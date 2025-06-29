@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="trangchu.css">
+    <title>Trang chu</title>
+</head>
+<body class="page">
+    <header></header>
+    <main class="page__main">
+        <article class="main__article">
+            <!-- slider -->
+            <div class="article__div-slider">
+                <div class="slides">
+                    <img class="slide" src="/img/background1.png" alt="background1" />
+                    <img class="slide" src="/img/background2.png" alt="background2" />
+                </div>
+                <button class="prev" onclick="prevSlide()"><i class="fa fa-chevron-left"></i></button>
+                <button class="next" onclick="nextSlide()"><i class="fa fa-chevron-right"></i></button>
+            </div>
+            <!-- brand -->
+            <section class="article__section--brand">
+                <div class="section__div--brand-item">
+                    <div class="brand-image">
+                        <img class="fa fa-truck" src="" alt="">
+                    </div>
+                    <div>
+                        <h2>MIỄN PHÍ VẬN CHUYỂN</h2>
+                        <p>Áp dụng cho hóa đơn trên 500k</p>
+                    </div>
+                </div>
+                <div class="section__div--brand-item">
+                    <div class="brand-image">
+                        <img class="fa fa-phone-square" src="" alt="">
+                    </div>
+                    <div>
+                        <h2>CHĂM SÓC KHÁCH HÀNG</h2>
+                        <p>Hỗ trợ 24/7, đổi trả trong 7 ngày</p>
+                    </div>
+                </div>
+                <div class="section__div--brand-item">
+                    <div class="brand-image">
+                        <img class="fa fa-certificate" src="" alt="">
+                    </div>
+                    <div>
+                        <h2>CHẤT LƯỢNG</h2>
+                        <p>Sản phẩm 100% handmade, bền đẹp</p>
+                    </div>
+                </div>
+            </section>
+            <!-- category -->
+            <section class="article__section--cate">
+                <h2>Danh mục sản phẩm</h2>
+                <div class="section__div--cate-list">
+                    <section class="div__section--cate-list-item">
+                        <img src="/img/chanhoahong.png" alt="" width="200px" height="200px">
+                        <h3 class="section__h3--title">Sản phẩm</h3>
+                    </section>
+                    <section class="div__section--cate-list-item">
+                        <img src="/img/lenmilkcottonladyco.png" alt="" width="200px" height="200px">
+                        <h3 class="section__h3--title">Len</h3>
+                    </section>
+                    <section class="div__section--cate-list-item">
+                        <img src="/img/lenbongxu.png" alt="" width="200px" height="200px">
+                        <h3 class="section__h3--title">Phụ kiện</h3>
+                    </section>
+                    <section class="div__section--cate-list-item">
+                        <img src="/img/lenbongxu.png" alt="" width="200px" height="200px">
+                        <h3 class="section__h3--title">Áo</h3>
+                    </section>
+                </div>
+            </section>
+            <!-- product-promotion -->
+            <section class="article__section--promotion">
+                <div class="section__div--name">
+                    <h2>Khuyến mãi đặc biệt</h2>
+                    <div class="section__div--countdown" id="mainCountdown" data-deadline="2025-06-28T23:59:59"></div>
+                </div>
+                <ul class="section__ul--products">
+                    <li>
+                        <section class="li__section--product-item">
+                            <div>
+                                <div class="section__div--product-top">
+                                    <a href="" class="div__a--product-thumb">
+                                        <img src="/img/lenbongxu.png" alt="lenbongxu">
+                                    </a>
+                                </div>
+                                <div class="section__div--info">
+                                    <a href="" class="div__a--product-name">Len Bông Xù - Bông Xù 50g</a>  
+                                    <span class="div__span--product-price">
+                                        <trong>₫13.900</trong> 
+                                        <del>₫25.000</del> 
+                                    </span>
+                                </div> 
+                            </div>
+                            <button class="buy-btn">Mua ngay</button>
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div>
+                                <div class="section__div--product-top">
+                                    <a href="" class="div__a--product-thumb">
+                                        <img src="/img/lenbongxu.png" alt="lenbongxu">
+                                    </a>
+                                </div>
+                                <div class="section__div--info">
+                                    <a href="" class="div__a--product-name">Len Bông Xù - Bông Xù 50g</a>  
+                                    <span class="div__span--product-price">
+                                        <trong>₫13.900</trong> 
+                                        <del>₫25.000</del> 
+                                    </span>
+                                </div> 
+                            </div>
+                            <button class="buy-btn">Mua ngay</button>
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div>
+                                <div class="section__div--product-top">
+                                    <a href="" class="div__a--product-thumb">
+                                        <img src="/img/lenbongxu.png" alt="lenbongxu">
+                                    </a>
+                                </div>
+                                <div class="section__div--info">
+                                    <a href="" class="div__a--product-name">Len Bông Xù - Bông Xù 50g</a>  
+                                    <span class="div__span--product-price">
+                                        <trong>₫13.900</trong> 
+                                        <del>₫25.000</del> 
+                                    </span>
+                                </div> 
+                            </div>
+                            <button class="buy-btn">Mua ngay</button>
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div>
+                                <div class="section__div--product-top">
+                                    <a href="" class="div__a--product-thumb">
+                                        <img src="/img/lenbongxu.png" alt="lenbongxu">
+                                    </a>
+                                </div>
+                                <div class="section__div--info">
+                                    <a href="" class="div__a--product-name">Len Bông Xù - Bông Xù 50g</a>  
+                                    <span class="div__span--product-price">
+                                        <trong>₫13.900</trong> 
+                                        <del>₫25.000</del> 
+                                    </span>
+                                </div> 
+                            </div>
+                            <button class="buy-btn">Mua ngay</button>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+            <!-- product-popular -->
+            <section class="article__div--product-popular">
+                <div class="section__div--name">
+                    <h3>Sản phẩm nổi bật</h3>
+                </div>
+                <ul class="section__ul--products">
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lenbongxu.png" alt="lenbongxu">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len Bông Xù - Bông Xù 50g</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lenmilkcottonladyco.png" alt="lenmilkcottonladyco">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len Cotton Milk 50g - Bảng 2</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/chanhoahong.png" alt="chanhoahong">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Mới</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Chăn Hoa Hồng Tự Làm Handmade với Móc Bó Hoa Quà Tặng Nhân Tạo Trang Trí Nhà Cửa</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lennhung.png" alt="lennhung">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len nhung đũa len bông sữa 100gr đan móc handmade thú bông</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lenbongxu.png" alt="lenbongxu">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len Bông Xù - Bông Xù 50g</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫3.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lenmilkcottonladyco.png" alt="lenmilkcottonladyco">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len Cotton Milk 50g - Bảng 2</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <strong>₫6.300 - ₫5.000</strong> 
+                                    <del>₫8.599 - ₫15.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/chanhoahong.png" alt="chanhoahong">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Mới</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Chăn Hoa Hồng Tự Làm Handmade với Móc Bó Hoa Quà Tặng Nhân Tạo Trang Trí Nhà Cửa</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <strong>₫682.990</strong> 
+                                    <del>₫685.990</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lennhung.png" alt="lennhung">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len nhung đũa len bông sữa 100gr đan móc handmade thú bông</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <strong>₫13.900 - ₫25.000</strong> 
+                                    <del>₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lennhung.png" alt="lennhung">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len nhung đũa len bông sữa 100gr đan móc handmade thú bông</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                </ul>
+            </section>
+            <!-- product-new -->
+            <section class="article__section--product-new">
+                <div class="section__div--name">
+                    <h3>Sản phẩm mới</h3>
+                </div>
+                <ul class="section__ul--products">
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lenbongxu.png" alt="lenbongxu">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len Bông Xù - Bông Xù 50g</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lenmilkcottonladyco.png" alt="lenmilkcottonladyco">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len Cotton Milk 50g - Bảng 2</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/chanhoahong.png" alt="chanhoahong">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Mới</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Chăn Hoa Hồng Tự Làm Handmade với Móc Bó Hoa Quà Tặng Nhân Tạo Trang Trí Nhà Cửa</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lennhung.png" alt="lennhung">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len nhung đũa len bông sữa 100gr đan móc handmade thú bông</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lenbongxu.png" alt="lenbongxu">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len Bông Xù - Bông Xù 50g</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <trong>₫13.900 - ₫25.000</trong> 
+                                    <del>₫13.900 - ₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lenmilkcottonladyco.png" alt="lenmilkcottonladyco">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len Cotton Milk 50g - Bảng 2</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <strong>₫6.300 - ₫5.000</strong> 
+                                    <del>₫8.599 - ₫15.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/chanhoahong.png" alt="chanhoahong">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Mới</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Chăn Hoa Hồng Tự Làm Handmade với Móc Bó Hoa Quà Tặng Nhân Tạo Trang Trí Nhà Cửa</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <strong>₫682.990</strong> 
+                                    <del>₫685.990</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                    <li>
+                        <section class="li__section--product-item">
+                            <div class="section__div--product-top">
+                                <a href="" class="div__a--product-thumb">
+                                    <img src="/img/lennhung.png" alt="lennhung">
+                                </a>
+                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
+                                <span class="div__span--sale-label">Giảm 33%</span>
+                            </div>
+                            <div class="section__div--info">
+                                <a href="" class="div__a--product-name">Len nhung đũa len bông sữa 100gr đan móc handmade thú bông</a>
+                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
+                                <span class="div__span--product-price"> 
+                                    <strong>₫13.900 - ₫25.000</strong> 
+                                    <del>₫25.000</del>
+                                </span>
+                            </div> 
+                        </section>
+                    </li>
+                </ul>
+            </section>
+            <video width="100%" height="500px" controls>
+                <source src="len.mp4" type="video/mp4" />
+            </video>
+            <!-- about --> 
+            <section class="article__section-about">
+                <div class="section__div-content">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>
+                    Tại Crochet Supply Store, từng sản phẩm được chọn len cẩn thận, đan móc tỉ mỉ và gửi đi kèm theo một lời nhắn nhỏ như một cái ôm ấm áp cho những người bạn chưa từng gặp.
+                        <br>
+                        <br>
+                    🌼 Chúng tôi là ai?
+                        <br>
+                        <li>Là những người yêu cái đẹp mộc mạc và giản dị.</li>
+                        <li>Là những đôi tay nhỏ kiên nhẫn bên cuộn len xoay tròn mỗi ngày.</li>
+                        <li>Là một tập thể chúng tôi tin rằng: làm chậm lại, làm bằng tim, thì sản phẩm sẽ có hồn.</li>
+                        <br>
+                        <br>
+                    💖 Giá trị của Crochet Supply Store
+                        <br>
+                        <li>Thủ công & chất lượng: Mỗi món đồ đều được làm bằng tay và kiểm tra kỹ lưỡng.</li>
+                        <li>Chân thành & tử tế: Chúng tôi gửi gắm sự tử tế vào từng sản phẩm.</li>
+                        <li>Cá nhân hóa: Bạn có thể yêu cầu theo màu sắc, kiểu dáng và nhận món quà riêng của chính mình.</li>
+                    </p>
+                </div>
+            </section>
+            <!-- news -->
+            <section id="news" class="article__section-news">
+                <h3>Tin Tức & Blog</h3>
+                <div class="sectione__div-news-grid">
+                    <div class="news-item">
+                        <img src="/img/lencotton.png" alt="Xu hướng len mới">
+                        <h4><a href="#">Xu Hướng Len Mới Nhất Năm 2025: Những Màu Sắc Hot</a></h4>
+                        <p class="news-date">25 tháng 6, 2025</p>
+                        <p>Khám phá các gam màu và chất liệu len đang làm mưa làm gió trong cộng đồng đan móc năm nay...</p>
+                        <a href="#" class="read-more">Đọc thêm &rarr;</a>
+                    </div>
+                    <div class="news-item">
+                        <img src="/img/lenmilkhannhi.png" alt="Mẹo đan móc">
+                        <h4><a href="#">5 Mẹo Hay Giúp Bạn Đan Móc Nhanh và Đẹp Hơn</a></h4>
+                        <p class="news-date">20 tháng 6, 2025</p>
+                        <p>Áp dụng ngay những bí quyết đơn giản này để nâng cao kỹ năng đan móc của bạn...</p>
+                        <a href="#" class="read-more">Đọc thêm &rarr;</a>
+                    </div>
+                    <div class="news-item">
+                        <img src="/img/lenyaohwool.png" alt="Chăm sóc len">
+                        <h4><a href="#">Bí Quyết Chăm Sóc Len Merino Luôn Bền Đẹp Như Mới</a></h4>
+                        <p class="news-date">15 tháng 6, 2025</p>
+                        <p>Hướng dẫn chi tiết cách giặt và bảo quản các sản phẩm len của bạn...</p>
+                        <a href="#" class="read-more">Đọc thêm &rarr;</a>
+                    </div>
+                </div>
+                <div class="view-all-news">
+                    <a href="#" class="btn">Xem Tất Cả Tin Tức</a>
+                </div>
+            </section>
+            <!-- y kien danh gia -->
+        </article>
+    </main>
+    <footer></footer>
+    <script src="trangchu.js"></script>
+</body>
+</html>
