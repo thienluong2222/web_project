@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product-itmes</title>
+    <link rel="stylesheet" href="product_items.css" />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <header></header>
+    <main class="main__product">
+      <div class="main__product-items">
+        <!--hình ảnh sản phẩm-->
+        <div class="product-describe">
+          <div class="product-items-img">
+            <div class="single-image">
+              <img
+                src="image/img1.jpg"
+                alt="Hình nhỏ 1"
+                class="img1"
+                onclick="changeImage(this)"
+                id="image1"
+                width="100%"
+              />
+            </div>
+            <div class="small-image-group">
+              <div class="small-image">
+                <img
+                  src="image/img2.jpg"
+                  alt="Hình nhỏ 2"
+                  class="img2"
+                  onclick="changeImage(this)"
+                  id="image2"
+                  width="100%"
+                />
+              </div>
+              <div class="small-image">
+                <img
+                  src="image/img3.jpg"
+                  alt="Hình nhỏ 3"
+                  class="img3"
+                  onclick="changeImage(this)"
+                  id="image3"
+                  width="100%"
+                />
+              </div>
+              <div class="small-image">
+                <img
+                  src="image/img4.jpg"
+                  alt="Hình nhỏ 4"
+                  class="img4"
+                  onclick="changeImage(this)"
+                  id="image4"
+                  width="100%"
+                />
+              </div>
+              <div class="small-image">
+                <img
+                  src="image/img9.jpg"
+                  alt="Hình nhỏ 9"
+                  class="img9"
+                  onclick="changeImage(this)"
+                  id="image9"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+          <!--phần content mô tả sản phẩm-->
+          <div class="product-items-content">
+            <h1 class="product-title">
+              Móc Khoá Len Handmade Thú Ú Nu - Quà Tặng cho bạn bè, người yêu -
+              Giá rẻ -Tặng kèm kẹo cực ngon
+            </h1>
+            <div class="product-rating">
+              <div class="star-rating">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-text"> (4.5/5)</span>
+                <span class="rating-count"> | (100 đánh giá)</span>
+              </div>
+            </div>
+            <div class="product-price">
+              <div class="product-price-value">₫47.200</div>
+              <div class="product-flash-sale-text">₫59.000</div>
+            </div>
+            <div class="product-mini-vouchers">
+              <h2 class="product-mini-vouchers-title">
+                Voucher giảm giá của Shop
+              </h2>
+              <div class="product-mini-vouchers-list">
+                <div class="product-mini-voucher">Giảm 10%</div>
+                <div class="product-mini-voucher">Giảm 15%</div>
+                <div class="product-mini-voucher">Giảm 20%</div>
+              </div>
+            </div>
+            <div class="product-quantity-box">
+              <label class="product-quantity-label">Số Lượng</label>
+              <div class="product-quantity-group">
+                <div class="product-quantity-btn minus">−</div>
+                <div class="product-quantity-value" id="quantity">1</div>
+                <div class="product-quantity-btn plus">+</div>
+              </div>
+            </div>
+            <div class="product-add-to-cart">
+              <button class="product-add-to-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
+              </button>
+              <button class="product-add-to-cart-voucher">
+                <div class="product-add-to-cart-voucher-text">
+                  Mua với voucher
+                </div>
+                <div class="product-add-to-cart-voucher-price">₫47.200</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--Phần mô tả đánh giá-->
+        <div class="product-items-information">
+          <div class="product-tabs">
+            <div class="tab">
+              <div>Mô tả sản phẩm</div>
+            </div>
+            <div class="tab">
+              <div>Đánh giá</div>
+            </div>
+          </div>
+
+          <div class="product-items-information-content">
+            <div class="product-items-information-description">
+              Móc khoá len handmade thú ú nu là một sản phẩm độc đáo, dễ thương,
+              được làm từ len cao cấp, an toàn cho sức khoẻ. Sản phẩm không chỉ
+              là một món quà ý nghĩa mà còn là một phụ kiện thời trang bắt mắt.
+
+              <h2>Thông tin chi tiết</h2>
+              <ul>
+                <li>Chất liệu: Len cao cấp</li>
+                <li>Kích thước: 10cm x 10cm</li>
+                <li>Màu sắc: Nhiều màu</li>
+              </ul>
+              ❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%,
+              sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước
+              lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ
+              không có nhé.
+              <br />
+              ❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách
+              nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng
+              mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt
+              hàng.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script>
+      function changeImage(element) {
+        // Lấy đường dẫn của hình ảnh được click
+        var mainImg = document.getElementById("image1");
+        mainImg.src = element.src;
+      }
+
+      const minus = document.querySelector(".minus");
+      const plus = document.querySelector(".plus");
+      const quantity = document.getElementById("quantity");
+
+      minus.onclick = () => {
+        let current = parseInt(quantity.textContent);
+        if (current > 1) quantity.textContent = current - 1;
+      };
+
+      plus.onclick = () => {
+        let current = parseInt(quantity.textContent);
+        quantity.textContent = current + 1;
+      };
+    </script>
+  </body>
+</html>
