@@ -19,8 +19,8 @@
 }
 
 .main__div--produce {
-  width: calc(33.33% - 20px);
-  border: 1px solid #fba2eb;
+  width: calc(31.00% - 20px);
+  border: 1px solid #ffa20088;
   padding: 10px;
   box-sizing: border-box;
   background-color: #ffc9ed;
