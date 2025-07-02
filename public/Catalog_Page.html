@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="vi-vn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Catalog_Page-css.css">
-    <title>Catalog_Page</title>
-    <link rel="icon" type="img/png" href="./images/image.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog_Page</title>
+  <link rel="icon" type="image/png" href="./images/image.png">
+  <link rel="stylesheet" href="css/Catalog_Page.css">
 </head>
 <body class="page__produce">
+  <div class="div__layout">
     <header class="page__header">
-
+      <nav>
+        <!-- THANH ĐIỀU HƯỚNG CỦA TRANG -->
+      </nav>
     </header>
+
     <main class="page__main">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h2>Danh Mục Sản Phẩm</h2>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <button class="sidebar__toggle">Búp bê</button>
+            <ul class="sidebar__sublist">
+              <li><a href="#">Búp bê gỗ</a></li>
+              <li><a href="#">Búp bê len</a></li>
+              <li><a href="#">Búp bê baby</a></li>
+            </ul>
+          </li>
+
+          <li class="sidebar__item">
+            <button class="sidebar__toggle">Len</button>
+            <ul class="sidebar__sublist">
+              <li><a href="#">Len sợi nhỏ</a></li>
+              <li><a href="#">Len sợi to</a></li>
+              <li><a href="#">Len sợi to ơi là to</a></li>
+            </ul>
+          </li>
+
+          <li class="sidebar__item">
+            <button class="sidebar__toggle">Dụng cụ</button>
+            <ul class="sidebar__sublist">
+              <li><a href="#">Dụng cụ 1</a></li>
+              <li><a href="#">Dụng cụ 2</a></li>
+              <li><a href="#">Dụng cụ 3</a></li>
+            </ul>
+          </li>
+
+          <li class="sidebar__item">
+            <button class="sidebar__toggle">Cha</button>
+            <ul class="sidebar__sublist">
+              <li><a href="#">Con 1</a></li>
+              <li><a href="#">Con 2</a></li>
+              <li><a href="#">Con 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- SẢN PHẨM -->
+      <div class="product__container">
         <div class="main__div--produce">
-           <img class="produce--image" src="./images/Demo.png" alt="produce1" height="auto" width="250" >
-           <div class="item-info">
-                <p class="item-id"> 001 </p>
-                <h3> Búp Bê viva </h3>
-                <p class="item-price"> Giá...</p>
-                <p class="demo-item">Mô tả sản phẩm</p>
-           </div>
-           <a href="#" class="add-cart"> Add to cart</a>
+          <img src="./images/Demo.png" alt="produce1" class="div__img--produce">
+          <div class="div__produce-item--info">
+            <p class="item--id">001</p>
+            <h3 class="item--name">Tên Sản Phẩm</h3>
+            <p class="item--demo">Mô tả sản phẩm</p>
+          </div>
+          <a class="div__add-cart" href="#">Add to cart</a>
         </div>
 
-         <div class="main__div--produce">
-           <img class="produce--image" src="./images/Demo.png" alt="produce1" height="auto" width="250" >
-           <div class="item-info">
-                <p class="item-id"> 001 </p>
-                <h3> Búp Bê viva </h3>
-                <p class="item-price"> Giá...</p>
-                <p class="demo-item">Mô tả sản phẩm</p>
-           </div>
-           <a href="#" class="add-cart"> Add to cart</a>
+        <div class="main__div--produce">
+          <img src="./images/Demo.png" alt="produce2" class="div__img--produce">
+          <div class="div__produce-item--info">
+            <p class="item--id">002</p>
+            <h3 class="item--name">Tên Sản Phẩm</h3>
+            <p class="item--demo">Mô tả sản phẩm</p>
+          </div>
+          <a class="div__add-cart" href="#">Add to cart</a>
         </div>
 
-         <div class="main__div--produce">
-           <img class="produce--image" src="./images/Demo.png" alt="produce1" height="auto" width="250" >
-           <div class="item-info">
-                <p class="item-id"> 001 </p>
-                <h3> Búp Bê viva </h3>
-                <p class="item-price"> Giá...</p>
-                <p class="demo-item">Mô tả sản phẩm</p>
-           </div>
-           <a href="#" class="add-cart"> Add to cart</a>
+        <div class="main__div--produce">
+          <img src="./images/Demo.png" alt="produce3" class="div__img--produce">
+          <div class="div__produce-item--info">
+            <p class="item--id">003</p>
+            <h3 class="item--name">Tên Sản Phẩm</h3>
+            <p class="item--demo">Mô tả sản phẩm</p>
+          </div>
+          <a class="div__add-cart" href="#">Add to cart</a>
         </div>
-
-         <div class="main__div--produce">
-           <img class="produce--image" src="./images/Demo.png" alt="produce1" height="auto" width="250" >
-           <div class="item-info">
-                <p class="item-id"> 001 </p>
-                <h3> Búp Bê viva </h3>
-                <p class="item-price"> Giá...</p>
-                <p class="demo-item">Mô tả sản phẩm</p>
-           </div>
-           <a href="#" class="add-cart"> Add to cart</a>
-        </div>
-
-         <div class="main__div--produce">
-           <img class="produce--image" src="./images/Demo.png" alt="produce1" height="auto" width="250" >
-           <div class="item-info">
-                <p class="item-id"> 001 </p>
-                <h3> Búp Bê viva </h3>
-                <p class="item-price"> Giá...</p>
-                <p class="demo-item">Mô tả sản phẩm</p>
-           </div>
-           <a href="#" class="add-cart"> Add to cart</a>
-        </div>
-
-         <div class="main__div--produce">
-           <img class="produce--image" src="./images/Demo.png" alt="produce1" height="auto" width="250" >
-           <div class="item-info">
-                <p class="item-id"> 001 </p>
-                <h3> Búp Bê viva </h3>
-                <p class="item-price"> Giá...</p>
-                <p class="demo-item">Mô tả sản phẩm</p>
-           </div>
-           <a href="#" class="add-cart"> Add to cart</a>
-        </div>
-
+      </div>
     </main>
+  </div>
 </body>
 </html>
