@@ -3,7 +3,9 @@ header{
 }
 body {
   font-family: Arial, sans-serif;
+
 }
+
 #navbarSupportedContent{
     background-color:#ffa3ce ;
     color-scheme: #ffa3ce;
@@ -31,10 +33,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  
+} 
 
-.register-form,
-.login-form {
+.register-form{
   width: 400px;
+  padding: 20px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background-color: #ffffff;
+  max-width: 400px;  /* Hoặc 300px nếu muốn nhỏ hơn nữa */
+  margin: 50px auto; /* Căn giữa khối */
+}
+.login-form {
+  width: 450px;
+  padding: 50px;
+  padding-bottom: 10px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+.form-footer{
+  max-width: 250px;
+  margin: 0 auto;
+}
+.text-center{
+  height: 60px;
+  font-family:'Quicksand', sans-serif ;
+  color: #ec3087;
+  font-weight: 200;
+  border: #ffa3ce;
+  border-radius: 20px;
 }
 
