@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Len Móc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/nav.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <ul class="navbar__links">
+                    <li><a href="#" class="navbar__link">Trang Chủ</a></li>
+                    <li><a href="#" class="navbar__link">Sản Phẩm</a></li>
+                    <li><a href="#" class="navbar__link">Giới Thiệu</a></li>
+                    <li><a href="#" class="navbar__link">Liên Hệ</a></li>
+                </ul>
+                <ul class="navbar__auth">
+                    <li><a href="#" class="navbar__auth-link">Đăng Ký</a></li>
+                    <li><a href="#" class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <section class="cart-items">
+            <h2 class="cart-items__title">Giỏ hàng của bạn</h2>
+
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100x100?text=Len+Hong" alt="Len Hồng Cao Cấp" class="cart-item__image">
+                <div class="cart-item__details">
+                    <h3 class="cart-item__name">Cuộn Len Hồng Cao Cấp</h3>
+                    <p class="cart-item__price">55.000 VNĐ</p>
+                    <div class="cart-item__quantity">
+                        <button class="cart-item__quantity-button">-</button>
+                        <input type="text" value="1" class="cart-item__quantity-input">
+                        <button class="cart-item__quantity-button">+</button>
+                    </div>
+                </div>
+                <button class="cart-item__remove">Xóa</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100x100?text=Kim+Moc" alt="Bộ Kim Móc Đa Năng" class="cart-item__image">
+                <div class="cart-item__details">
+                    <h3 class="cart-item__name">Bộ Kim Móc Đa Năng</h3>
+                    <p class="cart-item__price">120.000 VNĐ</p>
+                    <div class="cart-item__quantity">
+                        <button class="cart-item__quantity-button">-</button>
+                        <input type="text" value="1" class="cart-item__quantity-input">
+                        <button class="cart-item__quantity-button">+</button>
+                    </div>
+                </div>
+                <button class="cart-item__remove">Xóa</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100x100?text=Phu+Kien" alt="Phụ kiện len móc" class="cart-item__image">
+                <div class="cart-item__details">
+                    <h3 class="cart-item__name">Túi Phụ Kiện Len Móc</h3>
+                    <p class="cart-item__price">30.000 VNĐ</p>
+                    <div class="cart-item__quantity">
+                        <button class="cart-item__quantity-button">-</button>
+                        <input type="text" value="2" class="cart-item__quantity-input">
+                        <button class="cart-item__quantity-button">+</button>
+                    </div>
+                </div>
+                <button class="cart-item__remove">Xóa</button>
+            </div>
+
+        </section>
+
+        <aside class="cart-summary">
+            <h2 class="cart-summary__title">Tổng tiền</h2>
+            <div class="cart-summary__row">
+                <span class="cart-summary__label">Tổng phụ:</span>
+                <span class="cart-summary__value">205.000 VNĐ</span>
+            </div>
+            <div class="cart-summary__row">
+                <span class="cart-summary__label">Phí vận chuyển:</span>
+                <span class="cart-summary__value">Miễn phí</span>
+            </div>
+            <div class="cart-summary__row cart-summary__row--total">
+                <span class="cart-summary__label">Tổng cộng:</span>
+                <span class="cart-summary__value">205.000 VNĐ</span>
+            </div>
+            <button class="cart-summary__button">Tiến hành Thanh toán</button>
+        </aside>
+
+        </main>
+
+</body>
+</html>

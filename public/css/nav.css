@@ -1,0 +1,97 @@
+:root {
+            --primary-pink: #FF69B4; 
+            --light-pink: #FFC0CB; 
+            --dark-pink: #C71585;
+            --text-color: #333; 
+            --gray-light: #f9f9f9; 
+            --border-color: #eee;
+            --white-color: #fff; 
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            background-color: var(--gray-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: var(--primary-pink);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar__container { /* BEM: Block__Element */
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar__links { /* BEM: Block__Element */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar__link { /* BEM: Block__Element */
+            text-decoration: none;
+            color: var(--white-color);
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 10px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        .navbar__link:hover {
+            color: var(--light-pink);
+            border-bottom: 2px solid var(--light-pink);
+        }
+
+        .navbar__link--active { /* BEM: Block__Element--Modifier */
+            color: var(--dark-pink);
+            border-bottom: 2px solid var(--dark-pink);
+        }
+
+        .navbar__auth { /* BEM: Block__Element */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar__auth-link { /* BEM: Block__Element-Element */
+            text-decoration: none;
+            color: var(--white-color);
+            font-weight: 600;
+            font-size: 1em;
+            padding: 8px 15px;
+            border: 2px solid var(--white-color);
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .navbar__auth-link:hover {
+            background-color: var(--light-pink);
+            border-color: var(--light-pink);
+            color: var(--primary-pink);
+        }
+
+        .navbar__auth-link--primary { /* BEM: Block__Element--Modifier */
+            background-color: var(--white-color);
+            color: var(--primary-pink);
+        }
+
+        .navbar__auth-link--primary:hover {
+            background-color: var(--light-pink);
+            border-color: var(--light-pink);
+            color: var(--primary-pink);
+        }
