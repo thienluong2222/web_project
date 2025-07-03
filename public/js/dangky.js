@@ -1,4 +1,4 @@
-//thêm code js của các trang
+
 //js của trang Dang ky//
 
 //Lấy Element của trang đăng ký//
@@ -15,6 +15,10 @@ const errorEmail = document.getElementById("errorEmail")
 const errorSdt = document.getElementById("errorSdt")
 const errorPassword = document.getElementById("errorPassword")
 const errorRePassword = document.getElementById("errorRePassword")
+
+//Lấy dữ liệu từ local
+const userLocal = JSON.parse(localStorage.getItem("user")) || [];
+
 
 /**
  * Validate địa chỉ Email
@@ -87,7 +91,23 @@ formdangky.addEventListener("submit", function(e){
         && validateEmail(EmailElement.value) ){
             //Lấy dữ liệu và tạo thành user
             const user= {
-                userID: 
-            }
+                userID: Math.ceil(Math.random() * 1000000000),
+                UserName:  UserNameElement.value,
+                email: EmailElement.value,
+                sdt: sdtElement.value,
+                password: passwordElement.value,
+
+            };
+            //Push user vào mảng userLocal
+            userLocal.push(user); 
+
+            //Lưu trữ dữ liệu lên Local từ dữ liệu người dùng đã nhập ở trên nè
+            localStorage.setItem("user",JSON.stringify(userLocal))
+
+            //Chuyển hướng sang trang đăng nhập khi đăng ký thành công
+            window.location.href= "dangnhap.html";
+           
         }
+
 });
+

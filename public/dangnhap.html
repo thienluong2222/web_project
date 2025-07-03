@@ -45,7 +45,7 @@
 
 <!-- Nội dung chính -->
 <main class="main-container">
-  <form class="login-form">
+  <form id="formdangnhap" class="login-form">
     <h3 class="text-center">Đăng nhập tài khoản</h3>
 
     <div class="mb-3">
@@ -62,12 +62,16 @@
       <input type="checkbox" class="form-check-input" id="rememberUser">
       <label class="form-check-label" for="rememberUser">Ghi nhớ tài khoản</label>
     </div>
-
+    <div id="AlertError" style="display: none;" class="alert alert-danger" role="alert">
+      Email hoặc mật khẩu không đúng!
+    </div>
     <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
     <p class="text-center mt-2">Bạn chưa có tài khoản? <a href="dangky.html">Đăng ký ngay!</a></p>
   </form>
 </main>
 
+<!--Phần Java Script của trang đăng nhập-->
+<script src="js/dangnhap.js"></script>
 </body>
 
 </html>
