@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Đăng Ký</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Đăng Ký</title>
+  <link rel="stylesheet" href="css/dkdn.css">
+  <link href="images/image.png" rel="shortcut icon" type="image/vnd/microsift.icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+
+
+  
 </head>
 <body>
 
-  <!-- Thanh điều hướng -->   <!--Nguồn: https://getbootstrap.com/docs/5.0/components/navbar/ -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- Thanh điều hướng -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="dangky.html">Đăng ký</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="dangnhap.html">Đăng nhập</a>
-        </li>
-      </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="trangchu.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="dangky.html">Đăng ký</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dangnhap.html">Đăng nhập</a>
+            </li>
+          </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i> <!--link này thì lấy trên font awesome, bấm vô classic view all rồi kiếm-->
+                <a href ="Catalog_Page.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
       </form>
     </div>
   </div>
@@ -36,39 +49,52 @@
 
    <!-- Nội dung chính -->
 <main>
-    <div
-      style="height: 100vh"
-      class="Container d-flex justify-content-center align-items-center" >
-      <form style="width: 400px">
+    <div style="height: 100vh" class="Container d-flex justify-content-center align-items-center" >
+      <form id ="formdangky" style="width: 400px">
         <h3 class="text-center">Đăng ký tài khoản</h3>
         <div class="mb-3">
           <label for="UserName" class="form-label">Tên đăng nhập</label>
           <input type="text" class="form-control" id="UserName" aria-describedby="emailHelp" placeholder="Tên tài khoản của bạn">
-         </div>
-        <div class="mb-3">
+          <div id="errorUserName" style ="color: red; display: none;">*Tên không được để trống </div>
+        </div>
+        
 
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="text" class="form-control" id="UserName" aria-describedby="emailHelp" placeholder="Nhập Email">
-          <div id="email" class="form-text">We'll never share your email with anyone else.</div>
-         </div>
-        <div class="mb-3">    
-          <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
-          <input type="text" class="form-control" id="InputPassword" placeholder="Đặt mật khẩu" >
+          <input type="email" class="form-control" id="email" placeholder="Nhập Email">
+          <div id="errorEmail" style ="color: red; display: none;">*Email không được để trống </div>
         </div>
-        <div class="mb-3">    
+        <div class="mb-3">
+          <label for="sdt" class="form-label">Số điện thoại</label>
+          <input type="tel" class="form-control" id="sdt" placeholder="Nhập số điện thoại">
+          <div id="errorSdt" style ="color: red; display: none;">*Số điện thoại không được để trống </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="InputPassword" class="form-label">Mật khẩu</label>
+          <input type="password" class="form-control" id="InputPassword" placeholder="Đặt mật khẩu">
+          <div id="errorPassword" style ="color: red; display: none;">*Mật khẩu không được để trống </div>
+        </div>
+
+        <div class="mb-3">
           <label for="ReInputPassword" class="form-label">Nhập lại mật khẩu</label>
-          <input type="text" class="form-control" id="ReInputPassword" placeholder=" " >
+          <input type="password" class="form-control" id="ReInputPassword" placeholder="">
+          <div id="errorRePassword" style ="color: red; display: none;">*Mật khẩu không được để trống </div>
         </div>
+
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-remember-input" id="rememberUser">
-          <label class="form-remeber-label" for="rememberUser">Ghi nhớ tài khoản</label>
+          <input type="checkbox" class="form-check-input" id="rememberUser">
+          <label class="form-check-label" for="rememberUser">Ghi nhớ tài khoản</label>
         </div>
-        <button style="width: 100%;" type="button" class="btn btn-primary">Tạo tài khoản</button>
-        <p class="text-center mt-2">Bạn đã có tài khoản? <a href="dangnhap.html"> Đăng nhập </a> </p>
+
+        <button type="submit" class="btn btn-primary w-100">Tạo tài khoản</button>
+        <p class="text-center mt-2">Bạn đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a></p>
       </form>
-    </justify-content-center>  
-  </main>
+    </div>
+</main>
+      <!--Script-->
+    <script src="	https://unpkg.com/uuid@9.0.0/dist/index.js"></script>
+    <script src="js/dangky.js"></script>
 </body>
 
 </html>

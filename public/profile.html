@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  </head>
+  <body>
+    <header></header>
+    <main class="main-profile">
+      <div class="profile">
+        <div class="profile-img">
+          <div class="profile-img-user">
+            <img
+              class="img-user"
+              src="https://dm4fv4ltmsvz0.cloudfront.net/265/1000.jpg"
+              alt="ang usre"
+            />
+            <span
+              class="user-left-info__avatar-icon-camera fa fa-camera"
+            ></span>
+          </div>
+          <button class="profile-upload-file">Chọn ảnh</button>
+          <div class="profile-upload-format">
+            <div class="profile-upload-size">Dung lượng file tối đa: 1MB</div>
+            <div class="profile-upload-type">Định dạng: .JPG, .PNG</div>
+          </div>
+          <div class="box_information">
+            <ul class="menu">
+              <li><i class="fa fa-user"></i> Thông Tin Của Tôi</li>
+              <li><i class="fa fa-credit-card"></i> Thông Tin Ngân Hàng</li>
+              <li><i class="fa fa-map-marker-alt"></i> Địa Chỉ Của Tôi</li>
+              <li><i class="fa fa-calendar-check"></i> Quản Lý Đặt Chỗ</li>
+              <li class="active">
+                <i class="fa fa-shopping-bag"></i> Đơn Hàng Của Tôi
+              </li>
+              <li><i class="fa fa-shield-alt"></i> Bảo Hành Của Tôi</li>
+              <li><i class="fa fa-gift"></i> Ưu Đãi Của Tôi</li>
+              <li><i class="fa fa-coins"></i> Điểm Thành Viên</li>
+              <li><i class="fa fa-money-bill-wave"></i> Công Nợ</li>
+              <li><i class="fa fa-comments"></i> Thông Tin Diễn Đàn</li>
+            </ul>
+          </div>
+        </div>
+        <div class="profile-info">
+          <div class="profile-info-title">
+            <h1 class="profile-info-name">Hồ sơ của tôi</h1>
+            <div class="profile-info-manage">Quản lý thông tin cá nhân</div>
+          </div>
+          <div class="profile-info-form">
+            <form>
+              <table>
+                <tr>
+                  <td><label for="name">Tên đăng nhập</label></td>
+                  <td>
+                    <div>
+                      <input type="text" value="adc" class="form-name" />
+                    </div>
+                    <div>Tên đăng nhập chỉ có thể thay đổi một lần.</div>
+                  </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                  <td><label for="name">Tên </label></td>
+                  <td>
+                    <div><input type="text" value class="form-name" /></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="email">Email</label></td>
+                  <td>
+                    <div>abc****@gmail.com</div>
+                    <button>Thay đổi</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="phone">Số điện thoại</label></td>
+                  <td>
+                    <div>+84 123 456 789</div>
+                    <button>Thay đổi</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="address">Địa chỉ</label></td>
+                  <td>
+                    <div>Phường Xuân Khánh, Ninh Kiều, Cần Thơ</div>
+                    <button>Thay đổi</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="birthday">Ngày sinh</label>
+                  </td>
+                  <td><input type="date" id="birthday" name="birthday" /></td>
+                </tr>
+                <tr>
+                  <td><label for="gender">Giới tính</label></td>
+                  <td>
+                    <div>
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                      />
+                      <label for="male">Nam</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                      />
+                      <label for="female">Nữ</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="other"
+                        value="other"
+                      />
+                      <label for="other">Khác</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label></label>
+                  </td>
+                  <td>
+                    <button type="button">Lưu</button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

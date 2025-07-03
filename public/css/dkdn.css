@@ -1,0 +1,40 @@
+header{
+        background-color:#ffa3ce ;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+#navbarSupportedContent{
+    background-color:#ffa3ce ;
+    color-scheme: #ffa3ce;
+}
+.fa-magnifying-glass{
+    padding: 4px;
+    min-width: 50px; /*độ rộng bé nhất của phần tử là 30px*/
+    color:#ed4190;
+    text-align: center; /*canh giữa cho cái icon nó đều*/
+    background-color: #ffa3ce;
+    cursor: pointer;
+    font-size: 25px;
+}
+.fa-cart-shopping{
+    padding: 4px;
+    min-width: 30px; /*độ rộng bé nhất của phần tử là 30px*/
+    color:#ed4190;
+    text-align: center; /*canh giữa cho cái icon nó đều*/
+    background-color:#ffa3ce;
+    cursor: pointer;
+    font-size: 25px;
+}
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form,
+.login-form {
+  width: 400px;
+}
+

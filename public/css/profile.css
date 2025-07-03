@@ -1,0 +1,181 @@
+/* RESET CƠ BẢN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+.main-profile{
+  display: flex;
+  justify-content: center;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+/* hình ảnh user */
+.profile-img {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.profile-img-user {
+  position: relative;
+  display: inline-block;
+}
+
+.img-user {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.user-left-info__avatar-icon-camera {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #eee;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.profile-upload-file {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #ee4d2d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-upload-format {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+.box_information{
+  margin-top: 2rem;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.menu li i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+.menu li.active {
+  background-color: #fff3f3;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* BÊN PHẢI FORM */
+.profile-info {
+  flex: 1;
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.profile-info-title {
+  margin-bottom: 1.5rem;
+}
+
+.profile-info-title h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-info-manage {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.profile-info-form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-info-form td {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+.profile-info-form label {
+  font-weight: 500;
+}
+
+.profile-info-form input[type="text"],
+.profile-info-form input[type="date"],
+.profile-info-form input[type="email"],
+.profile-info-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.profile-info-form button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.profile-info-form button:hover {
+  background-color: #0069d9;
+}
+
+/* GIỚI TÍNH */
+input[type="radio"] {
+  margin-right: 6px;
+}
+
+.profile-info-form input[type="file"] {
+  display: none;
+}
+
