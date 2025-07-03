@@ -1,1 +1,0 @@
-//thêm code js của các trang
