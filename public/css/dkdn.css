@@ -38,13 +38,17 @@ body {
 
 .register-form{
   width: 400px;
-  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   background-color: #ffffff;
   max-width: 400px;  /* Hoặc 300px nếu muốn nhỏ hơn nữa */
   margin: 50px auto; /* Căn giữa khối */
 }
+
 .login-form {
   width: 450px;
   padding: 50px;
@@ -54,10 +58,8 @@ body {
   border-radius: 20px;
   background-color: #ffffff;
 }
-.form-footer{
-  max-width: 250px;
-  margin: 0 auto;
-}
+
+
 .text-center{
   height: 60px;
   font-family:'Quicksand', sans-serif ;
@@ -65,5 +67,6 @@ body {
   font-weight: 200;
   border: #ffa3ce;
   border-radius: 20px;
+  /*background-color: #ffb5e0;*/
+  
 }
-
