@@ -24,15 +24,15 @@
         />
         <link rel="stylesheet" href="./css/nav.css" />
     </head>
-    <body>
+    <body style="background-color: rgb(255, 204, 240);">
         <!-- Thanh điều hướng -->
         <header>
             <nav class="navbar">
                 <div class="navbar__container">
                     <ul class="navbar__links">
                         <li><a href="./trangchu.html" class="navbar__link">Trang Chủ</a></li>
-                        <li><a href="./Catalog_Page.html" class="navbar__link">Sản Phẩm</a></li>
-                        <li><a href="#" class="navbar__link">Giới Thiệu</a></li>
+                        <li><a href="./product_itmes.html" class="navbar__link">Sản Phẩm</a></li>
+                        <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
                         <li><a href="#" class="navbar__link">Liên Hệ</a></li>
                     </ul>
                     <ul class="navbar__auth">
@@ -40,8 +40,7 @@
                         <li>
                             <a
                                 href="./dangnhap.html"
-                                class="navbar__auth-link navbar__auth-link--primary"
-                                >Đăng Nhập</a
+                                class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a
                             >
                         </li>
                     </ul>
@@ -51,12 +50,9 @@
         <!-- Thanh điều hướng -->
 
         <!-- Nội dung chính -->
-        <main>
-            <div
-                style="height: 100vh"
-                class="Container d-flex justify-content-center align-items-center"
-            >
-                <form id="formdangky" style="width: 400px">
+        <main class="main-container">
+            <div>
+                <form id="formdangky" style="width: 350px" class="register-form">
                     <h3 class="text-center">Đăng ký tài khoản</h3>
                     <div class="mb-3">
                         <label for="UserName" class="form-label"
@@ -123,41 +119,21 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="ReInputPassword" class="form-label"
-                            >Nhập lại mật khẩu</label
-                        >
-                        <input
-                            type="password"
-                            class="form-control"
-                            id="ReInputPassword"
-                            placeholder=""
-                        />
-                        <div
-                            id="errorRePassword"
-                            style="color: red; display: none"
-                        >
+                        <label for="ReInputPassword" class="form-label">Nhập lại mật khẩu</label>
+                        <input type="password" class="form-control" id="ReInputPassword"placeholder="" />
+                        <div id="errorRePassword" style="color: red; display: none">
                             *Mật khẩu không được để trống
                         </div>
                     </div>
-
-                    <div class="mb-3 form-check">
-                        <input
-                            type="checkbox"
-                            class="form-check-input"
-                            id="rememberUser"
-                        />
-                        <label class="form-check-label" for="rememberUser"
-                            >Ghi nhớ tài khoản</label
-                        >
+                    <div class="form-footer">
+                        <div>
+                            <input type="checkbox" class="form-check-input" id="rememberUser"/>
+                            <label class="form-check-label" for="rememberUser">Ghi nhớ tài khoản</label>
+                        </div>
+                   
+                        <button type="submit" class="btn btn-primary w-100">Tạo tài khoản</button>
+                        <p class="text-form-footer"> Bạn đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a></p>
                     </div>
-
-                    <button type="submit" class="btn btn-primary w-100">
-                        Tạo tài khoản
-                    </button>
-                    <p class="text-center mt-2">
-                        Bạn đã có tài khoản?
-                        <a href="dangnhap.html">Đăng nhập</a>
-                    </p>
                 </form>
             </div>
         </main>

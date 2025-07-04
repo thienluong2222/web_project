@@ -3,12 +3,6 @@
     margin: 0;
     padding: 0;
 }
-body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    color: #111;
-    line-height: 1.15;
-}
 .page {
     display: grid;
     grid-template-areas:
@@ -19,7 +13,6 @@ body {
     margin: 0 auto;
     border: 1px;
     padding: 0 5px;
-    max-width: 1024px;
     font-size: 1.2rem;
 }
 .page__header {
@@ -27,6 +20,12 @@ body {
 }
 .page__main {
     grid-area: main-cell;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.15;
+    width: 1024px;
+    margin: auto;
 }
 .page__footer {
     grid-area: footer-cell;
@@ -62,7 +61,7 @@ h3{
 .article__div-slider{
     position: relative;
     width: 100%;
-    height: 600px;
+    height: auto;
     margin: auto;
     overflow: hidden;
 }
@@ -190,6 +189,15 @@ img.displaySlide{
     color: #b30000;
     border-color: #ffb3b3;
 }
+/* ==========countdown========== */
+.section__div--countdown {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-block;
+  color: #333;
+}
+
 /* ==========product========== */
 .section__div--name{
     text-align: center;
@@ -249,7 +257,7 @@ img.displaySlide{
     color: #111;
     padding: 10px 0px;
     position: absolute;
-    bottom: -42px;
+    bottom: -50px;
     width: 100%;
     transition: 0.25s ease-in-out;
     opacity: 0.85;
@@ -280,7 +288,7 @@ img.displaySlide{
     color: #334862;
     padding: 3px 0px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -291,7 +299,7 @@ img.displaySlide{
     color: #b30000;
     padding: 2px 0px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 11px;
 }
 .div__span--product-price del{
     margin-left: 10px;
