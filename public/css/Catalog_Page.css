@@ -1,11 +1,11 @@
-/* RESET CƠ BẢN */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY & BỐ CỤC TỔNG THỂ */
+
 body {
   background: radial-gradient(circle at 30% 30%, #ffe3e3, #ffccd5, #f8bbd0);
   font-family: 'Poppins', sans-serif;
@@ -17,7 +17,6 @@ body {
   margin: 0 auto;
 }
 
-/* CHIA CỘT: SIDEBAR + SẢN PHẨM */
 .page__main {
   display: flex;
   align-items: flex-start;
@@ -59,15 +58,16 @@ body {
 .sidebar__toggle:hover {
   color: rgb(219, 126, 141);             
 }
-.product__container {
-  flex: 1; /* Chiếm toàn bộ phần còn lại ngoài sidebar */
+
+.produce__container{
+  flex:1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4,1fr);
   gap: 20px;
   padding: 10px;
+
 }
 
-/* MỖI KHỐI SẢN PHẨM */
 .main__div--produce {
   background-color: #f0daef;
   border: 1px solid #000000;
@@ -83,42 +83,89 @@ body {
   box-shadow: 0 8px 20px rgba(239, 0, 0, 0.2);
 }
 
-.div__img--produce {
+/* 🎨 CẢI TIẾN KHỐI SẢN PHẨM */
+.produce__container .main__div--produce {
+  background-color: #ffffff; /* nền trắng tinh tế */
+  border: 1px solid #ddd; /* viền nhẹ */
+  border-radius: 20px; /* bo tròn hiện đại */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* ẩn phần thừa */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produce__container .main__div--produce:hover {
+  transform: translateY(-10px) scale(1.02); /* hiệu ứng nổi và phóng nhẹ */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎨 CẢI TIẾN HÌNH ẢNH */
+.produce__container .div__img--produce {
   width: 100%;
-  height: auto;
-  border-radius: 50px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0; /* bỏ bo góc hình ảnh */
+  border-bottom: 2px solid #f1f1f1;
+  transition: transform 0.3s ease;
 }
 
-.div__produce-item--info {
+.produce__container .div__img--produce:hover {
+  transform: scale(1.05); /* phóng to nhẹ khi hover */
+}
+
+/* 🎨 MÔ TẢ CÓ KHUNG + TIÊU ĐỀ */
+.produce__container .div__produce-item--info {
+  width: 90%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: justify;
+}
+
+.produce__container .div__produce-item--info::before {
+  content: "📝 Mô Tả";
+  display: block;
+  font-weight: bold;
+  color: #e84a63;
   margin-bottom: 10px;
-}
-
-.item--id {
-  font-size: 0.85rem;
-  color: #888;
-}
-
-.item--name {
   font-size: 1.1rem;
-  color: #333;
-  margin: 5px 0;
 }
 
-.item--demo {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-/* NÚT THÊM VÀO GIỎ */
-.div__add-cart {
+/* 🎨 CẢI TIẾN NÚT ADD TO CART */
+.produce__container .div__add-cart {
   display: inline-block;
-  padding: 6px 12px;
-  background-color: #007bff;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #ff5e78;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 30px; /* nút tròn hơn */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.produce__container .div__add-cart:hover {
+  background-color: #e84a63;
+  transform: scale(1.05);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 1024px) {
+  .produce__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .produce__container {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .div__add-cart:hover {
   background-color: #e84a63;
