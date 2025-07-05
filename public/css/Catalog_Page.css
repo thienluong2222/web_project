@@ -115,7 +115,7 @@ body {
   border-radius: 0;
   border-bottom: 2px solid #f1f1f1;
   transition: transform 0.3s ease;
-  border-radius: 0; /* Không bo góc hình */
+  border-radius: 10px; /* Không bo góc hình */
 }
 
 .div__img--produce:hover {
