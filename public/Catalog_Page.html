@@ -12,25 +12,21 @@
   <div class="div__layout">
     <header class="page__header">
       <nav class="navbar">
-                <div class="navbar__container">
-                    <ul class="navbar__links">
-                        <li><a href="./trangchu.html" class="navbar__link">Trang Chủ</a></li>
-                        <li><a href="./product_itmes.html" class="navbar__link">Sản Phẩm</a></li>
-                        <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
-                        <li><a href="#" class="navbar__link">Liên Hệ</a></li>
-                    </ul>
-                    <ul class="navbar__auth">
-                        <li><a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a></li>
-                        <li>
-                            <a
-                                href="./dangnhap.html"
-                                class="navbar__auth-link navbar__auth-link--primary"
-                                >Đăng Nhập</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <div class="navbar__container">
+          <ul class="navbar__links">
+            <li><a href="./trangchu.html" class="navbar__link">Trang Chủ</a></li>
+            <li><a href="./product_itmes.html" class="navbar__link">Sản Phẩm</a></li>
+            <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
+            <li><a href="#" class="navbar__link">Liên Hệ</a></li>
+          </ul>
+          <ul class="navbar__auth">
+            <li><a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a></li>
+            <li>
+              <a href="./dangnhap.html" class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
 
@@ -78,9 +74,12 @@
         </ul>
       </aside>
 
-
-      <div class="produce__container">
-        <div class="main__div--produce">
+      <div class="main__content">
+        <!-- 🧶 Len -->
+        <section class="product-section">
+          <h2 class="product-section__title">🧶 Len</h2>
+          <div class="produce__container">
+           <div class="main__div--produce">
           <img src="./Len Picture/Len Mohair.png" alt="img1" class="div__img--produce">
           <div class="div__produce-item--info">
             <p class="item--id">Mã Sản  Phẩm : 001</p>
@@ -210,9 +209,46 @@
             <h2>  70,000đ</h2>
           </div>
           <a class="div__add-cart" href="#">Add to cart</a>
-        </div>
+        </section>
+
+        <!-- 👗 Thời Trang -->
+        <section class="product-section">
+          <h2 class="product-section__title">👗 Thời Trang</h2>
+          <div class="produce__container">
+            <div class="main__div--produce">
+              <img src="./Fashion Picture/AoKhoac.jpeg" alt="Áo Khoác" class="div__img--produce">
+              <div class="div__produce-item--info">
+                <p class="item--id">Mã Sản  Phẩm : 101</p>
+                <h3 class="item--name">Áo Khoác Len Tay Dài</h3>
+                <hr>
+                <h2>320,000đ</h2>
+              </div>
+              <a class="div__add-cart" href="#">Add to cart</a>
+            </div>
+            <!-- ... (CÁC SẢN PHẨM THỜI TRANG KHÁC) ... -->
+          </div>
+        </section>
+
+        <!-- 📱 Phụ kiện -->
+        <section class="product-section">
+          <h2 class="product-section__title">📱 Phụ Kiện</h2>
+          <div class="produce__container">
+            <div class="main__div--produce">
+              <img src="./Accessory Picture/TuiXach.jpeg" alt="Túi Xách" class="div__img--produce">
+              <div class="div__produce-item--info">
+                <p class="item--id">Mã Sản  Phẩm : 201</p>
+                <h3 class="item--name">Túi Xách Thủ Công</h3>
+                <hr>
+                <h2>150,000đ</h2>
+              </div>
+              <a class="div__add-cart" href="#">Add to cart</a>
+            </div>
+            <!-- ... (CÁC SẢN PHẨM PHỤ KIỆN KHÁC) ... -->
+          </div>
+        </section>
       </div>
     </main>
   </div>
 </body>
 </html>
+
