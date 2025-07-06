@@ -186,3 +186,7 @@ body {
   transition: transform 0.3s ease;
 }
 
+.infomation__fashion{
+  font-style: italic;
+  color: #e84a63;
+}
