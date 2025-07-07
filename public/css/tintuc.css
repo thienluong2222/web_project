@@ -1,14 +1,14 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 14px;
+    /* font-size: 14px; */
     color: #111;
     line-height: 1.15;
 }
 .page {
     display: grid;
     grid-template-areas:
-        "header-cell"
+        /* "header-cell" */
         "main-cell"
         "footer-cell";
     font-family: "Helvetica", arial, sans-serif;
@@ -17,9 +17,9 @@ body {
     padding: 0 5px;
     font-size: 1.2rem;
 }
-.header__news {
+/* .header__news {
     grid-area: header-cell;
-}
+} */
 .main__news {
     grid-area: main-cell;
 }
