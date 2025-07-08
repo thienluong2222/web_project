@@ -82,7 +82,7 @@
             gap: 10px;
         }
 
-        .cart-item__quantity-button { 
+        .cart-item__quantity-button--decrease { 
             background-color: var(--primary-pink);
             color: var(--white-color);
             border: none;
