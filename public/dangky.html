@@ -52,75 +52,52 @@
         <!-- Nội dung chính -->
         <main class="main-container">
             <div>
-                <form id="formdangky" style="width: 350px" class="register-form">
+                <form id="formdangky" style="width: 650px" class="register-form">
                     <h3 class="text-center">Đăng ký tài khoản</h3>
-                    <div class="mb-3">
-                        <label for="UserName" class="form-label"
-                            >Tên đăng nhập</label
-                        >
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="UserName"
-                            aria-describedby="emailHelp"
-                            placeholder="Tên tài khoản của bạn"
-                        />
-                        <div
-                            id="errorUserName"
-                            style="color: red; display: none"
-                        >
+                    <div class="o">
+                        <label for="UserName" class="form-label"></label>
+                        <input type="text" class="form-control" id="UserName" aria-describedby="emailHelp" placeholder="Tên tài khoản của bạn"/>
+                        <div id="errorUserName" style="color: red; display: none">
                             *Tên không được để trống
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
+                    <div class="o">
                         <input
                             type="email"
                             class="form-control"
                             id="email"
-                            placeholder="Nhập Email"
-                        />
+                            placeholder="Nhập Email"/>
                         <div id="errorEmail" style="color: red; display: none">
                             *Email không được để trống
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="sdt" class="form-label"
-                            >Số điện thoại</label
-                        >
+                    <div class="o">
                         <input
                             type="tel"
                             class="form-control"
                             id="sdt"
-                            placeholder="Nhập số điện thoại"
-                        />
+                            placeholder="Nhập số điện thoại"/>
                         <div id="errorSdt" style="color: red; display: none">
                             *Số điện thoại không được để trống
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="InputPassword" class="form-label"
-                            >Mật khẩu</label
-                        >
-                        <input
+                    <div class="o">
+                        <input 
                             type="password"
                             class="form-control"
                             id="InputPassword"
-                            placeholder="Đặt mật khẩu"
-                        />
+                            placeholder="Đặt mật khẩu"/>
                         <div
                             id="errorPassword"
-                            style="color: red; display: none"
-                        >
+                            style="color: red; display: none">
                             *Mật khẩu không được để trống
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="ReInputPassword" class="form-label">Nhập lại mật khẩu</label>
-                        <input type="password" class="form-control" id="ReInputPassword"placeholder="" />
+                    <div class="o">
+                        <input type="password" class="form-control" id="ReInputPassword"placeholder="Nhập lại mật khẩu" />
                         <div id="errorRePassword" style="color: red; display: none">
                             *Mật khẩu không được để trống
                         </div>
