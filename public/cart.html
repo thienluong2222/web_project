@@ -10,6 +10,13 @@
             href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-..."
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="stylesheet" href="./css/cart.css" />
         <link rel="stylesheet" href="./css/nav.css" />
     </head>
@@ -37,7 +44,9 @@
                     </ul>
                     <ul class="navbar__auth">
                         <li>
-                            <a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a>
+                            <a href="./dangky.html" class="navbar__auth-link"
+                                >Đăng Ký</a
+                            >
                         </li>
                         <li>
                             <a
@@ -65,7 +74,7 @@
                         <h3 class="cart-item__name">Cuộn Len Hồng Cao Cấp</h3>
                         <p class="cart-item__price">55.000 VNĐ</p>
                         <div class="cart-item__quantity">
-                            <button class="cart-item__quantity-button">
+                            <button class="cart-item__quantity-button--decrease">
                                 -
                             </button>
                             <input
@@ -73,7 +82,7 @@
                                 value="1"
                                 class="cart-item__quantity-input"
                             />
-                            <button class="cart-item__quantity-button">
+                            <button class="cart-item__quantity-button--increase">
                                 +
                             </button>
                         </div>
@@ -210,9 +219,7 @@
 
                 <div class="footer__section">
                     <h3 class="footer__title">Liên hệ</h3>
-                    <p class="footer__text">
-                        Địa chỉ: Đại học Cần Thơ
-                    </p>
+                    <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
                     <p class="footer__text">Điện thoại: 0123 456 789</p>
                     <p class="footer__text">Email: miee@lenmoc.vn</p>
                     <div class="footer__social-links">
