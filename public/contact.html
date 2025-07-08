@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Điều Hướng - Len Móc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/contact.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__container">
+          <ul class="navbar__links">
+            <li>
+              <a href="./trangchu.html" class="navbar__link">Trang Chủ</a>
+            </li>
+            <li>
+              <a href="./product_itmes.html" class="navbar__link">Sản Phẩm</a>
+            </li>
+            <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
+            <li><a href="#" class="navbar__link">Liên Hệ</a></li>
+            <li><a href="./Catalog_Page.html">Mua sắm</a></li>
+          </ul>
+          <ul class="navbar__auth">
+            <li><a href="#" class="navbar__auth-link">Đăng Ký</a></li>
+            <li>
+              <a href="#" class="navbar__auth-link navbar__auth-link--primary"
+                >Đăng Nhập</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main__contact">
+      <!-- Contact Start -->
+      <div class="contact-container">
+        <div class="text-center">
+          <h2 class="title">
+            <span class="title-text">LIÊN HỆ VỚI CHÚNG TÔI</span>
+          </h2>
+        </div>
+        <div class="contact-row">
+          <div class="contact-colum">
+            <div class="contact-form">
+              <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                <div class="control-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Tên của bạn"
+                    required="required"
+                    data-validation-required-message="Please enter your name"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email của bạn"
+                    required="required"
+                    data-validation-required-message="Please enter your email"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder="Số điện thoại của bạn"
+                    required="required"
+                    data-validation-required-message="Please enter your phone number"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group">
+                  <textarea
+                    class="form-control"
+                    rows="6"
+                    id="message"
+                    placeholder="Nội dung"
+                    required="required"
+                    data-validation-required-message="Please enter your message"
+                  ></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div>
+                  <button
+                    class="btn btn-primary py-2 px-4"
+                    type="submit"
+                    id="sendMessageButton"
+                  >
+                    Send Your Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="contact-colum-text">
+            <h5>MieeCrochet</h5>
+            <p>
+            Nếu bạn có bất kỳ thắc mắc nào về sản phẩm, đơn hàng hoặc cần được tư vấn thêm, đừng ngần ngại liên hệ với MieeCrochet. 
+            Đội ngũ của chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn một cách tận tình, nhanh chóng.
+            MieeCrochet cam kết mang đến cho bạn không chỉ sản phẩm chất lượng mà còn dịch vụ chăm sóc khách hàng chu đáo, chuyên nghiệp. 
+            Hãy để chúng tôi đồng hành cùng bạn trên hành trình sáng tạo và lan tỏa sự ấm áp qua từng sợi len.
+            </p>
+            <div class="d-flex flex-column mb-3">
+              <h5>Liên hệ</h5>
+              <p class="logo">
+                <i class="fa fa-map-marker-alt"></i>Địa chỉ: Đại học Cần Thơ
+              </p>
+              <p class="logo">
+                <i class="fa fa-envelope"></i>Email: miee@lenmoc.vn
+              </p>
+              <p class="logo">
+                <i class="fa fa-phone-alt "></i>Điện thoại: 0123 456 789
+              </p>
+              
+            </div>
+            <div class="footer__social-links">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100085507778776"
+                            class="cotact__social-link"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="cotact__social-link"
+                            aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="cotact__social-link"
+                            aria-label="Pinterest"
+                            ><i class="fab fa-pinterest-p"></i
+                        ></a>
+                    </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact End -->
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__section">
+          <h3 class="footer__title">Về chúng tôi</h3>
+          <p class="footer__text">
+            Chào mừng bạn đến với Len Móc - nơi đam mê và sáng tạo với những sợi
+            len ấm áp. Chúng tôi cung cấp các sản phẩm len móc thủ công độc đáo
+            và nguyên liệu chất lượng cao.
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Danh mục</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Len Sợi</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Kim Móc</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Phụ Kiện</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Sản Phẩm Thủ Công</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Hỗ trợ khách hàng</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">FAQ</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Chính sách đổi trả</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Chính sách bảo mật</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Điều khoản dịch vụ</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Liên hệ</h3>
+          <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
+          <p class="footer__text">Điện thoại: 0123 456 789</p>
+          <p class="footer__text">Email: miee@lenmoc.vn</p>
+          <div class="footer__social-links">
+            <a
+              href="https://www.facebook.com/profile.php?id=100085507778776"
+              class="footer__social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="footer__social-link" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"
+              ><i class="fab fa-pinterest-p"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </footer>
+  </body>
+</html>
