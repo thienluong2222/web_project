@@ -1,22 +1,23 @@
-/* RESET */
+/* 🎯 RESET CSS - Xoá margin, padding mặc định của trình duyệt và set box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* 🎨 BODY - Đặt font chữ và background gradient */
 body {
   background: radial-gradient(circle at 30% 30%, #ffe3e3, #ffccd5, #f8bbd0);
   font-family: 'Poppins', sans-serif;
 }
 
-
+/* 📦 Layout chính bọc toàn bộ trang */
 .div__layout {
-  max-width: 100%; 
-  margin: 0 auto;
+  max-width: 100%; /* Chiều rộng tối đa */
+  margin: 0 auto;  /* Canh giữa */
 }
 
+/* 📦 Main content và sidebar */
 .page__main {
   display: flex;
   align-items: flex-start;
@@ -24,6 +25,7 @@ body {
   padding: 20px;
 }
 
+/* 📝 Sidebar - Danh mục bên trái */
 .sidebar {
   width: 250px;
   background-color: rgb(235, 207, 216);
@@ -32,16 +34,16 @@ body {
   border: 2px solid paleturquoise;
 }
 
-.sidebar__list, .sidebar__sublist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.sidebar__list, 
+.sidebar__sublist {
+  list-style: none; /* Xoá dấu chấm list */
 }
 
 .sidebar__item {
   margin-bottom: 10px;
 }
 
+/* 🎯 Nút mở danh mục con */
 .sidebar__toggle {
   cursor: pointer;
   font-weight: bold;
@@ -61,6 +63,7 @@ body {
   color: rgb(219, 126, 141);
 }
 
+/* 🛍️ Container chứa các sản phẩm */
 .produce__container {
   flex: 1;
   display: grid;
@@ -70,6 +73,7 @@ body {
 
 }
 
+/* 🎁 Box từng sản phẩm */
 .main__div--produce {
   background-color: #f0daef;
   border: 1px solid #000000;
@@ -111,10 +115,11 @@ body {
   border-radius: 0;
   border-bottom: 2px solid #f1f1f1;
   transition: transform 0.3s ease;
+  border-radius: 10px; /* Không bo góc hình */
 }
 
-.produce__container .div__img--produce:hover {
-  transform: scale(1.05);
+.div__img--produce:hover {
+  transform: scale(1.05); /* Phóng to khi hover */
 }
 
 /* 🎨 MÔ TẢ CÓ KHUNG */
@@ -162,6 +167,7 @@ body {
   }
 }
 
+/* 📱 Responsive Mobile */
 @media (max-width: 600px) {
   .produce__container {
     grid-template-columns: 1fr;
@@ -180,3 +186,7 @@ body {
   transition: transform 0.3s ease;
 }
 
+.infomation__fashion{
+  font-style: italic;
+  color: #e84a63;
+}
