@@ -9,14 +9,41 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="./css/nav.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-        <nav class="navbar">
+      <nav class="navbar">
         <div class="navbar__container">
+<<<<<<< HEAD
+          <ul class="navbar__links">
+            <li>
+              <a href="./trangchu.html" class="navbar__link">Trang Chủ</a>
+            </li>
+            <li>
+              <a href="./product_itmes.html" class="navbar__link">Sản Phẩm</a>
+            </li>
+            <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
+            <li><a href="#" class="navbar__link">Liên Hệ</a></li>
+          </ul>
+          <ul class="navbar__auth">
+            <li>
+              <a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a>
+            </li>
+            <li>
+              <a
+                href="./dangnhap.html"
+                class="navbar__auth-link navbar__auth-link--primary"
+                >Đăng Nhập</a
+              >
+            </li>
+          </ul>
+=======
             <ul class="navbar__links">
                 <li><a href="./trangchu.html" class="navbar__link">Trang Chủ</a></li>
                 <li><a href="./Catalog_Page.html" class="navbar__link">Sản Phẩm</a></li>
@@ -27,8 +54,9 @@
                 <li><a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a></li>
                 <li><a href="./dangnhap.html" class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a></li>
             </ul>
+>>>>>>> 421846306156f8e0dcab1f11a810cca09ebf4567
         </div>
-    </nav>
+      </nav>
     </header>
     <main class="main-profile">
       <div class="profile">
@@ -49,19 +77,22 @@
             <div class="profile-upload-type">Định dạng: .JPG, .PNG</div>
           </div>
           <div class="box_information">
-            <ul class="menu">
-              <li><i class="fa fa-user"></i> Thông Tin Của Tôi</li>
-              <li><i class="fa fa-credit-card"></i> Thông Tin Ngân Hàng</li>
-              <li><i class="fa fa-map-marker-alt"></i> Địa Chỉ Của Tôi</li>
-              <li><i class="fa fa-calendar-check"></i> Quản Lý Đặt Chỗ</li>
-              <li class="active">
-                <i class="fa fa-shopping-bag"></i> Đơn Hàng Của Tôi
+            <ul class="nav flex-column nav-tabs menu">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#tab-pane-1">
+                  <i class="fa fa-user"></i> Thông Tin Của Tôi
+                </a>
               </li>
-              <li><i class="fa fa-shield-alt"></i> Bảo Hành Của Tôi</li>
-              <li><i class="fa fa-gift"></i> Ưu Đãi Của Tôi</li>
-              <li><i class="fa fa-coins"></i> Điểm Thành Viên</li>
-              <li><i class="fa fa-money-bill-wave"></i> Công Nợ</li>
-              <li><i class="fa fa-comments"></i> Thông Tin Diễn Đàn</li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-pane-2">
+                  <i class="fa fa-map-marker-alt"></i> Địa Chỉ Của Tôi
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-pane-3">
+                  <i class="fa fa-shopping-bag"></i> Đánh giá
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -70,7 +101,11 @@
             <h1 class="profile-info-name">Hồ sơ của tôi</h1>
             <div class="profile-info-manage">Quản lý thông tin cá nhân</div>
           </div>
-          <div class="profile-info-form">
+          <div
+            class="profile-info-form tab-pane fade show active"
+            id="tab-pane-1"
+          >
+          <h1>Thông tin của bạn</h1>
             <form>
               <table>
                 <tr>
@@ -159,9 +194,78 @@
               </table>
             </form>
           </div>
+          <div class="tab-pane fade" id="tab-pane-2">
+            <h1>Địa chỉ của bạn:</h1>
+            <form action="">
+              <div class="form-group">
+                <label for="address">Địa chỉ cụ thể</label>
+                <textarea
+                  class="form-control"
+                  id="address"
+                  rows="3"
+                  placeholder="VD: Số nhà, tên đường, phường, quận..."
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="city">Tỉnh / Thành phố</label>
+                <select class="form-control" id="city">
+                  <option value="">Chọn tỉnh / thành phố</option>
+                  <option>Cần Thơ</option>
+                  <option>TP. Hồ Chí Minh</option>
+                  <option>Hà Nội</option>
+                  <option>Đà Nẵng</option>
+                  <option>Khác</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Lưu địa chỉ</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="tab-pane-3">
+            <h1>Đánh Giá Của bạn</h1>
+            <form>
+              <div class="form-group">
+                <label for="product">Sản phẩm đã mua</label>
+                <select class="form-control" id="product">
+                  <option value="">Chọn sản phẩm</option>
+                  <option>Móc khóa thú bông</option>
+                  <option>Gấu bông len handmade</option>
+                  <option>Ví da mini</option>
+                  <!-- thêm sản phẩm khác nếu cần -->
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="rating">Đánh giá</label>
+                <select class="form-control" id="rating">
+                  <option>★★★★★ - Rất hài lòng</option>
+                  <option>★★★★☆ - Hài lòng</option>
+                  <option>★★★☆☆ - Bình thường</option>
+                  <option>★★☆☆☆ - Không hài lòng</option>
+                  <option>★☆☆☆☆ - Rất tệ</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="review">Nội dung đánh giá</label>
+                <textarea
+                  class="form-control"
+                  id="review"
+                  rows="4"
+                  placeholder="Chia sẻ cảm nhận của bạn về sản phẩm..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">
+                Gửi đánh giá
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </main>
     <footer></footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

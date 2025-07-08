@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function addEventListenersToCartItems() {
         
         document.querySelectorAll('.cart-item__quantity-button--increase').forEach(button => {
-            button.removeEventListener('click', handleIncreaseQuantity); // Xóa listener cũ tránh trùng lặp
+            button.removeEventListener('click', handleIncreaseQuantity); 
             button.addEventListener('click', handleIncreaseQuantity);
         });
 
