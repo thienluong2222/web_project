@@ -10,20 +10,17 @@ body {
   color: #333;
 }
 /*canh toàn bộ là 1 cột*/
-.main__product-items {
-  display: flex;
-  flex-direction: column;
-}
+
 .product-describe {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
 }
 
 /* CỘT TRÁI: HÌNH ẢNH */
 .product-items-img {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
@@ -34,24 +31,6 @@ body {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-}
-.small-image-group {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 10px;
-}
-.small-image img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: border-color 0.3s ease;
-}
-.small-image img:hover {
-  border-color: #f63b71;
 }
 
 /* CỘT PHẢI: THÔNG TIN SẢN PHẨM */
@@ -195,32 +174,22 @@ body {
 /* Khung tổng */
 .product-items-information {
   overflow: hidden;
-  margin: 2rem auto;
+  margin: 2rem;
 }
 
 /* Tabs */
-.product-tabs {
-  display: flex;
-  gap: 1rem;
-}
-
 .tab {
-  color: #fff;
-  text-transform: uppercase;
-  padding: 1.5rem;
-  border-radius: 5px;
-  background-color: #1b8137;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid green;
 }
-
-/* Nội dung bên trong */
-.product-items-information-content {
-  border: 1px solid #1b8137;
-  border-radius: 5px;
-  padding: 1.5rem;
+.tab-content {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
   background-color: #fff;
-  color: #333;
-  line-height: 1.6;
-  font-size: 15px;
 }
 
 .product-items-information-description h2 {
@@ -245,21 +214,10 @@ body {
   margin-top: 1rem;
 }
 
-.product-items-information-description strong {
-  color: #d62828;
-  font-weight: bold;
-}
-
 .product-items-information-description::after {
   content: "";
   display: table;
   clear: both;
-}
-
-.product-items-information-description span.warning {
-  display: inline-block;
-  color: #d62828;
-  margin-top: 0.5rem;
 }
 
 /* RESPONSIVE */
