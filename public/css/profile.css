@@ -123,16 +123,26 @@ body {
 
 .profile-info-title {
   margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 .profile-info-title h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
-
+.profile-info-form-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
 .profile-info-manage {
   font-size: 0.9rem;
   color: #666;
+}
+
+.profile-info-form {
+  font-size: 1rem;
 }
 
 .profile-info-form table {
