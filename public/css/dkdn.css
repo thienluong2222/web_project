@@ -1,97 +1,198 @@
-header{
-        background-color:#ffa3ce ;
-}
-body {
-  font-family: Arial, sans-serif;
-
-}
-
-#navbarSupportedContent{
-    background-color:#ffa3ce ;
-    color-scheme: #ffa3ce;
-}
-.fa-magnifying-glass{
-    padding: 4px;
-    min-width: 50px; /*độ rộng bé nhất của phần tử là 30px*/
-    color:#ed4190;
-    text-align: center; /*canh giữa cho cái icon nó đều*/
-    background-color: #ffa3ce;
-    cursor: pointer;
-    font-size: 25px;
-}
-.fa-cart-shopping{
-    padding: 4px;
-    min-width: 30px; /*độ rộng bé nhất của phần tử là 30px*/
-    color:#ed4190;
-    text-align: center; /*canh giữa cho cái icon nó đều*/
-    background-color:#ffa3ce;
-    cursor: pointer;
-    font-size: 25px;
-}
-.main-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-} 
-
-.register-form{
-  width: 400px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  background-color: #ffffff;
-  max-width: 400px;  /* Hoặc 300px nếu muốn nhỏ hơn nữa */
-  margin: 50px auto; /* Căn giữa khối */
-}
-
-.login-form {
-  width: 450px;
-  padding: 50px;
-  padding-bottom: 10px;
-  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.1);
-  padding-bottom: 10px;
-  border-radius: 20px;
-  background-color: #ffffff;
-}
+/* Định dạng chung cho form đk 
 
 
-.text-center{
-  height: 10px;
-  font-family:'Quicksand', sans-serif ;
-  color: #ec3087;
-  font-weight: 200;
-  border: #ffa3ce;
-  border-radius: 20px;
-  /*background-color: #ffb5e0;*/
-  
+/* Tiêu đề form */
+.text-center_register {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 25px;
+  font-size: 25px;
 }
 
-.login-button{
+/* Style cho các input */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  border: 1px solid #ffa2a2;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: border 0.2s;
   width: 100%;
-  background: #ff69b4;
+  padding: 15px 20px;
+  background: rgb(255, 255, 255);
+  outline: none;
+  border-radius: 35px;
+  font-size: 16px;
+  color: #000000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+/* Style cho area*/
+textarea {
+  border: 1px solid #ffa2a2;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: border 0.2s;
+  width: 100%;
+  padding: 15px 20px;
+  background: rgb(255, 255, 255);
+  outline: none;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #000000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+/* Style cho các ô lỗi */
+#formdangky div[style*="color: red"] {
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+/* Nút "Tạo tài khoản" */
+.register-button {
+  background-color: #fb5d9c;
   color: white;
   padding: 12px;
   border: none;
   border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
   cursor: pointer;
-
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.login-button :hover {
-  background: #ff85c1;
+.register-button:hover {
+  background-color: #c2185b;
+}
+
+/* Ghi nhớ tài khoản */
+.form-footer {
+  margin-top: 2px;
+}
+
+.form-footer input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.form-footer label {
+  font-size: 15px;
+  color: #333;
+}
+
+/* Link đăng nhập */
+.text-form-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.text-form-footer a {
+  color: #e91e63;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text-form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive chỉnh kích thước giao diện theo màn hình (PC/phone) */
+@media (max-width: 768px) {
+  .register-form {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+.login-button{
+  background-color: #f44c8f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+.login-button:hover {
+  background-color: #c2185b;
 }
 
 
-.o input{
+.bgform {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 30px 0px;
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 5px; /* khoảng cách giữa các ô */
-  border-radius: 10px;
+  background-image: url("../images/wmremove-transformed.jpeg");
+  animation: gradientBG 15s ease infinite;
+  overflow: hidden;
+}
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.main-container_login,
+.main-container_register{
+  position: relative;
+  width: 380px;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.main-container_register::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  transform: skewX(-15deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+.main-container_login::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  transform: skewX(-15deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.main-container_login:hover::before {
+  left: 120%;
+}
+.main-container_register:hover::before {
+  left: 120%;
+}
+
+.o label{
+  color:#000000 ;
 }

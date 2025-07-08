@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-=======
-Lưu ý sau khi mở folder lên làm việc mọi người nhớ pull về trước để đảm bảo phiên bản mình đang code là phiên bản mới nhất nha
->>>>>>> 7dc45cc22a5ede84f2a0dd5b93472f97558c323f
+# **Lưu ý sau khi mở folder lên làm việc mọi người nhớ pull về trước để đảm bảo phiên bản mình đang code là phiên bản mới nhất nha**
 # ---NOTE---
-## - Từ ngày 3 - 4/7 học boostrap / javascript, hoàn thành html, css
-## - Cơ sở dữ liệu
-## - Trong ngày 8/7, hoàn thành js của trang của mình
-## - Tối chủ nhật, ngày 6/7 họp online
+## 1. Web tĩnh
+### a) Mỗi sản phẩm là 1 khối cấu trúc - sử dụng hard code (đồ án 9.3)
+### b) Sử dụng javascript để tạo phần tử mới (9.5 - 9.7)
+## 2. Web động
+### Sử dụng list of objects, framework (vd như node.js, express.js, ....)
+## 3. Web APIs
