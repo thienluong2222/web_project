@@ -9,6 +9,10 @@
   font-size: 25px;
 }
 
+.o label{                       /*chỉnh màu chữ label cho form đăng nhập*/
+  color:#000000 ;
+}
+
 /* Style cho các input */
 input[type="text"],
 input[type="email"],
@@ -186,6 +190,3 @@ textarea {
   left: 120%;
 }
 
-.o label{
-  color:#000000 ;
-}
