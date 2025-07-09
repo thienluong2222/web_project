@@ -8,6 +8,7 @@ const EmailElement = document.getElementById("email")
 const sdtElement = document.getElementById("sdt")
 const passwordElement = document.getElementById("InputPassword")
 const repasslElement = document.getElementById("ReInputPassword")
+const locationElement = document.getElementById("location")
 
 //Element liên quan đến lỗi//
 const errorUserName = document.getElementById("errorUserName")
@@ -15,6 +16,7 @@ const errorEmail = document.getElementById("errorEmail")
 const errorSdt = document.getElementById("errorSdt")
 const errorPassword = document.getElementById("errorPassword")
 const errorRePassword = document.getElementById("errorRePassword")
+const errorLocation = document.getElementById("errorLocation")
 
 //Lấy dữ liệu từ local
 const userLocal = JSON.parse(localStorage.getItem("user")) || [];
@@ -82,11 +84,16 @@ formdangky.addEventListener("submit", function(e){
     } else  {
         errorRePassword.style.display="none";
     }
-    
+    if ( !locationElement.value){
+        errorLocation.style.display="block"
+    }
+    else
+        errorLocation.style.display="none"
+
     //Gửi dữ liệu 
     if(UserNameElement.value && EmailElement.value 
         && sdtElement.value && passwordElement.value 
-        && repasslElement.value 
+        && repasslElement.value && locationElement.value 
         && passwordElement.value === repasslElement.value
         && validateEmail(EmailElement.value) ){
             //Lấy dữ liệu và tạo thành user
@@ -96,6 +103,7 @@ formdangky.addEventListener("submit", function(e){
                 email: EmailElement.value,
                 sdt: sdtElement.value,
                 password: passwordElement.value,
+                location: locationElement.value,
 
             };
             //Push user vào mảng userLocal
