@@ -12,9 +12,11 @@
     />
     <link rel="stylesheet" href="./css/nav.css" />
     <link href="css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/contact.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
+    <link href="./css/contact.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -42,14 +44,15 @@
         </div>
       </nav>
     </header>
-    <main class="main__contact">
+    <main class="main-contact">
       <!-- Contact Start -->
-      <div class="contact-container">
+      <div class="contact-content">
         <div class="text-center">
           <h2 class="title">
             <span class="title-text">LIÊN HỆ VỚI CHÚNG TÔI</span>
           </h2>
         </div>
+        <!-- form gửi thông tin -->
         <div class="contact-row">
           <div class="contact-colum">
             <div class="contact-form">
@@ -80,7 +83,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="subject"
+                    id="number"
                     placeholder="Số điện thoại của bạn"
                     required="required"
                     data-validation-required-message="Please enter your phone number"
@@ -108,17 +111,22 @@
                   </button>
                 </div>
               </form>
+              <!-- form gửi thông tin -->
             </div>
           </div>
+          <!-- Nội dung của contact -->
           <div class="contact-colum-text">
             <h5>MieeCrochet</h5>
             <p>
-            Nếu bạn có bất kỳ thắc mắc nào về sản phẩm, đơn hàng hoặc cần được tư vấn thêm, đừng ngần ngại liên hệ với MieeCrochet. 
-            Đội ngũ của chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn một cách tận tình, nhanh chóng.
-            MieeCrochet cam kết mang đến cho bạn không chỉ sản phẩm chất lượng mà còn dịch vụ chăm sóc khách hàng chu đáo, chuyên nghiệp. 
-            Hãy để chúng tôi đồng hành cùng bạn trên hành trình sáng tạo và lan tỏa sự ấm áp qua từng sợi len.
+              Nếu bạn có bất kỳ thắc mắc nào về sản phẩm, đơn hàng hoặc cần được
+              tư vấn thêm, đừng ngần ngại liên hệ với MieeCrochet. Đội ngũ của
+              chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn một cách tận tình,
+              nhanh chóng. MieeCrochet cam kết mang đến cho bạn không chỉ sản
+              phẩm chất lượng mà còn dịch vụ chăm sóc khách hàng chu đáo, chuyên
+              nghiệp. Hãy để chúng tôi đồng hành cùng bạn trên hành trình sáng
+              tạo và lan tỏa sự ấm áp qua từng sợi len.
             </p>
-            <div class="d-flex flex-column mb-3">
+            <div class="contact-colum__logo">
               <h5>Liên hệ</h5>
               <p class="logo">
                 <i class="fa fa-map-marker-alt"></i>Địa chỉ: Đại học Cần Thơ
@@ -127,29 +135,23 @@
                 <i class="fa fa-envelope"></i>Email: miee@lenmoc.vn
               </p>
               <p class="logo">
-                <i class="fa fa-phone-alt "></i>Điện thoại: 0123 456 789
+                <i class="fa fa-phone-alt"></i>Điện thoại: 0123 456 789
               </p>
-              
             </div>
+            <!-- Nội dung của contact -->
             <div class="footer__social-links">
-                        <a
-                            href="https://www.facebook.com/profile.php?id=100085507778776"
-                            class="cotact__social-link"
-                            ><i class="fab fa-facebook-f"></i
-                        ></a>
-                        <a
-                            href="#"
-                            class="cotact__social-link"
-                            aria-label="Instagram"
-                            ><i class="fab fa-instagram"></i
-                        ></a>
-                        <a
-                            href="#"
-                            class="cotact__social-link"
-                            aria-label="Pinterest"
-                            ><i class="fab fa-pinterest-p"></i
-                        ></a>
-                    </div>
+              <a
+                href="https://www.facebook.com/profile.php?id=100085507778776"
+                class="cotact__social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="cotact__social-link" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="cotact__social-link" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -222,7 +224,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer__bottom">
         <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
       </div>

@@ -9,7 +9,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f5f5;
 }
-
+/* tổng thể là flex chia 2 cột */
 .profile {
   display: flex;
   flex-direction: row;
@@ -39,7 +39,7 @@ body {
   object-fit: cover;
   border: 2px solid #ccc;
 }
-
+/* phần icon camera */
 .user-left-info__avatar-icon-camera {
   position: absolute;
   right: 0;
@@ -51,17 +51,21 @@ body {
   color: #333;
   cursor: pointer;
 }
-
+/* button upload */
 .profile-upload-file {
   margin-top: 10px;
   padding: 6px 12px;
-  background-color: #ee4d2d;
+  background-color: #e996bc;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-
+.profile-upload-file:hover {
+  background-color: #0069d9; /* màu khi hover */
+  border-color: #0069d9;
+}
+/* phần formet của file */
 .profile-upload-format {
   margin-top: 0.5rem;
   font-size: 0.75rem;
@@ -70,10 +74,20 @@ body {
 .box_information {
   margin-top: 2rem;
 }
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Màu chữ mặc định cho tất cả menu */
+.nav-tabs.menu .nav-link {
+  color: #e83e8c;
+}
+
+/* Khi được chọn (active) */
+.nav-tabs.menu .nav-link.active {
+  color: #e83e8c; /* Màu nổi bật khi đang chọn */
+  font-weight: bold;
+}
+
+/* Khi chưa active */
+.nav-tabs.menu .nav-link:not(.active) {
+  color: #888; /* Màu nhạt cho item chưa chọn */
 }
 
 .menu li {
@@ -82,28 +96,17 @@ body {
   gap: 10px;
   padding: 10px 14px;
   font-size: 15px;
-  color: #333;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s;
 }
-
-.menu li:hover {
-  background-color: #f0f0f0;
-}
-
+/* phần icon của thanh nav */
 .menu li i {
   font-size: 18px;
   width: 20px;
   text-align: center;
 }
-
-.menu li.active {
-  background-color: #fff3f3;
-  font-weight: bold;
-  color: #e74c3c;
-}
-
+/* phần nội dung sau khi chuyển tab */
 .tab-pane {
   display: none;
 }
@@ -120,7 +123,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 8px;
 }
-
+/* tiêu đề của form */
 .profile-info-title {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -131,7 +134,7 @@ body {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
-.profile-info-form-title{
+.profile-info-form-title {
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
@@ -140,25 +143,25 @@ body {
   font-size: 0.9rem;
   color: #666;
 }
-
+/* phần form nội dung đã đăng ký tài khoản */
 .profile-info-form {
   font-size: 1rem;
 }
-
+/* bảng nội dung */
 .profile-info-form table {
   width: 100%;
   border-collapse: collapse;
 }
-
+/* phần dòng */
 .profile-info-form td {
   padding: 0.75rem;
   vertical-align: top;
 }
-
+/* nhãn của dòng */
 .profile-info-form label {
   font-weight: 500;
 }
-
+/* phần input */
 .profile-info-form input[type="text"],
 .profile-info-form input[type="date"],
 .profile-info-form input[type="email"],
@@ -169,11 +172,11 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
+/* button lưu */
 .profile-info-form button {
   margin-top: 0.5rem;
   padding: 0.4rem 0.8rem;
-  background-color: #007bff;
+  background-color: #e996bc;
   color: white;
   border: none;
   border-radius: 4px;
@@ -192,4 +195,17 @@ input[type="radio"] {
 
 .profile-info-form input[type="file"] {
   display: none;
+}
+/* phần submit */
+.btn.btn-primary,
+.btn.btn-success {
+  background-color: #e996bc;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-success:hover {
+  background-color: #0069d9; /* màu khi hover */
+  border-color: #0069d9;
 }

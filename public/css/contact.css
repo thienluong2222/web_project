@@ -1,10 +1,9 @@
 /* Tổng thể */
-.main__contact {
+.main-contact {
   padding: 50px 15px;
   background-color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 /* Tiêu đề */
 .title {
   margin-bottom: 40px;
@@ -24,9 +23,8 @@
   vertical-align: middle;
   margin: 0 10px;
 }
-
 /* Bố cục cột */
-.contact-container {
+.contact-content {
   max-width: 100%;
   margin: auto;
 }
@@ -35,11 +33,14 @@
   flex-wrap: wrap;
   gap: 40px;
 }
+/* Phần form chiếm 40% */
 .contact-colum {
-  flex: 1 1 55%;
-}
-.contact-colum-text {
   flex: 1 1 40%;
+}
+/* phần nd chiếm 55% */
+.contact-colum-text {
+  flex: 1 1 55%;
+
 }
 
 .contact-colum-text h5{
@@ -52,7 +53,7 @@
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 .contact-form textarea {
   resize: vertical;
@@ -79,7 +80,7 @@
   margin-bottom: 10px;
 }
 .contact-colum-text p {
-  font-size: 14px;
+  font-size: 1.2rem;
   color: #444;
 }
 .logo i {

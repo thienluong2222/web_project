@@ -29,7 +29,7 @@
               <a href="./Catalog_Page.html" class="navbar__link">Sản Phẩm</a>
             </li>
             <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
-            <li><a href="#" class="navbar__link">Liên Hệ</a></li>
+            <li><a href="./contact.html" class="navbar__link">Liên Hệ</a></li>
           </ul>
           <ul class="navbar__auth">
             <li>
@@ -46,12 +46,12 @@
         </div>
       </nav>
     </header>
-    <!--Thanh điều hướng-->
-    <main class="main__product">
-      <div class="main__product-items">
-        <!--hình ảnh sản phẩm-->
+<!--Thanh điều hướng-->
+    <main class="main-product">
+      <div class="main-product__items">
+<!--hình ảnh sản phẩm-->
         <div class="product-describe">
-          <div class="product-items-img">
+          <div class="product-describe__img">
             <div class="single-image">
               <div
                 id="product-carousel"
@@ -71,12 +71,6 @@
                   <div class="carousel-item">
                     <img class="w-100 h-100" src="image/img4.jpg" alt="Image" />
                   </div>
-                  <!-- <div class="carousel-item">
-                    <img class="w-100 h-100" src="image/img5.jpg" alt="Image" />
-                  </div> -->
-                  <!-- <div class="carousel-item">
-                    <img class="w-100 h-100" src="image/img6.jpg" alt="Image" />
-                  </div> -->
                 </div>
                 <a
                   class="carousel-control-prev"
@@ -94,9 +88,10 @@
                 </a>
               </div>
             </div>
-            <!--phần content mô tả sản phẩm-->
-            <div class="product-items-content">
-              <h1 class="product-title">
+<!--hình ảnh sản phẩm-->      
+<!--phần content sản phẩm-->
+            <div class="product-describe__content">
+              <h1 class="content-title">
                 Móc Khoá Len Handmade Thú Ú Nu - Quà Tặng cho bạn bè, người yêu
                 - Giá rẻ -Tặng kèm kẹo cực ngon
               </h1>
@@ -113,9 +108,9 @@
                   <span class="rating-count"> | (100 đánh giá)</span>
                 </div>
               </div>
-              <div class="product-price">
-                <div class="product-price-value">₫47.200</div>
-                <div class="product-flash-sale-text">₫59.000</div>
+              <div class="product-describe__price">
+                <div class="price-value">₫47.200</div>
+                <div class="flash-sale-text">₫59.000</div>
               </div>
               <div class="product-mini-vouchers">
                 <h2 class="product-mini-vouchers-title">
@@ -149,8 +144,9 @@
               </div>
             </div>
           </div>
-          <!--Phần mô tả đánh giá-->
-
+<!--phần content sản phẩm-->
+<!--Phần mô tả đánh giá-->
+<!-- Thanh chuyển giữa mô tả và đánh giá -->
           <div class="product-items-information">
             <div
               class="product-tabs nav nav-tabs justify-content-center border-secondary mb-4"
@@ -168,6 +164,8 @@
                 >Đánh giá</a
               >
             </div>
+<!-- Thanh chuyển giữa mô tả và đánh giá -->
+<!-- Phần nội dung của mô tả -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="tab-pane-1">
                 <div class="product-items-information-description">
@@ -193,9 +191,12 @@
                   khi bấm đặt hàng.
                 </div>
               </div>
+<!-- Phần nội dung của mô tả -->
+<!-- Phần nội dung của đánh giá -->
               <div class="tab-pane fade" id="tab-pane-2">
                 <p>Chưa có đánh giá</p>
               </div>
+<!-- Phần nội dung của đánh giá -->
             </div>
           </div>
         </div>
@@ -208,12 +209,6 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-      // function changeImage(element) {
-      //   // Lấy đường dẫn của hình ảnh được click
-      //   var mainImg = document.getElementById("image1");
-      //   mainImg.src = element.src;
-      // }
-
       const minus = document.querySelector(".minus");
       const plus = document.querySelector(".plus");
       const quantity = document.getElementById("quantity");
@@ -222,7 +217,6 @@
         let current = parseInt(quantity.textContent);
         if (current >= 1) quantity.textContent = current - 1;
       };
-
       plus.onclick = () => {
         let current = parseInt(quantity.textContent);
         quantity.textContent = current + 1;

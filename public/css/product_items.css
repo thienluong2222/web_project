@@ -9,12 +9,6 @@ body {
   color: #333;
 }
 
-/* .main__product-items {
-  width: 100vw;
-  height: 100vh;
-} */
-/*canh toàn bộ là 1 cột*/
-
 .product-describe {
   display: flex;
   flex-direction: column;
@@ -28,7 +22,7 @@ body {
 }
 
 /* CỘT TRÁI: HÌNH ẢNH */
-.product-items-img {
+.product-describe__img {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -47,12 +41,12 @@ body {
 }
 
 /* CỘT PHẢI: THÔNG TIN SẢN PHẨM */
-.product-items-content {
+.product-describe__content {
   flex: 1;
   margin-left: 10px;
 }
 
-.product-title {
+.content-title {
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -71,17 +65,17 @@ body {
 }
 
 /* GIÁ */
-.product-price {
+.product-describe__price {
   font-size: 2rem;
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-.product-price-value {
+.price-value {
   color: #f63b71;
   font-weight: bold;
 }
-.product-flash-sale-text {
+.flash-sale-text {
   text-decoration: line-through;
   color: #999;
 }

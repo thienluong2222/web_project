@@ -20,21 +20,34 @@
     <header>
       <nav class="navbar">
         <div class="navbar__container">
-            <ul class="navbar__links">
-                <li><a href="./trangchu.html" class="navbar__link">Trang Chủ</a></li>
-                <li><a href="./Catalog_Page.html" class="navbar__link">Sản Phẩm</a></li>
-                <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
-                <li><a href="#" class="navbar__link">Liên Hệ</a></li>
-            </ul>
-            <ul class="navbar__auth">
-                <li><a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a></li>
-                <li><a href="./dangnhap.html" class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a></li>
-            </ul>
+          <ul class="navbar__links">
+            <li>
+              <a href="./trangchu.html" class="navbar__link">Trang Chủ</a>
+            </li>
+            <li>
+              <a href="./Catalog_Page.html" class="navbar__link">Sản Phẩm</a>
+            </li>
+            <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
+            <li><a href="./contact.html" class="navbar__link">Liên Hệ</a></li>
+          </ul>
+          <ul class="navbar__auth">
+            <li>
+              <a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a>
+            </li>
+            <li>
+              <a
+                href="./dangnhap.html"
+                class="navbar__auth-link navbar__auth-link--primary"
+                >Đăng Nhập</a
+              >
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
     <main class="main-profile">
       <div class="profile">
+        <!-- Phần upload hình ảnh -->
         <div class="profile-img">
           <div class="profile-img-user">
             <img
@@ -51,6 +64,8 @@
             <div class="profile-upload-size">Dung lượng file tối đa: 1MB</div>
             <div class="profile-upload-type">Định dạng: .JPG, .PNG</div>
           </div>
+          <!-- Phần upload hình ảnh -->
+          <!-- Phần thanh nav chuyển tab -->
           <div class="box_information">
             <ul class="nav flex-column nav-tabs menu">
               <li class="nav-item">
@@ -71,6 +86,8 @@
             </ul>
           </div>
         </div>
+        <!-- Phần thanh nav chuyển tab -->
+        <!-- Mô tả thông tin -->
         <div class="profile-info">
           <div class="profile-info-title">
             <h1 class="profile-info-name">Hồ sơ của tôi</h1>
@@ -80,7 +97,8 @@
             class="profile-info-form tab-pane fade show active"
             id="tab-pane-1"
           >
-          <h1 class="profile-info-form-title" >Thông tin của bạn</h1>
+            <!-- form thông tin đã điền ở đăng ký -->
+            <h1 class="profile-info-form-title">Thông tin của bạn</h1>
             <form>
               <table>
                 <tr>
@@ -163,14 +181,16 @@
                     <label></label>
                   </td>
                   <td>
-                    <button type="button">Lưu</button>
+                    <button type="button" class="profile-info-submit">Lưu</button>
                   </td>
                 </tr>
               </table>
             </form>
           </div>
+          <!-- form thông tin đã điền ở đăng ký -->
+          <!-- phần thông tin địa chỉ -->
           <div class="tab-pane fade" id="tab-pane-2">
-            <h1>Địa chỉ của bạn:</h1>
+            <h1>Địa chỉ của bạn</h1>
             <form action="">
               <div class="form-group">
                 <label for="address">Địa chỉ cụ thể</label>
@@ -195,6 +215,8 @@
               <button type="submit" class="btn btn-primary">Lưu địa chỉ</button>
             </form>
           </div>
+          <!-- phần thông tin địa chỉ -->
+          <!-- Phần thông tin đánh giá SP -->
           <div class="tab-pane fade" id="tab-pane-3">
             <h1>Đánh Giá Của bạn</h1>
             <form>
@@ -204,7 +226,7 @@
                   <option value="">Chọn sản phẩm</option>
                   <option>Móc khóa thú bông</option>
                   <option>Gấu bông len handmade</option>
-                  <option>Ví da mini</option>
+                  <option>Khác</option>
                   <!-- thêm sản phẩm khác nếu cần -->
                 </select>
               </div>
@@ -223,7 +245,7 @@
                 <textarea
                   class="form-control"
                   id="review"
-                  rows="4"
+                  rows="6"
                   placeholder="Chia sẻ cảm nhận của bạn về sản phẩm..."
                 ></textarea>
               </div>
@@ -232,10 +254,82 @@
               </button>
             </form>
           </div>
+          <!-- Phần thông tin đánh giá SP -->
         </div>
+        <!-- Mô tả thông tin -->
       </div>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__section">
+          <h3 class="footer__title">Về chúng tôi</h3>
+          <p class="footer__text">
+            Chào mừng bạn đến với Len Móc - nơi đam mê và sáng tạo với những sợi
+            len ấm áp. Chúng tôi cung cấp các sản phẩm len móc thủ công độc đáo
+            và nguyên liệu chất lượng cao.
+          </p>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Danh mục</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Len Sợi</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Kim Móc</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Phụ Kiện</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Sản Phẩm Thủ Công</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Hỗ trợ khách hàng</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">FAQ</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Chính sách đổi trả</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Chính sách bảo mật</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Điều khoản dịch vụ</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__title">Liên hệ</h3>
+          <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
+          <p class="footer__text">Điện thoại: 0123 456 789</p>
+          <p class="footer__text">Email: miee@lenmoc.vn</p>
+          <div class="footer__social-links">
+            <a
+              href="https://www.facebook.com/profile.php?id=100085507778776"
+              class="footer__social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="footer__social-link" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"
+              ><i class="fab fa-pinterest-p"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
