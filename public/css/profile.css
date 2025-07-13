@@ -199,9 +199,14 @@ input[type="radio"] {
 /* phần submit */
 .btn.btn-primary,
 .btn.btn-success {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
   background-color: #e996bc;
-  border-radius: 5px;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .btn.btn-primary:hover,

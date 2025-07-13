@@ -175,6 +175,7 @@ body {
   background-color: #f63b71;
   border: 3px solid #fff0f5;
   outline: none;
+  box-shadow: none;
 }
 
 /* Nút: Mua với Voucher */
@@ -203,6 +204,7 @@ body {
   background-color: #f63b71;
   border: 3px solid #fff0f5;
   outline: none;
+  box-shadow: none;
 }
 /* Đổi màu text con bên trong */
 .product-add-to-cart-voucher:hover .product-add-to-cart-voucher-text,
@@ -211,6 +213,14 @@ body {
 .product-add-to-cart-voucher:active .product-add-to-cart-voucher-price {
   color: #f8f8f8;
   outline: none;
+}
+
+.product-add-to-cart-btn:focus,
+.product-add-to-cart-btn:focus-visible,
+.product-add-to-cart-voucher:focus,
+.product-add-to-cart-voucher:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Khung tổng */

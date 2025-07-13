@@ -46,10 +46,10 @@
         </div>
       </nav>
     </header>
-<!--Thanh điều hướng-->
+    <!--Thanh điều hướng-->
     <main class="main-product">
       <div class="main-product__items">
-<!--hình ảnh sản phẩm-->
+        <!--hình ảnh sản phẩm-->
         <div class="product-describe">
           <div class="product-describe__img">
             <div class="single-image">
@@ -88,8 +88,8 @@
                 </a>
               </div>
             </div>
-<!--hình ảnh sản phẩm-->      
-<!--phần content sản phẩm-->
+            <!--hình ảnh sản phẩm-->
+            <!--phần content sản phẩm-->
             <div class="product-describe__content">
               <h1 class="content-title">
                 Móc Khoá Len Handmade Thú Ú Nu - Quà Tặng cho bạn bè, người yêu
@@ -109,12 +109,12 @@
                 </div>
               </div>
               <div class="product-describe__price">
-                <div class="price-value">₫47.200</div>
-                <div class="flash-sale-text">₫59.000</div>
+                <div class="price-value">47200</div>
+                <div class="flash-sale-text">59000</div>
               </div>
               <div class="product-mini-vouchers">
                 <h2 class="product-mini-vouchers-title">
-                   <i class="fas fa-gift"></i>
+                  <i class="fas fa-gift"></i>
                   Voucher giảm giá của shop
                 </h2>
                 <div class="product-mini-vouchers-list">
@@ -144,9 +144,9 @@
               </div>
             </div>
           </div>
-<!--phần content sản phẩm-->
-<!--Phần mô tả đánh giá-->
-<!-- Thanh chuyển giữa mô tả và đánh giá -->
+          <!--phần content sản phẩm-->
+          <!--Phần mô tả đánh giá-->
+          <!-- Thanh chuyển giữa mô tả và đánh giá -->
           <div class="product-items-information">
             <div
               class="product-tabs nav nav-tabs justify-content-center border-secondary mb-4"
@@ -164,8 +164,8 @@
                 >Đánh giá</a
               >
             </div>
-<!-- Thanh chuyển giữa mô tả và đánh giá -->
-<!-- Phần nội dung của mô tả -->
+            <!-- Thanh chuyển giữa mô tả và đánh giá -->
+            <!-- Phần nội dung của mô tả -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="tab-pane-1">
                 <div class="product-items-information-description">
@@ -191,12 +191,12 @@
                   khi bấm đặt hàng.
                 </div>
               </div>
-<!-- Phần nội dung của mô tả -->
-<!-- Phần nội dung của đánh giá -->
+              <!-- Phần nội dung của mô tả -->
+              <!-- Phần nội dung của đánh giá -->
               <div class="tab-pane fade" id="tab-pane-2">
                 <p>Chưa có đánh giá</p>
               </div>
-<!-- Phần nội dung của đánh giá -->
+              <!-- Phần nội dung của đánh giá -->
             </div>
           </div>
         </div>
@@ -220,6 +220,60 @@
       plus.onclick = () => {
         let current = parseInt(quantity.textContent);
         quantity.textContent = current + 1;
+      };
+      // Hàm định dạng tiền VND
+      const formatCurrency = (amount, locale = "vi-VN") => {
+        return new Intl.NumberFormat(locale, {
+          style: "currency",
+          currency: "VND",
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 2,
+        }).format(amount);
+      };
+
+      // Áp dụng định dạng giá
+      const priceValue = document.querySelector(".price-value");
+      const flashSaleText = document.querySelector(".flash-sale-text");
+
+      priceValue.textContent = formatCurrency(Number(priceValue.textContent));
+      flashSaleText.textContent = formatCurrency(
+        Number(flashSaleText.textContent)
+      );
+      // Thêm vào giỏ hàng (localStorage)
+      const addToCart = (item) => {
+        if (item.quantity <= 0) {
+          alert("Vui lòng chọn số lượng trước khi thêm vào giỏ!");
+          return;
+        }
+
+        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+        let index = cart.findIndex((p) => p.id === item.id);
+
+        if (index >= 0) {
+          cart[index].quantity += item.quantity;
+        } else {
+          cart.push(item);
+        }
+
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+        alert("Đã thêm vào giỏ hàng!");
+      };
+
+      // Mua ngay: lưu vào giỏ rồi chuyển trang
+      const buyNow = (item) => {
+        addToCart(item); // lưu vào giỏ
+        window.location.href = ""; // chuyển đến trang giỏ hàng
+      };
+
+      // Gán sự kiện
+      document.querySelector(".product-add-to-cart-btn").onclick = () => {
+        const item = getProductInfo();
+        addToCart(item);
+      };
+
+      document.querySelector(".product-add-to-cart-voucher").onclick = () => {
+        const item = getProductInfo();
+        buyNow(item);
       };
     </script>
   </body>
