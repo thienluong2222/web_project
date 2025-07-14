@@ -522,12 +522,12 @@
       "image_url": "/images/categories/``hu_kien.jpg"
     }
   ],
-  "users": [
+  "admin": [
     {
-      "id": "USER001",
-      "username": "nguyenvana",
-      "email": "vana@example.com",
-      "full_name": "Nguyễn Văn A",
+      "id": "admin",
+      "username": "Admin",
+      "email": "admin@gmail.com",
+      "full_name": "Đây là tài khoản admin",
       "address": "123 Đường ABC, Quận XYZ, TP.HCM",
       "phone": "0901234567"
     }
