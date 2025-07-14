@@ -36,7 +36,6 @@
         <ul class="sidebar__list">
           <li class="sidebar__item">
             <button class="sidebar__toggle" data-target="len">🧶 Len</button>
-          
           </li>
           <li class="sidebar__item">
             <button class="sidebar__toggle" data-target="thoitrang">👗 Thời Trang</button>
@@ -51,67 +50,25 @@
         <!-- 🧶 Len -->
         <section id="len" class="product-section">
           <h2 class="product-section__title">🧶 Len</h2>
-          <div class="produce__container">
-            <div class="main__div--produce">
-              <img src="./Len Picture/Len Milk Contton Den 4.jpeg" alt="Len Milk Cotton Đen" class="div__img--produce">
-              <div class="div__produce-item--info">
-                <p class="item--id">Mã Sản Phẩm : 005</p>
-                <h3 class="item--name">Len Milk cotton Đen</h3>
-                <hr>
-                <h2>7,500đ</h2>
-              </div>
-              <a class="div__add-cart" href="#">Xem Chi Tiết</a>
-            </div>
-          </div>
+          <div class="produce__container"></div> <!-- container để JS render sản phẩm -->
         </section>
 
         <!-- 👗 Thời Trang -->
         <section id="thoitrang" class="product-section">
           <h2 class="product-section__title">👗 Thời Trang</h2>
-          <div class="produce__container">
-            <div class="main__div--produce">
-              <img src="./ThoiTrang/Áo Khoác len đen.png" alt="Áo Khoác Len Cardigan" class="div__img--produce">
-              <div class="div__produce-item--info">
-                <p class="item--id">Mã Sản Phẩm : 101</p>
-                <h3 class="item--name">Áo Khoác Len Cardigan</h3>
-                <section class="produce__fashion">   
-                  <p class="infomation__fashion">Thông tin:</p>
-                  <hr>
-                  <p class="info--fashion">
-                    Áo dài: 40cm <br>
-                    Ngực: 98cm <br>
-                    Chiều dài tay áo: 77cm
-                  </p>
-                </section>
-                <hr>
-                <h2>320,000đ</h2>
-              </div>
-              <a class="div__add-cart" href="#">Xem Chi Tiết</a>
-            </div>
-          </div>
+          <div class="produce__container"></div>
         </section>
 
         <!-- 📱 Phụ kiện -->
         <section id="phukien" class="product-section">
           <h2 class="product-section__title">📱 Phụ Kiện Đan Móc Len</h2>
-          <div class="produce__container">
-            <div class="main__div--produce">
-              <img src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg" alt="Máy Đếm Dòng Cơ" class="div__img--produce">
-              <div class="div__produce-item--info">
-                <p class="item--id">Mã Sản Phẩm : 201</p>
-                <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
-                <hr>
-                <h2>50,000đ</h2>
-              </div>
-              <a class="div__add-cart" href="#">Add to cart</a>
-            </div>
-          </div>
+          <div class="produce__container"></div>
         </section>
       </div>
     </main>
   </div>
 
-  <!-- JavaScript scroll mượt -->
+  <!-- JavaScript -->
   <script>
     const sidebarButtons = document.querySelectorAll('.sidebar__toggle');
     sidebarButtons.forEach(button => {
@@ -124,8 +81,45 @@
       });
     });
 
+    // 🚀 Load sản phẩm từ JSON
+    async function loadProducts() {
+      try {
+        const response = await fetch('public/products.json'); // đường dẫn JSON
+        if (!response.ok) {
+          throw new Error('Không tìm thấy file products.json');
+        }
+        const data = await response.json();
+        const products = data.products;
 
+        products.forEach(product => {
+          // Xác định section từ category_id
+          let categoryId = product.category_id.toLowerCase().replace(/\s/g, '');
+          if (categoryId === "dụngcụđanlen") categoryId = "phukien"; // mapping tên nếu khác
+
+          const sectionContainer = document.querySelector(`#${categoryId} .produce__container`);
+          if (sectionContainer) {
+            // Tạo HTML sản phẩm
+            const productHTML = `
+              <div class="main__div--produce">
+                <img src="${product.image_url}" alt="${product.name}" class="div__img--produce">
+                <div class="div__produce-item--info">
+                  <p class="item--id">Mã Sản Phẩm : ${product.id.toUpperCase()}</p>
+                  <h3 class="item--name">${product.name}</h3>
+                  <hr>
+                  <h2>${product.price.toLocaleString()}đ</h2>
+                </div>
+                <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+              </div>
+            `;
+            sectionContainer.insertAdjacentHTML('beforeend', productHTML);
+          }
+        });
+      } catch (err) {
+        console.error('Lỗi load sản phẩm:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProducts);
   </script>
-
 </body>
 </html>
