@@ -17,6 +17,10 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
         <link rel="stylesheet" href="./css/cart.css" />
         <link rel="stylesheet" href="./css/nav.css" />
     </head>
@@ -56,6 +60,20 @@
                             >
                         </li>
                     </ul>
+                    <ul class="navbar__after" style="display: none">
+                        <li>
+                            <a href="./cart.html" class="navbar__cart"
+                                ><i class="fa fa-shopping-bag cart-counter"
+                                    >0</i
+                                ></a
+                            >
+                        </li>
+                        <li>
+                            <a href="./profile.html" class="navbar__profile"
+                                ><i class="fa fa-user-o"></i
+                            ></a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </header>
@@ -74,7 +92,9 @@
                         <h3 class="cart-item__name">Cuộn Len Hồng Cao Cấp</h3>
                         <p class="cart-item__price">55.000 VNĐ</p>
                         <div class="cart-item__quantity">
-                            <button class="cart-item__quantity-button--decrease">
+                            <button
+                                class="cart-item__quantity-button--decrease"
+                            >
                                 -
                             </button>
                             <input
@@ -82,7 +102,9 @@
                                 value="1"
                                 class="cart-item__quantity-input"
                             />
-                            <button class="cart-item__quantity-button--increase">
+                            <button
+                                class="cart-item__quantity-button--increase"
+                            >
                                 +
                             </button>
                         </div>
@@ -248,5 +270,6 @@
                 <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
             </div>
         </footer>
+        <script src="./js/main.js"></script>
     </body>
 </html>
