@@ -10,6 +10,29 @@ if (localStorage.getItem("isLoginedIn") === "true") {
     profileButton.setAttribute("style", "display: flex");
 }
 
+//Lấy dữ liệu từ data.json
+const dataPath = '../src/data.json'
+fetch(dataPath)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(products) {
+        let htmls = products.map(function(product) {
+            return `<div class="main__div--produce">
+        //   <img src="${product.products.image_url}" alt="img" class="div__img--produce">
+          <div class="div__produce-item--info">
+            <p class="item--id">Mã Sản  Phẩm : ${product.products.id}</p>
+            <h3 class="item--name">${product.products.name}</h3>
+            <hr>
+            <h2>  ${product.products.price}</h2>
+          </div>
+          <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+        </div>`;
+        });
+        var html = htmls.join('');
+        document.getElementById('Len').innerHTML = html;
+    });
+
 (function ($) {
     "use strict";
 
