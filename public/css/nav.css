@@ -97,6 +97,20 @@
             border-color: var(--light-pink);
             color: var(--primary-pink);
         }
+        .navbar__after{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar__profile {
+            color: var(--white-color);
+            justify-content: center;
+        }
+        .navbar__cart {
+            color: var(--white-color);
+        }
         .footer {
             background-color: var(--footer-bg); 
             color: var(--footer-text); 

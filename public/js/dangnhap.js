@@ -19,7 +19,9 @@ formdangnhap.addEventListener("submit", function(e) {
     if (!findUser) {
         AlertError.style.display = "block";//Nếu không thì thông báo lỗi để user nhập lại
     } else {
-        window.location.href = "trangchu.html";//Nếu có thì đăng nhập thành công và chuyển về trang chủ
+        localStorage.setItem('isLoginedIn', true)
+        window.location.href = "trangchu.html";
+        //Nếu có thì đăng nhập thành công và chuyển về trang chủ
     }
 });
 
