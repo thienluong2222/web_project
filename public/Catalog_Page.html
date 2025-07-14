@@ -33,17 +33,20 @@
     <main class="page__main">
       <!-- SIDEBAR -->
       <aside class="sidebar">
-        <h3 class="sidebar__h3">Mục Sản Phẩm</h3>
+        <h3 class="sidebar__h3">  Mục Sản Phẩm</h3>
+        <hr>
         <ul class="sidebar__list">
           <li class="sidebar__item">
             <button class="sidebar__toggle" data-target="len">🧶 Len</button>
-          
           </li>
           <li class="sidebar__item">
             <button class="sidebar__toggle" data-target="thoitrang">👗 Thời Trang</button>
           </li>
           <li class="sidebar__item">
             <button class="sidebar__toggle" data-target="phukien">📱 Dụng Cụ Đan Len</button>
+          </li>
+           <li class="sidebar__item">
+            <button class="sidebar__toggle" data-target="top">🔝 Quay Về Đầu Trang</button>
           </li>
         </ul>
       </aside>
@@ -200,17 +203,21 @@
 
   <!-- JavaScript scroll mượt -->
   <script>
-    const sidebarButtons = document.querySelectorAll('.sidebar__toggle');
+        const sidebarButtons = document.querySelectorAll('.sidebar__toggle');
     sidebarButtons.forEach(button => {
       button.addEventListener('click', () => {
         const targetId = button.getAttribute('data-target');
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (targetId === "top") {
+          // ✅ Nếu là "top" thì scroll về đầu trang
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+       } else {
+          const targetSection = document.getElementById(targetId);
+         if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+       }
       });
     });
-
 
   </script>
   <script src="./js/main.js"></script>

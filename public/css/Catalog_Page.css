@@ -253,3 +253,9 @@ body {
     background: #dc3545;
     color: #fff;
 }
+
+.sidebar__h3{
+    color: #ff5e78;
+    font-family: "Georgia", serif;
+    font-style: italic;
+    }
