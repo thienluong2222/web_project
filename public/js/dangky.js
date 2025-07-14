@@ -98,7 +98,7 @@ formdangky.addEventListener("submit", function(e){
         && validateEmail(EmailElement.value) ){
             //Lấy dữ liệu và tạo thành user
             const user= {
-                userID: Math.ceil(Math.random() * 1000000000),
+                userID: Math.ceil(Math.random() * 1000000000),  //Tạo id//
                 UserName:  UserNameElement.value,
                 email: EmailElement.value,
                 sdt: sdtElement.value,
