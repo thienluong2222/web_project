@@ -61,6 +61,14 @@ body {
     transition: color 0.3s ease;
 }
 
+/* 🎯🎯🎯 FIX: giữ icon và text cùng hàng, không xuống dòng */
+.sidebar__toggle {
+    display: flex;            /* NEW: icon + text cùng 1 hàng */
+    align-items: center;      /* NEW: căn giữa theo chiều dọc */
+    gap: 8px;                 /* NEW: khoảng cách giữa icon và text */
+    white-space: nowrap;      /* NEW: giữ text trên 1 dòng */
+}
+
 .sidebar__toggle:hover {
     color: rgb(219, 126, 141);
 }
