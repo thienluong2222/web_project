@@ -1,0 +1,65 @@
+{
+    "products": [
+        {
+            "id": "001",
+            "name": "Móc Khoá Len Handmade Thú Ú Nu - Quà Tặng cho bạn bè, người yêu - Giá rẻ -Tặng kèm kẹo cực ngon",
+            "category_id": "CAT001",
+            "price": 47000,
+            "original_price": 50000,
+            "description": "Móc khoá len handmade thú ú nu là một sản phẩm độc đáo, dễ thương, được làm từ len cao cấp, an toàn cho sức khoẻ. Sản phẩm không chỉ là một món quà ý nghĩa mà còn là một phụ kiện thời trang bắt mắt.
+Thông tin chi tiết
+Chất liệu: Len cao cấp
+Kích thước: 10cm x 10cm
+Màu sắc: Nhiều màu
+❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.
+❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
+            "image_url": "D:/Thien/project/web_project/public/image/img1.jpg",
+            "alt_images": [
+                "/images/products/sp001_ao_thun_side.jpg",
+                "/images/products/sp001_ao_thun_back.jpg"
+            ],
+            "variants": [
+                {
+                    "color": ["Đen", "Đỏ"],
+                    "stock": {
+                        "Đen": 10,
+                        "Đỏ": 15
+                        
+                    }
+                }
+            ],
+            "is_featured": true,
+            "rating": 4.5
+        }
+    ],
+    "categories": [
+        {
+            "id": "Len",
+            "name": "Len",
+            "description": "Các loại áo dành cho nam giới: áo thun, áo sơ mi, áo khoác...",
+            "image_url": "/images/categories/ao_nam.jpg"
+        },
+        {
+            "id": "Thoi_Trang",
+            "name": "Thời trang",
+            "description": "Các loại quần dành cho nam giới: quần jeans, quần tây, quần short...",
+            "image_url": "/images/categories/quan_nam.jpg"
+        },
+        {
+            "id": "Phu_Kien",
+            "name": "Phụ kiện",
+            "description": "Thắt lưng, ví, mũ, kính mắt...",
+            "image_url": "/images/categories/``hu_kien.jpg"
+        }
+    ],
+    "users": [
+        {
+            "id": "USER001",
+            "username": "nguyenvana",
+            "email": "vana@example.com",
+            "full_name": "Nguyễn Văn A",
+            "address": "123 Đường ABC, Quận XYZ, TP.HCM",
+            "phone": "0901234567"
+        }
+    ]
+}
