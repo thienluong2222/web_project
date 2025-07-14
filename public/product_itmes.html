@@ -53,37 +53,43 @@
         <div class="product-describe">
           <div class="product-describe__img">
             <div class="single-image">
-              <div
-                id="product-carousel"
-                class="carousel slide"
-                data-ride="carousel"
-              >
-                <div class="carousel-inner border">
-                  <div class="carousel-item active">
-                    <img class="w-100 h-100" src="image/img1.jpg" alt="Image" />
+              <div id="product-carousel">
+                <div class="img">
+                  <div class="img-item active">
+                    <img
+                      class="w-100 h-100"
+                      src="./image_sp/Len Picture/sp001_01_len_yarnart_jeans.jpeg"
+                      alt="Image"
+                    />
                   </div>
-                  <div class="carousel-item">
-                    <img class="w-100 h-100" src="image/img2.jpg" alt="Image" />
+                  <div class="img-item">
+                    <img
+                      class="w-100 h-100"
+                      src="./image_sp/Len Picture/sp001_len_yarnart_jeans.png"
+                      alt="Image"
+                    />
                   </div>
-                  <div class="carousel-item">
-                    <img class="w-100 h-100" src="image/img3.jpg" alt="Image" />
+                  <div class="img-item">
+                    <img
+                      class="w-100 h-100"
+                      src="./image_sp/Len Picture/sp002_01_len_xulamtoc.jpeg"
+                      alt="Image"
+                    />
                   </div>
-                  <div class="carousel-item">
-                    <img class="w-100 h-100" src="image/img4.jpg" alt="Image" />
+                  <div class="img-item">
+                    <img
+                      class="w-100 h-100"
+                      src="./image_sp/Len Picture/sp002_len_xulamtoc.png"
+                      alt="Image"
+                    />
                   </div>
                 </div>
-                <a
-                  class="carousel-control-prev"
-                  href="#product-carousel"
-                  data-slide="prev"
-                >
+
+                <!-- Nút điều hướng -->
+                <a class="carousel-control-prev" href="#">
                   <i class="fa fa-2x fa-angle-left text-dark"></i>
                 </a>
-                <a
-                  class="carousel-control-next"
-                  href="#product-carousel"
-                  data-slide="next"
-                >
+                <a class="carousel-control-next" href="#">
                   <i class="fa fa-2x fa-angle-right text-dark"></i>
                 </a>
               </div>
@@ -131,15 +137,13 @@
                   <div class="product-quantity-btn plus">+</div>
                 </div>
               </div>
+              <div></div>
               <div class="product-add-to-cart">
                 <button class="product-add-to-cart-btn">
                   <i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
                 </button>
                 <button class="product-add-to-cart-voucher">
-                  <div class="product-add-to-cart-voucher-text">
-                    Mua với voucher
-                  </div>
-                  <div class="product-add-to-cart-voucher-price">₫47.200</div>
+                  Mua với voucher
                 </button>
               </div>
             </div>
@@ -148,26 +152,14 @@
           <!--Phần mô tả đánh giá-->
           <!-- Thanh chuyển giữa mô tả và đánh giá -->
           <div class="product-items-information">
-            <div
-              class="product-tabs nav nav-tabs justify-content-center border-secondary mb-4"
-            >
-              <a
-                class="tab nav-item nav-link active"
-                data-toggle="tab"
-                href="#tab-pane-1"
-                >Mô tả sản phẩm</a
-              >
-              <a
-                class="tab nav-item nav-link"
-                data-toggle="tab"
-                href="#tab-pane-2"
-                >Đánh giá</a
-              >
+            <div class="tabs">
+              <button class="tab active" data-tab="desc">Mô tả sản phẩm</button>
+              <button class="tab" data-tab="review">Đánh giá</button>
             </div>
             <!-- Thanh chuyển giữa mô tả và đánh giá -->
             <!-- Phần nội dung của mô tả -->
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="tab-pane-1">
+              <div id="desc" class="tab-pane active">
                 <div class="product-items-information-description">
                   Móc khoá len handmade thú ú nu là một sản phẩm độc đáo, dễ
                   thương, được làm từ len cao cấp, an toàn cho sức khoẻ. Sản
@@ -193,7 +185,7 @@
               </div>
               <!-- Phần nội dung của mô tả -->
               <!-- Phần nội dung của đánh giá -->
-              <div class="tab-pane fade" id="tab-pane-2">
+              <div id="review" class="tab-pane">
                 <p>Chưa có đánh giá</p>
               </div>
               <!-- Phần nội dung của đánh giá -->
@@ -203,78 +195,6 @@
       </div>
     </main>
     <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      const minus = document.querySelector(".minus");
-      const plus = document.querySelector(".plus");
-      const quantity = document.getElementById("quantity");
-
-      minus.onclick = () => {
-        let current = parseInt(quantity.textContent);
-        if (current >= 1) quantity.textContent = current - 1;
-      };
-      plus.onclick = () => {
-        let current = parseInt(quantity.textContent);
-        quantity.textContent = current + 1;
-      };
-      // Hàm định dạng tiền VND
-      const formatCurrency = (amount, locale = "vi-VN") => {
-        return new Intl.NumberFormat(locale, {
-          style: "currency",
-          currency: "VND",
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 2,
-        }).format(amount);
-      };
-
-      // Áp dụng định dạng giá
-      const priceValue = document.querySelector(".price-value");
-      const flashSaleText = document.querySelector(".flash-sale-text");
-
-      priceValue.textContent = formatCurrency(Number(priceValue.textContent));
-      flashSaleText.textContent = formatCurrency(
-        Number(flashSaleText.textContent)
-      );
-      // Thêm vào giỏ hàng (localStorage)
-      const addToCart = (item) => {
-        if (item.quantity <= 0) {
-          alert("Vui lòng chọn số lượng trước khi thêm vào giỏ!");
-          return;
-        }
-
-        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
-        let index = cart.findIndex((p) => p.id === item.id);
-
-        if (index >= 0) {
-          cart[index].quantity += item.quantity;
-        } else {
-          cart.push(item);
-        }
-
-        localStorage.setItem("cartItems", JSON.stringify(cart));
-        alert("Đã thêm vào giỏ hàng!");
-      };
-
-      // Mua ngay: lưu vào giỏ rồi chuyển trang
-      const buyNow = (item) => {
-        addToCart(item); // lưu vào giỏ
-        window.location.href = ""; // chuyển đến trang giỏ hàng
-      };
-
-      // Gán sự kiện
-      document.querySelector(".product-add-to-cart-btn").onclick = () => {
-        const item = getProductInfo();
-        addToCart(item);
-      };
-
-      document.querySelector(".product-add-to-cart-voucher").onclick = () => {
-        const item = getProductInfo();
-        buyNow(item);
-      };
-    </script>
+    <script src="./js/product-items.js"></script>
   </body>
 </html>
