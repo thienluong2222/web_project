@@ -1,245 +1,261 @@
 /* 🎯 RESET CSS - Xoá margin, padding mặc định của trình duyệt và set box-sizing */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* 🎨 BODY - Đặt font chữ và background gradient */
 body {
-  background: radial-gradient(circle at 30% 30%, #ffe3e3, #ffccd5, #f8bbd0);
-  font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 30% 30%, #ffe3e3, #ffccd5, #f8bbd0);
+    font-family: "Poppins", sans-serif;
 }
 
 /* 📦 Layout chính bọc toàn bộ trang */
 .div__layout {
-  max-width: 100%; /* Chiều rộng tối đa */
-  margin: 0 auto;  /* Canh giữa */
+    max-width: 100%; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Canh giữa */
 }
 
 /* 📦 Main content và sidebar */
 .page__main {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
 }
 
 /* 📝 Sidebar - Danh mục bên trái */
 .sidebar {
-  width: 250px;
-  background-color: rgb(235, 207, 216);
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid paleturquoise;
+    width: 250px;
+    background-color: rgb(235, 207, 216);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid paleturquoise;
+    position: sticky;
+    top: 20px;
 }
 
-.sidebar__list, 
+.sidebar__list,
 .sidebar__sublist {
-  list-style: none; /* Xoá dấu chấm list */
+    list-style: none; /* Xoá dấu chấm list */
 }
 
 .sidebar__item {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* 🎯 Nút mở danh mục con */
 .sidebar__toggle {
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 8px 0;
-  border:none;
-  background: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-  color: #4b383f;
-  transition: color 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px 0;
+    border: none;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: #4b383f;
+    transition: color 0.3s ease;
+}
+
+/* 🎯🎯🎯 FIX: giữ icon và text cùng hàng, không xuống dòng */
+.sidebar__toggle {
+    display: flex;            /* NEW: icon + text cùng 1 hàng */
+    align-items: center;      /* NEW: căn giữa theo chiều dọc */
+    gap: 8px;                 /* NEW: khoảng cách giữa icon và text */
+    white-space: nowrap;      /* NEW: giữ text trên 1 dòng */
 }
 
 .sidebar__toggle:hover {
-  color: rgb(219, 126, 141);
+    color: rgb(219, 126, 141);
 }
 
 /* 🛍️ Container chứa các sản phẩm */
 .produce__container {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 10px;
-
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
 }
 
 /* 🎁 Box từng sản phẩm */
 .main__div--produce {
-  background-color: #f0daef;
-  border: 1px solid #000000;
-  padding: 10px;
-  border-radius: 50px; 
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f0daef;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .main__div--produce:hover {
-  transform: translateY(-20px);
-  box-shadow: 0 8px 20px rgba(239, 0, 0, 0.2);
+    transform: translateY(-20px);
+    box-shadow: 0 8px 20px rgba(239, 0, 0, 0.2);
 }
 
 /* 🎨 KHỐI SẢN PHẨM ĐẸP HƠN */
 .produce__container .main__div--produce {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .produce__container .main__div--produce:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* 🎨 HÌNH ẢNH */
 .produce__container .div__img--produce {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 0;
-  border-bottom: 2px solid #f1f1f1;
-  transition: transform 0.3s ease;
-  border-radius: 10px; /* Không bo góc hình */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+    border-bottom: 2px solid #f1f1f1;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Không bo góc hình */
 }
 
 .div__img--produce:hover {
-  transform: scale(1.05); /* Phóng to khi hover */
+    transform: scale(1.05); /* Phóng to khi hover */
 }
 
 /* 🎨 MÔ TẢ CÓ KHUNG */
 .produce__container .div__produce-item--info {
-  width: 90%;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 15px 0;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
-  text-align: justify;
+    width: 90%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: justify;
 }
 
 .produce__container .div__produce-item--info::before {
-  content: "📝 Mô Tả";
-  display: block;
-  font-weight: bold;
-  color: #e84a63;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
+    content: "📝 Mô Tả";
+    display: block;
+    font-weight: bold;
+    color: #e84a63;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
 /* 🎨 NÚT ADD TO CART */
 .produce__container .div__add-cart {
-  display: inline-block;
-  margin: 10px 0;
-  padding: 10px 20px;
-  background-color: #ff5e78;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #ff5e78;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .produce__container .div__add-cart:hover {
-  background-color: #e84a63;
-  transform: scale(1.05);
+    background-color: #e84a63;
+    transform: scale(1.05);
 }
 
 /* 📱 RESPONSIVE */
 @media (max-width: 1024px) {
-  .produce__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .produce__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* 📱 Responsive Mobile */
 @media (max-width: 600px) {
-  .produce__container {
-    grid-template-columns: 1fr;
-  }
+    .produce__container {
+        grid-template-columns: 1fr;
+    }
 }
-
 
 .div__add-cart:hover {
-  background-color: #e84a63;
+    background-color: #e84a63;
 }
 .div__img--produce {
-  width: 160px;       
-  height: auto;
-  object-fit: cover;  
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+    width: 160px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.infomation__fashion{
-  font-style: italic;
-  color: #e84a63;
+.infomation__fashion {
+    font-style: italic;
+    color: #e84a63;
 }
 
 .modal {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 .modal.hidden {
-  display: none;
+    display: none;
 }
 .modal__content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px;
-  box-shadow: 0 0 10px #000;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 10px #000;
 }
 .modal__content h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 .modal__content label {
-  display: block;
-  margin-top: 10px;
+    display: block;
+    margin-top: 10px;
 }
-.modal__content input, .modal__content select {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+.modal__content input,
+.modal__content select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
 }
 .modal__buttons {
-  margin-top: 15px;
-  text-align: right;
+    margin-top: 15px;
+    text-align: right;
 }
 .modal__buttons button {
-  padding: 8px 12px;
-  margin-left: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 #save-product {
-  background: #28a745;
-  color: #fff;
+    background: #28a745;
+    color: #fff;
 }
 #cancel-product {
-  background: #dc3545;
-  color: #fff;
+    background: #dc3545;
+    color: #fff;
 }
 
+.sidebar__h3{
+    color: #ff5e78;
+    font-family: "Georgia", serif;
+    font-style: italic;
+    }
