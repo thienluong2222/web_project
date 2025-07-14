@@ -29,97 +29,58 @@
       </nav>
     </header>
 
-
-
     <main class="page__main">
       <!-- SIDEBAR -->
       <aside class="sidebar">
         <h3 class="sidebar__h3">Danh Mục Sản Phẩm</h3>
         <ul class="sidebar__list">
           <li class="sidebar__item">
-            <button class="sidebar__toggle">Búp bê</button>
-            <ul class="sidebar__sublist">
-              <li><a href="#">Búp bê gỗ</a></li>
-              <li><a href="#">Búp bê len</a></li>
-              <li><a href="#">Búp bê baby</a></li>
-            </ul>
+            <button class="sidebar__toggle" data-target="len">🧶 Len</button>
+          
           </li>
-
           <li class="sidebar__item">
-            <button class="sidebar__toggle">Len</button>
-            <ul class="sidebar__sublist">
-              <li><a href="#">Len sợi nhỏ</a></li>
-              <li><a href="#">Len sợi to</a></li>
-              <li><a href="#">Len sợi to ơi là to</a></li>
-            </ul>
+            <button class="sidebar__toggle" data-target="thoitrang">👗 Thời Trang</button>
           </li>
-
           <li class="sidebar__item">
-            <button class="sidebar__toggle">Dụng cụ</button>
-            <ul class="sidebar__sublist">
-              <li><a href="#">Dụng cụ 1</a></li>
-              <li><a href="#">Dụng cụ 2</a></li>
-              <li><a href="#">Dụng cụ 3</a></li>
-            </ul>
-          </li>
-
-          <li class="sidebar__item">
-            <button class="sidebar__toggle">Cha</button>
-            <ul class="sidebar__sublist">
-              <li><a href="#">Con 1</a></li>
-              <li><a href="#">Con 2</a></li>
-              <li><a href="#">Con 3</a></li>
-            </ul>
+            <button class="sidebar__toggle" data-target="phukien">📱 Dụng Cụ Đan Len</button>
           </li>
         </ul>
       </aside>
 
       <div class="main__content">
         <!-- 🧶 Len -->
-      <section class="product-section">
+        <section id="len" class="product-section">
           <h2 class="product-section__title">🧶 Len</h2>
-
-        <div class="produce__container">
-          
-        
-
-
-        
-        
-        <div class="main__div--produce">
-          <img src="./Len Picture/Len Milk Contton Den 4.jpeg" alt="img1" class="div__img--produce">
-          <div class="div__produce-item--info">
-            <p class="item--id">Mã Sản  Phẩm : 005</p>
-            <h3 class="item--name">Len Milk cotton Đen</h3>
-            <hr>
-            <h2>  7,500đ</h2>
+          <div class="produce__container">
+            <div class="main__div--produce">
+              <img src="./Len Picture/Len Milk Contton Den 4.jpeg" alt="Len Milk Cotton Đen" class="div__img--produce">
+              <div class="div__produce-item--info">
+                <p class="item--id">Mã Sản Phẩm : 005</p>
+                <h3 class="item--name">Len Milk cotton Đen</h3>
+                <hr>
+                <h2>7,500đ</h2>
+              </div>
+              <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+            </div>
           </div>
-          <a class="div__add-cart" href="#">Xem Chi Tiết</a>
-        </div>
-
-        
-        
-
-        
         </section>
 
         <!-- 👗 Thời Trang -->
-        <section class="product-section">
+        <section id="thoitrang" class="product-section">
           <h2 class="product-section__title">👗 Thời Trang</h2>
           <div class="produce__container">
-
             <div class="main__div--produce">
-              <img src="./ThoiTrang/Áo Khoác len đen.png" alt="Áo Khoác len" class="div__img--produce">
+              <img src="./ThoiTrang/Áo Khoác len đen.png" alt="Áo Khoác Len Cardigan" class="div__img--produce">
               <div class="div__produce-item--info">
-                <p class="item--id">Mã Sản  Phẩm : 101</p>
+                <p class="item--id">Mã Sản Phẩm : 101</p>
                 <h3 class="item--name">Áo Khoác Len Cardigan</h3>
                 <section class="produce__fashion">   
-                  <p class="infomation__fashion"> Thông tin:</p>
+                  <p class="infomation__fashion">Thông tin:</p>
                   <hr>
                   <p class="info--fashion">
-                     Áo dài: 40cm <br>
-                     Ngực: 98cm <br>
-                     Chiều dài tay áo: 77cm
+                    Áo dài: 40cm <br>
+                    Ngực: 98cm <br>
+                    Chiều dài tay áo: 77cm
                   </p>
                 </section>
                 <hr>
@@ -127,134 +88,44 @@
               </div>
               <a class="div__add-cart" href="#">Xem Chi Tiết</a>
             </div>
-        
           </div>
         </section>
 
         <!-- 📱 Phụ kiện -->
-
-        <section class="product-section">
+        <section id="phukien" class="product-section">
           <h2 class="product-section__title">📱 Phụ Kiện Đan Móc Len</h2>
           <div class="produce__container">
-
             <div class="main__div--produce">
-              <img src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg" alt="Máy đếm dòng cơ" class="div__img--produce">
+              <img src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg" alt="Máy Đếm Dòng Cơ" class="div__img--produce">
               <div class="div__produce-item--info">
-                <p class="item--id">Mã Sản  Phẩm : 201</p>
+                <p class="item--id">Mã Sản Phẩm : 201</p>
                 <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
                 <hr>
                 <h2>50,000đ</h2>
               </div>
               <a class="div__add-cart" href="#">Add to cart</a>
             </div>
-  
           </div>
         </section>
       </div>
     </main>
   </div>
-  <div class="modal hidden">
-  <div class="modal__content">
-    <h2>Thêm Sản Phẩm Mới</h2>
-    <label>Tên sản phẩm:</label>
-    <input type="text" id="product-name" placeholder="Nhập tên sản phẩm">
 
-    <label>Giá:</label>
-    <input type="text" id="product-price" placeholder="Nhập giá">
+  <!-- JavaScript scroll mượt -->
+  <script>
+    const sidebarButtons = document.querySelectorAll('.sidebar__toggle');
+    sidebarButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
 
-    <label>Liên kết (nếu có):</label>
-    <input type="text" id="product-link" placeholder="Nhập link (nếu có)">
 
-    <label>Chọn danh mục:</label>
-    <select id="product-category">
-      <option value="🧶 Len">🧶 Len</option>
-      <option value="👗 Thời Trang">👗 Thời Trang</option>
-      <option value="📱 Phụ Kiện Đan Móc Len">📱 Phụ Kiện Đan Móc Len</option>
-    </select>
-
-    <label>Hình ảnh:</label>
-    <input type="file" id="product-image">
-
-    <div class="modal__buttons">
-      <button id="save-product">💾 Lưu</button>
-      <button id="cancel-product">❌ Hủy</button>
-    </div>
-  </div>
-</div>
+  </script>
 
 </body>
-<script>
-const isAdmin = true; // ✅ chỉ Admin
-
-if (isAdmin) {
-  document.querySelectorAll('.product-section').forEach(section => {
-    // Thêm nút ➕
-    const addBtn = document.createElement('button');
-    addBtn.textContent = '➕ Thêm Sản Phẩm';
-    addBtn.classList.add('btn__add-product');
-    section.insertBefore(addBtn, section.querySelector('.produce__container'));
-    
-    // Sự kiện mở modal
-    addBtn.addEventListener('click', () => {
-      document.querySelector('.modal').classList.remove('hidden');
-    });
-  });
-
-  // Nút Lưu sản phẩm
-  document.getElementById('save-product').addEventListener('click', () => {
-    const name = document.getElementById('product-name').value;
-    const price = document.getElementById('product-price').value;
-    const link = document.getElementById('product-link').value;
-    const category = document.getElementById('product-category').value;
-    const imageInput = document.getElementById('product-image');
-    const file = imageInput.files[0];
-    const reader = new FileReader();
-
-    reader.onload = function(e) {
-      const imgSrc = e.target.result;
-      const container = document.querySelector(`[data-category="${category}"] .produce__container`);
-
-      const newProduct = document.createElement('div');
-      newProduct.classList.add('main__div--produce');
-      newProduct.innerHTML = `
-        <img src="${imgSrc}" class="div__img--produce">
-        <div class="div__produce-item--info">
-          <p class="item--id">Mã Sản Phẩm : ???</p>
-          <h3 class="item--name">${name}</h3>
-          <hr>
-          <h2>${price}đ</h2>
-        </div>
-        <a class="div__add-cart" href="${link}" target="_blank">Xem Chi Tiết</a>
-        <button class="btn__delete-product">🗑️</button>
-      `;
-      container.appendChild(newProduct);
-
-      addDeleteEvent(newProduct); // Thêm sự kiện xóa
-      document.querySelector('.modal').classList.add('hidden');
-    };
-
-    if (file) reader.readAsDataURL(file);
-  });
-
-  // Nút Hủy
-  document.getElementById('cancel-product').addEventListener('click', () => {
-    document.querySelector('.modal').classList.add('hidden');
-  });
-
-  // Hàm thêm sự kiện xóa
-  function addDeleteEvent(product) {
-    product.querySelector('.btn__delete-product').addEventListener('click', () => {
-      if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
-        product.remove();
-      }
-    });
-  }
-
-  // Thêm sự kiện xóa cho sản phẩm có sẵn
-  document.querySelectorAll('.main__div--produce').forEach(addDeleteEvent);
-}
-
-</script>
-
 </html>
-
