@@ -823,7 +823,7 @@
     {
       "id": "sp110",
       "name": "Vịt Bông Len Handmade Mini",
-      "category_id": "",
+      "category_id": "Thu_Bong",
       "price": 50000,
       "original_price": 50000,
       "description": "Chú vịt bông len handmade nhỏ nhắn được làm hoàn toàn thủ công bằng len nhung cao cấp kết hợp len cotton cho phần mỏ và chân. Mềm mại, dễ thương, an toàn cho cả trẻ em.\n\n📌 Kích thước: khoảng 12–15cm\n📌 Màu sắc: Trắng (thân), Cam (mỏ & chân)\n📌 Chất liệu: Len nhung + len cotton\n\n🎁 Phù hợp làm móc khóa, đồ trang trí bàn học, quà tặng bạn bè, người yêu...\n\n👉 Mỗi sản phẩm là độc bản, không cái nào giống hoàn toàn cái nào!\n\n🚚 Giao hàng toàn quốc, nhận hàng kiểm tra trước khi thanh toán.",
@@ -849,7 +849,7 @@
     {
       "id": "sp111",
       "name": "Túi Len Handmade Cờ Đỏ Sao Vàng",
-      "category_id": "",
+      "category_id": "Thu_Bong",
       "price": 45000,
       "original_price": 55000,
       "description": "Túi len handmade lấy cảm hứng từ Quốc kỳ Việt Nam với màu đỏ nổi bật và ngôi sao vàng nổi ở giữa. Được đan thủ công từ len nhung mềm mại, túi có kích thước nhỏ gọn, tiện lợi để đựng tiền lẻ, tai nghe hoặc các vật dụng nhỏ khác.\n\n📌 Kích thước: 11cm x 11cm\n📌 Màu sắc: Đỏ (nền), Vàng (ngôi sao)\n📌 Phụ kiện: Móc khóa và hạt chữ 'VN' trang trí\n\n✨ Phù hợp làm quà tặng, treo balo, hoặc dùng hàng ngày như món đồ kỷ niệm tinh tế.\n\n👉 Mỗi sản phẩm là thủ công 100%, có thể có sai số nhỏ nhưng luôn đảm bảo chất lượng.",
@@ -874,7 +874,7 @@
     {
       "id": "sp112",
       "name": "Bạch Tuộc Len Handmade Mini",
-      "category_id": "",
+      "category_id": "Thu_Bong",
       "price": 39000,
       "original_price": 49000,
       "description": "Bạch tuộc len mini siêu dễ thương, được móc hoàn toàn thủ công bằng len cotton an toàn và mềm mại. Mỗi bé bạch tuộc có biểu cảm đáng yêu, phù hợp làm móc khóa, đồ trang trí balo, bàn học hoặc quà tặng nhỏ xinh.\n\n📌 Kích thước: Cao khoảng 6–7cm\n📌 Chất liệu: Len cotton, bông nhồi\n📌 Có đính ngôi sao vải handmade xinh xắn\n\n🎨 Màu sắc đa dạng:\n- Tím\n- Xanh Mint\n- Đỏ\n- Vàng\n- Cam\n- Xanh Dương\n- Hồng Nhạt\n- Hồng Đất\n\n🎁 Ý tưởng tuyệt vời cho quà sinh nhật, đồ lưu niệm hoặc quà tặng handmade.\n\n👉 Vì là sản phẩm thủ công nên mỗi bé sẽ có nét riêng và không hoàn toàn giống nhau.",
@@ -916,7 +916,7 @@
     {
       "id": "sp113",
       "name": "Túi Len Móc Tay Handmade Nơ Viền Ren",
-      "category_id": "",
+      "category_id": "Thu_Bong",
       "price": 49000,
       "original_price": 59000,
       "description": "Túi len móc tay handmade với thiết kế viền ren tinh tế và nơ cùng tông màu. Sản phẩm được móc tỉ mỉ thủ công bằng sợi cotton cao cấp, nhẹ nhàng, thoáng mát và thân thiện với môi trường. Kích thước nhỏ gọn, dễ thương, phù hợp đựng tiền lẻ, son môi hoặc tai nghe.\n\n📌 Kích thước: khoảng 11cm x 11cm\n📌 Chất liệu: Len cotton mềm mại\n📌 Kiểu dáng: Nắp viền ren, thắt nơ cùng màu\n\n🎨 Màu sắc:\n- Xanh Dương\n- Vàng\n- Tím\n- Hồng\n\n🎁 Thích hợp làm quà tặng, trang trí túi xách, balo, hoặc sử dụng hằng ngày.\n\n👉 Vì là sản phẩm thủ công nên mỗi chiếc túi sẽ có độ độc đáo riêng, không cái nào giống hoàn toàn!",
@@ -959,6 +959,12 @@
       "name": "Phụ kiện",
       "description": "Thắt lưng, ví, mũ, kính mắt...",
       "image_url": "/images/categories/``hu_kien.jpg"
+    },
+    {
+      "id": "Thu_Bong",
+      "name": "Thú Bông",
+      "description": "Thắt lưng, ví, mũ, kính mắt...",
+      "image_url": "/images/categories/`SPTuLen"
     }
   ],
   "admin": [
