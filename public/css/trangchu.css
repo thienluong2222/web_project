@@ -112,17 +112,16 @@ img.displaySlide{
     border-radius: 12px;
 }
 .section-brand__item h2{
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 10px;
-
 }
 .section-brand__item p{
     height: 60px;
-    font-size: 18px;
+    font-size: 1.6rem;
 }
 .brand__item-image{
-    border: 2px solid #831713;
+    border: 3px solid #831713;
     border-radius: 50%;
     padding: 5px;
     color: #831713;
@@ -334,18 +333,21 @@ img.displaySlide{
     width: 50%;
     height: auto;
 }
+.section-collection__info{
+    width: 50%;
+}
 .section-collection__img:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 .section-collection__title {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
 }
 .section-collection__content{
-    font-size: 16px;
+    font-size: 1.4rem;
     color: #555;
     margin-bottom: 20px;
 }
