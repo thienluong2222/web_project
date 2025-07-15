@@ -19,69 +19,100 @@ fetch(dataPath)
         const products = data.products;
 
         function createProductHtml(product) {
-            const formattedPrice = product.price.toLocaleString('vi-VN') + ' VNĐ';
-            const formattedOriginalPrice = product.original_price.toLocaleString('vi-VN') + ' VNĐ';
+            const formattedPrice =
+                product.price.toLocaleString("vi-VN") + " VNĐ";
+            const formattedOriginalPrice =
+                product.original_price.toLocaleString("vi-VN") + " VNĐ";
 
             return `
             <div class="main__div--produce">
-                <img src="${product.image_url}" alt="${product.name}" class="div__img--produce">
+                <img src="${
+                    product.image_url
+                }" alt="${product.name}" class="div__img--produce">
                 <div class="div__produce-item--info">
                     <p class="item--id">Mã Sản Phẩm : ${product.id}</p>
                     <h3 class="item--name">${product.name}</h3>
                     <hr>
                     <h2>${formattedPrice}</h2>
-                    ${product.original_price && product.original_price > product.price ? 
-                        `<p class="item--original-price">Giá gốc: <s>${formattedOriginalPrice}</s></p>` : ''}
+                    ${
+                        product.original_price &&
+                        product.original_price > product.price
+                            ? `<p class="item--original-price">Giá gốc: <s>${formattedOriginalPrice}</s></p>`
+                            : ""
+                    }
                 </div>
-                <a class="div__add-cart" href="./product_items.html?id=${product.id}">Xem Chi Tiết</a>
+                <a class="div__add-cart" href="./product_items.html?id=${
+                    product.id
+                }">Xem Chi Tiết</a>
             </div>`;
         }
 
         const len_catalogs = products
-            .filter(product => product.category_id === "Len")
+            .filter((product) => product.category_id === "Len")
             .map(createProductHtml);
 
         const thoiTrang_catalogs = products
-            .filter(product => product.category_id === "Thoi_Trang")
+            .filter((product) => product.category_id === "Thoi_Trang")
             .map(createProductHtml);
 
         const phuKien_catalogs = products
-            .filter(product => product.category_id === "Phu_Kien")
+            .filter((product) => product.category_id === "Phu_Kien")
             .map(createProductHtml);
 
         const thuBong_catalogs = products
-            .filter(product => product.category_id === "Thu_Bong")
-            .map(createProductHtml);
-               
-        const sale_catalogs = products
-            .filter(product => {
-                if (product.original_price && product.original_price > product.price) {
-                    const discountPercent = ((product.original_price - product.price) / product.original_price) * 100;
-                    return discountPercent >= 25;
-                }
-                return false;
-            })
-            .map(product => {
-                const discountPercent = Math.round(((product.original_price - product.price) / product.original_price) * 100);
-                return createProductHtml(product, discountPercent);
-            });
-
-        const fiveStarProducts = products
-        .filter(product => product.rating === 5.0)
-        .map(createProductHtml);
-        
-        const newestProducts = products
-            .sort((a, b) => b.id - a.id) 
-            .slice(0, 8)
+            .filter((product) => product.category_id === "Thu_Bong")
             .map(createProductHtml);
 
-        document.getElementById("newest_catalog").innerHTML = newestProducts.join("");
-        document.getElementById("fiveStar_catalog").innerHTML = fiveStarProducts.join("");
-        document.getElementById("sale_catalog").innerHTML = sale_catalogs.join("");    
-        document.getElementById("Len_catalog").innerHTML = len_catalogs.join("");
-        document.getElementById("ThoiTrang_catalog").innerHTML = thoiTrang_catalogs.join("");
-        document.getElementById("PhuKien_catalog").innerHTML = phuKien_catalogs.join("");
-        document.getElementById("thuBong_catalog").innerHTML = thuBong_catalogs.join("");
+            
+
+        // const sale_catalogs = products
+        //     .filter((product) => {
+        //         if (
+        //             product.original_price &&
+        //             product.original_price > product.price
+        //         ) {
+        //             const discountPercent =
+        //                 ((product.original_price - product.price) /
+        //                     product.original_price) *
+        //                 100;
+        //             return discountPercent >= 25;
+        //         }
+        //         return false;
+        //     })
+        //     .map((product) => {
+        //         const discountPercent = Math.round(
+        //             ((product.original_price - product.price) /
+        //                 product.original_price) *
+        //                 100
+        //         );
+        //         return createProductHtml(product, discountPercent);
+        //     });
+
+        // const fiveStarProducts = products
+        //     .filter((product) => product.rating === 5.0)
+        //     .map(createProductHtml);
+
+        // const newestProducts = products
+        //     .sort((a, b) => b.id - a.id)
+        //     .slice(0, 8)
+        //     .map(createProductHtml);
+
+        // document.getElementById("newest_catalog").innerHTML =
+        //     newestProducts.join("");
+        // document.getElementById("fiveStar_catalog").innerHTML =
+        //     fiveStarProducts.join("");
+
+
+        // document.getElementById("sale_catalog").innerHTML =
+        //     sale_catalogs.join("");
+        document.getElementById("Len_catalog").innerHTML =
+            len_catalogs.join("");
+        document.getElementById("ThoiTrang_catalog").innerHTML =
+            thoiTrang_catalogs.join("");
+        document.getElementById("PhuKien_catalog").innerHTML =
+            phuKien_catalogs.join("");
+        document.getElementById("thuBong_catalog").innerHTML =
+            thuBong_catalogs.join("");
     });
 
 (function ($) {
