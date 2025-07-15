@@ -33,7 +33,7 @@ fetch(dataPath)
                     ${product.original_price && product.original_price > product.price ? 
                         `<p class="item--original-price">Giá gốc: <s>${formattedOriginalPrice}</s></p>` : ''}
                 </div>
-                <a class="div__add-cart" href="product_itmes.html?id=${product.id}">Xem Chi Tiết</a>
+                <a class="div__add-cart" href="./product_items.html?id=${product.id}">Xem Chi Tiết</a>
             </div>`;
         }
 
@@ -48,10 +48,36 @@ fetch(dataPath)
         const phuKien_catalogs = products
             .filter(product => product.category_id === "Phu_Kien")
             .map(createProductHtml);
+
         const thuBong_catalogs = products
             .filter(product => product.category_id === "Thu_Bong")
             .map(createProductHtml);
+               
+        const sale_catalogs = products
+            .filter(product => {
+                if (product.original_price && product.original_price > product.price) {
+                    const discountPercent = ((product.original_price - product.price) / product.original_price) * 100;
+                    return discountPercent >= 25;
+                }
+                return false;
+            })
+            .map(product => {
+                const discountPercent = Math.round(((product.original_price - product.price) / product.original_price) * 100);
+                return createProductHtml(product, discountPercent);
+            });
 
+        const fiveStarProducts = products
+        .filter(product => product.rating === 5.0)
+        .map(createProductHtml);
+        
+        const newestProducts = products
+            .sort((a, b) => b.id - a.id) 
+            .slice(0, 8)
+            .map(createProductHtml);
+
+        document.getElementById("newest_catalog").innerHTML = newestProducts.join("");
+        document.getElementById("fiveStar_catalog").innerHTML = fiveStarProducts.join("");
+        document.getElementById("sale_catalog").innerHTML = sale_catalogs.join("");    
         document.getElementById("Len_catalog").innerHTML = len_catalogs.join("");
         document.getElementById("ThoiTrang_catalog").innerHTML = thoiTrang_catalogs.join("");
         document.getElementById("PhuKien_catalog").innerHTML = phuKien_catalogs.join("");
