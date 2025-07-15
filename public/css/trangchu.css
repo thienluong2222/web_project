@@ -190,7 +190,7 @@ img.displaySlide{
     border-color: #ffb3b3;
 }
 /* ==========product========== */
-.section__name{
+/* .section__name{
     text-align: center;
     margin: 40px 0px;
 }
@@ -295,7 +295,7 @@ img.displaySlide{
 .product-price del{
     margin-left: 10px;
     color: #777;
-}
+} */
 /* ==========product-promotion========== */
 .section-product-promotion .section__name{
     font-size: 24px;
@@ -435,4 +435,3 @@ img.displaySlide{
 .view-all-news {
     margin-top: 40px;
 }
-0

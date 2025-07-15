@@ -48,10 +48,14 @@ fetch(dataPath)
         const phuKien_catalogs = products
             .filter(product => product.category_id === "Phu_Kien")
             .map(createProductHtml);
+        const thuBong_catalogs = products
+            .filter(product => product.category_id === "Thu_Bong")
+            .map(createProductHtml);
 
         document.getElementById("Len_catalog").innerHTML = len_catalogs.join("");
         document.getElementById("ThoiTrang_catalog").innerHTML = thoiTrang_catalogs.join("");
         document.getElementById("PhuKien_catalog").innerHTML = phuKien_catalogs.join("");
+        document.getElementById("thuBong_catalog").innerHTML = thuBong_catalogs.join("");
     });
 
 (function ($) {

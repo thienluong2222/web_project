@@ -63,21 +63,6 @@ body {
     border-bottom: 2px solid var(--dark-pink);
 }
 
-.navbar__brand {
-    display: flex; /* Để logo và text (nếu có) nằm cạnh nhau */
-    align-items: center;
-    text-decoration: none;
-    color: var(--white-color); /* Hoặc màu phù hợp với logo */
-}
-
-.navbar__icon {
-    width: 40px; /* Ví dụ: kích thước cụ thể cho icon logo */
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%; /* Nếu icon là hình tròn */
-    margin-right: 10px; /* Khoảng cách giữa icon và text nếu có */
-}
-
 .navbar__auth {
     list-style: none;
     margin: 0;

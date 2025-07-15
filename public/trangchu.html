@@ -10,6 +10,7 @@
     <link href="images/image.png" rel="shortcut icon" type="image/vnd/microsift.icon"/>
     <link rel="stylesheet" href="./css/trangchu.css">
     <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/Catalog_Page.css">
     <title>Trang chủ</title>
 </head>
 <body>
@@ -141,7 +142,7 @@
                 <div class="section__name">
                     <h3>Sản phẩm nổi bật</h3>
                 </div>
-                <ul class="section__products">
+                <!-- <ul class="section__products">
                     <li>
                         <section class="section__product-item">
                             <p class="product-id" hidden>001</p>
@@ -162,35 +163,37 @@
                             </div> 
                         </section>
                     </li>
-                </ul>
+                </ul> -->
+                <section id="thoitrang" class="product-section">
+                    <div class="produce__container" id="ThoiTrang_catalog">
+                        <div class="main__div--produce">
+                            <img src="./ThoiTrang/Áo Khoác len đen.png" alt="Áo Khoác Len Cardigan" class="div__img--produce">
+                            <div class="div__produce-item--info">
+                                <p class="item--id">Mã Sản Phẩm : 101</p>
+                                <h3 class="item--name">Áo Khoác Len Cardigan</h3>
+                                <section class="produce__fashion">   
+                                <p class="infomation__fashion">Thông tin:</p>
+                                <hr>
+                                <p class="info--fashion">
+                                    Áo dài: 40cm <br>
+                                    Ngực: 98cm <br>
+                                    Chiều dài tay áo: 77cm
+                                </p>
+                                </section>
+                                <hr>
+                                <h2>320,000đ</h2>
+                            </div>
+                            <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                </section>
             </section>
             <!-- product-new -->
             <section class="section-product-new">
                 <div class="section__name">
                     <h3>Sản phẩm mới</h3>
                 </div>
-                <ul class="section__products">
-                    <li>
-                        <section class="section__product-item">
-                            <p class="product-id" hidden>001</p>
-                            <div class="section__product-item--top">
-                                <a href="" class="product-thumb">
-                                    <img src="./Len Picture/Len Milka Cotton loại 1 .jpeg" alt="Len Milka Cotton loại 1">
-                                </a>
-                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
-                                <span class="div__span--sale-label">Giảm 33%</span>
-                            </div>
-                            <div class="section__product-item--info">
-                                <a href="" class="product-name">Len Milka Cotton loại 1</a>
-                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
-                                <span class="product-price"> 
-                                    <strong>₫6.300 - ₫5.000</strong> 
-                                    <del>₫8.599 - ₫15.000</del>
-                                </span>
-                            </div> 
-                        </section>
-                    </li>
-                </ul>
+                
             </section>
             <video width="100%" height="500px" controls>
                 <source src="../public/imgtrangchu/len.mp4" type="video/mp4" />
@@ -299,5 +302,6 @@
       </div>
     </footer>
     <script src="../public/js/trangchu.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
