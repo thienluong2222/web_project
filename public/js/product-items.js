@@ -199,15 +199,15 @@ async function loadProductDetail() {
 // Gọi hàm khi trang HTML đã được tải đầy đủ
 document.addEventListener("DOMContentLoaded", loadProductDetail);
 
-productDetailContainer.addEventListener("click", function (event) {
-    if (event.target.id === "add-to-cart-button") {
-        const productId = getParameterByName("id");
-        alert(
-            `Đã thêm sản phẩm ${productId} vào giỏ hàng! (Logic giỏ hàng cần được triển khai)`
-        );
-        localStorage.setItem('cart', JSON.stringify(productId));
-    }
-});
+// productDetailContainer.addEventListener("click", function (event) {
+//     if (event.target.id === "add-to-cart-button") {
+//         const productId = getParameterByName("id");
+//         alert(
+//             `Đã thêm sản phẩm ${productId} vào giỏ hàng! (Logic giỏ hàng cần được triển khai)`
+//         );
+//         localStorage.setItem('cart', JSON.stringify(productId));
+//     }
+// });
 
 minus.onclick = () => {
     let current = parseInt(quantity.textContent);
