@@ -28,6 +28,10 @@ body {
   align-items: center;
   gap: 1rem;
 }
+#product-carousel {
+  position: relative;
+}
+
 .single-image {
   width: 400px;
   max-width: 100%;
@@ -39,7 +43,14 @@ body {
   border-radius: 10px;
   object-fit: cover;
 }
+.img-item {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
 
+.img-item.active {
+  display: block;
+}
 /* CỘT PHẢI: THÔNG TIN SẢN PHẨM */
 .product-describe__content {
   flex: 1;
@@ -157,7 +168,9 @@ body {
 }
 
 /* Nút: Thêm vào giỏ hàng */
-.product-add-to-cart-btn {
+/* Nút: Mua với Voucher */
+.product-add-to-cart-btn,
+.product-add-to-cart-voucher {
   background-color: #fff0f5;
   border: 3px solid #f63b71;
   flex: 1;
@@ -170,34 +183,7 @@ body {
 
 /* Khi click hoặc focus vào nút => hiện viền màu hồng */
 .product-add-to-cart-btn:hover,
-.product-add-to-cart-btn:active {
-  color: #f8f8f8;
-  background-color: #f63b71;
-  border: 3px solid #fff0f5;
-  outline: none;
-  box-shadow: none;
-}
-
-/* Nút: Mua với Voucher */
-.product-add-to-cart-voucher {
-  flex: 1;
-  background-color: #fff0f5;
-  border: 3px solid #f63b71;
-  border-radius: 8px;
-  padding: 0.8rem;
-  display: flex;
-  justify-content: space-between;
-  color: #333;
-  transition: border 0.2s ease;
-  outline: none;
-}
-
-/* Phần giá trong voucher */
-.product-add-to-cart-voucher-price {
-  color: #f63b71;
-  font-weight: bold;
-}
-/* Khi click vào voucher => viền chuyển thành solid */
+.product-add-to-cart-btn:active,
 .product-add-to-cart-voucher:hover,
 .product-add-to-cart-voucher:active {
   color: #f8f8f8;
@@ -205,22 +191,6 @@ body {
   border: 3px solid #fff0f5;
   outline: none;
   box-shadow: none;
-}
-/* Đổi màu text con bên trong */
-.product-add-to-cart-voucher:hover .product-add-to-cart-voucher-text,
-.product-add-to-cart-voucher:active .product-add-to-cart-voucher-text,
-.product-add-to-cart-voucher:hover .product-add-to-cart-voucher-price,
-.product-add-to-cart-voucher:active .product-add-to-cart-voucher-price {
-  color: #f8f8f8;
-  outline: none;
-}
-
-.product-add-to-cart-btn:focus,
-.product-add-to-cart-btn:focus-visible,
-.product-add-to-cart-voucher:focus,
-.product-add-to-cart-voucher:focus-visible {
-  outline: none !important;
-  box-shadow: none !important;
 }
 
 /* Khung tổng */
@@ -230,18 +200,56 @@ body {
 }
 
 /* Tabs */
-.tab {
-  background-color: green;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border: 1px solid green;
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
 }
+
+.tab {
+  background-color: #eaa0b9;
+  color: #0b0b0b;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #ddd;
+  border-color: #eaa0b9;
+}
+
+.tab.active {
+  background-color: white;
+  color: #e91e63;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+
 .tab-content {
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 0 8px 8px 8px;
   padding: 20px;
-  background-color: #fff;
+  background-color: white;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+.tab:focus,
+.tab:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }
 
 .product-items-information-description h2 {
@@ -269,28 +277,4 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  main.product-detail {
-    flex-direction: column;
-  }
-
-  .product-images {
-    width: 100%;
-    flex-direction: row;
-    gap: 1rem;
-    overflow-x: auto;
-  }
-
-  .small-image-group {
-    flex-direction: row;
-    margin-top: 0;
-    gap: 0.5rem;
-  }
-
-  .product-add-to-cart {
-    flex-direction: column;
-  }
 }

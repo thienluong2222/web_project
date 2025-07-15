@@ -1,539 +1,974 @@
 {
-    "products": [
+  "products": [
+    {
+      "id": "sp001",
+      "name": "Len YarnArt JEANS",
+      "category_id": "Len",
+      "price": 32800,
+      "original_price": 40000,
+      "description": "Len YarnArt JEANS thích hợp đan móc quần áo cho bé, thú bông, khăn, chăn, mũ, áo... sợi len nhỏ, không bị xù hay bai dão, không bị phai màu.\n\n- Xuất xứ: Thổ Nhĩ Kỳ\n- Thành phần: 55% Cotton, 45% Arcylic\n- Trọng lượng: 50gr\n- Độ dài: 160m\n- Kim móc: 2.5mm ~ 3.0mm\n- Kim đan: 3.0mm ~ 3.5mm\n- Giá bán lẻ: 40k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/LenPicture/sp001_len_yarnart_jeans.png",
+      "alt_images": [
+        "/public/image_sp/LenPicture/sp001_01_len_yarnart_jeans.jpeg"
+      ],
+      "variants": [
         {
-            "id": "sp001",
-            "name": "Len YarnArt JEANS",
-            "category_id": "Len",
-            "price": 32800,
-            "original_price": 40000,
-            "description": "Len YarnArt JEANS thích hợp đan móc quần áo cho bé, thú bông, khăn, chăn, mũ, áo... sợi len nhỏ, không bị xù hay bai dão, không bị phai màu.\n\n- Xuất xứ: Thổ Nhĩ Kỳ\n- Thành phần: 55% Cotton, 45% Arcylic\n- Trọng lượng: 50gr\n- Độ dài: 160m\n- Kim móc: 2.5mm ~ 3.0mm\n- Kim đan: 3.0mm ~ 3.5mm\n- Giá bán lẻ: 40k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
-            "image_url": "/public/image_sp/LenPicture/sp001_len_yarnart_jeans.png",
-            "alt_images": [
-                "/public/image_sp/LenPicture/sp001_01_len_yarnart_jeans.jpeg"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    },
-                    "ID_SP": [
-                        "Mã 01",
-                        "Mã 03",
-                        "Mã 05",
-                        "Mã 07",
-                        "Mã 11",
-                        "Mã 15",
-                        "Mã 16",
-                        "Mã 17",
-                        "Mã 18",
-                        "Mã 19",
-                        "Mã 20",
-                        "Mã 20",
-                        "Mã 26",
-                        "Mã 28",
-                        "Mã 29",
-                        "Mã 33"
-                    ]
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.8
-        },
-        {
-            "id": "sp002",
-            "name": "Len xù chuyên làm tóc cho búp bê",
-            "category_id": "Len",
-            "price": 37000,
-            "original_price": 40000,
-            "description": "Len xù chuyên làm tóc cho búp bê hoặc những sản phẩm thú bông có lông cần độ xù nhiều.\nLen chất sợi rất mềm, phần đầu kéo mạnh sẽ rất dễ đứt nên mn móc sai thì tháo ra nhẹ nhàng thôi nhé. Cuộn 50gr nhưng nhà máy quấn cuộn chặt nên ở ngoài nhìn cuộn len rất bé luôn nha.\n\n- Thành phần: 20% lông cừu, 80% acrylic\n- Trọng lượng: 50gr\n- Xuất xứ: Trung Quốc\n- Kim móc: 2.0mm - 2.5mm\n- Kim đan: 2.5mm - 3.0mm\n- Giá bán lẻ: 40k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
-
-            "image_url": "/public/image_sp/LenPicture/sp002_len_xulamtoc.png",
-            "alt_images": [
-                "/public/image_sp/LenPicture/sp002_01_len_xulamtoc.jpeg"
-            ],
-            "variants": [
-                {
-                    "ID_SP": [
-                        "Mã trắng kem",
-                        "Mã nâu nhạt",
-                        "Mã nâu bò",
-                        "Mã hạt dẻ",
-                        "Mã kem sữa",
-                        "Mã hồng phấn",
-                        "Mã hồng vỏ đổ",
-                        "Mã nâu be",
-                        "Mã đỏ đô",
-                        "Mã xanh navy",
-                        "Mã xám xanh",
-                        "Mã đen",
-                        "Mã xanh cốm",
-                        "Mã be",
-                        "Mã da nhạt",
-                        "Mã vàng nhạt"
-                    ]
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.3
-        },
-        {
-            "id": "sp003",
-            "name": "Len Susan Family 5 cỡ sợi tương đương len Milk cotton loạn 1",
-            "category_id": "Len",
-            "price": 45000,
-            "original_price": 50000,
-            "description": "Len Susan Family 5 cỡ sợi tương đương len Milk cotton loại 1, là dòng len nội địa cao cấp Trung Quốc, thích hợp đan móc quần áo cho bé, thú bông, khăn, chăn, mũ, áo... sợi len nhỏ, không bị xù hay bai dão, lên dáng sản phẩm rất đẹp.\n- Thành phần: 60% Cotton, 40% Arcylic\n- Trọng lượng: 100gr\n- Kim móc: 2.5mm ~ 3.0mm\n- Kim đan: 3.5mm ~ 4.0mm\n- Xuất xứ: Trung Quốc\n💲Giá: 45k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
-            "image_url": "/public/image_sp/LenPicture/sp003_len_susan_family5.png",
-            "alt_images": [
-                "/public/image_sp/LenPicture/sp003_01_len_susan_family5.jpeg"
-            ],
-            "variants": [
-                {
-                    "ID_SP": [
-                        "Mã 01",
-                        "Mã 02",
-                        "Mã 03",
-                        "Mã 04",
-                        "Mã 05",
-                        "Mã 06",
-                        "Mã 07",
-                        "Mã 09",
-                        "Mã 10",
-                        "Mã 11",
-                        "Mã 12",
-                        "Mã 13"
-                    ]
-                }
-            ],
-            "is_featured": true,
-            "rating": 5.0
-        },
-
-        {
-            "id": "sp004",
-            "name": "Len Mohair pompom (Mohair Tweed)",
-            "category_id": "Len",
-            "price": 70000,
-            "original_price": 85000,
-            "description": "Len Mohair pompom (Mohair Tweed) sợi mềm mượt phù hợp đan/móc áo, váy, khăn, đồ thu đông.…\n\nThành phần: 15% M, 25% W, 31% P, 9% N, 20% A.\nTrọng lượng: 50gr.\nChiều dài: 130m.\nKim đan: 5.5mm - 6.5mm.\nKim móc: 4.0mm - 5.0mm.\nXuất xứ: Trung Quốc.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
-            "image_url": "/public/image_sp/LenPicture/sp004_len_mohair.png",
-            "alt_images": [
-                "/public/image_sp/LenPicture/sp004_01_len_mohair.jpeg"
-            ],
-            "variants": [
-                {
-                    "ID_SP": [
-                        "Mã 01",
-                        "Mã 02",
-                        "Mã 03",
-                        "Mã 04",
-                        "Mã 05",
-                        "Mã 06",
-                        "Mã 07",
-                        "Mã 08"
-                    ]
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.9
-        },
-        {
-            "id": "sp005",
-            "name": "Milk Cotton loại 1",
-            "category_id": "Len",
-            "price": 40000,
-            "original_price": 45000,
-            "description": "Milk Cotton loại 1 thích hợp đan móc mũ len, khăn choàng, áo khoác, chăn, thú nhồi bông....\n\n- Thành phần: 20% Milk Protein, 80% Combed Cotton.\n- Trọng lượng: 125gr\n- Chiều dài: 220m\n- Kim đan: 4.0mm - 5.0mm\n- Kim móc: 2.5mm - 3.5mm\n- Xuất xứ: Trung Quốc\n- Giá bán lẻ: 47k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
-            "image_url": "/public/image_sp/LenPicture/sp005_len_milkcontton.jpeg",
-            "alt_images": [
-                "/public/image_sp/LenPicture/sp005_01_len_milkcotton.jpeg"
-            ],
-            "variants": [
-                {
-                    "ID_SP": [
-                        "Mã 01",
-                        "Mã 02",
-                        "Mã 03",
-                        "Mã 04",
-                        "Mã 05",
-                        "Mã 06",
-                        "Mã 07",
-                        "Mã 08",
-                        "Mã 09",
-                        "Mã 10",
-                        "Mã 11",
-                        "Mã 12"
-                    ]
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.5
-        },
-        {
-            "id": "sp006",
-            "name": "Len Susan Family 4",
-            "category_id": "Len",
-            "price": 40000,
-            "original_price": 45000,
-            "description": "Len Susan Family 4 là dòng len nội địa cao cấp Trung Quốc, thích hợp đan móc quần áo cho bé, thú bông, khăn, chăn, mũ, áo... sợi len nhỏ, không bị xù hay bai dão, lên dáng sản phẩm rất đẹp.\n\n- Thành phần: 60% Cotton, 40% Arcylic\n- Trọng lượng: 50gr\n- Độ dài: 120m\n- Kim móc: 2.0mm ~ 2.5mm\n- Kim đan: 3.0mm ~ 3.5mm\n- Xuất xứ: Trung Quốc\n💲Giá: 40k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
-            "image_url": "/public/image_sp/LenPicture/sp006_len_susan_family4.jpeg",
-            "alt_images": [
-                "/public/image_sp/LenPicture/sp006_01_len_susan_family4.jpeg"
-            ],
-            "variants": [
-                {
-                    "ID_SP": [
-                        "Mã 401",
-                        "Mã 402",
-                        "Mã 403",
-                        "Mã 404",
-                        "Mã 405",
-                        "Mã 406",
-                        "Mã 407",
-                        "Mã 408"
-                    ]
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.6
-        },
-        {
-            "id": "sp007",
-            "name": "YARNART BABY COTTON",
-            "category_id": "Len",
-            "price": 37000,
-            "original_price": 40000,
-            "description": "YARNART BABY COTTON\n\nYarnArt baby cotton thích hợp đan móc quần áo cho bé, thú bông, khăn, chăn, mũ ... sợi len mềm mại nên rất phù hợp đan móc quần áo cho bé sơ sinh.\nLen bền màu, không xù, ko bai dão.\n\n- Xuất xứ: Thổ Nhĩ Kỳ\n- Thành phần: 50% Cotton, 50% Arcylic\n- Trọng lượng: 50gr\n- Độ dài: 165m\n- Cỡ sợi: 1.5mm\n- Kim móc: 2.0mm ~ 3.0mm\n- Kim đan: 3.0mm ~ 4.0mm\n- Giá bán lẻ: 40k/cuộn.\n\n** Định lượng tham khảo:\n- Mũ bé sơ sinh 1 cuộn, bé trên 6 tháng hay người lớn thì 2 cuộn.\n- Khăn: 4-6 cuộn.\n- Áo cho bé nhỏ 4-6 cuộn, áo người lớn 12-14 cuộn.",
-            "image_url": "/public/image_sp/LenPicture/sp007_len_yarn_art_baby.jpeg",
-            "alt_images": [
-                "/public/image_sp/LenPicture/sp007_01_len_yarn_art_baby.jpeg"
-            ],
-            "variants": [
-                {
-                    "ID_SP": [
-                        "Mã 400",
-                        "Mã 401",
-                        "Mã 402",
-                        "Mã 403",
-                        "Mã 404",
-                        "Mã 405",
-                        "Mã 406",
-                        "Mã 407",
-                        "Mã 408",
-                        "Mã 410",
-                        "Mã 411",
-                        "Mã 412"
-                    ]
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.7
-        },
-        {
-            "id": "sp008",
-            "name": "Len YARNART SILKY WOOL",
-            "category_id": "Len",
-            "price": 50000,
-            "original_price": 55000,
-            "description": "Len YARNART SILKY WOOL đúng như tên gọi là 1 dòng len pha giữa lụa siêu mềm và len lông cừu merino, điều này sẽ giúp cho sản phẩm của bạn vừa có độ ấm của len lông cừu và sự mềm mượt của lụa tơ tằm. Siêu thích hợp cho các kiểu khăn choàng, cardigan mỏng nhẹ cho mùa thu đông. Cuộn chỉ có 25g nhưng dài tận 190m, siêu dôi nha, nên tính ra là rất tiết kiệm khi xài dòng này. Về màu sắc thì dòng này ko có nhiều màu, bù lại màu sắc thiên về tông trầm, nhẹ nhàng.\n\n- Thành phần: 35% Silk Rayon, 65% Merino Wool\n- Trọng lượng: 25g\n- Chiều dài: 190m\n- Kim móc: 2.5mm-3.5mm\n- Kim đan: 2.5mm-3.5mm\n- Xuất xứ: Thổ Nhĩ Kì\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
-            "image_url": "/public/image_sp/LenPicture/sp008_len_yarn_art_silky_wool.jpeg",
-            "alt_images": [
-                "/public/image_sp/LenPicture/sp008_01_len_yarn_art_silky_wool.jpeg"
-            ],
-            "variants": [
-                {
-                    "ID_SP": [
-                        "Mã 401",
-                        "Mã 402",
-                        "Mã 403",
-                        "Mã 404",
-                        "Mã 405",
-                        "Mã 406",
-                        "Mã 407",
-                        "Mã 408",
-                        "Mã 409",
-                        "Mã 410",
-                        "Mã 411",
-                        "Mã 412"
-                    ]
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.7
-        },
-        {
-            "id": "sp100",
-            "name": "Áo Cardigan Dệt Kim Tay Dài Cổ Tròn Phối Nút Thiết Kế Thanh Lịch",
-            "category_id": "Thoi_Trang",
-            "price": 164000,
-            "original_price": 205000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 47cm\nVòng ngực: 98cm\nChiều dài tay áo: 44CM\nChiều rộng vai: 57cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp100_ao_cardigan_det_kim_tay_dai_co_tron.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp100_01_ao_cardigan_det_kim_tay_dai_co_tron.png",
-                "/public/image_sp/ThoiTrang/sp100_02_ao_cardigan_det_kim_tay_dai_co_tron.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.8
-        },
-
-        {
-            "id": "sp101",
-            "name": "Áo Dệt Kim Tay Dài Dáng Rộng Lưng Cao Quyến Rũ Cho Nữ Áo len nữ hàn quốc",
-            "category_id": "Thoi_Trang",
-            "price": 108000,
-            "original_price": 145000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 51cm\nVòng ngực: 114cm\nChiều dài tay áo: 49CM\nChiều rộng vai: 58cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp101_ao_det_kim_tay_dai_dang_rong_lung_cao.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp101_01_ao_det_kim_tay_dai_dang_rong_lung_cao.png",
-                "/public/image_sp/ThoiTrang/sp101_02_ao_det_kim_tay_dai_dang_rong_lung_cao.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.7
-        },
-        {
-            "id": "sp102",
-            "name": "Áo Khoác Cardigan Mỏng Dệt Kim Màu Be Phối Nơ Oversize Xinh",
-            "category_id": "Thoi_Trang",
-            "price": 102000,
-            "original_price": 143000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 65cm\nVòng ngực: 100cm\nChiều dài tay áo: 60CM\nChiều rộng vai: 50cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp102_ao_khoac_cadigan_mong_det_kim.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp102_01_ao_khoac_cadigan_mong_det_kim.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 5.0
-        },
-        {
-            "id": "sp103",
-            "name": "Áo Khoác Len Cadigan Nữ Mỏng Kiểu Blackpink Tay Cánh Dơi Dáng Croptop",
-            "category_id": "Thoi_Trang",
-            "price": 85000,
-            "original_price": 115000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nÁo dài: 40cm\nNgực: 98cm\nChiều dài tay áo: 77cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp103_ao_khoac_len_den.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp103_01_ao_khoac_len_den.png",
-                "/public/image_sp/ThoiTrang/sp103_02_ao_khoac_len_den.png",
-                "/public/image_sp/ThoiTrang/sp103_03_ao_khoac_len_den.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.9
-        },
-        {
-            "id": "sp104",
-            "name": "Áo Khoác Len Dệt Kim Dài Tay Dáng Ngắn Thời Trang",
-            "category_id": "Thoi_Trang",
-            "price": 136000,
-            "original_price": 170000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 42cm\nVòng ngực: 90-120cm\nChiều dài tay áo: 52CM\nChiều rộng vai: 42cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp104_ao_khoac_len_det_kim.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp104_01_ao_khoac_len_det_kim.png",
-                "/public/image_sp/ThoiTrang/sp104_02_ao_khoac_len_det_kim.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.7
-        },
-        {
-            "id": "sp105",
-            "name": "Áo Len Nữ Đan Dây, Áo Crotop Cổ Chữ V Dệt Kim Dày Dặn Hoạ Tiết Sọc Dáng Rộng Phong Cách Hàn Quốc Thu Đông",
-            "category_id": "Thoi_Trang",
-            "price": 142000,
-            "original_price": 180000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 45cm\nVòng ngực: 94cm\nChiều dài tay áo: 48CM\nChiều rộng vai: 43cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp105_ao_len_nu_dang_day.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp105_01_ao_len_nu_dang_day.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.8
-        },
-        {
-            "id": "sp106",
-            "name": "Áo Len Nữ Dệt Kim Dài Tay Sọc Cổ Điển Mới Mùa Thu Đông",
-            "category_id": "Thoi_Trang",
-            "price": 112000,
-            "original_price": 140000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 65cm\nVòng ngực: 100cm\nChiều dài tay áo: 60CM\nChiều rộng vai: 50cm\n\nThông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 45cm\nVòng ngực: 102cm\nChiều dài tay áo: 50CM\nChiều rộng vai: 57cm\n\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp106_ao_len_nu_det_kim_dai_tay-soc.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp106_01_ao_len_nu_det_kim_dai_tay-soc.png",
-                "/public/image_sp/ThoiTrang/sp106_02_ao_len_nu_det_kim_dai_tay-soc.png",
-                "/public/image_sp/ThoiTrang/sp106_03_ao_len_nu_det_kim_dai_tay-soc.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 5.0
-        },
-        {
-            "id": "sp107",
-            "name": "Áo Len Chui Đầu Sọc Cổ Điển Ngọt Ngào Dành Cho Chàng Trai Nhỏ Slouchy Với Hàng Dệt Kim Phù Hợp",
-            "category_id": "Thoi_Trang",
-            "price": 160000,
-            "original_price": 205000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 58cm\nVòng ngực: 112-138cm\nChiều dài tay áo: 45CM\nChiều rộng vai: 58cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp107_ao_len_soc_co_đien.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp107_01_ao_len_soc_co_đien.png",
-                "/public/image_sp/ThoiTrang/sp107_02_ao_len_soc_co_đien.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 4.9
-        },
-        {
-            "id": "sp108",
-            "name": "Áo Len Trễ Vai Tay Dài Áo Len Cực Xinh Hàng",
-            "category_id": "Thoi_Trang",
-            "price": 136000,
-            "original_price": 170000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 46cm\nVòng ngực: 66cm\nChiều dài tay áo: 50CM\nChiều rộng vai: 35cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp108_ao_len_tre_vai_tay_dai.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp108_01_ao_len_tre_vai_tay_dai.png",
-                "/public/image_sp/ThoiTrang/sp108_02_ao_len_tre_vai_tay_dai.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 5.0
-        },
-        {
-            "id": "sp109",
-            "name": " Áo sweater Tay Dài Cổ Phối Lông Ấm Áp Xinh Xắn ",
-            "category_id": "Thoi_Trang",
-            "price": 148000,
-            "original_price": 184000,
-            "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 43cm\nVòng ngực: 84cm\nChiều dài tay áo: 45CM\nChiều rộng vai: 34cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
-            "image_url": "/public/image_sp/ThoiTrang/sp109_ao_sweater_tay_dai_co_phoi_long.png",
-            "alt_images": [
-                "/public/image_sp/ThoiTrang/sp109_01_ao_sweater_tay_dai_co_phoi_long.png",
-                "/public/image_sp/ThoiTrang/sp109_02_ao_sweater_tay_dai_co_phoi_long.png"
-            ],
-            "variants": [
-                {
-                    "color": ["Đen", "Đỏ"],
-                    "stock": {
-                        "Đen": 10,
-                        "Đỏ": 15
-                    }
-                }
-            ],
-            "is_featured": true,
-            "rating": 5.0
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          },
+          "ID_SP": [
+            "Mã 01",
+            "Mã 03",
+            "Mã 05",
+            "Mã 07",
+            "Mã 11",
+            "Mã 15",
+            "Mã 16",
+            "Mã 17",
+            "Mã 18",
+            "Mã 19",
+            "Mã 20",
+            "Mã 20",
+            "Mã 26",
+            "Mã 28",
+            "Mã 29",
+            "Mã 33"
+          ]
         }
-    ],
+      ],
+      "is_featured": true,
+      "rating": 4.8
+    },
+    {
+      "id": "sp002",
+      "name": "Len xù chuyên làm tóc cho búp bê",
+      "category_id": "Len",
+      "price": 37000,
+      "original_price": 40000,
+      "description": "Len xù chuyên làm tóc cho búp bê hoặc những sản phẩm thú bông có lông cần độ xù nhiều.\nLen chất sợi rất mềm, phần đầu kéo mạnh sẽ rất dễ đứt nên mn móc sai thì tháo ra nhẹ nhàng thôi nhé. Cuộn 50gr nhưng nhà máy quấn cuộn chặt nên ở ngoài nhìn cuộn len rất bé luôn nha.\n\n- Thành phần: 20% lông cừu, 80% acrylic\n- Trọng lượng: 50gr\n- Xuất xứ: Trung Quốc\n- Kim móc: 2.0mm - 2.5mm\n- Kim đan: 2.5mm - 3.0mm\n- Giá bán lẻ: 40k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
 
-    "categories": [
+      "image_url": "/public/image_sp/LenPicture/sp002_len_xulamtoc.png",
+      "alt_images": ["/public/image_sp/LenPicture/sp002_01_len_xulamtoc.jpeg"],
+      "variants": [
         {
-            "id": "Len",
-            "name": "Len",
-            "description": "Các loại áo dành cho nam giới: áo thun, áo sơ mi, áo khoác...",
-            "image_url": "/images/categories/ao_nam.jpg"
-        },
-        {
-            "id": "Thoi_Trang",
-            "name": "Thời trang",
-            "description": "Các loại quần dành cho nam giới: quần jeans, quần tây, quần short...",
-            "image_url": "/images/categories/quan_nam.jpg"
-        },
-        {
-            "id": "Phu_Kien",
-            "name": "Phụ kiện",
-            "description": "Thắt lưng, ví, mũ, kính mắt...",
-            "image_url": "/images/categories/``hu_kien.jpg"
+          "ID_SP": [
+            "Mã trắng kem",
+            "Mã nâu nhạt",
+            "Mã nâu bò",
+            "Mã hạt dẻ",
+            "Mã kem sữa",
+            "Mã hồng phấn",
+            "Mã hồng vỏ đổ",
+            "Mã nâu be",
+            "Mã đỏ đô",
+            "Mã xanh navy",
+            "Mã xám xanh",
+            "Mã đen",
+            "Mã xanh cốm",
+            "Mã be",
+            "Mã da nhạt",
+            "Mã vàng nhạt"
+          ]
         }
-    ],
-    "admin": [
+      ],
+      "is_featured": true,
+      "rating": 4.3
+    },
+    {
+      "id": "sp003",
+      "name": "Len Susan Family 5 cỡ sợi tương đương len Milk cotton loạn 1",
+      "category_id": "Len",
+      "price": 45000,
+      "original_price": 50000,
+      "description": "Len Susan Family 5 cỡ sợi tương đương len Milk cotton loại 1, là dòng len nội địa cao cấp Trung Quốc, thích hợp đan móc quần áo cho bé, thú bông, khăn, chăn, mũ, áo... sợi len nhỏ, không bị xù hay bai dão, lên dáng sản phẩm rất đẹp.\n- Thành phần: 60% Cotton, 40% Arcylic\n- Trọng lượng: 100gr\n- Kim móc: 2.5mm ~ 3.0mm\n- Kim đan: 3.5mm ~ 4.0mm\n- Xuất xứ: Trung Quốc\n💲Giá: 45k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/LenPicture/sp003_len_susan_family5.png",
+      "alt_images": [
+        "/public/image_sp/LenPicture/sp003_01_len_susan_family5.jpeg"
+      ],
+      "variants": [
         {
-            "id": "admin",
-            "username": "Admin",
-            "email": "admin@gmail.com",
-            "full_name": "Đây là tài khoản admin",
-            "address": "123 Đường ABC, Quận XYZ, TP.HCM",
-            "phone": "0901234567"
+          "ID_SP": [
+            "Mã 01",
+            "Mã 02",
+            "Mã 03",
+            "Mã 04",
+            "Mã 05",
+            "Mã 06",
+            "Mã 07",
+            "Mã 09",
+            "Mã 10",
+            "Mã 11",
+            "Mã 12",
+            "Mã 13"
+          ]
         }
-    ]
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+
+    {
+      "id": "sp004",
+      "name": "Len Mohair pompom (Mohair Tweed)",
+      "category_id": "Len",
+      "price": 70000,
+      "original_price": 85000,
+      "description": "Len Mohair pompom (Mohair Tweed) sợi mềm mượt phù hợp đan/móc áo, váy, khăn, đồ thu đông.…\n\nThành phần: 15% M, 25% W, 31% P, 9% N, 20% A.\nTrọng lượng: 50gr.\nChiều dài: 130m.\nKim đan: 5.5mm - 6.5mm.\nKim móc: 4.0mm - 5.0mm.\nXuất xứ: Trung Quốc.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/LenPicture/sp004_len_mohair.png",
+      "alt_images": ["/public/image_sp/LenPicture/sp004_01_len_mohair.jpeg"],
+      "variants": [
+        {
+          "ID_SP": [
+            "Mã 01",
+            "Mã 02",
+            "Mã 03",
+            "Mã 04",
+            "Mã 05",
+            "Mã 06",
+            "Mã 07",
+            "Mã 08"
+          ]
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.9
+    },
+    {
+      "id": "sp005",
+      "name": "Milk Cotton loại 1",
+      "category_id": "Len",
+      "price": 40000,
+      "original_price": 45000,
+      "description": "Milk Cotton loại 1 thích hợp đan móc mũ len, khăn choàng, áo khoác, chăn, thú nhồi bông....\n\n- Thành phần: 20% Milk Protein, 80% Combed Cotton.\n- Trọng lượng: 125gr\n- Chiều dài: 220m\n- Kim đan: 4.0mm - 5.0mm\n- Kim móc: 2.5mm - 3.5mm\n- Xuất xứ: Trung Quốc\n- Giá bán lẻ: 47k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/LenPicture/sp005_len_milkcontton.jpeg",
+      "alt_images": [
+        "/public/image_sp/LenPicture/sp005_01_len_milkcotton.jpeg"
+      ],
+      "variants": [
+        {
+          "ID_SP": [
+            "Mã 01",
+            "Mã 02",
+            "Mã 03",
+            "Mã 04",
+            "Mã 05",
+            "Mã 06",
+            "Mã 07",
+            "Mã 08",
+            "Mã 09",
+            "Mã 10",
+            "Mã 11",
+            "Mã 12"
+          ]
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.5
+    },
+    {
+      "id": "sp006",
+      "name": "Len Susan Family 4",
+      "category_id": "Len",
+      "price": 40000,
+      "original_price": 45000,
+      "description": "Len Susan Family 4 là dòng len nội địa cao cấp Trung Quốc, thích hợp đan móc quần áo cho bé, thú bông, khăn, chăn, mũ, áo... sợi len nhỏ, không bị xù hay bai dão, lên dáng sản phẩm rất đẹp.\n\n- Thành phần: 60% Cotton, 40% Arcylic\n- Trọng lượng: 50gr\n- Độ dài: 120m\n- Kim móc: 2.0mm ~ 2.5mm\n- Kim đan: 3.0mm ~ 3.5mm\n- Xuất xứ: Trung Quốc\n💲Giá: 40k/cuộn.\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/LenPicture/sp006_len_susan_family4.jpeg",
+      "alt_images": [
+        "/public/image_sp/LenPicture/sp006_01_len_susan_family4.jpeg"
+      ],
+      "variants": [
+        {
+          "ID_SP": [
+            "Mã 401",
+            "Mã 402",
+            "Mã 403",
+            "Mã 404",
+            "Mã 405",
+            "Mã 406",
+            "Mã 407",
+            "Mã 408"
+          ]
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.6
+    },
+    {
+      "id": "sp007",
+      "name": "YARNART BABY COTTON",
+      "category_id": "Len",
+      "price": 37000,
+      "original_price": 40000,
+      "description": "YARNART BABY COTTON\n\nYarnArt baby cotton thích hợp đan móc quần áo cho bé, thú bông, khăn, chăn, mũ ... sợi len mềm mại nên rất phù hợp đan móc quần áo cho bé sơ sinh.\nLen bền màu, không xù, ko bai dão.\n\n- Xuất xứ: Thổ Nhĩ Kỳ\n- Thành phần: 50% Cotton, 50% Arcylic\n- Trọng lượng: 50gr\n- Độ dài: 165m\n- Cỡ sợi: 1.5mm\n- Kim móc: 2.0mm ~ 3.0mm\n- Kim đan: 3.0mm ~ 4.0mm\n- Giá bán lẻ: 40k/cuộn.\n\n** Định lượng tham khảo:\n- Mũ bé sơ sinh 1 cuộn, bé trên 6 tháng hay người lớn thì 2 cuộn.\n- Khăn: 4-6 cuộn.\n- Áo cho bé nhỏ 4-6 cuộn, áo người lớn 12-14 cuộn.",
+      "image_url": "/public/image_sp/LenPicture/sp007_len_yarn_art_baby.jpeg",
+      "alt_images": [
+        "/public/image_sp/LenPicture/sp007_01_len_yarn_art_baby.jpeg"
+      ],
+      "variants": [
+        {
+          "ID_SP": [
+            "Mã 400",
+            "Mã 401",
+            "Mã 402",
+            "Mã 403",
+            "Mã 404",
+            "Mã 405",
+            "Mã 406",
+            "Mã 407",
+            "Mã 408",
+            "Mã 410",
+            "Mã 411",
+            "Mã 412"
+          ]
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.7
+    },
+    {
+      "id": "sp008",
+      "name": "Len YARNART SILKY WOOL",
+      "category_id": "Len",
+      "price": 50000,
+      "original_price": 55000,
+      "description": "Len YARNART SILKY WOOL đúng như tên gọi là 1 dòng len pha giữa lụa siêu mềm và len lông cừu merino, điều này sẽ giúp cho sản phẩm của bạn vừa có độ ấm của len lông cừu và sự mềm mượt của lụa tơ tằm. Siêu thích hợp cho các kiểu khăn choàng, cardigan mỏng nhẹ cho mùa thu đông. Cuộn chỉ có 25g nhưng dài tận 190m, siêu dôi nha, nên tính ra là rất tiết kiệm khi xài dòng này. Về màu sắc thì dòng này ko có nhiều màu, bù lại màu sắc thiên về tông trầm, nhẹ nhàng.\n\n- Thành phần: 35% Silk Rayon, 65% Merino Wool\n- Trọng lượng: 25g\n- Chiều dài: 190m\n- Kim móc: 2.5mm-3.5mm\n- Kim đan: 2.5mm-3.5mm\n- Xuất xứ: Thổ Nhĩ Kì\n\n❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ không có nhé.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/LenPicture/sp008_len_yarn_art_silky_wool.jpeg",
+      "alt_images": [
+        "/public/image_sp/LenPicture/sp008_01_len_yarn_art_silky_wool.jpeg"
+      ],
+      "variants": [
+        {
+          "ID_SP": [
+            "Mã 401",
+            "Mã 402",
+            "Mã 403",
+            "Mã 404",
+            "Mã 405",
+            "Mã 406",
+            "Mã 407",
+            "Mã 408",
+            "Mã 409",
+            "Mã 410",
+            "Mã 411",
+            "Mã 412"
+          ]
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.7
+    },
+    {
+      "id": "sp100",
+      "name": "Áo Cardigan Dệt Kim Tay Dài Cổ Tròn Phối Nút Thiết Kế Thanh Lịch",
+      "category_id": "Thoi_Trang",
+      "price": 164000,
+      "original_price": 205000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 47cm\nVòng ngực: 98cm\nChiều dài tay áo: 44CM\nChiều rộng vai: 57cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp100_ao_cardigan_det_kim_tay_dai_co_tron.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp100_01_ao_cardigan_det_kim_tay_dai_co_tron.png",
+        "/public/image_sp/ThoiTrang/sp100_02_ao_cardigan_det_kim_tay_dai_co_tron.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.8
+    },
+
+    {
+      "id": "sp101",
+      "name": "Áo Dệt Kim Tay Dài Dáng Rộng Lưng Cao Quyến Rũ Cho Nữ Áo len nữ hàn quốc",
+      "category_id": "Thoi_Trang",
+      "price": 108000,
+      "original_price": 145000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 51cm\nVòng ngực: 114cm\nChiều dài tay áo: 49CM\nChiều rộng vai: 58cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp101_ao_det_kim_tay_dai_dang_rong_lung_cao.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp101_01_ao_det_kim_tay_dai_dang_rong_lung_cao.png",
+        "/public/image_sp/ThoiTrang/sp101_02_ao_det_kim_tay_dai_dang_rong_lung_cao.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.7
+    },
+    {
+      "id": "sp102",
+      "name": "Áo Khoác Cardigan Mỏng Dệt Kim Màu Be Phối Nơ Oversize Xinh",
+      "category_id": "Thoi_Trang",
+      "price": 102000,
+      "original_price": 143000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 65cm\nVòng ngực: 100cm\nChiều dài tay áo: 60CM\nChiều rộng vai: 50cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp102_ao_khoac_cadigan_mong_det_kim.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp102_01_ao_khoac_cadigan_mong_det_kim.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp103",
+      "name": "Áo Khoác Len Cadigan Nữ Mỏng Kiểu Blackpink Tay Cánh Dơi Dáng Croptop",
+      "category_id": "Thoi_Trang",
+      "price": 85000,
+      "original_price": 115000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nÁo dài: 40cm\nNgực: 98cm\nChiều dài tay áo: 77cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp103_ao_khoac_len_den.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp103_01_ao_khoac_len_den.png",
+        "/public/image_sp/ThoiTrang/sp103_02_ao_khoac_len_den.png",
+        "/public/image_sp/ThoiTrang/sp103_03_ao_khoac_len_den.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.9
+    },
+    {
+      "id": "sp104",
+      "name": "Áo Khoác Len Dệt Kim Dài Tay Dáng Ngắn Thời Trang",
+      "category_id": "Thoi_Trang",
+      "price": 136000,
+      "original_price": 170000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 42cm\nVòng ngực: 90-120cm\nChiều dài tay áo: 52CM\nChiều rộng vai: 42cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp104_ao_khoac_len_det_kim.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp104_01_ao_khoac_len_det_kim.png",
+        "/public/image_sp/ThoiTrang/sp104_02_ao_khoac_len_det_kim.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.7
+    },
+    {
+      "id": "sp105",
+      "name": "Áo Len Nữ Đan Dây, Áo Crotop Cổ Chữ V Dệt Kim Dày Dặn Hoạ Tiết Sọc Dáng Rộng Phong Cách Hàn Quốc Thu Đông",
+      "category_id": "Thoi_Trang",
+      "price": 142000,
+      "original_price": 180000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 45cm\nVòng ngực: 94cm\nChiều dài tay áo: 48CM\nChiều rộng vai: 43cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp105_ao_len_nu_dang_day.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp105_01_ao_len_nu_dang_day.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.8
+    },
+    {
+      "id": "sp106",
+      "name": "Áo Len Nữ Dệt Kim Dài Tay Sọc Cổ Điển Mới Mùa Thu Đông",
+      "category_id": "Thoi_Trang",
+      "price": 112000,
+      "original_price": 140000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 65cm\nVòng ngực: 100cm\nChiều dài tay áo: 60CM\nChiều rộng vai: 50cm\n\nThông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 45cm\nVòng ngực: 102cm\nChiều dài tay áo: 50CM\nChiều rộng vai: 57cm\n\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp106_ao_len_nu_det_kim_dai_tay-soc.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp106_01_ao_len_nu_det_kim_dai_tay-soc.png",
+        "/public/image_sp/ThoiTrang/sp106_02_ao_len_nu_det_kim_dai_tay-soc.png",
+        "/public/image_sp/ThoiTrang/sp106_03_ao_len_nu_det_kim_dai_tay-soc.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp107",
+      "name": "Áo Len Chui Đầu Sọc Cổ Điển Ngọt Ngào Dành Cho Chàng Trai Nhỏ Slouchy Với Hàng Dệt Kim Phù Hợp",
+      "category_id": "Thoi_Trang",
+      "price": 160000,
+      "original_price": 205000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 58cm\nVòng ngực: 112-138cm\nChiều dài tay áo: 45CM\nChiều rộng vai: 58cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp107_ao_len_soc_co_đien.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp107_01_ao_len_soc_co_đien.png",
+        "/public/image_sp/ThoiTrang/sp107_02_ao_len_soc_co_đien.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.9
+    },
+    {
+      "id": "sp108",
+      "name": "Áo Len Trễ Vai Tay Dài Áo Len Cực Xinh Hàng",
+      "category_id": "Thoi_Trang",
+      "price": 136000,
+      "original_price": 170000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 46cm\nVòng ngực: 66cm\nChiều dài tay áo: 50CM\nChiều rộng vai: 35cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp108_ao_len_tre_vai_tay_dai.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp108_01_ao_len_tre_vai_tay_dai.png",
+        "/public/image_sp/ThoiTrang/sp108_02_ao_len_tre_vai_tay_dai.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp109",
+      "name": " Áo sweater Tay Dài Cổ Phối Lông Ấm Áp Xinh Xắn ",
+      "category_id": "Thoi_Trang",
+      "price": 148000,
+      "original_price": 184000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 43cm\nVòng ngực: 84cm\nChiều dài tay áo: 45CM\nChiều rộng vai: 34cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp109_ao_sweater_tay_dai_co_phoi_long.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp109_01_ao_sweater_tay_dai_co_phoi_long.png",
+        "/public/image_sp/ThoiTrang/sp109_02_ao_sweater_tay_dai_co_phoi_long.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp050",
+      "name": " Keo dán UHU ",
+      "category_id": "Phu_Kien",
+      "price": 35000,
+      "original_price": 35000,
+      "description": "Keo được sử dụng để dán các loại sản phẩm cần độ thẩm mỹ cao như mô hình DIY, đồ Handmade như dán mắt thú bông, băng đô, kẹp tóc,…\n\n- Keo dễ sử dụng, không bị lem như keo nến hay bị khô cứng như keo 502\n- Keo trong suốt, không hôi, không gây hại cho da\n- Khi dán nên để khoảng 15-20 phút để keo khô bề mặt, tốt nhất là 3h-4h để keo chết thì sẽ chắc hơn\n\nTHÔNG TIN\nTên sản phẩm: Keo dán UHU\nChất liệu: Keo dán\nXuất xứ: Trung Quốc\nMàu sắc: Trong suốt\n\n❗️ Đóng nắp ngay sau khi sử dụng\n❗️ Tránh xa tầm tay trẻ em\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kỹ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/DungCuDanLen/sp050_keo_dan.jpeg",
+      "alt_images": [],
+      "variants": [{}],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp051",
+      "name": " Kim móc Tunisian ",
+      "category_id": "Phu_Kien",
+      "price": 27000,
+      "original_price": 27000,
+      "description": "Kim móc Tunisian 27k/cái.\n- Shop có sẵn size: 2.5mm, 3.0mm, 3.5mm, 4.0mm.\n- Chiều dài kim: 27cm\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kỹ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/DungCuDanLen/sp051_kim_moc.jpeg",
+      "alt_images": [],
+      "variants": [{}],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp052",
+      "name": " Trục gỗ xoay le ",
+      "category_id": "Phu_Kien",
+      "price": 180000,
+      "original_price": 180000,
+      "description": "Trục gỗ xoay len\n\nChất liệu: gỗ\n\nVới thiết kế thân có thể xoay được giúp bạn giữ cố định cuộn len và tháo len một cách dễ dàng.\n\nLà sản phẩm thiết yếu cho những bạn đam mê đan móc, có tác dụng giữ cuộn len giúp hạn chế việc rối len cũng như giúp chúng ta móc đan một cách dễ dàng, ít tốn sức kéo dây và gỡ rối như bình thường.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kỹ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/DungCuDanLen/sp052_truc_go_xoay_len.jpeg",
+      "alt_images": [],
+      "variants": [{}],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp054",
+      "name": " Kim móc cán dẻo ",
+      "category_id": "Phu_Kien",
+      "price": 20000,
+      "original_price": 20000,
+      "description": "Kim móc cán dẻo\n- Size 2.0mm đến 6.0mm: 20k/cây\n- Size 6.5mm đến 10.0mm: 25k/cây\nMàu kim có thể thay đổi theo từng đợt nên shop sẽ giao màu ngẫu nhiên, không chọn màu được nhé khách ơi\n\n—————————————-\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kỹ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/DungCuDanLen/sp054_kim_moc_can_deo.jpeg",
+      "alt_images": [],
+      "variants": [{}],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp055",
+      "name": " Đồng hồ nam châm hít kim khâu, kim định vị… ",
+      "category_id": "Phu_Kien",
+      "price": 60000,
+      "original_price": 60000,
+      "description": "Đồng hồ nam châm hít kim khâu, kim định vị…\n60k/cái\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kỹ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/DungCuDanLen/sp055_ghim_cai.jpeg",
+      "alt_images": [],
+      "variants": [{}],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp056",
+      "name": " Vỉ 3 kim khâu len ",
+      "category_id": "Phu_Kien",
+      "price": 15000,
+      "original_price": 15000,
+      "description": "Vỉ 3 kim khâu len 15k/vỉ\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kỹ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/DungCuDanLen/sp056_vi_3_kim_khau.jpeg",
+      "alt_images": [],
+      "variants": [{}],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp057",
+      "name": " Set kim khâu Tulip",
+      "category_id": "Phu_Kien",
+      "price": 140000,
+      "original_price": 150000,
+      "description": "Set kim khâu Tulip 140k/1 set.\nXuất xứ: Nhật\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kỹ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/DungCuDanLen/sp057_set_kim_khau_len_tulip.jpeg",
+      "alt_images": [],
+      "variants": [{}],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp058",
+      "name": " Set 9 kim khâu len kèm ống đựng kim khâu",
+      "category_id": "Phu_Kien",
+      "price": 30000,
+      "original_price": 30000,
+      "description": "Set 9 kim khâu len kèm ống đựng kim khâu 30k/set.\n\n❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách nhiệm đối với trường hợp Quý khách chọn không đúng phân loại từng mã nên Quý khách vui lòng kiểm tra kỹ đơn hàng trước khi bấm đặt hàng.",
+      "image_url": "/public/image_sp/DungCuDanLen/sp058_set_9_kim_kem_ong_dung.jpeg",
+      "alt_images": [],
+      "variants": [{}],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp101",
+      "name": "Áo Dệt Kim Tay Dài Dáng Rộng Lưng Cao Quyến Rũ Cho Nữ Áo len nữ hàn quốc",
+      "category_id": "Thoi_Trang",
+      "price": 108000,
+      "original_price": 145000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 51cm\nVòng ngực: 114cm\nChiều dài tay áo: 49CM\nChiều rộng vai: 58cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp101_ao_det_kim_tay_dai_dang_rong_lung_cao.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp101_01_ao_det_kim_tay_dai_dang_rong_lung_cao.png",
+        "/public/image_sp/ThoiTrang/sp101_02_ao_det_kim_tay_dai_dang_rong_lung_cao.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.7
+    },
+    {
+      "id": "sp102",
+      "name": "Áo Khoác Cardigan Mỏng Dệt Kim Màu Be Phối Nơ Oversize Xinh",
+      "category_id": "Thoi_Trang",
+      "price": 102000,
+      "original_price": 143000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 65cm\nVòng ngực: 100cm\nChiều dài tay áo: 60CM\nChiều rộng vai: 50cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp102_ao_khoac_cadigan_mong_det_kim.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp102_01_ao_khoac_cadigan_mong_det_kim.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp103",
+      "name": "Áo Khoác Len Cadigan Nữ Mỏng Kiểu Blackpink Tay Cánh Dơi Dáng Croptop",
+      "category_id": "Thoi_Trang",
+      "price": 85000,
+      "original_price": 115000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nÁo dài: 40cm\nNgực: 98cm\nChiều dài tay áo: 77cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp103_ao_khoac_len_den.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp103_01_ao_khoac_len_den.png",
+        "/public/image_sp/ThoiTrang/sp103_02_ao_khoac_len_den.png",
+        "/public/image_sp/ThoiTrang/sp103_03_ao_khoac_len_den.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.9
+    },
+    {
+      "id": "sp104",
+      "name": "Áo Khoác Len Dệt Kim Dài Tay Dáng Ngắn Thời Trang",
+      "category_id": "Thoi_Trang",
+      "price": 136000,
+      "original_price": 170000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 42cm\nVòng ngực: 90-120cm\nChiều dài tay áo: 52CM\nChiều rộng vai: 42cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp104_ao_khoac_len_det_kim.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp104_01_ao_khoac_len_det_kim.png",
+        "/public/image_sp/ThoiTrang/sp104_02_ao_khoac_len_det_kim.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.7
+    },
+    {
+      "id": "sp105",
+      "name": "Áo Len Nữ Đan Dây, Áo Crotop Cổ Chữ V Dệt Kim Dày Dặn Hoạ Tiết Sọc Dáng Rộng Phong Cách Hàn Quốc Thu Đông",
+      "category_id": "Thoi_Trang",
+      "price": 142000,
+      "original_price": 180000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 45cm\nVòng ngực: 94cm\nChiều dài tay áo: 48CM\nChiều rộng vai: 43cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp105_ao_len_nu_dang_day.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp105_01_ao_len_nu_dang_day.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.8
+    },
+    {
+      "id": "sp106",
+      "name": "Áo Len Nữ Dệt Kim Dài Tay Sọc Cổ Điển Mới Mùa Thu Đông",
+      "category_id": "Thoi_Trang",
+      "price": 112000,
+      "original_price": 140000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 65cm\nVòng ngực: 100cm\nChiều dài tay áo: 60CM\nChiều rộng vai: 50cm\n\nThông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 45cm\nVòng ngực: 102cm\nChiều dài tay áo: 50CM\nChiều rộng vai: 57cm\n\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp106_ao_len_nu_det_kim_dai_tay-soc.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp106_01_ao_len_nu_det_kim_dai_tay-soc.png",
+        "/public/image_sp/ThoiTrang/sp106_02_ao_len_nu_det_kim_dai_tay-soc.png",
+        "/public/image_sp/ThoiTrang/sp106_03_ao_len_nu_det_kim_dai_tay-soc.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp107",
+      "name": "Áo Len Chui Đầu Sọc Cổ Điển Ngọt Ngào Dành Cho Chàng Trai Nhỏ Slouchy Với Hàng Dệt Kim Phù Hợp",
+      "category_id": "Thoi_Trang",
+      "price": 160000,
+      "original_price": 205000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 58cm\nVòng ngực: 112-138cm\nChiều dài tay áo: 45CM\nChiều rộng vai: 58cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp107_ao_len_soc_co_đien.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp107_01_ao_len_soc_co_đien.png",
+        "/public/image_sp/ThoiTrang/sp107_02_ao_len_soc_co_đien.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.9
+    },
+    {
+      "id": "sp108",
+      "name": "Áo Len Trễ Vai Tay Dài Áo Len Cực Xinh Hàng",
+      "category_id": "Thoi_Trang",
+      "price": 136000,
+      "original_price": 170000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 46cm\nVòng ngực: 66cm\nChiều dài tay áo: 50CM\nChiều rộng vai: 35cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp108_ao_len_tre_vai_tay_dai.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp108_01_ao_len_tre_vai_tay_dai.png",
+        "/public/image_sp/ThoiTrang/sp108_02_ao_len_tre_vai_tay_dai.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp109",
+      "name": " Áo sweater Tay Dài Cổ Phối Lông Ấm Áp Xinh Xắn ",
+      "category_id": "Thoi_Trang",
+      "price": 148000,
+      "original_price": 184000,
+      "description": "Thông tin kích thước (có thể có lỗi 1-3cm)\nChiều dài: 43cm\nVòng ngực: 84cm\nChiều dài tay áo: 45CM\nChiều rộng vai: 34cm\nPhong cách: Hàn Quốc/Casual\nVật chất: Đan\nPhù hợp với đám đông: Người trẻ\n\n🥰 Vui lòng kiểm tra bản vẽ kích thước và địa chỉ điền chính xác trước khi đặt hàng.\n😍 Cửa hàng của chúng tôi cung cấp thanh toán COD khi giao hàng\n😍 Thanh toán hôm nay, giao hàng sau 12 giờ vào ngày hôm sau~ (không bao gồm hàng đặt trước)\n😍 Các đơn đặt hàng trước 12 giờ sẽ được giao ngay trong ngày (không bao gồm các mặt hàng đặt trước)",
+      "image_url": "/public/image_sp/ThoiTrang/sp109_ao_sweater_tay_dai_co_phoi_long.png",
+      "alt_images": [
+        "/public/image_sp/ThoiTrang/sp109_01_ao_sweater_tay_dai_co_phoi_long.png",
+        "/public/image_sp/ThoiTrang/sp109_02_ao_sweater_tay_dai_co_phoi_long.png"
+      ],
+      "variants": [
+        {
+          "color": ["Đen", "Đỏ"],
+          "stock": {
+            "Đen": 10,
+            "Đỏ": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp110",
+      "name": "Vịt Bông Len Handmade Mini",
+      "category_id": "",
+      "price": 50000,
+      "original_price": 50000,
+      "description": "Chú vịt bông len handmade nhỏ nhắn được làm hoàn toàn thủ công bằng len nhung cao cấp kết hợp len cotton cho phần mỏ và chân. Mềm mại, dễ thương, an toàn cho cả trẻ em.\n\n📌 Kích thước: khoảng 12–15cm\n📌 Màu sắc: Trắng (thân), Cam (mỏ & chân)\n📌 Chất liệu: Len nhung + len cotton\n\n🎁 Phù hợp làm móc khóa, đồ trang trí bàn học, quà tặng bạn bè, người yêu...\n\n👉 Mỗi sản phẩm là độc bản, không cái nào giống hoàn toàn cái nào!\n\n🚚 Giao hàng toàn quốc, nhận hàng kiểm tra trước khi thanh toán.",
+      "image_url": "/public/image_sp/SPTuLen/sp110_sp1.jpg",
+      "alt_images": [
+        "/public/image_sp/SPTuLen/sp110_sp1_01.jpg",
+        "/public/image_sp/SPTuLen/sp110_sp1_02.jpg",
+        "/public/image_sp/SPTuLen/sp110_sp1_03.jpg",
+        "/public/image_sp/SPTuLen/sp110_sp1_04.jpg",
+        "/public/image_sp/SPTuLen/sp110_sp1_05.jpg"
+      ],
+      "variants": [
+        {
+          "color": ["Trắng"],
+          "stock": {
+            "Trắng": 20
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    },
+    {
+      "id": "sp111",
+      "name": "Túi Len Handmade Cờ Đỏ Sao Vàng",
+      "category_id": "",
+      "price": 45000,
+      "original_price": 55000,
+      "description": "Túi len handmade lấy cảm hứng từ Quốc kỳ Việt Nam với màu đỏ nổi bật và ngôi sao vàng nổi ở giữa. Được đan thủ công từ len nhung mềm mại, túi có kích thước nhỏ gọn, tiện lợi để đựng tiền lẻ, tai nghe hoặc các vật dụng nhỏ khác.\n\n📌 Kích thước: 11cm x 11cm\n📌 Màu sắc: Đỏ (nền), Vàng (ngôi sao)\n📌 Phụ kiện: Móc khóa và hạt chữ 'VN' trang trí\n\n✨ Phù hợp làm quà tặng, treo balo, hoặc dùng hàng ngày như món đồ kỷ niệm tinh tế.\n\n👉 Mỗi sản phẩm là thủ công 100%, có thể có sai số nhỏ nhưng luôn đảm bảo chất lượng.",
+      "image_url": "/public/image_sp/SPTuLen/sp111_sp2.jpg",
+      "alt_images": [
+        "/public/image_sp/SPTuLen/sp111_sp2_01.jpg",
+        "/public/image_sp/SPTuLen/sp111_sp2_02.jpg",
+        "/public/image_sp/SPTuLen/sp111_sp2_03.jpg",
+        "/public/image_sp/SPTuLen/sp111_sp2_04.jpg"
+      ],
+      "variants": [
+        {
+          "color": ["Đỏ"],
+          "stock": {
+            "Đỏ": 30
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 4.9
+    },
+    {
+      "id": "sp112",
+      "name": "Bạch Tuộc Len Handmade Mini",
+      "category_id": "",
+      "price": 39000,
+      "original_price": 49000,
+      "description": "Bạch tuộc len mini siêu dễ thương, được móc hoàn toàn thủ công bằng len cotton an toàn và mềm mại. Mỗi bé bạch tuộc có biểu cảm đáng yêu, phù hợp làm móc khóa, đồ trang trí balo, bàn học hoặc quà tặng nhỏ xinh.\n\n📌 Kích thước: Cao khoảng 6–7cm\n📌 Chất liệu: Len cotton, bông nhồi\n📌 Có đính ngôi sao vải handmade xinh xắn\n\n🎨 Màu sắc đa dạng:\n- Tím\n- Xanh Mint\n- Đỏ\n- Vàng\n- Cam\n- Xanh Dương\n- Hồng Nhạt\n- Hồng Đất\n\n🎁 Ý tưởng tuyệt vời cho quà sinh nhật, đồ lưu niệm hoặc quà tặng handmade.\n\n👉 Vì là sản phẩm thủ công nên mỗi bé sẽ có nét riêng và không hoàn toàn giống nhau.",
+      "image_url": "/public/image_sp/SPTuLen/sp112_sp3.jpg",
+      "alt_images": [
+        "/public/image_sp/SPTuLen/sp112_sp3_01.jpg",
+        "/public/image_sp/SPTuLen/sp112_sp3_02jpg",
+        "/public/image_sp/SPTuLen/sp112_sp3_03.jpg",
+        "/public/image_sp/SPTuLen/sp112_sp3_04.jpg",
+        "/public/image_sp/SPTuLen/sp112_sp3_05.jpg"
+      ],
+      "variants": [
+        {
+          "color": [
+            "Tím",
+            "Xanh Mint",
+            "Đỏ",
+            "Vàng",
+            "Cam",
+            "Xanh Dương",
+            "Hồng Nhạt",
+            "Hồng Đất"
+          ],
+          "stock": {
+            "Tím": 10,
+            "Xanh Mint": 10,
+            "Đỏ": 10,
+            "Vàng": 10,
+            "Cam": 10,
+            "Xanh Dương": 10,
+            "Hồng Nhạt": 10,
+            "Hồng Đất": 10
+          }
+        }
+      ],
+      "is_featured": false,
+      "rating": 5.0
+    },
+    {
+      "id": "sp113",
+      "name": "Túi Len Móc Tay Handmade Nơ Viền Ren",
+      "category_id": "",
+      "price": 49000,
+      "original_price": 59000,
+      "description": "Túi len móc tay handmade với thiết kế viền ren tinh tế và nơ cùng tông màu. Sản phẩm được móc tỉ mỉ thủ công bằng sợi cotton cao cấp, nhẹ nhàng, thoáng mát và thân thiện với môi trường. Kích thước nhỏ gọn, dễ thương, phù hợp đựng tiền lẻ, son môi hoặc tai nghe.\n\n📌 Kích thước: khoảng 11cm x 11cm\n📌 Chất liệu: Len cotton mềm mại\n📌 Kiểu dáng: Nắp viền ren, thắt nơ cùng màu\n\n🎨 Màu sắc:\n- Xanh Dương\n- Vàng\n- Tím\n- Hồng\n\n🎁 Thích hợp làm quà tặng, trang trí túi xách, balo, hoặc sử dụng hằng ngày.\n\n👉 Vì là sản phẩm thủ công nên mỗi chiếc túi sẽ có độ độc đáo riêng, không cái nào giống hoàn toàn!",
+      "image_url": "/public/image_sp/SPTuLen/sp113_sp4.jpg",
+      "alt_images": [
+        "/public/image_sp/SPTuLen/sp113_sp4_01.jpg",
+        "/public/image_sp/SPTuLen/sp113_sp4_02.jpg"
+      ],
+      "variants": [
+        {
+          "color": ["Xanh", "Vàng", "Tím", "Hồng"],
+          "stock": {
+            "Xanh": 12,
+            "Vàng": 14,
+            "Tím": 10,
+            "Hồng": 15
+          }
+        }
+      ],
+      "is_featured": true,
+      "rating": 5.0
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "Len",
+      "name": "Len",
+      "description": "Các loại áo dành cho nam giới: áo thun, áo sơ mi, áo khoác...",
+      "image_url": "/images/categories/ao_nam.jpg"
+    },
+    {
+      "id": "Thoi_Trang",
+      "name": "Thời trang",
+      "description": "Các loại quần dành cho nam giới: quần jeans, quần tây, quần short...",
+      "image_url": "/images/categories/quan_nam.jpg"
+    },
+    {
+      "id": "Phu_Kien",
+      "name": "Phụ kiện",
+      "description": "Thắt lưng, ví, mũ, kính mắt...",
+      "image_url": "/images/categories/``hu_kien.jpg"
+    }
+  ],
+  "admin": [
+    {
+      "id": "admin",
+      "username": "Admin",
+      "email": "admin@gmail.com",
+      "full_name": "Đây là tài khoản admin",
+      "address": "123 Đường ABC, Quận XYZ, TP.HCM",
+      "phone": "0901234567"
+    }
+  ]
 }
