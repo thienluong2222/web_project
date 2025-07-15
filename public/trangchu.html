@@ -77,16 +77,20 @@
                 <h2>Danh mục sản phẩm</h2>
                 <div class="section-cate__list">
                     <section class="section-cate__list-item">
-                        <img src="/public/image_sp/Len Picture/sp001_01_len_yarnart_jeans.jpeg" alt="" width="200px" height="200px">
-                        <h3 class="section__h3--title">Len</h3>
-                    </section>
-                    <section class="section-cate__list-item">
-                        <img src="/public/image_sp/DụngCụĐanLen/sp050_keo_dan.jpeg" alt="" width="200px" height="200px">
-                        <h3 class="section__h3--title">Dụng cụ</h3>
+                        <img src="/public/image_sp/LenPicture/sp008_len_yarn_art_silky_wool.jpeg" alt="" width="200px" height="200px">
+                        <a href="/public/Catalog_Page.html#len"><h3 class="section__h3--title">Len</h3></a>
                     </section>
                     <section class="section-cate__list-item">
                         <img src="/public/image_sp/ThoiTrang/sp100_01_ao_cardigan_det_kim_tay_dai_co_tron.png" alt="" width="200px" height="200px">
-                        <h3 class="section__h3--title">Thời Trang</h3>
+                        <a href="/public/Catalog_Page.html#thoitrang"><h3 class="section__h3--title">Thời Trang</h3></a>
+                    </section>
+                    <section class="section-cate__list-item">
+                        <img src="/public/image_sp/DungCuDanLen/sp057_set_kim_khau_len_tulip.jpeg" alt="" width="200px" height="200px">
+                        <a href="/public/Catalog_Page.html#phukien"><h3 class="section__h3--title">Dụng cụ</h3></a>
+                    </section>
+                    <section class="section-cate__list-item">
+                        <img src="/public/image_sp/SPTuLen/sp110_sp1.jpg" alt="" width="200px" height="200px">
+                        <a href="/public/Catalog_Page.html#sanphamlen"><h3 class="section__h3--title">Sản phẩm</h3></a>
                     </section>
                 </div>
             </section>
@@ -95,28 +99,11 @@
                 <div class="section__name">
                     <h2>Khuyến mãi sốc</h2>
                 </div>
-                <ul class="section__products">
-                    <li>
-                        <section class="section__product-item">
-                            <p class="product-id" hidden>001</p>
-                            <div class="section__product-item--top">
-                                <a href="" class="product-thumb">
-                                    <img src="./Len Picture/Len Alize Cotton gold .jpeg" alt="Len Alize Cotton gold">
-                                </a>
-                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
-                                <span class="div__span--sale-label">Giảm 33%</span>
-                            </div>
-                            <div class="section__product-item--info">
-                                <a href="" class="product-name">Len Alize Cotton gold</a>
-                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
-                                <span class="product-price"> 
-                                    <strong>₫6.300 - ₫5.000</strong> 
-                                    <del>₫8.599 - ₫15.000</del>
-                                </span>
-                            </div> 
-                        </section>
-                    </li>
-                </ul>
+                <section id="len" class="product-section">
+                    <div class="produce__container" id="Len_catalog">
+                    <!-- Sản phẩm Len sẽ được load ở đây -->
+                    </div>
+                </section>
             </section>
             <!-- collection -->
             <section class="section-collection">
@@ -125,16 +112,16 @@
                     <div class="section-collection__info">
                         <h2 class="section-collection__title">BỘ SƯU TẬP MẪU ÁO ĐỘC ĐÁO</h2>
                         <p class="section-collection__content">Khi thời tiết bắt đầu trở lạnh, không gì ấm áp và thời trang hơn một chiếc áo len basic - đơn giản nhưng luôn cuốn hút! Với các phối màu mới lạ, mẫu áo len MIEE được hơn 1.000 bạn trẻ tin dùng dù chỉ vừa ra mắt được vài tháng.</p>
-                        <a class="more" href="">Xem chi tiết</a>
+                        <a class="more" href="/public/Catalog_Page.html#thoitrang">Xem chi tiết</a>
                     </div>
                 </div>
                 <div class="section-collection__item">
                     <div class="section-collection__info">
                         <h2 class="section-collection__title">BỘ DỤNG CỤ ĐAN LEN SIÊU HOT</h2>
                         <p class="section-collection__content">Bạn yêu thích sự tỉ mỉ, thư giãn và muốn tự tay tạo ra những món đồ len xinh xắn? Bộ dụng cụ đan len chính là người bạn đồng hành không thể thiếu trong hành trình sáng tạo đó!</p>
-                        <a class="more" href="#">Xem chi tiết</a>
+                        <a class="more" href="/public/Catalog_Page.html#phukien">Xem chi tiết</a>
                     </div>
-                    <img class="section-collection__img" src="/public/image_sp/DụngCụĐanLen/sp054_kim_moc_can_deo.jpeg" alt="">
+                    <img class="section-collection__img" src="/public/image_sp/DungCuDanLen/sp061_kim_moc_nhat_hamanaka.jpeg" alt="">
                 </div>
             </section>
             <!-- product-popular -->
@@ -142,49 +129,9 @@
                 <div class="section__name">
                     <h3>Sản phẩm nổi bật</h3>
                 </div>
-                <!-- <ul class="section__products">
-                    <li>
-                        <section class="section__product-item">
-                            <p class="product-id" hidden>001</p>
-                            <div class="section__product-item--top">
-                                <a href="" class="product-thumb">
-                                    <img src="./ThoiTrang/Áo sweater tay dài cổ phối lông.png" alt="Áo sweater tay dài cổ phối lông">
-                                </a>
-                                <a href="" class="div__a--buy-now"><i class="fa fa-shopping-cart shopping-cart"></i>Mua ngay</a>
-                                <span class="div__span--sale-label">Giảm 33%</span>
-                            </div>
-                            <div class="section__product-item--info">
-                                <a href="" class="product-name">Áo sweater tay dài cổ phối lông</a>
-                                <p><span>4.9 <img class="fa fa-star-o" src="" alt=""></span>(124 đánh giá)</p>   
-                                <span class="product-price"> 
-                                    <strong>₫6.300 - ₫5.000</strong> 
-                                    <del>₫8.599 - ₫15.000</del>
-                                </span>
-                            </div> 
-                        </section>
-                    </li>
-                </ul> -->
-                <section id="thoitrang" class="product-section">
+                <section id="len" class="product-section">
                     <div class="produce__container" id="ThoiTrang_catalog">
-                        <div class="main__div--produce">
-                            <img src="./ThoiTrang/Áo Khoác len đen.png" alt="Áo Khoác Len Cardigan" class="div__img--produce">
-                            <div class="div__produce-item--info">
-                                <p class="item--id">Mã Sản Phẩm : 101</p>
-                                <h3 class="item--name">Áo Khoác Len Cardigan</h3>
-                                <section class="produce__fashion">   
-                                <p class="infomation__fashion">Thông tin:</p>
-                                <hr>
-                                <p class="info--fashion">
-                                    Áo dài: 40cm <br>
-                                    Ngực: 98cm <br>
-                                    Chiều dài tay áo: 77cm
-                                </p>
-                                </section>
-                                <hr>
-                                <h2>320,000đ</h2>
-                            </div>
-                            <a class="div__add-cart" href="#">Xem Chi Tiết</a>
-                        </div>
+                    <!-- Sản phẩm Len sẽ được load ở đây -->
                     </div>
                 </section>
             </section>
@@ -193,14 +140,23 @@
                 <div class="section__name">
                     <h3>Sản phẩm mới</h3>
                 </div>
-                
+                <section id="len" class="product-section">
+                    <div class="produce__container" id="PhuKien_catalog">
+                    <!-- Sản phẩm Len sẽ được load ở đây -->
+                    </div>
+                </section>
             </section>
-            <video width="100%" height="500px" controls>
-                <source src="../public/imgtrangchu/len.mp4" type="video/mp4" />
-            </video>
+            <!-- video -->
+            <div class="video">
+                <video controls>
+                    <source src="../public/imgtrangchu/len.mp4" type="video/mp4" />
+                </video>
+            </div>
             <!-- news -->
             <section id="news" class="section-news">
-                <h3>Tin Tức</h3>
+                <div class="section__name">
+                    <h3>Tin tức</h3>
+                </div>
                 <div class="section-news-list">
                     <div class="news-item">
                         <img src="../public/imgtrangchu/Xu hướng.png" alt="">
