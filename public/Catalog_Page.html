@@ -46,7 +46,7 @@
             <button class="sidebar__toggle" data-target="phukien">📱 Dụng Cụ Đan Len</button>
           </li>
           <li class="sidebar__item">
-            <button class="sidebar__toggle" data-target="phukien">🐻 Sản Phẩm Từ Len</button>
+            <button class="sidebar__toggle" data-target="Sanphamtulen">🐻 Sản Phẩm Từ Len</button>
           </li>
            <li class="sidebar__item">
             <button class="sidebar__toggle" data-target="top">🔝 Quay Về Đầu Trang</button>
@@ -117,13 +117,9 @@
         </section>
         <!--🐻 Sản Phẩm Từ Len-->
 
-         <section id="phukien" class="product-section">
+         <section id="Sanphamtulen" class="product-section">
           <h2 class="product-section__title">🐻 Sản Phẩm Từ Len</h2>
-<<<<<<< HEAD
-          <div class="produce__container" id="PhuKien_catalog">
-=======
           <div class="produce__container" id="thuBong_catalog">
->>>>>>> 0b52ac08dac0b0af1bf73d1a07701cc653a8d708
             <div class="main__div--produce">
               <img src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg" alt="Máy Đếm Dòng Cơ" class="div__img--produce">
               <div class="div__produce-item--info">
@@ -229,22 +225,20 @@
 
   <!-- JavaScript scroll mượt -->
   <script>
-        const sidebarButtons = document.querySelectorAll('.sidebar__toggle');
+       const sidebarButtons = document.querySelectorAll('.sidebar__toggle');
     sidebarButtons.forEach(button => {
       button.addEventListener('click', () => {
         const targetId = button.getAttribute('data-target');
         if (targetId === "top") {
-          // ✅ Nếu là "top" thì scroll về đầu trang
           window.scrollTo({ top: 0, behavior: 'smooth' });
-       } else {
+        } else {
           const targetSection = document.getElementById(targetId);
-         if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
           }
-       }
+        }
       });
     });
-
   </script>
   <script src="./js/main.js"></script>
 
