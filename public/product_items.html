@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>product-itmes</title>
+        <link rel="stylesheet" href="css/product_items.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/nav.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!--Thanh điều hướng-->
+        <header>
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <ul class="navbar__links">
+                        <li>
+                            <a href="./trangchu.html" class="navbar__link"
+                                >Trang Chủ</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./Catalog_Page.html" class="navbar__link"
+                                >Sản Phẩm</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./tintuc.html" class="navbar__link"
+                                >Tin tức</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./contact.html" class="navbar__link"
+                                >Liên Hệ</a
+                            >
+                        </li>
+                    </ul>
+                    <ul class="navbar__auth">
+                        <li>
+                            <a href="./dangky.html" class="navbar__auth-link"
+                                >Đăng Ký</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="./dangnhap.html"
+                                class="navbar__auth-link navbar__auth-link--primary"
+                                >Đăng Nhập</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--Thanh điều hướng-->
+        <main class="main-product">
+            <div class="main-product__items">
+                <!--hình ảnh sản phẩm-->
+                <div class="product-describe" id="product-container">
+                    <div class="product-describe__img">
+                        <!-- <div class="single-image">
+                            <div id="product-carousel">
+                                <div class="img">
+                                    <div class="img-item active">
+                                        <img
+                                            class="w-100 h-100"
+                                            src="./image_sp/SPTuLen/sp110_sp1.jpg"
+                                            alt="Image"
+                                        />
+                                    </div>
+                                    <div class="img-item">
+                                        <img
+                                            class="w-100 h-100"
+                                            src="./image_sp/SPTuLen/sp110_sp1_01.jpg"
+                                            alt="Image"
+                                        />
+                                    </div>
+                                    <div class="img-item">
+                                        <img
+                                            class="w-100 h-100"
+                                            src="./image_sp/SPTuLen/sp110_sp1_02.jpg"
+                                            alt="Image"
+                                        />
+                                    </div>
+                                    <div class="img-item">
+                                        <img
+                                            class="w-100 h-100"
+                                            src="./image_sp/SPTuLen/sp110_sp1_03.jpg"
+                                            alt="Image"
+                                        />
+                                    </div>
+                                </div> -->
+
+                                <!-- Nút điều hướng -->
+                                <!-- <a class="carousel-control-prev" href="#">
+                                    <i
+                                        class="fa fa-2x fa-angle-left text-dark"
+                                    ></i>
+                                </a>
+                                <a class="carousel-control-next" href="#">
+                                    <i
+                                        class="fa fa-2x fa-angle-right text-dark"
+                                    ></i>
+                                </a>
+                            </div>
+                        </div> -->
+                        <!--hình ảnh sản phẩm-->
+                        <!--phần content sản phẩm-->
+                        <!-- <div class="product-describe__content">
+                            <h1 class="content-title">
+                                Móc Khoá Len Handmade Thú Ú Nu - Quà Tặng cho
+                                bạn bè, người yêu - Giá rẻ -Tặng kèm kẹo cực
+                                ngon
+                            </h1>
+                            <div class="product-rating">
+                                <div class="star-rating">
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-text"> (4.5/5)</span>
+                                    <span class="rating-count">
+                                        | (100 đánh giá)</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="product-describe__price">
+                                <div class="price-value">47200</div>
+                                <div class="flash-sale-text">59000</div>
+                            </div>
+                            <div class="product-mini-vouchers">
+                                <h2 class="product-mini-vouchers-title">
+                                    <i class="fas fa-gift"></i>
+                                    Voucher giảm giá của shop
+                                </h2>
+                                <div class="product-mini-vouchers-list">
+                                    <div class="product-mini-voucher">
+                                        Giảm 10%
+                                    </div>
+                                    <div class="product-mini-voucher">
+                                        Giảm 15%
+                                    </div>
+                                    <div class="product-mini-voucher">
+                                        Giảm 20%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-quantity-box">
+                                <label class="product-quantity-label"
+                                    >Số Lượng</label
+                                >
+                                <div class="product-quantity-group">
+                                    <div class="product-quantity-btn minus">
+                                        −
+                                    </div>
+                                    <div
+                                        class="product-quantity-value"
+                                        id="quantity"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="product-quantity-btn plus">
+                                        +
+                                    </div>
+                                </div>
+                            </div>
+                            <div></div>
+                            <div class="product-add-to-cart">
+                                <button class="product-add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i> Thêm
+                                    vào giỏ hàng
+                                </button>
+                                <button class="product-add-to-cart-voucher">
+                                    Mua với voucher
+                                </button>
+                            </div> 
+                        </div>-->
+                    </div>
+                    <!--phần content sản phẩm-->
+                    <!--Phần mô tả đánh giá-->
+                    <!-- Thanh chuyển giữa mô tả và đánh giá -->
+                    <div class="product-items-information">
+                        <div class="tabs">
+                            <button class="tab active" data-tab="desc">
+                                Mô tả sản phẩm
+                            </button>
+                            <button class="tab" data-tab="review">
+                                Đánh giá
+                            </button>
+                        </div>
+                        <!-- Thanh chuyển giữa mô tả và đánh giá -->
+                        <!-- Phần nội dung của mô tả -->
+                        <div class="tab-content">
+                            <div id="desc" class="tab-pane active">
+                                <div
+                                    class="product-items-information-description"
+                                >
+                                    Móc khoá len handmade thú ú nu là một sản
+                                    phẩm độc đáo, dễ thương, được làm từ len cao
+                                    cấp, an toàn cho sức khoẻ. Sản phẩm không
+                                    chỉ là một món quà ý nghĩa mà còn là một phụ
+                                    kiện thời trang bắt mắt.
+
+                                    <h2>Thông tin chi tiết</h2>
+                                    <ul>
+                                        <li>Chất liệu: Len cao cấp</li>
+                                        <li>Kích thước: 10cm x 10cm</li>
+                                        <li>Màu sắc: Nhiều màu</li>
+                                    </ul>
+                                    ❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị
+                                    lệch khoảng 5% - 10%, sợi cũng có thể chênh
+                                    lệch lớn nhỏ chút xíu, nên Quý khách ước
+                                    lượng đặt mua dư một chút để tránh thiếu sợi
+                                    mà tìm lại lô cũ không có nhé.
+                                    <br />
+                                    ❌ Shop không có chính sách đổi trả hàng và
+                                    sẽ không chịu trách nhiệm đối với trường hợp
+                                    Quý khách chọn không đúng phân loại từng mã
+                                    nên Quý khách vui lòng kiểm tra kĩ đơn hàng
+                                    trước khi bấm đặt hàng.
+                                </div>
+                            </div>
+                            <!-- Phần nội dung của mô tả -->
+                            <!-- Phần nội dung của đánh giá -->
+                            <div id="review" class="tab-pane">
+                                <p>Chưa có đánh giá</p>
+                            </div>
+                            <!-- Phần nội dung của đánh giá -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+        <script src="./js/product-items.js"></script>
+    </body>
+</html>

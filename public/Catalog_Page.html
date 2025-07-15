@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi-vn">
 <head>
@@ -44,57 +45,31 @@
           <li class="sidebar__item">
             <button class="sidebar__toggle" data-target="phukien">📱 Dụng Cụ Đan Len</button>
           </li>
-          <!-- ✅ Thêm mục mới -->
           <li class="sidebar__item">
-            <button class="sidebar__toggle" data-target="sanphamlen">🐻 Sản Phẩm Từ Len</button>
+            <button class="sidebar__toggle" data-target="phukien">🐻 Sản Phẩm Từ Len</button>
           </li>
-          <li class="sidebar__item">
+           <li class="sidebar__item">
             <button class="sidebar__toggle" data-target="top">🔝 Quay Về Đầu Trang</button>
           </li>
+         
         </ul>
       </aside>
-
-      <!-- Nút Thêm Sản Phẩm -->
-<div class="add-product__container">
-  <button id="addProductBtn" class="add-product__btn">➕ Thêm Sản Phẩm</button>
-</div>
-
-<!-- Form Thêm Sản Phẩm (ẩn ban đầu) -->
-<div id="addProductForm" class="add-product__form hidden">
-  <h3>Thêm Sản Phẩm Mới</h3>
-  <label>Tên Sản Phẩm:
-    <input type="text" id="productName" placeholder="Nhập tên sản phẩm">
-  </label>
-  <label>Giá:
-    <input type="text" id="productPrice" placeholder="Nhập giá (vd: 100000đ)">
-  </label>
-  <label>Mô tả:
-    <textarea id="productDesc" placeholder="Thông tin mô tả..."></textarea>
-  </label>
-  <label>Hình Ảnh:
-    <input type="file" id="productImage" accept="image/*">
-  </label>
-  <label>Loại Sản Phẩm:
-    <select id="productCategory">
-      <option value="len">🧶 Len</option>
-      <option value="thoitrang">👗 Thời Trang</option>
-      <option value="phukien">📱 Phụ Kiện Đan Móc Len</option>
-      <option value="sanphamlen">🐻 Sản Phẩm Từ Len</option>
-    </select>
-  </label>
-  <div class="add-product__actions">
-    <button id="saveProductBtn">Lưu</button>
-    <button id="cancelProductBtn">Hủy</button>
-  </div>
-</div>
-
 
       <div class="main__content">
         <!-- 🧶 Len -->
         <section id="len" class="product-section">
           <h2 class="product-section__title">🧶 Len</h2>
           <div class="produce__container" id="Len_catalog">
-            <!-- Sản phẩm Len sẽ được load ở đây -->
+            <!-- <div class="main__div--produce">
+              <img src="./Len Picture/Len Milk Contton Den 4.jpeg" alt="Len Milk Cotton Đen" class="div__img--produce">
+              <div class="div__produce-item--info">
+                <p class="item--id">Mã Sản Phẩm : 005</p>
+                <h3 class="item--name">Len Milk cotton Đen</h3>
+                <hr>
+                <h2>7,500đ</h2>
+              </div>
+              <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+            </div> -->
           </div>
         </section>
 
@@ -140,137 +115,134 @@
             </div>
           </div>
         </section>
+        <!--🐻 Sản Phẩm Từ Len-->
 
-        <!-- 🐻 Sản Phẩm Từ Len -->
-        <section id="sanphamlen" class="product-section">
+         <section id="phukien" class="product-section">
           <h2 class="product-section__title">🐻 Sản Phẩm Từ Len</h2>
           <div class="produce__container" id="thuBong_catalog">
             <div class="main__div--produce">
-              <img src="./SanPhamTuLen/GauBongLen.jpeg" alt="Gấu Bông Len" class="div__img--produce">
+              <img src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg" alt="Máy Đếm Dòng Cơ" class="div__img--produce">
               <div class="div__produce-item--info">
-                <p class="item--id">Mã Sản Phẩm : 301</p>
-                <h3 class="item--name">Gấu Bông Len</h3>
+                <p class="item--id">Mã Sản Phẩm : 201</p>
+                <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
                 <hr>
-                <h2>150,000đ</h2>
+                <h2>50,000đ</h2>
               </div>
               <a class="div__add-cart" href="#">Xem Chi Tiết</a>
             </div>
           </div>
         </section>
-
+          
       </div>
     </main>
   </div>
 
   <footer class="footer">
-    <!-- Footer giữ nguyên -->
-  </footer>
+            <div class="footer__container">
+                <div class="footer__section">
+                    <h3 class="footer__title">Về chúng tôi</h3>
+                    <p class="footer__text">
+                        Chào mừng bạn đến với Len Móc - nơi đam mê và sáng tạo
+                        với những sợi len ấm áp. Chúng tôi cung cấp các sản phẩm
+                        len móc thủ công độc đáo và nguyên liệu chất lượng cao.
+                    </p>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Danh mục</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Len Sợi</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Kim Móc</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Phụ Kiện</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Sản Phẩm Thủ Công</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Hỗ trợ khách hàng</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">FAQ</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Chính sách đổi trả</a
+                            >
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Chính sách bảo mật</a
+                            >
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Điều khoản dịch vụ</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Liên hệ</h3>
+                    <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
+                    <p class="footer__text">Điện thoại: 0123 456 789</p>
+                    <p class="footer__text">Email: miee@lenmoc.vn</p>
+                    <div class="footer__social-links">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100085507778776"
+                            class="footer__social-link"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="footer__social-link"
+                            aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="footer__social-link"
+                            aria-label="Pinterest"
+                            ><i class="fab fa-pinterest-p"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </footer>
 
   <!-- JavaScript scroll mượt -->
   <script>
-    const sidebarButtons = document.querySelectorAll('.sidebar__toggle');
+        const sidebarButtons = document.querySelectorAll('.sidebar__toggle');
     sidebarButtons.forEach(button => {
       button.addEventListener('click', () => {
         const targetId = button.getAttribute('data-target');
         if (targetId === "top") {
+          // ✅ Nếu là "top" thì scroll về đầu trang
           window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
+       } else {
           const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+         if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
           }
-        }
+       }
       });
     });
 
-    const addProductBtn = document.getElementById('addProductBtn');
-const addProductForm = document.getElementById('addProductForm');
-const saveProductBtn = document.getElementById('saveProductBtn');
-const cancelProductBtn = document.getElementById('cancelProductBtn');
-
-function loadProducts() {
-  const products = JSON.parse(localStorage.getItem('products')) || [];
-  products.forEach(p => renderProduct(p));
-}
-
-function saveProduct(product) {
-  const products = JSON.parse(localStorage.getItem('products')) || [];
-  products.push(product);
-  localStorage.setItem('products', JSON.stringify(products));
-}
-
-function renderProduct(product) {
-  const section = document.getElementById(product.category);
-  const container = section.querySelector('.produce__container');
-  const div = document.createElement('div');
-  div.className = 'main__div--produce';
-  div.innerHTML = `
-    <img src="${product.image}" alt="${product.name}" class="div__img--produce">
-    <div class="div__produce-item--info">
-      <p class="item--id">Mã Sản Phẩm : ${product.id}</p>
-      <h3 class="item--name">${product.name}</h3>
-      <p>${product.desc}</p>
-      <hr>
-      <h2>${product.price}</h2>
-    </div>
-    <a class="div__add-cart" href="#">Xem Chi Tiết</a>
-    <div class="div__add-cart delete-btn">🗑️ Xóa</div>
-  `;
-  div.querySelector('.delete-btn').onclick = () => {
-    div.remove();
-    deleteProduct(product.id);
-  };
-  container.appendChild(div);
-}
-
-function deleteProduct(id) {
-  let products = JSON.parse(localStorage.getItem('products')) || [];
-  products = products.filter(p => p.id !== id);
-  localStorage.setItem('products', JSON.stringify(products));
-}
-
-addProductBtn.onclick = () => {
-  addProductForm.classList.remove('hidden');
-};
-
-cancelProductBtn.onclick = () => {
-  addProductForm.classList.add('hidden');
-};
-
-saveProductBtn.onclick = () => {
-  const name = document.getElementById('productName').value;
-  const price = document.getElementById('productPrice').value;
-  const desc = document.getElementById('productDesc').value;
-  const category = document.getElementById('productCategory').value;
-  const imageFile = document.getElementById('productImage').files[0];
-
-  if (!name || !price || !desc || !imageFile) {
-    alert('Vui lòng điền đầy đủ thông tin và chọn hình ảnh!');
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.onload = function (e) {
-    const product = {
-      id: Date.now(),
-      name,
-      price,
-      desc,
-      category,
-      image: e.target.result
-    };
-    saveProduct(product);
-    renderProduct(product);
-    addProductForm.classList.add('hidden');
-    addProductForm.reset();
-  };
-  reader.readAsDataURL(imageFile);
-};
-
-// Load sản phẩm khi trang tải
-window.addEventListener('DOMContentLoaded', loadProducts);
-
   </script>
   <script src="./js/main.js"></script>
+
 </body>
 </html>

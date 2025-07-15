@@ -33,7 +33,7 @@ fetch(dataPath)
                     ${product.original_price && product.original_price > product.price ? 
                         `<p class="item--original-price">Giá gốc: <s>${formattedOriginalPrice}</s></p>` : ''}
                 </div>
-                <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+                <a class="div__add-cart" href="./product_items.html?id=${product.id}">Xem Chi Tiết</a>
             </div>`;
         }
 
