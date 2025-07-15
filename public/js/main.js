@@ -4,10 +4,10 @@ const submitButton = document.getElementById("login-button");
 const loginButton = document.querySelector("ul.navbar__auth");
 const profileButton = document.querySelector("ul.navbar__after");
 
-if (localStorage.getItem("isLoginedIn") === "true") {
-    loginButton.setAttribute("style", "display: none");
-    profileButton.setAttribute("style", "display: flex");
-}
+// if (localStorage.getItem("isLoginedIn") === "true") {
+//     loginButton.setAttribute("style", "display: none");
+//     profileButton.setAttribute("style", "display: flex");
+// }
 
 //Lấy dữ liệu từ data.json
 const dataPath = "../src/data.json";
@@ -64,7 +64,6 @@ fetch(dataPath)
             .map(createProductHtml);
 
             
-
         // const sale_catalogs = products
         //     .filter((product) => {
         //         if (
@@ -105,6 +104,8 @@ fetch(dataPath)
 
         // document.getElementById("sale_catalog").innerHTML =
         //     sale_catalogs.join("");
+
+        
         document.getElementById("Len_catalog").innerHTML =
             len_catalogs.join("");
         document.getElementById("ThoiTrang_catalog").innerHTML =
