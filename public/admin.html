@@ -1,12 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="icon" href="./images/image.png" type="image/png">
+    <title>Trang quản trị</title>
+    <link rel="icon" type="image/png" href="./images/image.png">
+    <link rel="stylesheet" href="css/admin_CSS.css">
+    <link rel="stylesheet" href="./css/nav.css">
+
 </head>
 <body>
-    
+    <header>
+
+
+    </header>
+
+    <main>
+        <div class="container">
+        <div class="left-panel">
+            <div class="avatar-section">
+                <div class="avatar">Min</div>
+                <div>
+                    <div class="section-title">Thông tin Admin</div>
+                    <div class="info-item">ID: <span id="admin-id">B_2306549</span></div>
+                    <div class="info-item">Tên: <span id="admin-name">Phùng Đăng Khoa </span></div>
+                </div>
+            </div>
+
+            <div class="function-box">
+                <h3>Thêm chức năng</h3>
+                <button onclick="addFunction('thêm sản phẩm')">Thêm sản phẩm</button>
+                <button onclick="addFunction('sửa sản phẩm')">Sửa sản phẩm</button>
+                <button onclick="addFunction('xoá sản phẩm')">Xóa sản phẩm</button>
+            </div>
+
+            <div class="function-list">
+                <h3>Các nút chức năng</h3>
+                <ul id="active-functions"></ul>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="main-content-display" id="main-content">
+                <h3>Thông tin chung (Mặc định)</h3>
+                <div class="info-item">CHÀO MỪNG BẠN ĐẾN VỚI BÌNH NGUYÊN VÔ TẬN.</div>
+                <div class="info-item">YÊU CẦU MẦY CHỌN CHỨC NĂNG BÊN TRÁI.</div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__section">
+                    <h3 class="footer__title">Về chúng tôi</h3>
+                    <p class="footer__text">
+                        Chào mừng bạn đến với Len Móc - nơi đam mê và sáng tạo
+                        với những sợi len ấm áp. Chúng tôi cung cấp các sản phẩm
+                        len móc thủ công độc đáo và nguyên liệu chất lượng cao.
+                    </p>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Danh mục</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Len Sợi</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Kim Móc</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Phụ Kiện</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Sản Phẩm Thủ Công</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Hỗ trợ khách hàng</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">FAQ</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Chính sách đổi trả</a
+                            >
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Chính sách bảo mật</a
+                            >
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Điều khoản dịch vụ</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Liên hệ</h3>
+                    <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
+                    <p class="footer__text">Điện thoại: 0123 456 789</p>
+                    <p class="footer__text">Email: miee@lenmoc.vn</p>
+                    <div class="footer__social-links">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100085507778776"
+                            class="footer__social-link"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="footer__social-link"
+                            aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="footer__social-link"
+                            aria-label="Pinterest"
+                            ><i class="fab fa-pinterest-p"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
+            </div>
+    </footer>
+
+    <script>
+
+        
+    </script>
+
 </body>
 </html>
