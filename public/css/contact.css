@@ -9,18 +9,18 @@
   margin-bottom: 40px;
 }
 .title-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 28px;
   font-weight: bold;
-  position: relative;
 }
 .title-text::before,
 .title-text::after {
   content: "";
-  display: inline-block;
-  width: 50px;
+  flex: 1;
   height: 1px;
   background: #000;
-  vertical-align: middle;
   margin: 0 10px;
 }
 /* Bố cục cột */
@@ -33,13 +33,13 @@
   flex-wrap: wrap;
   gap: 40px;
 }
-/* Phần form chiếm 40% */
+/* Phần form chiếm 55% */
 .contact-colum {
-  flex: 1 1 40%;
-}
-/* phần nd chiếm 55% */
-.contact-colum-text {
   flex: 1 1 55%;
+}
+/* phần nd chiếm 40% */
+.contact-colum-text {
+  flex: 1 1 40%;
 
 }
 
@@ -85,16 +85,112 @@
 }
 .logo i {
   color: #FF69B4;
-  margin-right: 10px;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+.logo i :hover{
+  transform: scale(1.2);
+}
+.contact__social-links{
+  display: flex;
+  gap: 30px;
 }
 .cotact__social-link{
     color: #FF69B4;
     font-size: 20px;
     display: flex;
 }
+
+
 /* Responsive */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 600px) {
+
   .contact-row {
     flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-colum,
+  .contact-colum-text {
+    flex: 1 1 100%;
+  }
+
+  .contact-form .form-control {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .contact-colum-text {
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  .contact-colum-text h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .contact-colum-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .cotact__social-link {
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .title-text {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .title-text::before,
+  .title-text::after {
+    width: 40px;
+    margin: 0 8px;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .contact-colum {
+    flex: 1 1 55%;
+    padding-right: 10px;
+  }
+
+  .contact-colum-text {
+    flex: 1 1 40%;
+    padding-left: 10px;
+  }
+
+  .contact-form .form-control {
+    padding: 10px 12px;
+    font-size: 1.1rem;
+  }
+
+  .contact-form button {
+    padding: 12px 18px;
+    font-size: 1rem;
+    width: auto;
+  }
+
+  .title-text {
+    font-size: 26px;
+    text-align: center;
+  }
+
+}
+

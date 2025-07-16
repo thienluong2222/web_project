@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thanh Điều Hướng - Len Móc</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
+      <nav class="navbar">
         <div class="navbar__container">
-            <ul class="navbar__links">
-                <li><a href="./trangchu.html" class="navbar__link">Trang Chủ</a></li>
-                <li><a href="./product_itmes.html" class="navbar__link">Sản Phẩm</a></li>
-                <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
-                <li><a href="./contact.html" class="navbar__link">Liên Hệ</a></li>
-                <li><a href="./Catalog_Page.html">Mua sắm</a></li>
-            </ul>
-            <ul class="navbar__auth">
-                <li><a href="#" class="navbar__auth-link">Đăng Ký</a></li>
-                <li><a href="#" class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a></li>
-            </ul>
+          <button class="navbar__toggle" id="navbarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="navbar__links" id="navbarLinks">
+            <li>
+              <a href="./trangchu.html" class="navbar__link">Trang Chủ</a>
+            </li>
+            <li>
+              <a href="./product_itmes.html" class="navbar__link">Sản Phẩm</a>
+            </li>
+            <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
+            <li><a href="./contact.html" class="navbar__link">Liên Hệ</a></li>
+            <li><a href="./Catalog_Page.html">Mua sắm</a></li>
+          </ul>
+          <ul class="navbar__auth" id="navbarAuth">
+            <li><a href="#" class="navbar__auth-link">Đăng Ký</a></li>
+            <li>
+              <a href="#" class="navbar__auth-link navbar__auth-link--primary"
+                >Đăng Nhập</a
+              >
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
     </header>
 
+    <script>
+      const toggleBtn = document.getElementById("navbarToggle");
+      const links = document.getElementById("navbarLinks");
+      const auth = document.getElementById("navbarAuth");
 
-</body>
+      toggleBtn.addEventListener("click", () => {
+        links.classList.toggle("show");
+        auth.classList.toggle("show");
+      });
+    </script>
+  </body>
 </html>

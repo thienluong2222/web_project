@@ -20,7 +20,10 @@
     <header>
       <nav class="navbar">
         <div class="navbar__container">
-          <ul class="navbar__links">
+          <button class="navbar__toggle" id="navbarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="navbar__links" id="navbarLinks">
             <li>
               <a href="./trangchu.html" class="navbar__link">Trang Chủ</a>
             </li>
@@ -34,7 +37,7 @@
               <a href="./contact.html" class="navbar__link">Liên Hệ</a>
             </li>
           </ul>
-          <ul class="navbar__auth">
+          <ul class="navbar__auth"  id="navbarAuth">
             <li>
               <a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a>
             </li>
@@ -81,7 +84,7 @@
           <!-- Phần upload hình ảnh -->
           <!-- Phần thanh nav chuyển tab -->
           <div class="box_information">
-            <ul class="nav flex-column nav-tabs menu">
+            <ul class="nav nav-tabs menu">
               <li class="nav-item">
                 <a class="nav-link active" data-tab-target="#tab-pane-1">
                   <i class="fa fa-user"></i> Thông tin của tôi
@@ -216,7 +219,7 @@
           <!-- form thông tin đã điền ở đăng ký -->
           <!-- phần thông tin địa chỉ -->
           <div class="tab-pane fade" id="tab-pane-2">
-            <h1>Địa chỉ của bạn</h1>
+            <h1 class="profile-info-form-title">Địa chỉ của bạn</h1>
             <form action="">
               <div class="form-information">
                 <div class="form-group">
@@ -246,7 +249,7 @@
           <!-- phần thông tin địa chỉ -->
           <!-- Phần thông tin đánh giá SP -->
           <div class="tab-pane fade" id="tab-pane-3">
-            <h1>Đánh Giá Của bạn</h1>
+            <h1 class="profile-info-form-title">Đánh Giá Của bạn</h1>
             <form class="form-group">
               <div class="form-information">
                 <div class="form-group">
@@ -348,7 +351,10 @@
               class="footer__social-link"
               ><i class="fab fa-facebook-f"></i
             ></a>
-            <a href="https://www.instagram.com/miee_crochet/" class="footer__social-link" aria-label="Instagram"
+            <a
+              href="https://www.instagram.com/miee_crochet/"
+              class="footer__social-link"
+              aria-label="Instagram"
               ><i class="fab fa-instagram"></i
             ></a>
             <a href="#" class="footer__social-link" aria-label="Pinterest"
@@ -361,6 +367,16 @@
         <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
       </div>
     </footer>
+    <script>
+      const toggleBtn = document.getElementById("navbarToggle");
+      const links = document.getElementById("navbarLinks");
+      const auth = document.getElementById("navbarAuth");
+
+      toggleBtn.addEventListener("click", () => {
+        links.classList.toggle("show");
+        auth.classList.toggle("show");
+      });
+    </script>
     <script src="./js/profile.js"></script>
   </body>
 </html>

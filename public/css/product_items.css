@@ -9,7 +9,7 @@ body {
   color: #333;
 }
 
-.product-describe {
+.main-product__items{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,7 +234,7 @@ body {
 .tab-content {
   border: 1px solid #ccc;
   border-radius: 0 8px 8px 8px;
-  padding: 20px;
+  padding: 10px;
   background-color: white;
 }
 
@@ -277,4 +277,91 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablet (tối đa 1024px) */
+@media (max-width: 1024px) {
+  .product-describe {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .product-describe__img {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-describe__content {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-mini-vouchers-list {
+    flex-direction: row;
+    gap: 0.5rem;
+     font-size: 1rem;
+  }
+
+  .product-add-to-cart {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+.product-mini-vouchers-list{
+  font-size: 1rem;
+}
+  .product-describe__price{
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+/* Mobile (tối đa 600px) */
+@media (max-width: 600px) {
+  .product-describe {
+    padding: 1rem 0.5rem;
+  }
+
+  .single-image {
+    width: 100%;
+  }
+
+  .content-title {
+    font-size: 1.2rem;
+  }
+
+  .product-describe__price {
+    font-size: 1.5rem;
+    flex-direction: row;
+  }
+
+  .product-mini-vouchers-title {
+    font-size: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-mini-voucher {
+    padding: 4px 8px;
+    font-size: 0.9rem;
+  }
+
+  .product-quantity-label {
+    font-size: 1rem;
+  }
+
+  .product-add-to-cart-btn,
+  .product-add-to-cart-voucher {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .product-items-information {
+    display: none;
+  }
 }
