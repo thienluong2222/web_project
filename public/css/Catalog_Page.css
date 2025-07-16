@@ -1,39 +1,39 @@
-/* 🎯 RESET CSS - Xoá margin, padding mặc định của trình duyệt và set box-sizing */
+/* 🎯 RESET - Reset margin, padding và box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;                  /* Xoá khoảng trắng mặc định */
+    padding: 0;                 /* Xoá padding mặc định */
+    box-sizing: border-box;     /* Tính toán kích thước theo border-box */
 }
 
-/* 🎨 BODY - Đặt font chữ và background gradient */
+/* 🎨 BODY - Font chữ và nền gradient */
 body {
-    background: radial-gradient(circle at 30% 30%, #ffe3e3, #ffccd5, #f8bbd0);
-    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at 30% 30%, #ffe3e3, #ffccd5, #f8bbd0); /* Nền gradient */
+    font-family: "Poppins", sans-serif;                                        /* Font chữ chính */
 }
 
-/* 📦 Layout chính bọc toàn bộ trang */
+/* 📦 Layout chính - Bọc toàn bộ trang */
 .div__layout {
-    max-width: 100%; /* Chiều rộng tối đa */
-    margin: 0 auto; /* Canh giữa */
+    max-width: 100%; /* Full chiều rộng */
+    margin: 0 auto;  /* Căn giữa */
 }
 
-/* 📦 Main content và sidebar */
+/* 📦 Main content - Gồm sidebar và nội dung */
 .page__main {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
+    display: flex;              /* Flexbox để sắp xếp ngang */
+    align-items: flex-start;    /* Căn top */
+    gap: 20px;                  /* Khoảng cách giữa sidebar và content */
+    padding: 20px;              /* Padding tổng */
 }
 
-/* 📝 Sidebar - Danh mục bên trái */
+/* 📝 SIDEBAR - Danh mục sản phẩm */
 .sidebar {
-    width: 250px;
-    background-color: rgb(235, 207, 216);
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid paleturquoise;
-    position: sticky;
-    top: 20px;
+    width: 250px;                          /* Chiều rộng sidebar */
+    background-color: rgb(235, 207, 216);   /* Nền sidebar */
+    padding: 20px;                         /* Khoảng cách trong */
+    border-radius: 10px;                   /* Bo góc */
+    border: 2px solid paleturquoise;       /* Viền */
+    position: sticky;                      /* Giữ cố định khi scroll */
+    top: 20px;                             /* Khoảng cách từ top */
 }
 
 .sidebar__list,
@@ -42,220 +42,189 @@ body {
 }
 
 .sidebar__item {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Khoảng cách giữa các item */
 }
 
-/* 🎯 Nút mở danh mục con */
+/* 🎯 Nút mở danh mục */
 .sidebar__toggle {
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 8px 0;
-    border: none;
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
-    color: #4b383f;
-    transition: color 0.3s ease;
-}
-
-/* 🎯🎯🎯 FIX: giữ icon và text cùng hàng, không xuống dòng */
-.sidebar__toggle {
-    display: flex;            /* NEW: icon + text cùng 1 hàng */
-    align-items: center;      /* NEW: căn giữa theo chiều dọc */
-    gap: 8px;                 /* NEW: khoảng cách giữa icon và text */
-    white-space: nowrap;      /* NEW: giữ text trên 1 dòng */
+    display: flex;              /* Icon + text cùng hàng */
+    align-items: center;        /* Căn giữa icon và text */
+    gap: 8px;                   /* Khoảng cách giữa icon và text */
+    cursor: pointer;            /* Đổi con trỏ khi hover */
+    font-weight: bold;          /* Đậm chữ */
+    font-size: 1rem;            /* Cỡ chữ */
+    padding: 8px 0;             /* Padding trên/dưới */
+    border: none;               /* Xoá border */
+    background: none;           /* Xoá nền */
+    width: 100%;                /* Chiếm hết chiều ngang */
+    text-align: left;           /* Căn trái text */
+    color: #4b383f;             /* Màu chữ */
+    white-space: nowrap;        /* Giữ text trên 1 dòng */
+    transition: color 0.3s ease;/* Hiệu ứng hover */
 }
 
 .sidebar__toggle:hover {
-    color: rgb(219, 126, 141);
+    color: rgb(219, 126, 141); /* Đổi màu khi hover */
 }
 
-/* 🛍️ Container chứa các sản phẩm */
+/* 🛍️ CONTAINER sản phẩm - Grid layout */
 .produce__container {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 10px;
+    flex: 1;                                       /* Chiếm hết phần còn lại */
+    display: grid;                                 /* Grid layout */
+    grid-template-columns: repeat(4, 1fr);         /* 4 cột đều nhau */
+    gap: 20px;                                     /* Khoảng cách giữa các sản phẩm */
+    padding: 10px;                                 /* Padding */
 }
 
-/* 🎁 Box từng sản phẩm */
+/* 🎁 CARD sản phẩm - Box từng sản phẩm */
 .main__div--produce {
-    background-color: #f0daef;
-    border: 1px solid #000000;
-    padding: 10px;
-    border-radius: 50px;
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;                            /* Nền trắng */
+    border: 1px solid #ddd;                         /* Viền mờ */
+    border-radius: 20px;                            /* Bo góc */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);      /* Đổ bóng nhẹ */
+    overflow: hidden;                               /* Ẩn phần tràn */
+    display: flex;                                  /* Flexbox */
+    flex-direction: column;                         /* Sắp xếp dọc */
+    justify-content: space-between;                 /* Đẩy nút xuống đáy */
+    align-items: center;                            /* Căn giữa nội dung */
+    height: 100%;                                   /* Chiều cao đồng nhất */
+    text-align: center;                             /* Căn giữa text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
 }
 
 .main__div--produce:hover {
-    transform: translateY(-20px);
-    box-shadow: 0 8px 20px rgba(239, 0, 0, 0.2);
+    transform: translateY(-10px) scale(1.02);      /* Nhô lên khi hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);     /* Bóng đậm hơn */
 }
 
-/* 🎨 KHỐI SẢN PHẨM ĐẸP HƠN */
-.produce__container .main__div--produce {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.produce__container .main__div--produce:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* 🎨 HÌNH ẢNH */
-.produce__container .div__img--produce {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 0;
-    border-bottom: 2px solid #f1f1f1;
-    transition: transform 0.3s ease;
-    border-radius: 10px; /* Không bo góc hình */
+/* 🖼️ ẢNH sản phẩm */
+.div__img--produce {
+    width: 100%;                                   /* Full chiều ngang */
+    height: 220px;                                 /* Chiều cao cố định */
+    object-fit: cover;                             /* Zoom hình đầy khung */
+    border-radius: 10px;                           /* Bo nhẹ góc */
+    transition: transform 0.3s ease;               /* Hiệu ứng hover */
 }
 
 .div__img--produce:hover {
-    transform: scale(1.05); /* Phóng to khi hover */
+    transform: scale(1.05);                        /* Phóng to ảnh khi hover */
 }
 
-/* 🎨 MÔ TẢ CÓ KHUNG */
-.produce__container .div__produce-item--info {
-    width: 90%;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 0;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
-    text-align: justify;
+/* 📋 MÔ TẢ sản phẩm */
+.div__produce-item--info {
+    width: 90%;                                    /* Chiều rộng */
+    background: #fafafa;                           /* Nền nhạt */
+    border: 1px solid #ddd;                        /* Viền mờ */
+    border-radius: 10px;                           /* Bo góc */
+    padding: 15px;                                 /* Padding */
+    margin: 15px 0;                                /* Margin trên/dưới */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);/* Đổ bóng trong */
+    text-align: justify;                           /* Căn đều text */
 }
 
-.produce__container .div__produce-item--info::before {
-    content: "📝 Mô Tả";
+.div__produce-item--info::before {
+    content: "📝 Mô Tả";                            /* Tiêu đề trước mô tả */
     display: block;
     font-weight: bold;
-    color: #e84a63;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+    color: #e84a63;                                /* Màu tiêu đề */
+    margin-bottom: 10px;                           /* Khoảng cách dưới */
+    font-size: 1.1rem;                             /* Cỡ chữ */
 }
 
-/* 🎨 NÚT ADD TO CART */
-.produce__container .div__add-cart {
-    display: inline-block;
+/* 🏷️ Tên và giá sản phẩm */
+.item--name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2f3542;
+    margin: 8px 0;
+}
+
+.item--id {
+    color: #747d8c;
+    font-size: 0.9rem;
+}
+
+.div__produce-item--info h2 {
+    color: #ff4757;                                /* Màu giá */
     margin: 10px 0;
+    font-size: 1.4rem;
+}
+
+/* 🍬 NÚT Xem Chi Tiết */
+.div__add-cart {
+    display: inline-block;
     padding: 10px 20px;
-    background-color: #ff5e78;
+    background: linear-gradient(45deg, #ff6b81, #ff4757); /* Gradient nút */
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 30px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.produce__container .div__add-cart:hover {
-    background-color: #e84a63;
-    transform: scale(1.05);
-}
-
-/* 📱 RESPONSIVE */
-@media (max-width: 1024px) {
-    .produce__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* 📱 Responsive Mobile */
-@media (max-width: 600px) {
-    .produce__container {
-        grid-template-columns: 1fr;
-    }
+    box-shadow: 0 4px 12px rgba(255, 107, 129, 0.4); /* Bóng nút */
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .div__add-cart:hover {
-    background-color: #e84a63;
-}
-.div__img--produce {
-    width: 160px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    background: linear-gradient(45deg, #ff4757, #ff6b81); /* Đảo gradient khi hover */
+    transform: scale(1.05);
 }
 
-.infomation__fashion {
-    font-style: italic;
-    color: #e84a63;
+/* 📱 RESPONSIVE - Tablet */
+@media (max-width: 1024px) {
+    .produce__container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột */
+    }
 }
 
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+/* 📱 RESPONSIVE - Mobile */
+@media (max-width: 600px) {
+    .produce__container {
+        grid-template-columns: 1fr; /* 1 cột */
+    }
+    .div__img--produce {
+        height: 180px; /* Chiều cao ảnh nhỏ hơn */
+    }
 }
-.modal.hidden {
-    display: none;
+
+/* 🌟 TIÊU ĐỀ mỗi section (Len, Thời Trang, ...) */
+.product-section__title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 30px 0 20px;
+    color: #ff6b81;
+    background: linear-gradient(45deg, #ff6b81, #ff4757);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
 }
-.modal__content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    box-shadow: 0 0 10px #000;
-}
-.modal__content h2 {
-    margin-top: 0;
-}
-.modal__content label {
+
+.product-section__title::after {
+    content: "";
     display: block;
-    margin-top: 10px;
-}
-.modal__content input,
-.modal__content select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-}
-.modal__buttons {
-    margin-top: 15px;
-    text-align: right;
-}
-.modal__buttons button {
-    padding: 8px 12px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#save-product {
-    background: #28a745;
-    color: #fff;
-}
-#cancel-product {
-    background: #dc3545;
-    color: #fff;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b81, #ff4757);
+    margin: 8px auto 0;
+    border-radius: 2px;
 }
 
-.sidebar__h3{
-    color: #ff5e78;
-    font-family: "Georgia", serif;
-    font-style: italic;
-    } 
+.product-section__title:hover {
+    text-shadow: 0 0 10px rgba(255, 107, 129, 0.7);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* 🌟 NGĂN CÁCH từng section sản phẩm */
+.product-section {
+    background: linear-gradient(135deg, #ffe3ec, #f9f9f9);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    margin-bottom: 40px; /* Khoảng cách giữa các section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
