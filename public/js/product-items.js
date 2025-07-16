@@ -1,11 +1,11 @@
-function formatDescription(description) { //chỉnh description
+function formatDescription(description) {
+  //chỉnh description
   if (!description) return "";
 
   return (
     description
       // Đổi ❌ thành <span class="warning">❌</span>
       .replace(/❌/g, '<span class="warning">❌</span>')
-
 
       // Đổi xuống dòng thành <br>
       .replace(/\n/g, "<br>")
@@ -52,138 +52,133 @@ async function loadProductDetail() {
 
     if (product) {
       // Nếu tìm thấy sản phẩm, điền dữ liệu vào HTML
-      productDetailContainer.innerHTML = `
-                <div class="product-describe">
-                    <div class="product-describe__img">
-                        <div class="single-image">
-                            <div id="product-carousel">
-                                <div class="img">
-                                    <div class="img-item active">
-                                        <img
-                                            class="w-100 h-100"
-                                            src="${product.image_url}"
-                                            alt="Image"
-                                        />
-                                    </div>
-                                </div>
-
-                                <!-- Nút điều hướng -->
-                                <a class="carousel-control-prev" href="#">
-                                    <i
-                                        class="fa fa-2x fa-angle-left text-dark"
-                                    ></i>
-                                </a>
-                                <a class="carousel-control-next" href="#">
-                                    <i
-                                        class="fa fa-2x fa-angle-right text-dark"
-                                    ></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--hình ảnh sản phẩm-->
-                        <!--phần content sản phẩm-->
-                        <div class="product-describe__content">
-                            <h1 class="content-title">
-                                ${product.name}
-                            </h1>
-                            <div class="product-rating">
-                                <div class="star-rating">
-                                    <div class="star">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <span class="rating-text"> (${product.rating})</span>
-                                    <span class="rating-count">
-                                        | (100 đánh giá)</span
-                                    >
-                                </div>
-                            </div>
-                            <div class="product-describe__price">
-                                <div class="price-value">${product.original_price}</div>
-                                <div class="flash-sale-text">${product.price}</div>
-                            </div>
-                            <div class="product-mini-vouchers">
-                                <h2 class="product-mini-vouchers-title">
-                                    <i class="fas fa-gift"></i>
-                                    Voucher giảm giá của shop
-                                </h2>
-                                <div class="product-mini-vouchers-list">
-                                    <div class="product-mini-voucher">
-                                        Giảm 10%
-                                    </div>
-                                    <div class="product-mini-voucher">
-                                        Giảm 15%
-                                    </div>
-                                    <div class="product-mini-voucher">
-                                        Giảm 20%
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-quantity-box">
-                                <label class="product-quantity-label"
-                                    >Số Lượng</label
-                                >
-                                <div class="product-quantity-group">
-                                    <div class="product-quantity-btn minus">
-                                        −
-                                    </div>
-                                    <div
-                                        class="product-quantity-value"
-                                        id="quantity"
-                                    >
-                                        0
-                                    </div>
-                                    <div class="product-quantity-btn plus">
-                                        +
-                                    </div>
-                                </div>
-                            </div>
-                            <div></div>
-                            <div class="product-add-to-cart">
-                                <button class="product-add-to-cart-btn" id="add-to-cart-button">
-                                    <i class="fas fa-shopping-cart"></i> Thêm
-                                    vào giỏ hàng
-                                </button>
-                                <button class="product-add-to-cart-voucher">
-                                    Mua với voucher
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!--phần content sản phẩm-->
-                    <!--Phần mô tả đánh giá-->
-                    <!-- Thanh chuyển giữa mô tả và đánh giá -->
-                    <div class="product-items-information">
-                        <div class="tabs">
-                            <button class="tab active" data-tab="desc">
-                                Mô tả sản phẩm
-                            </button>
-                            <button class="tab" data-tab="review">
-                                Đánh giá
-                            </button>
-                        </div>
-                        <!-- Thanh chuyển giữa mô tả và đánh giá -->
-                        <!-- Phần nội dung của mô tả -->
-                        <div class="tab-content">
-                            <div id="desc" class="tab-pane active">
-                                <div
-                                    class="product-items-information-description"
-                                >
-                                    ${formatDescription(product.description)}
-                                </div>
-                            </div>
-                            <!-- Phần nội dung của mô tả -->
-                            <!-- Phần nội dung của đánh giá -->
-                            <div id="review" class="tab-pane">
-                                <p>Chưa có đánh giá</p>
-                            </div>
-                            <!-- Phần nội dung của đánh giá -->
-                        </div>
-                    </div>
+      productDetailContainer.innerHTML = `<div class="main-product__items" id="product-container">
+        <div class="product-describe__img">
+          <div class="single-image">
+            <div id="product-carousel">
+              <div class="img">
+                <div class="img-item active">
+                  <img
+                    class="w-100 h-100"
+                    src=" ${product.image_url} "
+                    alt="Image"
+                  />
                 </div>
+                <div class="img-item">
+                  <img
+                    class="w-100 h-100"
+                    src="./image_sp/SPTuLen/sp110_sp1_01.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <div class="img-item">
+                  <img
+                    class="w-100 h-100"
+                    src="./image_sp/SPTuLen/sp110_sp1_02.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <div class="img-item">
+                  <img
+                    class="w-100 h-100"
+                    src="./image_sp/SPTuLen/sp110_sp1_03.jpg"
+                    alt="Image"
+                  />
+                </div>
+              </div>
+
+              <!-- Nút điều hướng -->
+              <a class="carousel-control-prev" href="#">
+                <i class="fa fa-2x fa-angle-left text-dark"></i>
+              </a>
+              <a class="carousel-control-next" href="#">
+                <i class="fa fa-2x fa-angle-right text-dark"></i>
+              </a>
+            </div>
+          </div>
+
+          <!--hình ảnh sản phẩm-->
+          <!--phần content sản phẩm-->
+          <div class="product-describe__content">
+            <h1 class="content-title">
+               ${product.name}
+            </h1>
+            <div class="product-rating">
+              <div class="star-rating">
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-text"> ${product.rating} </span>
+                <span class="rating-count"> | (100 đánh giá)</span>
+              </div>
+            </div>
+            <div class="product-describe__price">
+              <div class="price-value"> ${product.original_price} </div>
+              <div class="flash-sale-text"> ${product.price} </div>
+            </div>
+            <div class="product-mini-vouchers">
+              <h2 class="product-mini-vouchers-title">
+                <i class="fas fa-gift"></i>
+                Voucher giảm giá của shop
+              </h2>
+              <div class="product-mini-vouchers-list">
+                <div class="product-mini-voucher">Giảm 10%</div>
+                <div class="product-mini-voucher">Giảm 15%</div>
+                <div class="product-mini-voucher">Giảm 20%</div>
+              </div>
+            </div>
+            <div class="product-quantity-box">
+              <label class="product-quantity-label">Số Lượng</label>
+              <div class="product-quantity-group">
+                <div class="product-quantity-btn minus">−</div>
+                <div class="product-quantity-value" id="quantity">0</div>
+                <div class="product-quantity-btn plus">+</div>
+              </div>
+              <div>
+                <label class="product-quantity-label">Phân Loại</label>
+                <select name="type" id="id-product"></select>
+              </div>
+            </div>
+            <div></div>
+            <div class="product-add-to-cart">
+              <button class="product-add-to-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
+              </button>
+              <button class="product-add-to-cart-voucher">
+                Mua với voucher
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--phần content sản phẩm-->
+        <!--Phần mô tả đánh giá-->
+        <!-- Thanh chuyển giữa mô tả và đánh giá -->
+        <div class="product-items-information">
+          <div class="tabs">
+            <button class="tab active" data-tab="desc">Mô tả sản phẩm</button>
+            <button class="tab" data-tab="review">Đánh giá</button>
+          </div>
+          <!-- Thanh chuyển giữa mô tả và đánh giá -->
+          <!-- Phần nội dung của mô tả -->
+          <div class="tab-content">
+            <div id="desc" class="tab-pane active">
+              <div class="product-items-information-description">
+                ${formatDescription(product.description)}
+              </div>
+            </div>
+            <!-- Phần nội dung của mô tả -->
+            <!-- Phần nội dung của đánh giá -->
+            <div id="review" class="tab-pane">
+              <p>Chưa có đánh giá</p>
+            </div>
+            <!-- Phần nội dung của đánh giá -->
+          </div>
+        </div>
+      </div>
             `;
       // Ẩn thông báo đang tải
       productDetailContainer.style.display = "flex"; // Hiển thị container chi tiết
@@ -309,9 +304,9 @@ function bindProductEvents(product) {
     alert("Đã thêm vào giỏ hàng!");
   };
 
-//   document.querySelector(".product-add-to-cart-btn").onclick = () => {
-//     addToCart(getItem());
-//   };
+  //   document.querySelector(".product-add-to-cart-btn").onclick = () => {
+  //     addToCart(getItem());
+  //   };
 
   document.querySelector(".product-add-to-cart-voucher").onclick = () => {
     addToCart(getItem());

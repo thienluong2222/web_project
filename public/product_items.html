@@ -65,39 +65,40 @@
     </header>
     <!--Thanh điều hướng-->
     <main class="main-product">
+      <!--hình ảnh sản phẩm-->
       <div class="main-product__items" id="product-container">
-        <!--hình ảnh sản phẩm-->
-
         <div class="product-describe__img">
           <div class="single-image">
             <div id="product-carousel">
-              <div class="img-item active">
-                <img
-                  class="w-100 h-100"
-                  src="./image_sp/SPTuLen/sp110_sp1.jpg"
-                  alt="Image"
-                />
-              </div>
-              <div class="img-item">
-                <img
-                  class="w-100 h-100"
-                  src="./image_sp/SPTuLen/sp110_sp1_01.jpg"
-                  alt="Image"
-                />
-              </div>
-              <div class="img-item">
-                <img
-                  class="w-100 h-100"
-                  src="./image_sp/SPTuLen/sp110_sp1_02.jpg"
-                  alt="Image"
-                />
-              </div>
-              <div class="img-item">
-                <img
-                  class="w-100 h-100"
-                  src="./image_sp/SPTuLen/sp110_sp1_03.jpg"
-                  alt="Image"
-                />
+              <div class="img">
+                <div class="img-item active">
+                  <img
+                    class="w-100 h-100"
+                    src="./image_sp/SPTuLen/sp110_sp1.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <div class="img-item">
+                  <img
+                    class="w-100 h-100"
+                    src="./image_sp/SPTuLen/sp110_sp1_01.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <div class="img-item">
+                  <img
+                    class="w-100 h-100"
+                    src="./image_sp/SPTuLen/sp110_sp1_02.jpg"
+                    alt="Image"
+                  />
+                </div>
+                <div class="img-item">
+                  <img
+                    class="w-100 h-100"
+                    src="./image_sp/SPTuLen/sp110_sp1_03.jpg"
+                    alt="Image"
+                  />
+                </div>
               </div>
 
               <!-- Nút điều hướng -->
@@ -109,6 +110,7 @@
               </a>
             </div>
           </div>
+
           <!--hình ảnh sản phẩm-->
           <!--phần content sản phẩm-->
           <div class="product-describe__content">
@@ -150,6 +152,10 @@
                 <div class="product-quantity-btn minus">−</div>
                 <div class="product-quantity-value" id="quantity">0</div>
                 <div class="product-quantity-btn plus">+</div>
+              </div>
+              <div>
+                <label class="product-quantity-label">Phân Loại</label>
+                <select name="type" id="id-product"></select>
               </div>
             </div>
             <div></div>
@@ -209,16 +215,6 @@
       </div>
     </main>
     <footer></footer>
-    <script>
-      const toggleBtn = document.getElementById("navbarToggle");
-      const links = document.getElementById("navbarLinks");
-      const auth = document.getElementById("navbarAuth");
-
-      toggleBtn.addEventListener("click", () => {
-        links.classList.toggle("show");
-        auth.classList.toggle("show");
-      });
-    </script>
     <script src="./js/product-items.js"></script>
   </body>
 </html>
