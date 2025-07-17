@@ -117,3 +117,15 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("navbarToggle");
+    const links = document.querySelector(".navbar__links");
+    const auth = document.querySelector(".navbar__auth");
+    const after = document.querySelector(".navbar__after");
+
+    toggleBtn.addEventListener("click", function () {
+      links.classList.toggle("active");
+      auth.classList.toggle("active");
+      after.classList.toggle("active");
+    });
+  });
