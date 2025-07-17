@@ -1,6 +1,17 @@
 const formdangnhap = document.getElementById("formdangnhap");
 const EmailElement = document.getElementById("email");
 const passwordElement = document.getElementById("password");
+const toggleEyeLogin = document.getElementById("toggleEyeLogin");
+
+if (toggleEyeLogin) {
+  toggleEyeLogin.addEventListener("click", function () {
+    const isHidden = passwordElement.type === "password";
+    passwordElement.type = isHidden ? "text" : "password";
+    toggleEyeLogin.classList.toggle("fa-eye");
+    toggleEyeLogin.classList.toggle("fa-eye-slash");
+  });
+}
+
 const AlertError = document.getElementById("AlertError");
 
 //Lắng nghe sự kiện submit từ form đăng nhập tài khoản
@@ -51,3 +62,5 @@ formdangnhap.addEventListener("submit", function (e) {
         //Nếu có thì đăng nhập thành công và chuyển về trang chủ
     }
 });
+
+

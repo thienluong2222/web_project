@@ -1,142 +1,118 @@
 <!DOCTYPE html>
 <html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Đăng Ký</title>
-        <link rel="stylesheet" href="css/dkdn.css" />
-        <link
-            href="images/image.png"
-            rel="shortcut icon"
-            type="image/vnd.microsoft.icon"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./css/nav.css" />
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Đăng Ký</title>
 
-    <body>
-        <!-- Thanh điều hướng -->
-        <header></header>
+  <!--  CSS chính cho giao diện đăng ký/đăng nhập -->
+  <link rel="stylesheet" href="css/dkdn.css" />
 
-        <!-- Nội dung chính -->
-        <div class="background-image"></div>
-        <div class="bgform">
-            <main class="main-container_register">
-                <form id="formdangky" class="register-form">
-                    <h3 class="text-center_register">Đăng ký tài khoản</h3>
+  <!--  Favicon (icon nhỏ trên tab trình duyệt) -->
+  <link href="images/image.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 
-                    <div class="o">
-                        <label for="UserName"></label>
-                        <input
-                            type="text"
-                            id="UserName"
-                            placeholder="Tên tài khoản của bạn"
-                        />
-                        <div
-                            id="errorUserName"
-                            style="color: red; display: none"
-                        >
-                            *Tên không được để trống
-                        </div>
-                    </div>
+  <!--  Font Awesome 6 - dùng để hiển thị icon (VD: icon con mắt) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!--  Font Awesome 4 - KHÔNG cần thiết nếu đã dùng v6, có thể bỏ để tránh xung đột -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-                    <div class="o">
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Nhập Email"
-                        />
-                        <div id="errorEmail" style="color: red; display: none">
-                            *Email không được để trống
-                        </div>
-                    </div>
+  <!--  Google Fonts: dùng font chữ Quicksand -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
 
-                    <div class="o">
-                        <input
-                            type="tel"
-                            id="sdt"
-                            placeholder="Nhập số điện thoại"
-                        />
-                        <div id="errorSdt" style="color: red; display: none">
-                            *Số điện thoại không được để trống
-                        </div>
-                    </div>
+  <!--  CSS cho thanh điều hướng -->
+  <link rel="stylesheet" href="./css/nav.css" />
+</head>
 
-                    <div class="o">
-                        <input
-                            type="password"
-                            id="InputPassword"
-                            placeholder="Đặt mật khẩu"
-                        />
+<body>
+  <!--  Header chứa navbar (sẽ render bằng JS trong navbar-component.js) -->
+  <header></header>
 
-                        <div
-                            id="errorPassword"
-                            style="color: red; display: none"
-                        >
-                            *Mật khẩu không được để trống
-                        </div>
-                    </div>
+  <!--  Ảnh nền -->
+  <div class="background-image"></div>
 
-                    <div class="o">
-                        <input
-                            type="password"
-                            id="ReInputPassword"
-                            placeholder="Nhập lại mật khẩu"
-                        />
-                        <div
-                            id="errorRePassword"
-                            style="color: red; display: none"
-                        >
-                            *Mật khẩu không được để trống
-                        </div>
-                    </div>
+  <!--  Khung nền của form -->
+  <div class="bgform">
+    <main class="main-container_register">
+      <form id="formdangky" class="register-form">
+        <h3 class="text-center_register">Đăng ký tài khoản</h3>
 
-                    <div class="diachi">
-                        <textarea
-                            id="location"
-                            rows="4"
-                            placeholder="Nhập địa chỉ..."
-                        ></textarea>
-                        <div
-                            id="errorLocation"
-                            style="color: red; display: none"
-                        >
-                            *Địa chỉ không được để trống
-                        </div>
-                    </div>
-
-                    <div class="form-footer">
-                        <div>
-                            <input type="checkbox" id="rememberUser" />
-                            <label for="rememberUser">Ghi nhớ tài khoản</label>
-                        </div>
-
-                        <button type="submit" class="register-button">
-                            Tạo tài khoản
-                        </button>
-                        <p class="text-form-footer">
-                            Bạn đã có tài khoản?
-                            <a href="dangnhap.html">Đăng nhập</a>
-                        </p>
-                    </div>
-                </form>
-            </main>
+        <!--  Nhập tên người dùng -->
+        <div class="o">
+          <label for="UserName"></label>
+          <input type="text" id="UserName" placeholder="Tên tài khoản của bạn" />
+          <div id="errorUserName" style="color: red; display: none">*Tên không được để trống</div>
         </div>
-        <!-- Script -->
-        <script src="https://unpkg.com/uuid@9.0.0/dist/index.js"></script>
-        <script src="js/dangky.js"></script>
-        <script src="./js/navbar-component.js"></script>
-        <script src="./js/auth_util.js"></script>
-    </body>
-    <footer></footer>
+
+        <!--  Nhập email -->
+        <div class="o">
+          <input type="email" id="email" placeholder="Nhập Email" />
+          <div id="errorEmail" style="color: red; display: none">*Email không được để trống</div>
+        </div>
+
+        <!--  Nhập số điện thoại -->
+        <div class="o">
+          <input type="tel" id="sdt" placeholder="Nhập số điện thoại" />
+          <div id="errorSdt" style="color: red; display: none">*Số điện thoại không được để trống</div>
+        </div>
+
+        <!--  Mật khẩu -->
+        <div class="o">
+          <div class="password-container_register">
+            <input type="password" id="InputPassword" placeholder="Đặt mật khẩu" />
+            <!--  Icon con mắt để ẩn/hiện mật khẩu -->
+            <i class="fa-solid fa-eye toggle-password" id="toggleEye"></i>
+          </div>
+          <div id="errorPassword" style="color: red; display: none">*Mật khẩu không được để trống</div>
+        </div>
+
+        <!--  Nhập lại mật khẩu -->
+        <div class="o">
+          <div class="RePassword-container_register">
+            <input type="password" id="ReInputPassword" placeholder="Nhập lại mật khẩu" />
+            <!--  Icon con mắt cho mật khẩu nhập lại -->
+            <i class="fa-solid fa-eye toggle-password" id="toggleEyeRePass"></i>
+          </div>
+          <div id="errorRePassword" style="color: red; display: none">*Mật khẩu không được để trống</div>
+        </div>
+
+        <!--  Địa chỉ -->
+        <div class="diachi">
+          <textarea id="location" rows="4" placeholder="Nhập địa chỉ..."></textarea>
+          <div id="errorLocation" style="color: red; display: none">*Địa chỉ không được để trống</div>
+        </div>
+
+        <!--  Footer form gồm checkbox và nút submit -->
+        <div class="form-footer">
+          <div>
+            <input type="checkbox" id="rememberUser" />
+            <label for="rememberUser">Ghi nhớ tài khoản</label>
+          </div>
+
+          <!--  Nút tạo tài khoản -->
+          <button type="submit" class="register-button">Tạo tài khoản</button>
+
+          <!--  Link chuyển sang trang đăng nhập -->
+          <p class="text-form-footer">
+            Bạn đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>
+          </p>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <!--  Các script JavaScript -->
+  <!--  Dùng thư viện uuid để tạo ID ngẫu nhiên (nếu có) -->
+  <script src="https://unpkg.com/uuid@9.0.0/dist/index.js"></script>
+
+  <!--  Script xử lý logic trang đăng ký -->
+  <script src="js/dangky.js"></script>
+
+  <!--  Script xử lý hiển thị thanh điều hướng -->
+  <script src="./js/navbar-component.js"></script>
+
+  <!--  Script chứa các hàm tiện ích về đăng nhập/đăng ký -->
+  <script src="./js/auth_util.js"></script>
+</body>
+
+<!--  Footer nếu có thể thêm nội dung (hiện tại để trống) -->
+<footer></footer>
 </html>
