@@ -1,362 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/profile.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header>
-      
-    </header>
-    <main class="main-profile">
-      <div class="profile">
-        <!-- Phần upload hình ảnh -->
-        <div class="profile-img">
-          <div class="profile-img-user">
-            <img
-              class="img-user"
-              src="https://dm4fv4ltmsvz0.cloudfront.net/265/1000.jpg"
-              alt="anh usre"
-            />
-          </div>
-          <button class="profile-upload-file" id="uploadButton">
-            <i class="fa fa-camera"></i> Chọn ảnh
-          </button>
-          <input type="file" id="uploadInput" accept="image/*" />
-          <div class="profile-upload-format">
-            <div class="profile-upload-size">Dung lượng file tối đa: 1MB</div>
-            <div class="profile-upload-type">Định dạng: .JPG, .PNG</div>
-          </div>
-          <!-- Phần upload hình ảnh -->
-          <!-- Phần thanh nav chuyển tab -->
-          <div class="box_information">
-            <ul class="nav nav-tabs menu">
-              <li class="nav-item">
-                <a class="nav-link active" data-tab-target="#tab-pane-1">
-                  <i class="fa fa-user"></i> Thông tin của tôi
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-tab-target="#tab-pane-2">
-                  <i class="fa fa-map-marker-alt"></i> Đơn hàng của tôi
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-tab-target="#tab-pane-3">
-                  <i class="fa fa-shopping-bag"></i> Đánh giá của tôi
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Phần thanh nav chuyển tab -->
-        <!-- Mô tả thông tin -->
-        <div class="profile-info">
-          <div class="profile-info-title">
-            <h1 class="profile-info-name">Hồ sơ của tôi</h1>
-            <div class="profile-info-manage">Quản lý thông tin cá nhân</div>
-          </div>
-          <div
-            class="profile-info-form tab-pane fade show active"
-            id="tab-pane-1"
-          >
-            <!-- form thông tin đã điền ở đăng ký -->
-            <h1 class="profile-info-form-title">Thông tin của bạn</h1>
-            <form id="profileForm">
-              <table>
-                <tr>
-                  <td><label for="username">Tên đăng nhập</label></td>
-                  <td>
-                    <div>
-                      <input
-                        type="text"
-                        id="username"
-                        class="form-name"
-                        readonly
-                      />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/profile.css" />
+        <link rel="stylesheet" href="./css/nav.css" />
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header></header>
+        <main class="main-profile">
+            <div class="profile">
+                <!-- Phần upload hình ảnh -->
+                <div class="profile-img">
+                    <div class="profile-img-user">
+                        <img
+                            class="img-user"
+                            src="https://dm4fv4ltmsvz0.cloudfront.net/265/1000.jpg"
+                            alt="anh usre"
+                        />
                     </div>
-                    <div>Tên đăng nhập không thể thay đổi.</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><label for="fullname">Họ và tên</label></td>
-                  <td>
-                    <div>
-                      <input type="text" id="fullname" class="form-name" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><label for="email">Email</label></td>
-                  <td>
-                    <div id="emailDisplay">Chưa cập nhật</div>
-                    <input
-                      type="email"
-                      id="email"
-                      class="form-name"
-                      style="display: none"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td><label for="phone">Số điện thoại</label></td>
-                  <td>
-                    <div>
-                      <input type="tel" id="phone" class="form-name" />
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td><label for="birthdate">Ngày sinh</label></td>
-                  <td>
-                    <div>
-                      <input type="date" id="birthdate" class="form-name" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><label for="address">Địa chỉ</label></td>
-                  <td>
-                    <div>
-                      <textarea
-                        id="address"
-                        class="form-name"
-                        rows="3"
-                      ></textarea>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>
-                    <button
-                      type="button"
-                      onclick="updateProfile()"
-                      class="btn-update"
-                    >
-                      Cập nhật thông tin
+                    <button class="profile-upload-file" id="uploadButton">
+                        <i class="fa fa-camera"></i> Chọn ảnh
                     </button>
-                  </td>
-                </tr>
-              </table>
-            </form>
-          </div>
+                    <input type="file" id="uploadInput" accept="image/*" />
+                    <div class="profile-upload-format">
+                        <div class="profile-upload-size">
+                            Dung lượng file tối đa: 1MB
+                        </div>
+                        <div class="profile-upload-type">
+                            Định dạng: .JPG, .PNG
+                        </div>
+                    </div>
+                    <!-- Phần upload hình ảnh -->
+                    <!-- Phần thanh nav chuyển tab -->
+                    <div class="box_information">
+                        <ul class="nav nav-tabs menu">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    data-tab-target="#tab-pane-1"
+                                >
+                                    <i class="fa fa-user"></i> Thông tin của tôi
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-tab-target="#tab-pane-2"
+                                >
+                                    <i class="fa fa-map-marker-alt"></i> Đơn
+                                    hàng của tôi
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-tab-target="#tab-pane-3"
+                                >
+                                    <i class="fa fa-shopping-bag"></i> Đánh giá
+                                    của tôi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Phần thanh nav chuyển tab -->
+                <!-- Mô tả thông tin -->
+                <div class="profile-info">
+                    <div class="profile-info-title">
+                        <h1 class="profile-info-name">Hồ sơ của tôi</h1>
+                        <div class="profile-info-manage">
+                            Quản lý thông tin cá nhân
+                        </div>
+                    </div>
+                    <div
+                        class="profile-info-form tab-pane fade show active"
+                        id="tab-pane-1"
+                    >
+                        <!-- form thông tin đã điền ở đăng ký -->
+                        <h1 class="profile-info-form-title">
+                            Thông tin của bạn
+                        </h1>
+                        <form id="profileForm">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="username"
+                                            >Tên đăng nhập</label
+                                        >
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <input
+                                                type="text"
+                                                id="username"
+                                                class="form-name"
+                                                readonly
+                                            />
+                                        </div>
+                                        <div>
+                                            Tên đăng nhập không thể thay đổi.
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="fullname">Họ và tên</label>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <input
+                                                type="text"
+                                                id="fullname"
+                                                class="form-name"
+                                            />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email">Email</label></td>
+                                    <td>
+                                        <div id="emailDisplay">
+                                            Chưa cập nhật
+                                        </div>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            class="form-name"
+                                            style="display: none"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="phone">Số điện thoại</label>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <input
+                                                type="tel"
+                                                id="phone"
+                                                class="form-name"
+                                            />
+                                        </div>
+                                    </td>
+                                </tr>
 
-          <!-- form thông tin đã điền ở đăng ký -->
-          <!-- phần thông tin địa chỉ -->
-          <div class="tab-pane fade" id="tab-pane-2">
-            <div>HIỆN TẠI ĐANG CẬP NHẬT</div>
-          </div>
-          <!-- phần thông tin địa chỉ -->
-          <!-- Phần thông tin đánh giá SP -->
-          <div class="tab-pane fade" id="tab-pane-3">
-            <div>HIỆN TẠI ĐANG CẬP NHẬT</div>
-          </div>
-          <!-- Phần thông tin đánh giá SP -->
-        </div>
-        <!-- Mô tả thông tin -->
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__section">
-          <h3 class="footer__title">Về chúng tôi</h3>
-          <p class="footer__text">
-            Chào mừng bạn đến với Len Móc - nơi đam mê và sáng tạo với những sợi
-            len ấm áp. Chúng tôi cung cấp các sản phẩm len móc thủ công độc đáo
-            và nguyên liệu chất lượng cao.
-          </p>
-        </div>
+                                <tr>
+                                    <td>
+                                        <label for="birthdate">Ngày sinh</label>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <input
+                                                type="date"
+                                                id="birthdate"
+                                                class="form-name"
+                                            />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="address">Địa chỉ</label>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <textarea
+                                                id="address"
+                                                class="form-name"
+                                                rows="3"
+                                            ></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <button
+                                            type="button"
+                                            onclick="updateProfile()"
+                                            class="btn-update"
+                                        >
+                                            Cập nhật thông tin
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
 
-        <div class="footer__section">
-          <h3 class="footer__title">Danh mục</h3>
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Len Sợi</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Kim Móc</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Phụ Kiện</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Sản Phẩm Thủ Công</a>
-            </li>
-          </ul>
-        </div>
+                    <!-- form thông tin đã điền ở đăng ký -->
+                    <!-- phần thông tin địa chỉ -->
+                    <div class="tab-pane fade" id="tab-pane-2">
+                        <div>HIỆN TẠI ĐANG CẬP NHẬT</div>
+                    </div>
+                    <!-- phần thông tin địa chỉ -->
+                    <!-- Phần thông tin đánh giá SP -->
+                    <div class="tab-pane fade" id="tab-pane-3">
+                        <div>HIỆN TẠI ĐANG CẬP NHẬT</div>
+                    </div>
+                    <!-- Phần thông tin đánh giá SP -->
+                </div>
+                <!-- Mô tả thông tin -->
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__section">
+                    <h3 class="footer__title">Về chúng tôi</h3>
+                    <p class="footer__text">
+                        Chào mừng bạn đến với Len Móc - nơi đam mê và sáng tạo
+                        với những sợi len ấm áp. Chúng tôi cung cấp các sản phẩm
+                        len móc thủ công độc đáo và nguyên liệu chất lượng cao.
+                    </p>
+                </div>
 
-        <div class="footer__section">
-          <h3 class="footer__title">Hỗ trợ khách hàng</h3>
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">FAQ</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Chính sách đổi trả</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Chính sách bảo mật</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Điều khoản dịch vụ</a>
-            </li>
-          </ul>
-        </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Danh mục</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Len Sợi</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Kim Móc</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Phụ Kiện</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Sản Phẩm Thủ Công</a
+                            >
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="footer__section">
-          <h3 class="footer__title">Liên hệ</h3>
-          <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
-          <p class="footer__text">Điện thoại: 0123 456 789</p>
-          <p class="footer__text">Email: miee@lenmoc.vn</p>
-          <div class="footer__social-links">
-            <a
-              href="https://www.facebook.com/profile.php?id=100085507778776"
-              class="footer__social-link"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/miee_crochet/"
-              class="footer__social-link"
-              aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" class="footer__social-link" aria-label="Pinterest"
-              ><i class="fab fa-pinterest-p"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
-      </div>
-    </footer>
+                <div class="footer__section">
+                    <h3 class="footer__title">Hỗ trợ khách hàng</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">FAQ</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Chính sách đổi trả</a
+                            >
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Chính sách bảo mật</a
+                            >
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Điều khoản dịch vụ</a
+                            >
+                        </li>
+                    </ul>
+                </div>
 
-    <!-- Scripts -->
-    <script src="./js/auth_util.js"></script>
-    <script src="./js/navbar-component.js"></script>
-    <script src="./js/profile.js"></script>
-    <script>
-      // Khởi tạo navbar
-      const toggleBtn = document.getElementById("navbarToggle");
-      const links = document.getElementById("navbarLinks");
-      const auth = document.getElementById("navbarAuth");
-      const after = document.getElementById("navbarAfter");
+                <div class="footer__section">
+                    <h3 class="footer__title">Liên hệ</h3>
+                    <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
+                    <p class="footer__text">Điện thoại: 0123 456 789</p>
+                    <p class="footer__text">Email: miee@lenmoc.vn</p>
+                    <div class="footer__social-links">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100085507778776"
+                            class="footer__social-link"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a
+                            href="https://www.instagram.com/miee_crochet/"
+                            class="footer__social-link"
+                            aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="footer__social-link"
+                            aria-label="Pinterest"
+                            ><i class="fab fa-pinterest-p"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </footer>
 
-      if (toggleBtn) {
-        toggleBtn.addEventListener("click", () => {
-          links.classList.toggle("show");
-          if (isUserLoggedIn()) {
-            after.classList.toggle("show");
-          } else {
-            auth.classList.toggle("show");
-          }
-        });
-      }
+        <!-- Scripts -->
+        <script src="./js/auth_util.js"></script>
+        <script src="./js/navbar-component.js"></script>
+        <script src="./js/profile.js"></script>
+        <script>
+            // Khởi tạo navbar
+            const toggleBtn = document.getElementById("navbarToggle");
+            const links = document.getElementById("navbarLinks");
+            const auth = document.getElementById("navbarAuth");
+            const after = document.getElementById("navbarAfter");
 
-      // Event listener cho nút logout
-      const logoutBtn = document.getElementById("logoutBtn");
-      if (logoutBtn) {
-        logoutBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          logout();
-        });
-      }
+            if (toggleBtn) {
+                toggleBtn.addEventListener("click", () => {
+                    links.classList.toggle("show");
+                    if (isUserLoggedIn()) {
+                        after.classList.toggle("show");
+                    } else {
+                        auth.classList.toggle("show");
+                    }
+                });
+            }
 
-      // Kiểm tra đăng nhập khi trang load
-      document.addEventListener("DOMContentLoaded", function () {
-        if (!isUserLoggedIn()) {
-          alert("Vui lòng đăng nhập để xem trang cá nhân!");
-          window.location.href = "dangnhap.html";
-          return;
-        }
+            // Event listener cho nút logout
+            const logoutBtn = document.getElementById("logoutBtn");
+            if (logoutBtn) {
+                logoutBtn.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    logout();
+                });
+            }
 
-        // Load thông tin user
-        loadUserProfile();
-        updateNavbarState();
+            // Kiểm tra đăng nhập khi trang load
+            document.addEventListener("DOMContentLoaded", function () {
+                if (!isUserLoggedIn()) {
+                    alert("Vui lòng đăng nhập để xem trang cá nhân!");
+                    window.location.href = "dangnhap.html";
+                    return;
+                }
 
-        if (typeof updateCartCount === "function") {
-          updateCartCount();
-        }
-      });
+                // Load thông tin user
+                loadUserProfile();
+                updateNavbarState();
 
-      // Load thông tin profile
-      function loadUserProfile() {
-        const userData = getUserData();
-        if (userData) {
-          document.getElementById("username").value =
-            userData.username || userData.email || "Chưa cập nhật";
-          document.getElementById("fullname").value =
-            userData.name || userData.fullname || "";
-          document.getElementById("email").value = userData.email || "";
-          document.getElementById("emailDisplay").textContent =
-            userData.email || "Chưa cập nhật";
-          document.getElementById("phone").value = userData.phone || "";
-          document.getElementById("birthdate").value = userData.birthdate || "";
-          document.getElementById("address").value = userData.address || "";
+                if (typeof updateCartCount === "function") {
+                    updateCartCount();
+                }
+            });
 
-          if (userData.gender) {
-            const genderRadio = document.querySelector(
-              `input[name="gender"][value="${userData.gender}"]`
-            );
-            if (genderRadio) genderRadio.checked = true;
-          }
-        }
-      }
+            // Load thông tin profile
+            function loadUserProfile() {
+                const userData = getUserData();
+                if (userData) {
+                    document.getElementById("username").value =
+                        userData.username || userData.email || "Chưa cập nhật";
+                    document.getElementById("fullname").value =
+                        userData.name || userData.fullname || "";
+                    document.getElementById("email").value =
+                        userData.email || "";
+                    document.getElementById("emailDisplay").textContent =
+                        userData.email || "Chưa cập nhật";
+                    document.getElementById("phone").value =
+                        userData.phone || "";
+                    document.getElementById("birthdate").value =
+                        userData.birthdate || "";
+                    document.getElementById("address").value =
+                        userData.address || "";
 
-      // Cập nhật thông tin profile
-      function updateProfile() {
-        const userData = getUserData() || {};
+                    if (userData.gender) {
+                        const genderRadio = document.querySelector(
+                            `input[name="gender"][value="${userData.gender}"]`
+                        );
+                        if (genderRadio) genderRadio.checked = true;
+                    }
+                }
+            }
 
-        userData.fullname = document.getElementById("fullname").value;
-        userData.email = document.getElementById("email").value;
-        userData.phone = document.getElementById("phone").value;
-        userData.birthdate = document.getElementById("birthdate").value;
-        userData.address = document.getElementById("address").value;
+            // Cập nhật thông tin profile
+            function updateProfile() {
+                const userData = getUserData() || {};
 
-        const selectedGender = document.querySelector(
-          'input[name="gender"]:checked'
-        );
-        if (selectedGender) {
-          userData.gender = selectedGender.value;
-        }
+                userData.fullname = document.getElementById("fullname").value;
+                userData.email = document.getElementById("email").value;
+                userData.phone = document.getElementById("phone").value;
+                userData.birthdate = document.getElementById("birthdate").value;
+                userData.address = document.getElementById("address").value;
 
-        // Lưu vào localStorage
-        localStorage.setItem("userData", JSON.stringify(userData));
+                const selectedGender = document.querySelector(
+                    'input[name="gender"]:checked'
+                );
+                if (selectedGender) {
+                    userData.gender = selectedGender.value;
+                }
 
-        // Cập nhật hiển thị email
-        document.getElementById("emailDisplay").textContent =
-          userData.email || "Chưa cập nhật";
-        document.getElementById("email").style.display = "none";
-        document.getElementById("emailDisplay").style.display = "block";
+                // Lưu vào localStorage
+                localStorage.setItem("userData", JSON.stringify(userData));
 
-        alert("Cập nhật thông tin thành công!");
-      }
+                // Cập nhật hiển thị email
+                document.getElementById("emailDisplay").textContent =
+                    userData.email || "Chưa cập nhật";
+                document.getElementById("email").style.display = "none";
+                document.getElementById("emailDisplay").style.display = "block";
 
-      // Bật chế độ chỉnh sửa email
-      function enableEmailEdit() {
-        document.getElementById("emailDisplay").style.display = "none";
-        document.getElementById("email").style.display = "block";
-        document.getElementById("email").focus();
-      }
-    </script>
-    <script src="./js/navbar-component.js"></script>
-  </body>
+                alert("Cập nhật thông tin thành công!");
+            }
+
+            // Bật chế độ chỉnh sửa email
+            function enableEmailEdit() {
+                document.getElementById("emailDisplay").style.display = "none";
+                document.getElementById("email").style.display = "block";
+                document.getElementById("email").focus();
+            }
+        </script>
+        <script src="./js/navbar-component.js"></script>
+    </body>
 </html>

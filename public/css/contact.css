@@ -1,4 +1,9 @@
 /* Tổng thể */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .main-contact {
   padding: 50px 15px;
   background-color: #fff;

@@ -131,7 +131,7 @@ body {
 .navbar__after {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-top: 2px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -166,8 +166,8 @@ body {
 /* Cart counter styling */
 .cart-counter {
     position: absolute;
-    top: -8px;
-    right: -8px;
+    top: -0px;
+    right: -0px;
     background: #ff4444;
     color: white;
     border-radius: 50%;

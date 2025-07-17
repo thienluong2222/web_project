@@ -1,99 +1,142 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <title>Đăng Ký</title>
-  <link rel="stylesheet" href="css/dkdn.css" />
-  <link href="images/image.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link
+    <head>
+        <meta charset="UTF-8" />
+        <title>Đăng Ký</title>
+        <link rel="stylesheet" href="css/dkdn.css" />
+        <link
+            href="images/image.png"
+            rel="shortcut icon"
+            type="image/vnd.microsoft.icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
             href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
             rel="stylesheet"
         />
-  <link rel="stylesheet" href="./css/nav.css" />
-</head>
+        <link rel="stylesheet" href="./css/nav.css" />
+    </head>
 
-<body>
-  <!-- Thanh điều hướng -->
-  <header>
-    
-  </header>
+    <body>
+        <!-- Thanh điều hướng -->
+        <header></header>
 
-  <!-- Nội dung chính -->
-<div class="background-image"></div>
-   <div class="bgform">
-        <main class="main-container_register">
-            <form id="formdangky" class="register-form">
-                <h3 class="text-center_register">Đăng ký tài khoản</h3>
+        <!-- Nội dung chính -->
+        <div class="background-image"></div>
+        <div class="bgform">
+            <main class="main-container_register">
+                <form id="formdangky" class="register-form">
+                    <h3 class="text-center_register">Đăng ký tài khoản</h3>
 
-                <div class="o">
-                    <label for="UserName"></label>
-                    <input type="text" id="UserName" placeholder="Tên tài khoản của bạn" />
-                    <div id="errorUserName" style="color: red; display: none">
-                        *Tên không được để trống
-                    </div>
-                </div>
-
-                <div class="o">
-                    <input type="email" id="email" placeholder="Nhập Email" />
-                    <div id="errorEmail" style="color: red; display: none">
-                        *Email không được để trống
-                    </div>
-                </div>
-
-                <div class="o">
-                    <input type="tel" id="sdt" placeholder="Nhập số điện thoại" />
-                    <div id="errorSdt" style="color: red; display: none">
-                        *Số điện thoại không được để trống
-                    </div>
-                </div>
-
-                <div class="o">
-                    <input type="password" id="InputPassword" placeholder="Đặt mật khẩu" />
-                        
-                    <div id="errorPassword" style="color: red; display: none">
-                        *Mật khẩu không được để trống
-                    </div>
-                </div>
-
-                <div class="o">
-                    <input type="password" id="ReInputPassword" placeholder="Nhập lại mật khẩu" />
-                    <div id="errorRePassword" style="color: red; display: none">
-                        *Mật khẩu không được để trống
-                    </div>
-                </div>
-
-                <div class="diachi">
-                    <textarea id="location" rows="4" placeholder="Nhập địa chỉ..."></textarea>
-                    <div id="errorLocation" style="color: red; display: none">
-                        *Địa chỉ không được để trống
-                    </div>
-                </div>
-
-                <div class="form-footer">
-                    <div>
-                        <input type="checkbox" id="rememberUser" />
-                        <label for="rememberUser">Ghi nhớ tài khoản</label>
+                    <div class="o">
+                        <label for="UserName"></label>
+                        <input
+                            type="text"
+                            id="UserName"
+                            placeholder="Tên tài khoản của bạn"
+                        />
+                        <div
+                            id="errorUserName"
+                            style="color: red; display: none"
+                        >
+                            *Tên không được để trống
+                        </div>
                     </div>
 
-                    <button type="submit" class="register-button">Tạo tài khoản</button>
-                    <p class="text-form-footer">
+                    <div class="o">
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Nhập Email"
+                        />
+                        <div id="errorEmail" style="color: red; display: none">
+                            *Email không được để trống
+                        </div>
+                    </div>
+
+                    <div class="o">
+                        <input
+                            type="tel"
+                            id="sdt"
+                            placeholder="Nhập số điện thoại"
+                        />
+                        <div id="errorSdt" style="color: red; display: none">
+                            *Số điện thoại không được để trống
+                        </div>
+                    </div>
+
+                    <div class="o">
+                        <input
+                            type="password"
+                            id="InputPassword"
+                            placeholder="Đặt mật khẩu"
+                        />
+
+                        <div
+                            id="errorPassword"
+                            style="color: red; display: none"
+                        >
+                            *Mật khẩu không được để trống
+                        </div>
+                    </div>
+
+                    <div class="o">
+                        <input
+                            type="password"
+                            id="ReInputPassword"
+                            placeholder="Nhập lại mật khẩu"
+                        />
+                        <div
+                            id="errorRePassword"
+                            style="color: red; display: none"
+                        >
+                            *Mật khẩu không được để trống
+                        </div>
+                    </div>
+
+                    <div class="diachi">
+                        <textarea
+                            id="location"
+                            rows="4"
+                            placeholder="Nhập địa chỉ..."
+                        ></textarea>
+                        <div
+                            id="errorLocation"
+                            style="color: red; display: none"
+                        >
+                            *Địa chỉ không được để trống
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <div>
+                            <input type="checkbox" id="rememberUser" />
+                            <label for="rememberUser">Ghi nhớ tài khoản</label>
+                        </div>
+
+                        <button type="submit" class="register-button">
+                            Tạo tài khoản
+                        </button>
+                        <p class="text-form-footer">
                             Bạn đã có tài khoản?
-                        <a href="dangnhap.html">Đăng nhập</a>
-                    </p>
-                </div>
-            </form>
-        </main>
-    </div>
-  <!-- Script -->
-  <script src="https://unpkg.com/uuid@9.0.0/dist/index.js"></script>
-  <script src="js/dangky.js"></script>
-  <script src="./js/navbar-component.js"></script>
-  <script src="./js/auth_util.js"></script>
-</body>
-<footer>
-  
-</footer>
+                            <a href="dangnhap.html">Đăng nhập</a>
+                        </p>
+                    </div>
+                </form>
+            </main>
+        </div>
+        <!-- Script -->
+        <script src="https://unpkg.com/uuid@9.0.0/dist/index.js"></script>
+        <script src="js/dangky.js"></script>
+        <script src="./js/navbar-component.js"></script>
+        <script src="./js/auth_util.js"></script>
+    </body>
+    <footer></footer>
 </html>
