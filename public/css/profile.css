@@ -230,7 +230,6 @@ input[type="radio"] {
   display: block;
 }
 
-
 @media  (max-width: 600px){
   body{
     overflow-x: hidden;
@@ -291,4 +290,4 @@ input[type="radio"] {
 }
 @media (min-width: 769px) and (max-width: 1024px){
 
-}
+} 

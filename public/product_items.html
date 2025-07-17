@@ -215,6 +215,16 @@
       </div>
     </main>
     <footer></footer>
+        <script>
+      const toggleBtn = document.getElementById("navbarToggle");
+      const links = document.getElementById("navbarLinks");
+      const auth = document.getElementById("navbarAuth");
+
+      toggleBtn.addEventListener("click", () => {
+        links.classList.toggle("show");
+        auth.classList.toggle("show");
+      });
+    </script>
     <script src="./js/product-items.js"></script>
   </body>
 </html>

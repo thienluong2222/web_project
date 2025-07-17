@@ -304,9 +304,9 @@ function bindProductEvents(product) {
     alert("Đã thêm vào giỏ hàng!");
   };
 
-  //   document.querySelector(".product-add-to-cart-btn").onclick = () => {
-  //     addToCart(getItem());
-  //   };
+    document.querySelector(".product-add-to-cart-btn").onclick = () => {
+      addToCart(getItem());
+    };
 
   document.querySelector(".product-add-to-cart-voucher").onclick = () => {
     addToCart(getItem());
