@@ -1,6 +1,17 @@
 const formdangnhap = document.getElementById("formdangnhap");
 const EmailElement = document.getElementById("email");
 const passwordElement = document.getElementById("password");
+const toggleEyeLogin = document.getElementById("toggleEyeLogin");
+
+if (toggleEyeLogin) {
+  toggleEyeLogin.addEventListener("click", function () {
+    const isHidden = passwordElement.type === "password";
+    passwordElement.type = isHidden ? "text" : "password";
+    toggleEyeLogin.classList.toggle("fa-eye");
+    toggleEyeLogin.classList.toggle("fa-eye-slash");
+  });
+}
+
 const AlertError = document.getElementById("AlertError");
 
 // Hàm load dữ liệu admin từ data.json
@@ -200,3 +211,5 @@ formdangnhap.addEventListener("submit", async function (e) {
         );
     }
 });
+
+

@@ -1,305 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>product-itmes</title>
-    <link rel="stylesheet" href="css/product_items.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!--Thanh điều hướng-->
-     <header>
-      <nav class="navbar">
-        <div class="navbar__container">
-          <button class="navbar__toggle" id="navbarToggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="navbar__links" id="navbarLinks">
-            <li>
-              <a href="./trangchu.html" class="navbar__link">Trang Chủ</a>
-            </li>
-            <li>
-              <a href="./Catalog_Page.html" class="navbar__link">Sản Phẩm</a>
-            </li>
-            <li>
-              <a href="./tintuc.html" class="navbar__link">Tin tức</a>
-            </li>
-            <li>
-              <a href="./contact.html" class="navbar__link">Liên Hệ</a>
-            </li>
-          </ul>
-          <ul class="navbar__auth"  id="navbarAuth">
-            <li>
-              <a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a>
-            </li>
-            <li>
-              <a
-                href="./dangnhap.html"
-                class="navbar__auth-link navbar__auth-link--primary"
-                >Đăng Nhập</a
-              >
-            </li>
-          </ul>
-          <ul class="navbar__after" style="display: none">
-            <li>
-              <a href="./profile.html" class="navbar__auth-link">Hồ sơ</a>
-            </li>
-            <li>
-              <a href="#" class="navbar__auth-link" onclick="logout()"
-                >Đăng Xuất</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <!--Thanh điều hướng-->
-    <main class="main-product">
-      <!--hình ảnh sản phẩm-->
-      <div class="main-product__items" id="product-container">
-        <div class="product-describe__img">
-          <div class="single-image">
-            <div id="product-carousel">
-              <div class="img">
-                <div class="img-item active">
-                  <img
-                    class="w-100 h-100"
-                    src="./image_sp/SPTuLen/sp110_sp1.jpg"
-                    alt="Image"
-                  />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>product-itmes</title>
+        <link rel="stylesheet" href="css/product_items.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/nav.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/chatbot.css" />
+    </head>
+    <body>
+        <!--Thanh điều hướng-->
+        <header>
+            
+        </header>
+        <!--Thanh điều hướng-->
+        <main class="main-product">
+            <!--hình ảnh sản phẩm-->
+            <div class="main-product__items" id="product-container">
+                <!-- <div class="product-describe__img">
+                    <div class="single-image">
+                        <div id="product-carousel">
+                            <div class="img">
+                                <div class="img-item active">
+                                    <img
+                                        class="w-100 h-100"
+                                        src="./image_sp/SPTuLen/sp110_sp1.jpg"
+                                        alt="Image"
+                                    />
+                                </div>
+                                <div class="img-item">
+                                    <img
+                                        class="w-100 h-100"
+                                        src="./image_sp/SPTuLen/sp110_sp1_01.jpg"
+                                        alt="Image"
+                                    />
+                                </div>
+                                <div class="img-item">
+                                    <img
+                                        class="w-100 h-100"
+                                        src="./image_sp/SPTuLen/sp110_sp1_02.jpg"
+                                        alt="Image"
+                                    />
+                                </div>
+                                <div class="img-item">
+                                    <img
+                                        class="w-100 h-100"
+                                        src="./image_sp/SPTuLen/sp110_sp1_03.jpg"
+                                        alt="Image"
+                                    />
+                                </div>
+                            </div> -->
+
+                            <!-- Nút điều hướng -->
+                            <!-- <a class="carousel-control-prev" href="#">
+                                <i class="fa fa-2x fa-angle-left text-dark"></i>
+                            </a>
+                            <a class="carousel-control-next" href="#">
+                                <i
+                                    class="fa fa-2x fa-angle-right text-dark"
+                                ></i>
+                            </a>
+                        </div>
+                    </div> -->
+
+                    <!--hình ảnh sản phẩm-->
+                    <!--phần content sản phẩm-->
+                    <!-- <div class="product-describe__content">
+                        <h1 class="content-title">
+                            Móc Khoá Len Handmade Thú Ú Nu - Quà Tặng cho bạn
+                            bè, người yêu - Giá rẻ -Tặng kèm kẹo cực ngon
+                        </h1>
+                        <div class="product-rating">
+                            <div class="star-rating">
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-text"> (4.5/5)</span>
+                                <span class="rating-count">
+                                    | (100 đánh giá)</span
+                                >
+                            </div>
+                        </div>
+                        <div class="product-describe__price">
+                            <div class="price-value">47200</div>
+                            <div class="flash-sale-text">59000</div>
+                        </div>
+                        <div class="product-mini-vouchers">
+                            <h2 class="product-mini-vouchers-title">
+                                <i class="fas fa-gift"></i>
+                                Voucher giảm giá của shop
+                            </h2>
+                            <div class="product-mini-vouchers-list">
+                                <div class="product-mini-voucher">Giảm 10%</div>
+                                <div class="product-mini-voucher">Giảm 15%</div>
+                                <div class="product-mini-voucher">Giảm 20%</div>
+                            </div>
+                        </div>
+                        <div class="product-quantity-box">
+                            <label class="product-quantity-label"
+                                >Số Lượng</label
+                            >
+                            <div class="product-quantity-group">
+                                <div class="product-quantity-btn minus">−</div>
+                                <div
+                                    class="product-quantity-value"
+                                    id="quantity"
+                                >
+                                    0
+                                </div>
+                                <div class="product-quantity-btn plus">+</div>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div class="product-add-to-cart">
+                            <button class="product-add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Thêm vào
+                                giỏ hàng
+                            </button>
+                            <button class="product-add-to-cart-voucher">
+                                Mua với voucher
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+                <!--phần content sản phẩm-->
+                <!--Phần mô tả đánh giá-->
+                <!-- Thanh chuyển giữa mô tả và đánh giá -->
+                <!-- <div class="product-items-information">
+                    <div class="tabs">
+                        <button class="tab active" data-tab="desc">
+                            Mô tả sản phẩm
+                        </button>
+                        <button class="tab" data-tab="review">Đánh giá</button>
+                    </div> -->
+                    <!-- Thanh chuyển giữa mô tả và đánh giá -->
+                    <!-- Phần nội dung của mô tả -->
+                    <!-- <div class="tab-content">
+                        <div id="desc" class="tab-pane active">
+                            <div class="product-items-information-description">
+                                Móc khoá len handmade thú ú nu là một sản phẩm
+                                độc đáo, dễ thương, được làm từ len cao cấp, an
+                                toàn cho sức khoẻ. Sản phẩm không chỉ là một món
+                                quà ý nghĩa mà còn là một phụ kiện thời trang
+                                bắt mắt.
+
+                                <h2>Thông tin chi tiết</h2>
+                                <ul>
+                                    <li>Chất liệu: Len cao cấp</li>
+                                    <li>Kích thước: 10cm x 10cm</li>
+                                    <li>Màu sắc: Nhiều màu</li>
+                                </ul>
+                                ❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch
+                                khoảng 5% - 10%, sợi cũng có thể chênh lệch lớn
+                                nhỏ chút xíu, nên Quý khách ước lượng đặt mua dư
+                                một chút để tránh thiếu sợi mà tìm lại lô cũ
+                                không có nhé.
+                                <br />
+                                ❌ Shop không có chính sách đổi trả hàng và sẽ
+                                không chịu trách nhiệm đối với trường hợp Quý
+                                khách chọn không đúng phân loại từng mã nên Quý
+                                khách vui lòng kiểm tra kĩ đơn hàng trước khi
+                                bấm đặt hàng.
+                            </div>
+                        </div>
+                        <!-- Phần nội dung của mô tả -->
+                        <!-- Phần nội dung của đánh giá -->
+                        <!-- <div id="review" class="tab-pane">
+                            <p>Chưa có đánh giá</p>
+                        </div>  -->
+                        <!-- Phần nội dung của đánh giá -->
+                    <!-- </div>
                 </div>
-                <div class="img-item">
-                  <img
-                    class="w-100 h-100"
-                    src="./image_sp/SPTuLen/sp110_sp1_01.jpg"
-                    alt="Image"
-                  />
+            </div> -->
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__section">
+                    <h3 class="footer__title">Về chúng tôi</h3>
+                    <p class="footer__text">
+                        Chào mừng bạn đến với Len Móc - nơi đam mê và sáng tạo
+                        với những sợi len ấm áp. Chúng tôi cung cấp các sản phẩm
+                        len móc thủ công độc đáo và nguyên liệu chất lượng cao.
+                    </p>
                 </div>
-                <div class="img-item">
-                  <img
-                    class="w-100 h-100"
-                    src="./image_sp/SPTuLen/sp110_sp1_02.jpg"
-                    alt="Image"
-                  />
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Danh mục</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Len Sợi</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Kim Móc</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Phụ Kiện</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Sản Phẩm Thủ Công</a
+                            >
+                        </li>
+                    </ul>
                 </div>
-                <div class="img-item">
-                  <img
-                    class="w-100 h-100"
-                    src="./image_sp/SPTuLen/sp110_sp1_03.jpg"
-                    alt="Image"
-                  />
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Hỗ trợ khách hàng</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">FAQ</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Chính sách đổi trả</a
+                            >
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Chính sách bảo mật</a
+                            >
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link"
+                                >Điều khoản dịch vụ</a
+                            >
+                        </li>
+                    </ul>
                 </div>
-              </div>
 
-              <!-- Nút điều hướng -->
-              <a class="carousel-control-prev" href="#">
-                <i class="fa fa-2x fa-angle-left text-dark"></i>
-              </a>
-              <a class="carousel-control-next" href="#">
-                <i class="fa fa-2x fa-angle-right text-dark"></i>
-              </a>
-            </div>
-          </div>
-
-          <!--hình ảnh sản phẩm-->
-          <!--phần content sản phẩm-->
-          <div class="product-describe__content">
-            <h1 class="content-title">
-              Móc Khoá Len Handmade Thú Ú Nu - Quà Tặng cho bạn bè, người yêu -
-              Giá rẻ -Tặng kèm kẹo cực ngon
-            </h1>
-            <div class="product-rating">
-              <div class="star-rating">
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
+                <div class="footer__section">
+                    <h3 class="footer__title">Liên hệ</h3>
+                    <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
+                    <p class="footer__text">Điện thoại: 0123 456 789</p>
+                    <p class="footer__text">Email: miee@lenmoc.vn</p>
+                    <div class="footer__social-links">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100085507778776"
+                            class="footer__social-link"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a
+                            href="https://www.instagram.com/miee_crochet/"
+                            class="footer__social-link"
+                            aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="footer__social-link"
+                            aria-label="Pinterest"
+                            ><i class="fab fa-pinterest-p"></i
+                        ></a>
+                    </div>
                 </div>
-                <span class="rating-text"> (4.5/5)</span>
-                <span class="rating-count"> | (100 đánh giá)</span>
-              </div>
             </div>
-            <div class="product-describe__price">
-              <div class="price-value">47200</div>
-              <div class="flash-sale-text">59000</div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
             </div>
-            <div class="product-mini-vouchers">
-              <h2 class="product-mini-vouchers-title">
-                <i class="fas fa-gift"></i>
-                Voucher giảm giá của shop
-              </h2>
-              <div class="product-mini-vouchers-list">
-                <div class="product-mini-voucher">Giảm 10%</div>
-                <div class="product-mini-voucher">Giảm 15%</div>
-                <div class="product-mini-voucher">Giảm 20%</div>
-              </div>
-            </div>
-            <div class="product-quantity-box">
-              <label class="product-quantity-label">Số Lượng</label>
-              <div class="product-quantity-group">
-                <div class="product-quantity-btn minus">−</div>
-                <div class="product-quantity-value" id="quantity">0</div>
-                <div class="product-quantity-btn plus">+</div>
-              </div>
-            </div>
-            <div></div>
-            <div class="product-add-to-cart">
-              <button class="product-add-to-cart-btn">
-                <i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng
-              </button>
-              <button class="product-add-to-cart-voucher">
-                Mua với voucher
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--phần content sản phẩm-->
-        <!--Phần mô tả đánh giá-->
-        <!-- Thanh chuyển giữa mô tả và đánh giá -->
-        <div class="product-items-information">
-          <div class="tabs">
-            <button class="tab active" data-tab="desc">Mô tả sản phẩm</button>
-            <button class="tab" data-tab="review">Đánh giá</button>
-          </div>
-          <!-- Thanh chuyển giữa mô tả và đánh giá -->
-          <!-- Phần nội dung của mô tả -->
-          <div class="tab-content">
-            <div id="desc" class="tab-pane active">
-              <div class="product-items-information-description">
-                Móc khoá len handmade thú ú nu là một sản phẩm độc đáo, dễ
-                thương, được làm từ len cao cấp, an toàn cho sức khoẻ. Sản phẩm
-                không chỉ là một món quà ý nghĩa mà còn là một phụ kiện thời
-                trang bắt mắt.
+        </footer>
+        <script>
+            const toggleBtn = document.getElementById("navbarToggle");
+            const links = document.getElementById("navbarLinks");
+            const auth = document.getElementById("navbarAuth");
 
-                <h2>Thông tin chi tiết</h2>
-                <ul>
-                  <li>Chất liệu: Len cao cấp</li>
-                  <li>Kích thước: 10cm x 10cm</li>
-                  <li>Màu sắc: Nhiều màu</li>
-                </ul>
-                ❌ LƯU Ý QUAN TRỌNG: Mỗi lô hàng màu sẽ bị lệch khoảng 5% - 10%,
-                sợi cũng có thể chênh lệch lớn nhỏ chút xíu, nên Quý khách ước
-                lượng đặt mua dư một chút để tránh thiếu sợi mà tìm lại lô cũ
-                không có nhé.
-                <br />
-                ❌ Shop không có chính sách đổi trả hàng và sẽ không chịu trách
-                nhiệm đối với trường hợp Quý khách chọn không đúng phân loại
-                từng mã nên Quý khách vui lòng kiểm tra kĩ đơn hàng trước khi
-                bấm đặt hàng.
-              </div>
-            </div>
-            <!-- Phần nội dung của mô tả -->
-            <!-- Phần nội dung của đánh giá -->
-            <div id="review" class="tab-pane">
-              <p>Chưa có đánh giá</p>
-            </div>
-            <!-- Phần nội dung của đánh giá -->
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__section">
-          <h3 class="footer__title">Về chúng tôi</h3>
-          <p class="footer__text">
-            Chào mừng bạn đến với Len Móc - nơi đam mê và sáng tạo với những sợi
-            len ấm áp. Chúng tôi cung cấp các sản phẩm len móc thủ công độc đáo
-            và nguyên liệu chất lượng cao.
-          </p>
-        </div>
-
-        <div class="footer__section">
-          <h3 class="footer__title">Danh mục</h3>
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Len Sợi</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Kim Móc</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Phụ Kiện</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Sản Phẩm Thủ Công</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer__section">
-          <h3 class="footer__title">Hỗ trợ khách hàng</h3>
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">FAQ</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Chính sách đổi trả</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Chính sách bảo mật</a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#" class="footer__link">Điều khoản dịch vụ</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer__section">
-          <h3 class="footer__title">Liên hệ</h3>
-          <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
-          <p class="footer__text">Điện thoại: 0123 456 789</p>
-          <p class="footer__text">Email: miee@lenmoc.vn</p>
-          <div class="footer__social-links">
-            <a
-              href="https://www.facebook.com/profile.php?id=100085507778776"
-              class="footer__social-link"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/miee_crochet/"
-              class="footer__social-link"
-              aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" class="footer__social-link" aria-label="Pinterest"
-              ><i class="fab fa-pinterest-p"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
-      </div>
-    </footer>
-    <script>
-      const toggleBtn = document.getElementById("navbarToggle");
-      const links = document.getElementById("navbarLinks");
-      const auth = document.getElementById("navbarAuth");
-
-      toggleBtn.addEventListener("click", () => {
-        links.classList.toggle("show");
-        auth.classList.toggle("show");
-      });
-    </script>
-    <script src="./js/product-items.js"></script>
-    <script src="./js/navbar-component.js"></script>
-    <script src="./js/auth_util.js"></script>
-  </body>
+            toggleBtn.addEventListener("click", () => {
+                links.classList.toggle("show");
+                auth.classList.toggle("show");
+            });
+        </script>
+        <script src="./js/product-items.js"></script>
+        <script src="./js/navbar-component.js"></script>
+        <script src="./js/auth_util.js"></script>
+        <!-- Chatbot Scripts -->
+        <script src="./js/nlp-config.js"></script>
+        <script src="./js/huggingface_service.js"></script>
+        <script src="./js/chatbot.js"></script>
+    </body>
 </html>
