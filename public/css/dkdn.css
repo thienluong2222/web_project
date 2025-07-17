@@ -203,3 +203,7 @@ textarea {
 .main-container_register:hover::before {
     left: 120%;
 }
+
+body{
+  font-family: "Quicksand", sans-serif;
+}
