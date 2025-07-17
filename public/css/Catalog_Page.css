@@ -187,16 +187,19 @@ body {
 
 /* 🌟 TIÊU ĐỀ mỗi section (Len, Thời Trang, ...) */
 .product-section__title {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    margin: 30px 0 20px;
-    color: #ff6b81;
-    background: linear-gradient(45deg, #ff6b81, #ff4757);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 30px 0 20px;
+  background: linear-gradient(45deg, #ff6b81, #ff4757);
+  /* hỗ trợ đầy đủ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* nếu cần */
+  position: relative;
 }
+
 
 .product-section__title::after {
     content: "";
