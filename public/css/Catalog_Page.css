@@ -209,6 +209,7 @@ body {
     background: linear-gradient(90deg, #ff6b81, #ff4757);
     margin: 8px auto 0;
     border-radius: 2px;
+    text-align: center;
 }
 
 .product-section__title:hover {
