@@ -69,7 +69,7 @@ async function loadProductDetail() {
                 <div class="img-item">
                   <img
                     class="w-100 h-100"
-                    src="./image_sp/SPTuLen/sp110_sp1_01.jpg"
+                    src="${product}"
                     alt="Image"
                   />
                 </div>
@@ -80,13 +80,7 @@ async function loadProductDetail() {
                     alt="Image"
                   />
                 </div>
-                <div class="img-item">
-                  <img
-                    class="w-100 h-100"
-                    src="./image_sp/SPTuLen/sp110_sp1_03.jpg"
-                    alt="Image"
-                  />
-                </div>
+
               </div>
 
               <!-- Nút điều hướng -->
