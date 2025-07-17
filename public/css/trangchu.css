@@ -628,6 +628,7 @@ img.displaySlide {
     }
 }
 @media (max-width: 480px) {
+    /* product */
     .section__products li {
         flex-basis: 100%;
     }
