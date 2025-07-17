@@ -2,7 +2,7 @@
 .main-contact {
   padding: 50px 15px;
   background-color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 /* Tiêu đề */
 .title {
@@ -31,7 +31,8 @@
 .contact-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 60px;
+  align-items: center;
 }
 /* Phần form chiếm 55% */
 .contact-colum {
@@ -74,6 +75,9 @@
   color: #000;
 }
 
+.btn.btn-primary{
+  font-size: 1rem;
+}
 /* Thông tin liên hệ */
 .contact-colum-text h5 {
   font-size: 20px;
@@ -95,7 +99,7 @@
   display: flex;
   gap: 30px;
 }
-.cotact__social-link{
+.contact__social-link{
     color: #FF69B4;
     font-size: 20px;
     display: flex;
