@@ -196,7 +196,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block; /* nếu cần */
   position: relative;
 }
 
@@ -204,7 +203,7 @@ body {
 .product-section__title::after {
     content: "";
     display: block;
-    width: 80px;
+    width: 80px;    
     height: 4px;
     background: linear-gradient(90deg, #ff6b81, #ff4757);
     margin: 8px auto 0;
