@@ -314,7 +314,7 @@ class CartManager {
         this.cart = [];
         this.saveCart();
         this.renderCart();
-        this.showNotification("Đã xóa toàn bộ giỏ hàng!");
+        this.showNotification("Đã thanh toán!");
     }
 
     // Thanh toán

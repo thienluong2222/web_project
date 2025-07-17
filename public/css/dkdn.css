@@ -139,6 +139,56 @@ textarea {
     
 }
 
+.password-container_register,
+.RePassword-container_register,
+.password-container_login {
+  position: relative;
+  width: 100%;
+}
+
+/* Input mật khẩu (có chừa khoảng cho icon) */
+.password-container_register input,
+.RePassword-container_register input,
+.password-container_login input {
+  width: 100%;
+  padding-right: 40px;
+  border-radius: 25px;
+}
+
+/* Icon mắt toggle password - Đăng ký */
+.password-container_register .toggle-password {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  bottom: 7px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000000;
+  font-size: 20px;
+}
+
+/* Icon mắt - Đăng nhập */
+.password-container_login .toggle-password {
+  position: absolute;
+  right: 20px;
+  bottom: 18%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000000;
+  font-size: 20px;
+}
+
+/* Icon mắt - Nhập lại mật khẩu */
+.RePassword-container_register .toggle-password {
+  position: absolute;
+  right: 20px;
+  bottom: 18%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000000;
+  font-size: 20px;
+}
+
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
