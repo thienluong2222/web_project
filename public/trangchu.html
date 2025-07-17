@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +15,8 @@
 </head>
 <body>
     <header class="page__header">
-        <nav class="navbar">
-        <div class="navbar__container">
-            <ul class="navbar__links">
-                <li><a href="./trangchu.html" class="navbar__link">Trang Chủ</a></li>
-                <li><a href="./Catalog_Page.html" class="navbar__link">Sản Phẩm</a></li>
-                <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
-                <li><a href="./contact.html" class="navbar__link">Liên Hệ</a></li>
-            </ul>
-            <ul class="navbar__auth">
-                <li><a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a></li>
-                <li><a href="./dangnhap.html" class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a></li>
-                <li><a href="./cart.html" class="'navbar__auth-link navbar__auth-link--primary">Giỏ hàng</a></li>
-            </ul>
-        </div>
+        <!-- Navbar sẽ được tạo bởi navbar-component.js -->
+    </header>
     </nav>
     </header>
     <main class="page page__main">
@@ -35,8 +24,8 @@
             <!-- slider -->
             <div class="article__div-slider">
                 <div class="slides">
-                    <img class="slide" src="../public/imgtrangchu/background1.png" alt="background1" />
-                    <img class="slide" src="../public/imgtrangchu/background2.png" alt="background2" />
+                    <img class="slide" src="../public/img-pages/background1.png" alt="background1" />
+                    <img class="slide" src="../public/img-pages/background2.png" alt="background2" />
                 </div>
                 <button class="prev" onclick="prevSlide()"><i class="fa fa-chevron-left"></i></button>
                 <button class="next" onclick="nextSlide()"><i class="fa fa-chevron-right"></i></button>
@@ -379,7 +368,7 @@
             <!-- video -->
             <div class="video">
                 <video width="80%" height="auto" controls>
-                    <source src="../public/imgtrangchu/len.mp4" type="video/mp4" />
+                    <source src="../public/img-pages/len.mp4" type="video/mp4" />
                 </video>
             </div>
             <!-- news -->
@@ -389,21 +378,21 @@
                 </div>
                 <div class="section-news-list">
                     <div class="news-item">
-                        <img src="../public/imgtrangchu/Xu hướng.png" alt="">
+                        <img src="../public/img-pages/Xu hướng.png" alt="Xu Hướng Len">
                         <h4><a href="./tintuc.html#tin1">Xu Hướng Len Mới Nhất Năm 2025: Những Màu Sắc “Hot Trend” Không Thể Bỏ Lỡ</a></h4>
                         <p class="news-date">25 tháng 6, 2025</p>
                         <p>Năm 2025 đánh dấu sự bùng nổ mạnh mẽ của thế giới thời trang thủ công, đặc biệt là trong lĩnh vực đan móc với chất liệu len...</p>
                         <a href="./tintuc.html#tin1" class="read-more">Đọc thêm &rarr;</a>
                     </div>
                     <div class="news-item">
-                        <img src="../public/imgtrangchu/5 Mẹo Hay Giúp Bạn Đan Móc Nhanh và Đẹp Hơn.png" alt="">
+                        <img src="../public/img-pages/5 Mẹo Hay Giúp Bạn Đan Móc Nhanh và Đẹp Hơn.png" alt="5 Mẹo Hay Giúp Bạn Đan Móc Nhanh và Đẹp Hơn">
                         <h4><a href="./tintuc.html#tin2">5 Mẹo Hay Giúp Bạn Đan Móc Nhanh và Đẹp Hơn</a></h4>
                         <p class="news-date">20 tháng 6, 2025</p>
                         <p>Đan móc là một bộ môn nghệ thuật đòi hỏi sự kiên nhẫn và kỹ năng. Nếu bạn muốn cải thiện tốc độ và chất lượng sản phẩm, hãy thử áp dụng 5 mẹo đơn giản sau đây...</p>
                         <a href="./tintuc.html#tin2" class="read-more">Đọc thêm &rarr;</a>
                     </div>
                     <div class="news-item">
-                        <img src="../public/imgtrangchu/quatanglen.png" alt="Chăm sóc len">
+                        <img src="../public/img-pages/quatanglen.png" alt="Quà Tặng Handmade Từ Len">
                         <h4><a href="./tintuc.html#tin3">Gợi Ý Làm Quà Tặng Handmade Từ Len - Ý Nghĩa & Ấm Áp Cho Người Thân</a></h4>
                         <p class="news-date">15 tháng 6, 2025</p>
                         <p>Không cần những món quà đắt tiền, một sản phẩm đan móc thủ công từ len cũng có thể truyền tải đầy đủ tình cảm chân thành và sự quan tâm của bạn...</p>
@@ -488,6 +477,10 @@
       </div>
     </footer>
     <script src="../public/js/trangchu.js"></script>
+    <!-- Scripts -->
+    <script src="./js/auth_util.js"></script>
+    <script src="./js/navbar-component.js"></script>
+    <script src="./js/cart.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

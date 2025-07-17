@@ -27,58 +27,59 @@
     </head>
     <body>
         <header>
-            <nav class="navbar">
-                <div class="navbar__container">
-                    <!-- <a href="./trangchu.html" class="navbar__brand">
-                        <img
-                            src="./images/image.png"
-                            class="navbar__icon"
-                            alt="Logo Cửa hàng thời trang của bạn"
-                        />
-                    </a> -->
-                    <ul class="navbar__links">
-                        <li>
-                            <a href="./trangchu.html" class="navbar__link"
-                                >Trang Chủ</a
-                            >
-                        </li>
-                        <li>
-                            <a href="./Catalog_Page.html" class="navbar__link"
-                                >Sản Phẩm</a
-                            >
-                        </li>
-                        <li>
-                            <a href="./tintuc.html" class="navbar__link"
-                                >Tin tức</a
-                            >
-                        </li>
-                        <li><a href="#" class="navbar__link">Liên Hệ</a></li>
-                    </ul>
-                    <ul class="navbar__auth">
-                        <li>
-                            <a href="./dangky.html" class="navbar__auth-link"
-                                >Đăng Ký</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="./dangnhap.html"
-                                class="navbar__auth-link navbar__auth-link--primary"
-                                >Đăng Nhập</a
-                            >
-                        </li>
-                    </ul>
-                    <ul class="navbar__after" style="display: none">
-                        <li>
-                            <a href="./cart.html" class="navbar__cart"
-                                ><i class="fa fa-shopping-bag cart-counter"
-                                    >0</i
-                                ></a
-                            >
-                        </li>
-                        <li>
-                            <a href="./profile.html" class="navbar__profile"
-                                ><i class="fa fa-user-o"></i
+            <!-- Navbar sẽ được tạo bởi navbar-component.js -->
+        </header>
+
+        <main class="cart-container">
+            <div class="cart-header">
+                <h1>Giỏ Hàng Của Bạn</h1>
+                <p>Có <span id="cart-item-count">0</span> sản phẩm trong giỏ hàng</p>
+            </div>
+
+            <!-- Empty cart message -->
+            <div class="empty-cart" id="empty-cart" style="display: none;">
+                <div class="empty-cart__icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h2>Giỏ hàng của bạn đang trống</h2>
+                <p>Hãy thêm một số sản phẩm tuyệt vời vào giỏ hàng của bạn!</p>
+                <a href="./Catalog_Page.html" class="empty-cart__link">
+                    <i class="fas fa-arrow-left"></i>
+                    Tiếp tục mua sắm
+                </a>
+            </div>
+
+            <!-- Cart items -->
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items sẽ được tạo bởi JavaScript -->
+            </div>
+
+            <!-- Cart summary -->
+            <div class="cart-summary" id="cart-summary">
+                <div class="cart-summary__header">
+                    <h3>Tổng cộng</h3>
+                    <div class="cart-summary__total">
+                        <span id="cart-total">0</span>
+                    </div>
+                </div>
+                
+                <div class="cart-summary__actions">
+                    <a href="./Catalog_Page.html" class="cart-btn cart-btn--secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        Tiếp tục mua sắm
+                    </a>
+                    <button class="cart-btn cart-btn--danger" id="clear-cart-btn">
+                        <i class="fas fa-trash"></i>
+                        Xóa tất cả
+                    </button>
+                    <button class="cart-btn cart-btn--primary" id="checkout-btn" disabled>
+                        <i class="fas fa-credit-card"></i>
+                        Thanh toán
+                    </button>
+                </div>
+            </div>
+        </main>
+                                ><i class="fas fa-sign-out-alt"></i
                             ></a>
                         </li>
                     </ul>
@@ -196,6 +197,10 @@
 
                 <div class="footer__section">
                     <h3 class="footer__title">Liên hệ</h3>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <h3 class="footer__title">Liên Hệ</h3>
                     <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
                     <p class="footer__text">Điện thoại: 0123 456 789</p>
                     <p class="footer__text">Email: miee@lenmoc.vn</p>
@@ -225,6 +230,10 @@
                 <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
             </div>
         </footer>
+
+        <!-- Scripts -->
+        <script src="./js/auth_util.js"></script>
+        <script src="./js/navbar-component.js"></script>
         <script src="./js/cart.js"></script>
     </body>
 </html>

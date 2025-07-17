@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Your Page Title</title>
+        <!-- Favicon -->
+        <link rel="icon" href="./images/image.png" type="image/png" />
+        <link rel="shortcut icon" href="./images/image.png" type="image/png" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/nav.css" />
+        <!-- Add your other CSS files here -->
+    </head>
+    <body>
+        <!-- Navbar Template - Copy this to your HTML files -->
+        <header>
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <!-- Logo -->
+                    <a href="./trangchu.html" class="navbar__brand">
+                        <img
+                            src="./images/image.png"
+                            alt="Len Móc Logo"
+                            class="navbar__logo"
+                        />
+                        <span class="navbar__brand-text">Len Móc</span>
+                    </a>
+
+                    <!-- Mobile Toggle Button -->
+                    <button class="navbar__toggle" id="navbarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <!-- Navigation Links -->
+                    <ul class="navbar__links" id="navbarLinks">
+                        <li>
+                            <a href="./trangchu.html" class="navbar__link"
+                                >Trang Chủ</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./Catalog_Page.html" class="navbar__link"
+                                >Sản Phẩm</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./tintuc.html" class="navbar__link"
+                                >Tin tức</a
+                            >
+                        </li>
+                        <li>
+                            <a href="./contact.html" class="navbar__link"
+                                >Liên Hệ</a
+                            >
+                        </li>
+                    </ul>
+
+                    <!-- Auth Links (Before Login) -->
+                    <ul class="navbar__auth" id="navbarAuth">
+                        <li>
+                            <a href="./dangky.html" class="navbar__auth-link"
+                                >Đăng Ký</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="./dangnhap.html"
+                                class="navbar__auth-link navbar__auth-link--primary"
+                                >Đăng Nhập</a
+                            >
+                        </li>
+                    </ul>
+
+                    <!-- User Links (After Login) -->
+                    <ul
+                        class="navbar__after"
+                        id="navbarAfter"
+                        style="display: none"
+                    >
+                        <li>
+                            <a href="./cart.html" class="navbar__cart">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span id="cart-counter" class="cart-counter"
+                                    >0</span
+                                >
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./profile.html" class="navbar__profile">
+                                <i class="fa fa-user-o"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Your page content here -->
+        <main>
+            <!-- Add your content here -->
+        </main>
+
+        <!-- Scripts -->
+        <script src="./js/cart-utils.js"></script>
+        <script src="./js/auth-utils.js"></script>
+
+        <!-- Mobile Menu Toggle Script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggleBtn = document.getElementById("navbarToggle");
+                const links = document.getElementById("navbarLinks");
+                const auth = document.getElementById("navbarAuth");
+                const after = document.getElementById("navbarAfter");
+
+                if (toggleBtn) {
+                    toggleBtn.addEventListener("click", function () {
+                        links.classList.toggle("show");
+
+                        // Show appropriate auth section based on login status
+                        if (
+                            typeof isUserLoggedIn === "function" &&
+                            isUserLoggedIn()
+                        ) {
+                            after.classList.toggle("show");
+                        } else {
+                            auth.classList.toggle("show");
+                        }
+                    });
+                }
+            });
+        </script>
+
+        <!-- Add your other scripts here -->
+    </body>
+</html>

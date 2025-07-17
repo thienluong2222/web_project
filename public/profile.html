@@ -37,17 +37,15 @@
               <a href="./contact.html" class="navbar__link">Liên Hệ</a>
             </li>
           </ul>
-          <ul class="navbar__auth"  id="navbarAuth">
-            <li>
-              <a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a>
-            </li>
-            <li>
-              <a
-                href="./dangnhap.html"
-                class="navbar__auth-link navbar__auth-link--primary"
-                >Đăng Nhập</a
-              >
-            </li>
+          <ul class="navbar__auth" id="navbarAuth">
+            <li><a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a></li>
+            <li><a href="./dangnhap.html" class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a></li>
+          </ul>
+          <ul class="navbar__after" id="navbarAfter" style="display: none;">
+            <li><a href="./cart.html" class="navbar__icon-link" title="Giỏ hàng"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cartCount">0</span></a></li>
+            <li><a href="./profile.html" class="navbar__icon-link" title="Tài khoản"><i class="fas fa-user"></i></a></li>
+            <li><a href="#" id="logoutBtn" class="navbar__icon-link" title="Đăng xuất"><i class="fas fa-sign-out-alt"></i></a></li>
+          </ul>
           </ul>
           <ul class="navbar__after" style="display: none">
             <li>
@@ -116,47 +114,78 @@
           >
             <!-- form thông tin đã điền ở đăng ký -->
             <h1 class="profile-info-form-title">Thông tin của bạn</h1>
-            <form>
+            <form id="profileForm">
               <table>
                 <tr>
-                  <td>
-                    <label for="name">Tên đăng nhập</label>
-                  </td>
+                  <td><label for="username">Tên đăng nhập</label></td>
                   <td>
                     <div>
-                      <input type="text" value="adc" class="form-name" />
+                      <input type="text" id="username" class="form-name" readonly />
                     </div>
-                    <div>Tên đăng nhập chỉ có thể thay đổi một lần.</div>
+                    <div>Tên đăng nhập không thể thay đổi.</div>
                   </td>
                 </tr>
-                <tr></tr>
                 <tr>
-                  <td><label for="name">Tên </label></td>
+                  <td><label for="fullname">Họ và tên</label></td>
                   <td>
                     <div>
-                      <input type="text" value class="form-name" />
+                      <input type="text" id="fullname" class="form-name" />
                     </div>
                   </td>
                 </tr>
                 <tr>
                   <td><label for="email">Email</label></td>
                   <td>
-                    <div>abc****@gmail.com</div>
-                    <button type="submit">Thay đổi</button>
+                    <div id="emailDisplay">Chưa cập nhật</div>
+                    <button type="button" onclick="enableEmailEdit()">Thay đổi</button>
+                    <input type="email" id="email" class="form-name" style="display: none;" />
                   </td>
                 </tr>
                 <tr>
+                  <td><label for="phone">Số điện thoại</label></td>
                   <td>
-                    <label for="phone">Số điện thoại</label>
-                  </td>
-                  <td>
-                    <div>+84 123 456 789</div>
-                    <button type="submit">Thay đổi</button>
+                    <div>
+                      <input type="tel" id="phone" class="form-name" />
+                    </div>
                   </td>
                 </tr>
-                
                 <tr>
+                  <td><label for="gender">Giới tính</label></td>
                   <td>
+                    <div>
+                      <label><input type="radio" name="gender" value="male" /> Nam</label>
+                      <label><input type="radio" name="gender" value="female" /> Nữ</label>
+                      <label><input type="radio" name="gender" value="other" /> Khác</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="birthdate">Ngày sinh</label></td>
+                  <td>
+                    <div>
+                      <input type="date" id="birthdate" class="form-name" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="address">Địa chỉ</label></td>
+                  <td>
+                    <div>
+                      <textarea id="address" class="form-name" rows="3"></textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button type="button" onclick="updateProfile()" class="btn-update">Cập nhật thông tin</button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+          <!-- Tab 2: Địa chỉ -->
+          <div class="profile-info-form tab-pane fade" id="tab-pane-2">
                     <label for="birthday">Ngày sinh</label>
                   </td>
                   <td>
@@ -326,16 +355,106 @@
         <p>&copy; 2025 Len Móc. Tất cả quyền được bảo lưu.</p>
       </div>
     </footer>
+    
+    <!-- Scripts -->
+    <script src="./js/auth_util.js"></script>
+    <script src="./js/navbar-component.js"></script>
+    <script src="./js/profile.js"></script>
     <script>
+      // Khởi tạo navbar
       const toggleBtn = document.getElementById("navbarToggle");
       const links = document.getElementById("navbarLinks");
       const auth = document.getElementById("navbarAuth");
+      const after = document.getElementById("navbarAfter");
 
-      toggleBtn.addEventListener("click", () => {
-        links.classList.toggle("show");
-        auth.classList.toggle("show");
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          links.classList.toggle("show");
+          if (isUserLoggedIn()) {
+            after.classList.toggle("show");
+          } else {
+            auth.classList.toggle("show");
+          }
+        });
+      }
+
+      // Event listener cho nút logout
+      const logoutBtn = document.getElementById("logoutBtn");
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", function(e) {
+          e.preventDefault();
+          logout();
+        });
+      }
+
+      // Kiểm tra đăng nhập khi trang load
+      document.addEventListener('DOMContentLoaded', function() {
+        if (!isUserLoggedIn()) {
+          alert('Vui lòng đăng nhập để xem trang cá nhân!');
+          window.location.href = 'dangnhap.html';
+          return;
+        }
+        
+        // Load thông tin user
+        loadUserProfile();
+        updateNavbarState();
+        
+        if (typeof updateCartCount === 'function') {
+          updateCartCount();
+        }
       });
+
+      // Load thông tin profile
+      function loadUserProfile() {
+        const userData = getUserData();
+        if (userData) {
+          document.getElementById('username').value = userData.username || userData.email || 'Chưa cập nhật';
+          document.getElementById('fullname').value = userData.name || userData.fullname || '';
+          document.getElementById('email').value = userData.email || '';
+          document.getElementById('emailDisplay').textContent = userData.email || 'Chưa cập nhật';
+          document.getElementById('phone').value = userData.phone || '';
+          document.getElementById('birthdate').value = userData.birthdate || '';
+          document.getElementById('address').value = userData.address || '';
+          
+          if (userData.gender) {
+            const genderRadio = document.querySelector(`input[name="gender"][value="${userData.gender}"]`);
+            if (genderRadio) genderRadio.checked = true;
+          }
+        }
+      }
+
+      // Cập nhật thông tin profile
+      function updateProfile() {
+        const userData = getUserData() || {};
+        
+        userData.fullname = document.getElementById('fullname').value;
+        userData.email = document.getElementById('email').value;
+        userData.phone = document.getElementById('phone').value;
+        userData.birthdate = document.getElementById('birthdate').value;
+        userData.address = document.getElementById('address').value;
+        
+        const selectedGender = document.querySelector('input[name="gender"]:checked');
+        if (selectedGender) {
+          userData.gender = selectedGender.value;
+        }
+        
+        // Lưu vào localStorage
+        localStorage.setItem('userData', JSON.stringify(userData));
+        
+        // Cập nhật hiển thị email
+        document.getElementById('emailDisplay').textContent = userData.email || 'Chưa cập nhật';
+        document.getElementById('email').style.display = 'none';
+        document.getElementById('emailDisplay').style.display = 'block';
+        
+        alert('Cập nhật thông tin thành công!');
+      }
+
+      // Bật chế độ chỉnh sửa email
+      function enableEmailEdit() {
+        document.getElementById('emailDisplay').style.display = 'none';
+        document.getElementById('email').style.display = 'block';
+        document.getElementById('email').focus();
+      }
     </script>
-    <script src="./js/profile.js"></script>
   </body>
 </html>
