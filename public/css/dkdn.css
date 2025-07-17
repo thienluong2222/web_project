@@ -112,12 +112,7 @@ textarea {
   }
 }
 
-@media (min-width: 410px){
-	.bgform{
-background-repeat: no-repeat !important; /*Không lặp lại hình*/
-  background-size: cover !important; /*Cắt và tùy chỉnh hình phù hợp với khung*/
-}
-}
+
 
 
 .login-button{
@@ -145,12 +140,19 @@ background-repeat: no-repeat !important; /*Không lặp lại hình*/
   background-image: url("../img-pages/wmremove-transformed.jpeg");
   animation: gradientBG 15s ease infinite;
   overflow: hidden;
-
 }
+
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
+}
+
+@media (min-width: 410px){
+	.bgform{
+background-repeat: no-repeat !important; /*Không lặp lại hình*/
+background-size: cover !important; /*Cắt và tùy chỉnh hình phù hợp với khung*/
+}
 }
 
 .main-container_login,
