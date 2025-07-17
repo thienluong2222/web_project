@@ -67,7 +67,7 @@ body {
 .news__item h3 {
     font-size: 1em;
 }
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
     .main-news {
         flex-direction: column;
     }
@@ -77,4 +77,4 @@ body {
     .main__sidebar-news {
         margin-top: 20px;
     }
-} */
+}
