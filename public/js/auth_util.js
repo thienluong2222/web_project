@@ -69,6 +69,33 @@ function updateNavbarState() {
 
         // Thêm nút logout vào auth section cho mobile
         updateAuthSectionForMobile(true);
+
+        // Cập nhật cart count - sử dụng cả ID cũ và mới
+        if (window.updateCartCount) {
+            window.updateCartCount();
+        }
+        if (window.cartManager) {
+            window.cartManager.updateCartCount();
+        }
+
+        // Cập nhật cho cart-utils.js compatibility
+        const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        // Template cart counter
+        const cartCounter = document.getElementById("cart-counter");
+        if (cartCounter) {
+            cartCounter.textContent = totalItems;
+            cartCounter.style.display =
+                totalItems > 0 ? "inline-block" : "none";
+        }
+
+        // Legacy cart count
+        const cartCount = document.getElementById("cartCount");
+        if (cartCount) {
+            cartCount.textContent = totalItems;
+            cartCount.style.display = totalItems > 0 ? "inline-block" : "none";
+        }
     } else {
         // Desktop: Hiển thị nút đăng ký/đăng nhập, ẩn icon profile và giỏ hàng
         if (navbarAuth) navbarAuth.style.display = "flex";

@@ -10,85 +10,10 @@
     </head>
     <body>
         <header>
-            <nav class="navbar">
-                <div class="navbar__container">
-                    <button class="navbar__toggle" id="navbarToggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <ul class="navbar__links" id="navbarLinks">
-                        <li>
-                            <a href="./trangchu.html" class="navbar__link"
-                                >Trang Chủ</a
-                            >
-                        </li>
-                        <li>
-                            <a href="./Catalog_Page.html" class="navbar__link"
-                                >Sản Phẩm</a
-                            >
-                        </li>
-                        <li>
-                            <a href="./tintuc.html" class="navbar__link"
-                                >Tin tức</a
-                            >
-                        </li>
-                        <li>
-                            <a href="./contact.html" class="navbar__link"
-                                >Liên Hệ</a
-                            >
-                        </li>
-                    </ul>
-                    <ul class="navbar__auth" id="navbarAuth">
-                        <li>
-                            <a href="./dangky.html" class="navbar__auth-link"
-                                >Đăng Ký</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="./dangnhap.html"
-                                class="navbar__auth-link navbar__auth-link--primary"
-                                >Đăng Nhập</a
-                            >
-                        </li>
-                    </ul>
-                    <ul
-                        class="navbar__after"
-                        id="navbarAfter"
-                        style="display: none"
-                    >
-                        <li>
-                            <a
-                                href="./cart.html"
-                                class="navbar__icon-link"
-                                title="Giỏ hàng"
-                                ><i class="fas fa-shopping-cart"></i
-                                ><span class="cart-count" id="cartCount"
-                                    >0</span
-                                ></a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="./profile.html"
-                                class="navbar__icon-link"
-                                title="Tài khoản"
-                                ><i class="fas fa-user"></i
-                            ></a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                id="logoutBtn"
-                                class="navbar__icon-link"
-                                title="Đăng xuất"
-                                ><i class="fas fa-sign-out-alt"></i
-                            ></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <!-- Navbar sẽ được tạo bởi navbar-component.js -->
         </header>
 
+        <!-- Admin Panel Container -->
         <main>
             <div class="container">
                 <div class="left-panel">
@@ -266,264 +191,266 @@
         <script src="./js/auth_util.js"></script>
         <script src="./js/navbar-component.js"></script>
         <script>
-            // Mock user data - thay thế bằng API thực tế
-            let users = [
-                {
-                    id: 1,
-                    name: "Nguyễn Văn A",
-                    email: "nguyenvana@email.com",
-                    role: "user",
-                    status: "active",
-                    joinDate: "2024-01-15",
-                },
-                {
-                    id: 2,
-                    name: "Trần Thị B",
-                    email: "tranthib@email.com",
-                    role: "user",
-                    status: "active",
-                    joinDate: "2024-02-20",
-                },
-                {
-                    id: 3,
-                    name: "Lê Văn C",
-                    email: "levanc@email.com",
-                    role: "user",
-                    status: "banned",
-                    joinDate: "2024-03-10",
-                },
-                {
-                    id: 4,
-                    name: "Phạm Thị D",
-                    email: "phamthid@email.com",
-                    role: "moderator",
-                    status: "active",
-                    joinDate: "2024-01-05",
-                },
-            ];
+                // Mock user data - thay thế bằng API thực tế
+                let users = [
+                    {
+                        id: 1,
+                        name: "Nguyễn Văn A",
+                        email: "nguyenvana@email.com",
+                        role: "user",
+                        status: "active",
+                        joinDate: "2024-01-15",
+                    },
+                    {
+                        id: 2,
+                        name: "Trần Thị B",
+                        email: "tranthib@email.com",
+                        role: "user",
+                        status: "active",
+                        joinDate: "2024-02-20",
+                    },
+                    {
+                        id: 3,
+                        name: "Lê Văn C",
+                        email: "levanc@email.com",
+                        role: "user",
+                        status: "banned",
+                        joinDate: "2024-03-10",
+                    },
+                    {
+                        id: 4,
+                        name: "Phạm Thị D",
+                        email: "phamthid@email.com",
+                        role: "moderator",
+                        status: "active",
+                        joinDate: "2024-01-05",
+                    },
+                ];
 
-            // Kiểm tra quyền admin
-            function checkAdminAccess() {
-                if (!isAdminLoggedIn()) {
-                    alert("Bạn không có quyền truy cập trang này!");
-                    window.location.href = "dangnhap.html";
-                    return false;
+                // Kiểm tra quyền admin
+                function checkAdminAccess() {
+                    if (!isAdminLoggedIn()) {
+                        alert("Bạn không có quyền truy cập trang này!");
+                        window.location.href = "dangnhap.html";
+                        return false;
+                    }
+                    return true;
                 }
-                return true;
-            }
 
-            // Hiển thị quản lý user
-            function showUserManagement() {
-                if (!checkAdminAccess()) return;
+                // Hiển thị quản lý user
+                function showUserManagement() {
+                    if (!checkAdminAccess()) return;
 
-                document.getElementById("main-content").style.display = "none";
-                document.getElementById("user-management").style.display =
-                    "block";
-                document.getElementById("order-management").style.display =
-                    "none";
+                    document.getElementById("main-content").style.display = "none";
+                    document.getElementById("user-management").style.display =
+                        "block";
+                    document.getElementById("order-management").style.display =
+                        "none";
 
-                refreshUserList();
-            }
-
-            // Hiển thị quản lý đơn hàng
-            function showOrderManagement() {
-                if (!checkAdminAccess()) return;
-
-                document.getElementById("main-content").style.display = "none";
-                document.getElementById("user-management").style.display =
-                    "none";
-                document.getElementById("order-management").style.display =
-                    "block";
-            }
-
-            // Tải lại danh sách user
-            function refreshUserList() {
-                const userListEl = document.getElementById("userList");
-                let html = `
-                <table class="user-table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Tên</th>
-                            <th>Email</th>
-                            <th>Vai trò</th>
-                            <th>Trạng thái</th>
-                            <th>Ngày tham gia</th>
-                            <th>Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            `;
-
-                users.forEach((user) => {
-                    const statusClass =
-                        user.status === "active"
-                            ? "status-active"
-                            : "status-banned";
-                    html += `
-                    <tr>
-                        <td>${user.id}</td>
-                        <td>${user.name}</td>
-                        <td>${user.email}</td>
-                        <td>
-                            <select onchange="changeUserRole(${
-                                user.id
-                            }, this.value)">
-                                <option value="user" ${
-                                    user.role === "user" ? "selected" : ""
-                                }>User</option>
-                                <option value="moderator" ${
-                                    user.role === "moderator" ? "selected" : ""
-                                }>Moderator</option>
-                                <option value="admin" ${
-                                    user.role === "admin" ? "selected" : ""
-                                }>Admin</option>
-                            </select>
-                        </td>
-                        <td><span class="status ${statusClass}">${
-                        user.status
-                    }</span></td>
-                        <td>${user.joinDate}</td>
-                        <td>
-                            <button onclick="toggleUserStatus(${
-                                user.id
-                            })" class="btn-toggle">
-                                ${user.status === "active" ? "Khóa" : "Mở khóa"}
-                            </button>
-                            <button onclick="deleteUser(${
-                                user.id
-                            })" class="btn-delete">Xóa</button>
-                        </td>
-                    </tr>
-                `;
-                });
-
-                html += `</tbody></table>`;
-                userListEl.innerHTML = html;
-            }
-
-            // Tìm kiếm user
-            function searchUsers() {
-                const searchTerm = document
-                    .getElementById("userSearch")
-                    .value.toLowerCase();
-                const filteredUsers = users.filter(
-                    (user) =>
-                        user.name.toLowerCase().includes(searchTerm) ||
-                        user.email.toLowerCase().includes(searchTerm)
-                );
-
-                const userListEl = document.getElementById("userList");
-                let html = `
-                <table class="user-table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Tên</th>
-                            <th>Email</th>
-                            <th>Vai trò</th>
-                            <th>Trạng thái</th>
-                            <th>Ngày tham gia</th>
-                            <th>Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            `;
-
-                filteredUsers.forEach((user) => {
-                    const statusClass =
-                        user.status === "active"
-                            ? "status-active"
-                            : "status-banned";
-                    html += `
-                    <tr>
-                        <td>${user.id}</td>
-                        <td>${user.name}</td>
-                        <td>${user.email}</td>
-                        <td>
-                            <select onchange="changeUserRole(${
-                                user.id
-                            }, this.value)">
-                                <option value="user" ${
-                                    user.role === "user" ? "selected" : ""
-                                }>User</option>
-                                <option value="moderator" ${
-                                    user.role === "moderator" ? "selected" : ""
-                                }>Moderator</option>
-                                <option value="admin" ${
-                                    user.role === "admin" ? "selected" : ""
-                                }>Admin</option>
-                            </select>
-                        </td>
-                        <td><span class="status ${statusClass}">${
-                        user.status
-                    }</span></td>
-                        <td>${user.joinDate}</td>
-                        <td>
-                            <button onclick="toggleUserStatus(${
-                                user.id
-                            })" class="btn-toggle">
-                                ${user.status === "active" ? "Khóa" : "Mở khóa"}
-                            </button>
-                            <button onclick="deleteUser(${
-                                user.id
-                            })" class="btn-delete">Xóa</button>
-                        </td>
-                    </tr>
-                `;
-                });
-
-                html += `</tbody></table>`;
-                userListEl.innerHTML = html;
-            }
-
-            // Thay đổi vai trò user
-            function changeUserRole(userId, newRole) {
-                const user = users.find((u) => u.id === userId);
-                if (user) {
-                    user.role = newRole;
-                    alert(
-                        `Đã thay đổi vai trò của ${user.name} thành ${newRole}`
-                    );
-                }
-            }
-
-            // Khóa/mở khóa user
-            function toggleUserStatus(userId) {
-                const user = users.find((u) => u.id === userId);
-                if (user) {
-                    user.status =
-                        user.status === "active" ? "banned" : "active";
-                    alert(
-                        `Đã ${
-                            user.status === "active" ? "mở khóa" : "khóa"
-                        } tài khoản ${user.name}`
-                    );
                     refreshUserList();
                 }
-            }
 
-            // Xóa user
-            function deleteUser(userId) {
-                if (confirm("Bạn có chắc muốn xóa người dùng này?")) {
-                    const userIndex = users.findIndex((u) => u.id === userId);
-                    if (userIndex > -1) {
-                        const deletedUser = users.splice(userIndex, 1)[0];
-                        alert(`Đã xóa người dùng ${deletedUser.name}`);
+                // Hiển thị quản lý đơn hàng
+                function showOrderManagement() {
+                    if (!checkAdminAccess()) return;
+
+                    document.getElementById("main-content").style.display = "none";
+                    document.getElementById("user-management").style.display =
+                        "none";
+                    document.getElementById("order-management").style.display =
+                        "block";
+                }
+
+                // Tải lại danh sách user
+                function refreshUserList() {
+                    const userListEl = document.getElementById("userList");
+                    let html = `
+                    <table class="user-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên</th>
+                                <th>Email</th>
+                                <th>Vai trò</th>
+                                <th>Trạng thái</th>
+                                <th>Ngày tham gia</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                    users.forEach((user) => {
+                        const statusClass =
+                            user.status === "active"
+                                ? "status-active"
+                                : "status-banned";
+                        html += `
+                        <tr>
+                            <td>${user.id}</td>
+                            <td>${user.name}</td>
+                            <td>${user.email}</td>
+                            <td>
+                                <select onchange="changeUserRole(${
+                                    user.id
+                                }, this.value)">
+                                    <option value="user" ${
+                                        user.role === "user" ? "selected" : ""
+                                    }>User</option>
+                                    <option value="moderator" ${
+                                        user.role === "moderator" ? "selected" : ""
+                                    }>Moderator</option>
+                                    <option value="admin" ${
+                                        user.role === "admin" ? "selected" : ""
+                                    }>Admin</option>
+                                </select>
+                            </td>
+                            <td><span class="status ${statusClass}">${
+                            user.status
+                        }</span></td>
+                            <td>${user.joinDate}</td>
+                            <td>
+                                <button onclick="toggleUserStatus(${
+                                    user.id
+                                })" class="btn-toggle">
+                                    ${user.status === "active" ? "Khóa" : "Mở khóa"}
+                                </button>
+                                <button onclick="deleteUser(${
+                                    user.id
+                                })" class="btn-delete">Xóa</button>
+                            </td>
+                        </tr>
+                    `;
+                    });
+
+                    html += `</tbody></table>`;
+                    userListEl.innerHTML = html;
+                }
+
+                // Tìm kiếm user
+                function searchUsers() {
+                    const searchTerm = document
+                        .getElementById("userSearch")
+                        .value.toLowerCase();
+                    const filteredUsers = users.filter(
+                        (user) =>
+                            user.name.toLowerCase().includes(searchTerm) ||
+                            user.email.toLowerCase().includes(searchTerm)
+                    );
+
+                    const userListEl = document.getElementById("userList");
+                    let html = `
+                    <table class="user-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên</th>
+                                <th>Email</th>
+                                <th>Vai trò</th>
+                                <th>Trạng thái</th>
+                                <th>Ngày tham gia</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                    filteredUsers.forEach((user) => {
+                        const statusClass =
+                            user.status === "active"
+                                ? "status-active"
+                                : "status-banned";
+                        html += `
+                        <tr>
+                            <td>${user.id}</td>
+                            <td>${user.name}</td>
+                            <td>${user.email}</td>
+                            <td>
+                                <select onchange="changeUserRole(${
+                                    user.id
+                                }, this.value)">
+                                    <option value="user" ${
+                                        user.role === "user" ? "selected" : ""
+                                    }>User</option>
+                                    <option value="moderator" ${
+                                        user.role === "moderator" ? "selected" : ""
+                                    }>Moderator</option>
+                                    <option value="admin" ${
+                                        user.role === "admin" ? "selected" : ""
+                                    }>Admin</option>
+                                </select>
+                            </td>
+                            <td><span class="status ${statusClass}">${
+                            user.status
+                        }</span></td>
+                            <td>${user.joinDate}</td>
+                            <td>
+                                <button onclick="toggleUserStatus(${
+                                    user.id
+                                })" class="btn-toggle">
+                                    ${user.status === "active" ? "Khóa" : "Mở khóa"}
+                                </button>
+                                <button onclick="deleteUser(${
+                                    user.id
+                                })" class="btn-delete">Xóa</button>
+                            </td>
+                        </tr>
+                    `;
+                    });
+
+                    html += `</tbody></table>`;
+                    userListEl.innerHTML = html;
+                }
+
+                // Thay đổi vai trò user
+                function changeUserRole(userId, newRole) {
+                    const user = users.find((u) => u.id === userId);
+                    if (user) {
+                        user.role = newRole;
+                        alert(
+                            `Đã thay đổi vai trò của ${user.name} thành ${newRole}`
+                        );
+                    }
+                }
+
+                // Khóa/mở khóa user
+                function toggleUserStatus(userId) {
+                    const user = users.find((u) => u.id === userId);
+                    if (user) {
+                        user.status =
+                            user.status === "active" ? "banned" : "active";
+                        alert(
+                            `Đã ${
+                                user.status === "active" ? "mở khóa" : "khóa"
+                            } tài khoản ${user.name}`
+                        );
                         refreshUserList();
                     }
                 }
-            }
 
-            // Existing functions
-            function addFunction(functionName) {
+                // Xóa user
+                function deleteUser(userId) {
+                    if (confirm("Bạn có chắc muốn xóa người dùng này?")) {
+                        const userIndex = users.findIndex((u) => u.id === userId);
+                        if (userIndex > -1) {
+                            const deletedUser = users.splice(userIndex, 1)[0];
+                            alert(`Đã xóa người dùng ${deletedUser.name}`);
+                            refreshUserList();
+                        }
+                    }
+                }
+
+                // Existing functions
+                function addFunction(functionName) {
+            <!-- Scripts -->
+            <script src="js/auth_util.js">
+        </script>
+        <script src="js/navbar-component.js"></script>
+        <script src="js/admin.js"></script>
+        <script>
+            function showNotImplemented(functionName) {
                 alert(`Chức năng "${functionName}" đang được phát triển`);
             }
-
-            // Khởi tạo khi trang load
-            document.addEventListener("DOMContentLoaded", function () {
-                checkAdminAccess();
-            });
         </script>
     </body>
 </html>

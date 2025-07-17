@@ -37,6 +37,34 @@ body {
     margin: 0 auto;
 }
 
+/* Brand/Logo styles */
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    gap: 10px;
+}
+
+.navbar__logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.navbar__brand-text {
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar__brand:hover {
+    color: var(--light-pink);
+}
+
 .navbar__links {
     list-style: none;
     margin: 0;
@@ -109,6 +137,51 @@ body {
     align-items: center;
 }
 
+/* New navbar after login styles for template */
+.navbar__cart,
+.navbar__profile,
+.navbar__logout {
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar__cart:hover,
+.navbar__profile:hover,
+.navbar__logout:hover {
+    background-color: var(--light-pink);
+    color: var(--primary-pink);
+    transform: translateY(-2px);
+}
+
+/* Cart counter styling */
+.cart-counter {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    animation: pulse 0.3s ease;
+}
+
+/* Legacy support for old navbar styles */
 .navbar__icon-link {
     color: var(--white-color);
     text-decoration: none;
@@ -249,11 +322,31 @@ body {
 }
 
 @media (max-width: 768px) {
+    .navbar__container {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .navbar__brand {
+        flex: 1;
+        order: 1;
+    }
+
+    .navbar__brand-text {
+        font-size: 1.2rem;
+    }
+
+    .navbar__logo {
+        width: 35px;
+        height: 35px;
+    }
+
     .navbar__toggle {
         display: block;
         background: none;
         border: none;
         font-size: 24px;
+        order: 2;
         margin-bottom: 10px;
     }
 
@@ -265,6 +358,8 @@ body {
         background-color: hotpink;
         padding: 1rem;
         width: 100%;
+        order: 3;
+        flex-basis: 100%;
     }
 
     .navbar__links.show,
@@ -289,5 +384,239 @@ body {
         flex-direction: row;
         justify-content: center;
         gap: 30px;
+    }
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+    transition: all 0.3s ease;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(255, 105, 180, 0.4);
+}
+
+.chatbot-popup {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chatbot-header {
+    background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.chatbot-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chatbot-message {
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.chatbot-message p {
+    margin: 0;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.chatbot-message--user {
+    align-self: flex-end;
+}
+
+.chatbot-message--user p {
+    background: var(--primary-pink);
+    color: white;
+}
+
+.chatbot-message--bot {
+    align-self: flex-start;
+}
+
+.chatbot-message--bot p {
+    background: #f1f1f1;
+    color: var(--text-color);
+}
+
+.chatbot-input {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.chatbot-input input:focus {
+    border-color: var(--primary-pink);
+}
+
+.chatbot-input button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-pink);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.chatbot-input button:hover {
+    background: var(--dark-pink);
+}
+
+/* Mobile responsiveness for chatbot */
+@media (max-width: 768px) {
+    .chatbot-popup {
+        width: 300px;
+        height: 400px;
+    }
+
+    .chatbot-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbot-popup {
+        width: calc(100vw - 30px);
+        right: -15px;
+        height: 350px;
+    }
+}
+
+/* Cart notification styles */
+.cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    z-index: 1001;
+    font-family: inherit;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Cart count badge improvements */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }
