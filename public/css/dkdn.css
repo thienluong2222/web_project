@@ -111,6 +111,7 @@ textarea {
     padding: 20px;
   }
 }
+
 @media (min-width: 410px){
 	.bgform{
 background-repeat: no-repeat !important; /*Không lặp lại hình*/
@@ -141,7 +142,7 @@ background-repeat: no-repeat !important; /*Không lặp lại hình*/
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../imgtrangchu/wmremove-transformed.jpeg");
+  background-image: url("../img-pages/wmremove-transformed.jpeg");
   animation: gradientBG 15s ease infinite;
   overflow: hidden;
 
