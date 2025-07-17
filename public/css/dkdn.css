@@ -112,7 +112,6 @@ textarea {
     }
 }
 
-<<<<<<< HEAD
 .login-button {
     background-color: #f44c8f;
     color: white;
@@ -124,34 +123,12 @@ textarea {
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease;
-=======
-@media (min-width: 410px){
-	.bgform{
-background-repeat: no-repeat !important; /*Không lặp lại hình*/
-  background-size: cover !important; /*Cắt và tùy chỉnh hình phù hợp với khung*/
-}
-}
-
-
-.login-button{
-  background-color: #f44c8f;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  width: 100%;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
->>>>>>> 86793aedcefe537797429b3685dd7331df8211ac
 }
 .login-button:hover {
     background-color: #c2185b;
 }
 
 .bgform {
-<<<<<<< HEAD
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -159,18 +136,9 @@ background-repeat: no-repeat !important; /*Không lặp lại hình*/
     background-image: url("../img-pages/wmremove-transformed.jpeg");
     animation: gradientBG 15s ease infinite;
     overflow: hidden;
+    
 }
-=======
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../img-pages/wmremove-transformed.jpeg");
-  animation: gradientBG 15s ease infinite;
-  overflow: hidden;
->>>>>>> 86793aedcefe537797429b3685dd7331df8211ac
 
-}
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -183,16 +151,13 @@ background-repeat: no-repeat !important; /*Không lặp lại hình*/
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 410px) {
     .bgform {
         background-repeat: no-repeat !important;
-        background-size: cover !important;
+        background-size: 110vw auto !important;
     }
 }
 
-=======
->>>>>>> 86793aedcefe537797429b3685dd7331df8211ac
 .main-container_login,
 .main-container_register {
     position: relative;
@@ -236,10 +201,5 @@ background-repeat: no-repeat !important; /*Không lặp lại hình*/
     left: 120%;
 }
 .main-container_register:hover::before {
-<<<<<<< HEAD
     left: 120%;
 }
-=======
-  left: 120%;
-}
->>>>>>> 86793aedcefe537797429b3685dd7331df8211ac
