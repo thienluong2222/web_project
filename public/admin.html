@@ -4,9 +4,123 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Trang quản trị</title>
-        <link rel="icon" type="image/png" href="./images/image.png" />
+        <link rel="icon" href="./images/image.png" type="image/png" />
+        <script src="js/auth_util.js"></script>
+        <script src="js/navbar-component.js"></script>
+        <script src="js/admin.js"></script>
+        <script>
+            // Admin utility functions
+            function showDashboard() {
+                document.getElementById("main-content").style.display = "block";
+                document.getElementById("user-management").style.display =
+                    "none";
+                updateDashboardStats();
+            }
+
+            function adminLogout() {
+                if (confirm("Bạn có chắc chắn muốn đăng xuất?")) {
+                    localStorage.removeItem("adminLoggedIn");
+                    window.location.href = "dangnhap.html";
+                }
+            }
+
+            function addNewUser() {
+                const name = prompt("Nhập tên người dùng:");
+                if (!name) return;
+
+                const email = prompt("Nhập email:");
+                if (!email) return;
+
+                const phone = prompt("Nhập số điện thoại:");
+                if (!phone) return;
+
+                const password = prompt("Nhập mật khẩu:");
+                if (!password) return;
+
+                // Generate new user ID
+                const users = JSON.parse(localStorage.getItem("users") || "[]");
+                const newId = "user_" + Date.now();
+
+                const newUser = {
+                    id: newId,
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    password: password,
+                    status: "active",
+                    createdAt: new Date().toISOString(),
+                };
+
+                users.push(newUser);
+                localStorage.setItem("users", JSON.stringify(users));
+
+                alert("Thêm người dùng thành công!");
+                refreshUserList();
+                updateStats();
+            }
+
+            function updateDashboardStats() {
+                const users = JSON.parse(localStorage.getItem("users") || "[]");
+                const totalUsers = users.length;
+                const activeUsers = users.filter(
+                    (u) => u.status === "active"
+                ).length;
+
+                document.getElementById("dashboard-users").textContent =
+                    totalUsers;
+                document.getElementById("dashboard-active").textContent =
+                    activeUsers;
+            }
+
+            function updateStats() {
+                const users = JSON.parse(localStorage.getItem("users") || "[]");
+                const totalUsers = users.length;
+                const activeUsers = users.filter(
+                    (u) => u.status === "active"
+                ).length;
+                const bannedUsers = users.filter(
+                    (u) => u.status === "banned"
+                ).length;
+
+                document.getElementById("total-users").textContent = totalUsers;
+                document.getElementById("active-users").textContent =
+                    activeUsers;
+                document.getElementById("banned-users").textContent =
+                    bannedUsers;
+
+                updateDashboardStats();
+            }
+
+            // Initialize on page load
+            document.addEventListener("DOMContentLoaded", function () {
+                updateStats();
+
+                // Load admin info from data.json or set defaults
+                const adminInfo = {
+                    id: "admin",
+                    name: "Administrator",
+                    email: "admin@gmail.com",
+                };
+
+                document.getElementById("admin-id").textContent = adminInfo.id;
+                document.getElementById("admin-name").textContent =
+                    adminInfo.name;
+                document.getElementById("admin-email").textContent =
+                    adminInfo.email;
+
+                // Show dashboard by default
+                showDashboard();
+            });
+        </script>
         <link rel="stylesheet" href="css/admin_CSS.css" />
         <link rel="stylesheet" href="./css/nav.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
     <body>
         <header>
@@ -18,58 +132,167 @@
             <div class="container">
                 <div class="left-panel">
                     <div class="avatar-section">
-                        <div class="avatar">Min</div>
+                        <div class="avatar">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
                         <div>
                             <div class="section-title">Thông tin Admin</div>
                             <div class="info-item">
-                                ID: <span id="admin-id">B_2306549</span>
+                                ID: <span id="admin-id">admin</span>
                             </div>
                             <div class="info-item">
-                                Tên:
-                                <span id="admin-name">Phùng Đăng Khoa </span>
+                                Tên: <span id="admin-name">Administrator</span>
+                            </div>
+                            <div class="info-item">
+                                Email:
+                                <span id="admin-email">admin@gmail.com</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="function-box">
-                        <h3>Chức năng quản lý</h3>
-                        <button onclick="showUserManagement()">
-                            Quản lý User
+                        <h3><i class="fas fa-cogs"></i> Chức năng quản lý</h3>
+                        <button
+                            onclick="showUserManagement()"
+                            class="primary-btn"
+                        >
+                            <i class="fas fa-users"></i> Quản lý User
                         </button>
-                        <button onclick="addFunction('thêm sản phẩm')">
-                            Thêm sản phẩm
+                        <button
+                            onclick="refreshUserList()"
+                            class="secondary-btn"
+                        >
+                            <i class="fas fa-sync-alt"></i> Tải lại danh sách
                         </button>
-                        <button onclick="addFunction('sửa sản phẩm')">
-                            Sửa sản phẩm
+                        <button onclick="showDashboard()" class="info-btn">
+                            <i class="fas fa-chart-dashboard"></i> Dashboard
                         </button>
-                        <button onclick="addFunction('xoá sản phẩm')">
-                            Xóa sản phẩm
-                        </button>
-                        <button onclick="showOrderManagement()">
-                            Quản lý đơn hàng
+                        <button onclick="adminLogout()" class="danger-btn">
+                            <i class="fas fa-sign-out-alt"></i> Đăng xuất
                         </button>
                     </div>
 
-                    <div class="function-list">
-                        <h3>Các nút chức năng</h3>
-                        <ul id="active-functions"></ul>
+                    <div class="stats-box">
+                        <h3><i class="fas fa-chart-bar"></i> Thống kê</h3>
+                        <div class="stat-item">
+                            <i class="fas fa-user"></i>
+                            <span
+                                >Tổng users:
+                                <strong id="total-users">0</strong></span
+                            >
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-user-check"></i>
+                            <span
+                                >Đang hoạt động:
+                                <strong id="active-users">0</strong></span
+                            >
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-user-lock"></i>
+                            <span
+                                >Đã khóa:
+                                <strong id="banned-users">0</strong></span
+                            >
+                        </div>
                     </div>
                 </div>
 
                 <div class="right-panel">
+                    <!-- Welcome Dashboard -->
                     <div class="main-content-display" id="main-content">
-                        <h3>Trang quản trị hệ thống</h3>
-                        <div class="info-item">
-                            CHÀO MỪNG BẠN ĐẾN VỚI TRANG QUẢN TRỊ.
-                        </div>
-                        <div class="info-item">
-                            VUI LÒNG CHỌN CHỨC NĂNG BÊN TRÁI ĐỂ BẮT ĐẦU.
+                        <div class="welcome-header">
+                            <h2>
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                                Admin
+                            </h2>
+                            <p>
+                                Chào mừng bạn đến với hệ thống quản trị người
+                                dùng
+                            </p>
                         </div>
 
-                        <!-- User Management Section -->
-                        <div id="user-management" style="display: none">
-                            <h3>Quản lý người dùng</h3>
-                            <div class="user-controls">
+                        <div class="dashboard-cards">
+                            <div class="card">
+                                <div class="card-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Quản lý User</h3>
+                                    <p>
+                                        Xem, sửa, xóa và quản lý tài khoản người
+                                        dùng
+                                    </p>
+                                    <button
+                                        onclick="showUserManagement()"
+                                        class="card-btn"
+                                    >
+                                        Truy cập
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Thống kê</h3>
+                                    <p>
+                                        Xem thống kê chi tiết về người dùng hệ
+                                        thống
+                                    </p>
+                                    <div class="stats-mini">
+                                        <span
+                                            >Users:
+                                            <strong id="dashboard-users"
+                                                >0</strong
+                                            ></span
+                                        >
+                                        <span
+                                            >Active:
+                                            <strong id="dashboard-active"
+                                                >0</strong
+                                            ></span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-actions">
+                            <h3><i class="fas fa-bolt"></i> Thao tác nhanh</h3>
+                            <div class="action-buttons">
+                                <button
+                                    onclick="showUserManagement()"
+                                    class="action-btn"
+                                >
+                                    <i class="fas fa-users"></i> Quản lý User
+                                </button>
+                                <button
+                                    onclick="refreshUserList()"
+                                    class="action-btn"
+                                >
+                                    <i class="fas fa-sync-alt"></i> Tải lại
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Management Section -->
+                    <div id="user-management" style="display: none">
+                        <div class="management-header">
+                            <h2>
+                                <i class="fas fa-users"></i> Quản lý người dùng
+                            </h2>
+                            <button onclick="showDashboard()" class="back-btn">
+                                <i class="fas fa-arrow-left"></i> Về Dashboard
+                            </button>
+                        </div>
+
+                        <div class="user-controls">
+                            <div class="control-group">
                                 <button
                                     onclick="refreshUserList()"
                                     class="btn-refresh"
@@ -77,24 +300,23 @@
                                     <i class="fas fa-sync-alt"></i> Tải lại danh
                                     sách
                                 </button>
+                                <button onclick="addNewUser()" class="btn-add">
+                                    <i class="fas fa-plus"></i> Thêm user mới
+                                </button>
+                            </div>
+                            <div class="search-group">
                                 <input
                                     type="text"
                                     id="userSearch"
-                                    placeholder="Tìm kiếm người dùng..."
+                                    placeholder="Tìm kiếm theo tên, email hoặc số điện thoại..."
                                     onkeyup="searchUsers()"
                                 />
-                            </div>
-                            <div class="user-list" id="userList">
-                                <!-- User list will be populated here -->
+                                <i class="fas fa-search search-icon"></i>
                             </div>
                         </div>
 
-                        <!-- Order Management Section -->
-                        <div id="order-management" style="display: none">
-                            <h3>Quản lý đơn hàng</h3>
-                            <div class="order-list" id="orderList">
-                                <p>Chức năng đang được phát triển...</p>
-                            </div>
+                        <div class="user-list" id="userList">
+                            <!-- User list will be populated here -->
                         </div>
                     </div>
                 </div>
@@ -190,263 +412,7 @@
         <!-- Scripts -->
         <script src="./js/auth_util.js"></script>
         <script src="./js/navbar-component.js"></script>
-        <script>
-                // Mock user data - thay thế bằng API thực tế
-                let users = [
-                    {
-                        id: 1,
-                        name: "Nguyễn Văn A",
-                        email: "nguyenvana@email.com",
-                        role: "user",
-                        status: "active",
-                        joinDate: "2024-01-15",
-                    },
-                    {
-                        id: 2,
-                        name: "Trần Thị B",
-                        email: "tranthib@email.com",
-                        role: "user",
-                        status: "active",
-                        joinDate: "2024-02-20",
-                    },
-                    {
-                        id: 3,
-                        name: "Lê Văn C",
-                        email: "levanc@email.com",
-                        role: "user",
-                        status: "banned",
-                        joinDate: "2024-03-10",
-                    },
-                    {
-                        id: 4,
-                        name: "Phạm Thị D",
-                        email: "phamthid@email.com",
-                        role: "moderator",
-                        status: "active",
-                        joinDate: "2024-01-05",
-                    },
-                ];
-
-                // Kiểm tra quyền admin
-                function checkAdminAccess() {
-                    if (!isAdminLoggedIn()) {
-                        alert("Bạn không có quyền truy cập trang này!");
-                        window.location.href = "dangnhap.html";
-                        return false;
-                    }
-                    return true;
-                }
-
-                // Hiển thị quản lý user
-                function showUserManagement() {
-                    if (!checkAdminAccess()) return;
-
-                    document.getElementById("main-content").style.display = "none";
-                    document.getElementById("user-management").style.display =
-                        "block";
-                    document.getElementById("order-management").style.display =
-                        "none";
-
-                    refreshUserList();
-                }
-
-                // Hiển thị quản lý đơn hàng
-                function showOrderManagement() {
-                    if (!checkAdminAccess()) return;
-
-                    document.getElementById("main-content").style.display = "none";
-                    document.getElementById("user-management").style.display =
-                        "none";
-                    document.getElementById("order-management").style.display =
-                        "block";
-                }
-
-                // Tải lại danh sách user
-                function refreshUserList() {
-                    const userListEl = document.getElementById("userList");
-                    let html = `
-                    <table class="user-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Tên</th>
-                                <th>Email</th>
-                                <th>Vai trò</th>
-                                <th>Trạng thái</th>
-                                <th>Ngày tham gia</th>
-                                <th>Hành động</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                `;
-
-                    users.forEach((user) => {
-                        const statusClass =
-                            user.status === "active"
-                                ? "status-active"
-                                : "status-banned";
-                        html += `
-                        <tr>
-                            <td>${user.id}</td>
-                            <td>${user.name}</td>
-                            <td>${user.email}</td>
-                            <td>
-                                <select onchange="changeUserRole(${
-                                    user.id
-                                }, this.value)">
-                                    <option value="user" ${
-                                        user.role === "user" ? "selected" : ""
-                                    }>User</option>
-                                    <option value="moderator" ${
-                                        user.role === "moderator" ? "selected" : ""
-                                    }>Moderator</option>
-                                    <option value="admin" ${
-                                        user.role === "admin" ? "selected" : ""
-                                    }>Admin</option>
-                                </select>
-                            </td>
-                            <td><span class="status ${statusClass}">${
-                            user.status
-                        }</span></td>
-                            <td>${user.joinDate}</td>
-                            <td>
-                                <button onclick="toggleUserStatus(${
-                                    user.id
-                                })" class="btn-toggle">
-                                    ${user.status === "active" ? "Khóa" : "Mở khóa"}
-                                </button>
-                                <button onclick="deleteUser(${
-                                    user.id
-                                })" class="btn-delete">Xóa</button>
-                            </td>
-                        </tr>
-                    `;
-                    });
-
-                    html += `</tbody></table>`;
-                    userListEl.innerHTML = html;
-                }
-
-                // Tìm kiếm user
-                function searchUsers() {
-                    const searchTerm = document
-                        .getElementById("userSearch")
-                        .value.toLowerCase();
-                    const filteredUsers = users.filter(
-                        (user) =>
-                            user.name.toLowerCase().includes(searchTerm) ||
-                            user.email.toLowerCase().includes(searchTerm)
-                    );
-
-                    const userListEl = document.getElementById("userList");
-                    let html = `
-                    <table class="user-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Tên</th>
-                                <th>Email</th>
-                                <th>Vai trò</th>
-                                <th>Trạng thái</th>
-                                <th>Ngày tham gia</th>
-                                <th>Hành động</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                `;
-
-                    filteredUsers.forEach((user) => {
-                        const statusClass =
-                            user.status === "active"
-                                ? "status-active"
-                                : "status-banned";
-                        html += `
-                        <tr>
-                            <td>${user.id}</td>
-                            <td>${user.name}</td>
-                            <td>${user.email}</td>
-                            <td>
-                                <select onchange="changeUserRole(${
-                                    user.id
-                                }, this.value)">
-                                    <option value="user" ${
-                                        user.role === "user" ? "selected" : ""
-                                    }>User</option>
-                                    <option value="moderator" ${
-                                        user.role === "moderator" ? "selected" : ""
-                                    }>Moderator</option>
-                                    <option value="admin" ${
-                                        user.role === "admin" ? "selected" : ""
-                                    }>Admin</option>
-                                </select>
-                            </td>
-                            <td><span class="status ${statusClass}">${
-                            user.status
-                        }</span></td>
-                            <td>${user.joinDate}</td>
-                            <td>
-                                <button onclick="toggleUserStatus(${
-                                    user.id
-                                })" class="btn-toggle">
-                                    ${user.status === "active" ? "Khóa" : "Mở khóa"}
-                                </button>
-                                <button onclick="deleteUser(${
-                                    user.id
-                                })" class="btn-delete">Xóa</button>
-                            </td>
-                        </tr>
-                    `;
-                    });
-
-                    html += `</tbody></table>`;
-                    userListEl.innerHTML = html;
-                }
-
-                // Thay đổi vai trò user
-                function changeUserRole(userId, newRole) {
-                    const user = users.find((u) => u.id === userId);
-                    if (user) {
-                        user.role = newRole;
-                        alert(
-                            `Đã thay đổi vai trò của ${user.name} thành ${newRole}`
-                        );
-                    }
-                }
-
-                // Khóa/mở khóa user
-                function toggleUserStatus(userId) {
-                    const user = users.find((u) => u.id === userId);
-                    if (user) {
-                        user.status =
-                            user.status === "active" ? "banned" : "active";
-                        alert(
-                            `Đã ${
-                                user.status === "active" ? "mở khóa" : "khóa"
-                            } tài khoản ${user.name}`
-                        );
-                        refreshUserList();
-                    }
-                }
-
-                // Xóa user
-                function deleteUser(userId) {
-                    if (confirm("Bạn có chắc muốn xóa người dùng này?")) {
-                        const userIndex = users.findIndex((u) => u.id === userId);
-                        if (userIndex > -1) {
-                            const deletedUser = users.splice(userIndex, 1)[0];
-                            alert(`Đã xóa người dùng ${deletedUser.name}`);
-                            refreshUserList();
-                        }
-                    }
-                }
-
-                // Existing functions
-                function addFunction(functionName) {}
-            <!-- Scripts -->
-            <script src="js/auth_util.js">
-        </script>
-        <script src="js/navbar-component.js"></script>
-        <script src="js/admin.js"></script>
+        <script src="./js/admin.js"></script>
         <script>
             function showNotImplemented(functionName) {
                 alert(`Chức năng "${functionName}" đang được phát triển`);
