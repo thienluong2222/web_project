@@ -69,17 +69,18 @@ async function loadProductDetail() {
                 <div class="img-item">
                   <img
                     class="w-100 h-100"
-                    src="${product}"
+                    src="${product.alt_images[0]}"
                     alt="Image"
                   />
                 </div>
                 <div class="img-item">
                   <img
                     class="w-100 h-100"
-                    src="./image_sp/SPTuLen/sp110_sp1_02.jpg"
+                    src="${product.alt_images[1]}"
                     alt="Image"
                   />
                 </div>
+                
 
               </div>
 
