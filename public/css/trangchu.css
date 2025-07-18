@@ -3,32 +3,13 @@
     margin: 0;
     padding: 0;
 }
-.page {
-    display: grid;
-    grid-template-areas:
-        "header-cell"
-        "main-cell"
-        "footer-cell";
-    font-family: "Quicksand", sans-serif;
-    margin: 0 auto;
-    border: 1px;
-    padding: 0 5px;
-    font-size: 1.2rem;
-}
-.page__header {
-    grid-area: header-cell;
-}
 .page__main {
-    grid-area: main-cell;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
     color: #111;
     line-height: 1.15;
     width: 90vw;
     margin: auto;
-}
-.page__footer {
-    grid-area: footer-cell;
 }
 .load-more {
     display: block;
