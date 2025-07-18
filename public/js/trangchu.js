@@ -41,8 +41,9 @@ async function loadProducts() {
         const data = await response.json();
 
         // Load random products for popular and new sections
-        loadRandomProducts(data.products, "popular-products", 4);
-        loadRandomProducts(data.products, "new-products", 4);
+        loadRandomProducts(data.products, "popular-products", 8);
+        loadRandomProducts(data.products, "new-products", 8);
+        loadRandomProducts(data.products, "promotion-products", 4);
 
         console.log("Products loaded successfully");
     } catch (error) {
