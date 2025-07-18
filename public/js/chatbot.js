@@ -44,36 +44,36 @@ class SimpleChatbot {
             </div>
         `;
 
-        document.body.insertAdjacentHTML('beforeend', chatbotHTML);
+        document.body.insertAdjacentHTML("beforeend", chatbotHTML);
     }
 
     bindEvents() {
-        const toggleBtn = document.getElementById('chatbotToggle');
-        const sendBtn = document.getElementById('chatbotSend');
-        const input = document.getElementById('chatbotInput');
+        const toggleBtn = document.getElementById("chatbotToggle");
+        const sendBtn = document.getElementById("chatbotSend");
+        const input = document.getElementById("chatbotInput");
 
-        toggleBtn?.addEventListener('click', () => this.toggleChatbot());
-        sendBtn?.addEventListener('click', () => this.sendMessage());
-        input?.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
+        toggleBtn?.addEventListener("click", () => this.toggleChatbot());
+        sendBtn?.addEventListener("click", () => this.sendMessage());
+        input?.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
                 this.sendMessage();
             }
         });
     }
 
     toggleChatbot() {
-        const button = document.getElementById('chatbotToggle');
-        const window = document.getElementById('chatbotWindow');
-        
+        const button = document.getElementById("chatbotToggle");
+        const window = document.getElementById("chatbotWindow");
+
         this.isOpen = !this.isOpen;
 
         if (this.isOpen) {
-            button.classList.add('active');
-            window.classList.add('show');
-            document.getElementById('chatbotInput')?.focus();
+            button.classList.add("active");
+            window.classList.add("show");
+            document.getElementById("chatbotInput")?.focus();
         } else {
-            button.classList.remove('active');
-            window.classList.remove('show');
+            button.classList.remove("active");
+            window.classList.remove("show");
         }
     }
 
@@ -87,32 +87,33 @@ Tôi có thể hỗ trợ bạn về:
 • Hướng dẫn đặt hàng
 
 Bạn cần hỗ trợ gì ạ?`;
-        
-        this.addMessage(welcomeMsg, 'bot');
+
+        this.addMessage(welcomeMsg, "bot");
     }
 
     addMessage(text, sender) {
-        const messagesContainer = document.getElementById('chatbotMessages');
+        const messagesContainer = document.getElementById("chatbotMessages");
         if (!messagesContainer) return;
 
-        const messageDiv = document.createElement('div');
+        const messageDiv = document.createElement("div");
         messageDiv.className = `chatbot-message ${sender}`;
 
-        const avatar = document.createElement('div');
-        avatar.className = 'message-avatar';
-        avatar.innerHTML = sender === 'bot' 
-            ? '<i class="fas fa-robot"></i>'
-            : '<i class="fas fa-user"></i>';
+        const avatar = document.createElement("div");
+        avatar.className = "message-avatar";
+        avatar.innerHTML =
+            sender === "bot"
+                ? '<i class="fas fa-robot"></i>'
+                : '<i class="fas fa-user"></i>';
 
-        const content = document.createElement('div');
-        content.className = 'message-content';
-        content.innerHTML = text.replace(/\n/g, '<br>');
+        const content = document.createElement("div");
+        content.className = "message-content";
+        content.innerHTML = text.replace(/\n/g, "<br>");
 
-        const timestamp = document.createElement('div');
-        timestamp.className = 'message-timestamp';
-        timestamp.textContent = new Date().toLocaleTimeString('vi-VN', {
-            hour: '2-digit',
-            minute: '2-digit'
+        const timestamp = document.createElement("div");
+        timestamp.className = "message-timestamp";
+        timestamp.textContent = new Date().toLocaleTimeString("vi-VN", {
+            hour: "2-digit",
+            minute: "2-digit",
         });
 
         messageDiv.appendChild(avatar);
@@ -124,13 +125,13 @@ Bạn cần hỗ trợ gì ạ?`;
     }
 
     sendMessage() {
-        const input = document.getElementById('chatbotInput');
+        const input = document.getElementById("chatbotInput");
         const message = input?.value.trim();
-        
+
         if (!message) return;
 
-        this.addMessage(message, 'user');
-        input.value = '';
+        this.addMessage(message, "user");
+        input.value = "";
 
         // Simulate typing delay
         setTimeout(() => {
@@ -140,13 +141,13 @@ Bạn cần hỗ trợ gì ạ?`;
 
     generateResponse(userMessage) {
         const msg = userMessage.toLowerCase();
-        let response = '';
+        let response = "";
 
         // Simple keyword matching
-        if (msg.includes('chào') || msg.includes('hello')) {
-            response = 'Xin chào! Cảm ơn bạn đã liên hệ với shop len đan móc. Tôi có thể giúp gì cho bạn?';
-        }
-        else if (msg.includes('len') || msg.includes('sản phẩm')) {
+        if (msg.includes("chào") || msg.includes("hello")) {
+            response =
+                "Xin chào! Cảm ơn bạn đã liên hệ với shop len đan móc. Tôi có thể giúp gì cho bạn?";
+        } else if (msg.includes("len") || msg.includes("sản phẩm")) {
             response = `Chúng tôi có nhiều loại len chất lượng:
 
 🧶 Len Yarnart Jeans - 25.000đ
@@ -155,8 +156,7 @@ Bạn cần hỗ trợ gì ạ?`;
 🧶 Len Milkcotton - 30.000đ
 
 Bạn quan tâm loại nào ạ?`;
-        }
-        else if (msg.includes('kim') || msg.includes('dụng cụ')) {
+        } else if (msg.includes("kim") || msg.includes("dụng cụ")) {
             response = `Dụng cụ đan móc của shop:
 
 🪡 Kim móc (size 2-10mm) - 15.000đ
@@ -165,8 +165,7 @@ Bạn quan tâm loại nào ạ?`;
 📏 Thước đo - 10.000đ
 
 Tất cả đều chính hãng, bảo hành 6 tháng!`;
-        }
-        else if (msg.includes('giá') || msg.includes('bao nhiêu')) {
+        } else if (msg.includes("giá") || msg.includes("bao nhiêu")) {
             response = `Bảng giá tham khảo:
 
 💰 Len: 15.000 - 50.000đ/cuộn
@@ -175,8 +174,7 @@ Tất cả đều chính hãng, bảo hành 6 tháng!`;
 
 🚚 Miễn phí ship từ 300.000đ
 🎁 Giảm 10% cho khách hàng mới`;
-        }
-        else if (msg.includes('đặt hàng') || msg.includes('mua')) {
+        } else if (msg.includes("đặt hàng") || msg.includes("mua")) {
             response = `Cách đặt hàng tại shop:
 
 📱 Cách 1: Gọi hotline 0123.456.789
@@ -185,8 +183,7 @@ Tất cả đều chính hãng, bảo hành 6 tháng!`;
 📧 Cách 4: Email: shop@lendan.com
 
 Hỗ trợ COD toàn quốc!`;
-        }
-        else if (msg.includes('liên hệ') || msg.includes('địa chỉ')) {
+        } else if (msg.includes("liên hệ") || msg.includes("địa chỉ")) {
             response = `Thông tin liên hệ:
 
 📞 Hotline: 0123.456.789
@@ -194,11 +191,10 @@ Hỗ trợ COD toàn quốc!`;
 🏪 Địa chỉ: Đại học Cần Thơ
 ⏰ Giờ mở cửa: 8h - 20h (T2-CN)
 📱 Facebook: /lendan.cantho`;
-        }
-        else if (msg.includes('cảm ơn') || msg.includes('bye')) {
-            response = 'Cảm ơn bạn đã quan tâm đến shop! 🧶 Chúc bạn đan móc vui vẻ và tạo ra những sản phẩm tuyệt đẹp! ✨';
-        }
-        else {
+        } else if (msg.includes("cảm ơn") || msg.includes("bye")) {
+            response =
+                "Cảm ơn bạn đã quan tâm đến shop! 🧶 Chúc bạn đan móc vui vẻ và tạo ra những sản phẩm tuyệt đẹp! ✨";
+        } else {
             response = `Tôi có thể hỗ trợ bạn về:
 
 🧶 Sản phẩm len và chất lượng
@@ -210,12 +206,12 @@ Hỗ trợ COD toàn quốc!`;
 Bạn muốn hỏi về chủ đề nào ạ?`;
         }
 
-        this.addMessage(response, 'bot');
+        this.addMessage(response, "bot");
     }
 }
 
 // Initialize chatbot when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     new SimpleChatbot();
-    console.log('✅ Simple Chatbot initialized!');
+    console.log("✅ Simple Chatbot initialized!");
 });
