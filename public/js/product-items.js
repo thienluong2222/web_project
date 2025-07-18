@@ -224,8 +224,8 @@ function bindProductEvents(product) {
   const priceValue = document.querySelector(".price-value");
   const flashSaleText = document.querySelector(".flash-sale-text");
 
-  priceValue.textContent = formatCurrency(product.original_price);
-  flashSaleText.textContent = formatCurrency(product.price);
+    priceValue.textContent = formatCurrency(product.price);
+    flashSaleText.textContent = formatCurrency(product.original_price);
 
   // Tabs
   const tabs = document.querySelectorAll(".tab");

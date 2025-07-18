@@ -90,9 +90,9 @@ function validateEmail(email) {
 }
 
 // Hàm validate password
-function validatePassword(password) {
-    return password.length >= 6; // Tối thiểu 6 ký tự
-}
+// function validatePassword(password) {
+//     return password.length >= 6; // Tối thiểu 6 ký tự
+// }
 
 // Hàm xử lý lỗi đăng nhập
 function handleLoginError(email, errorMessage) {
