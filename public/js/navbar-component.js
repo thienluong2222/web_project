@@ -61,32 +61,6 @@ function createNavbar() {
                 </ul>
             </div>
         </nav>
-        
-        <!-- Chatbot Button -->
-        <div class="chatbot-container">
-            <button class="chatbot-toggle" id="chatbotToggle" title="Trợ lý ảo">
-                <i class="fas fa-comment-dots"></i>
-            </button>
-            <div class="chatbot-popup" id="chatbotPopup" style="display: none;">
-                <div class="chatbot-header">
-                    <h4>Trợ lý ảo</h4>
-                    <button class="chatbot-close" id="chatbotClose">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="chatbot-messages" id="chatbotMessages">
-                    <div class="chatbot-message chatbot-message--bot">
-                        <p>Xin chào! Tôi có thể giúp gì cho bạn?</p>
-                    </div>
-                </div>
-                <div class="chatbot-input">
-                    <input type="text" id="chatbotInput" placeholder="Nhập tin nhắn..." />
-                    <button id="chatbotSend">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
     `;
 }
 
@@ -124,127 +98,11 @@ function initNavbar() {
         });
     }
 
-    // Khởi tạo chatbot
-    initChatbot();
-
     // Cập nhật số lượng giỏ hàng
     updateCartCount();
 
     // Cập nhật trạng thái navbar
     updateNavbarState();
-}
-
-// Khởi tạo chatbot
-function initChatbot() {
-    const chatbotToggle = document.getElementById("chatbotToggle");
-    const chatbotPopup = document.getElementById("chatbotPopup");
-    const chatbotClose = document.getElementById("chatbotClose");
-    const chatbotInput = document.getElementById("chatbotInput");
-    const chatbotSend = document.getElementById("chatbotSend");
-    const chatbotMessages = document.getElementById("chatbotMessages");
-
-    if (!chatbotToggle) return;
-
-    // Toggle chatbot popup
-    chatbotToggle.addEventListener("click", () => {
-        const isVisible = chatbotPopup.style.display !== "none";
-        chatbotPopup.style.display = isVisible ? "none" : "block";
-
-        if (!isVisible) {
-            chatbotInput.focus();
-        }
-    });
-
-    // Close chatbot
-    if (chatbotClose) {
-        chatbotClose.addEventListener("click", () => {
-            chatbotPopup.style.display = "none";
-        });
-    }
-
-    // Send message
-    function sendMessage() {
-        const message = chatbotInput.value.trim();
-        if (!message) return;
-
-        // Add user message
-        addChatMessage(message, "user");
-        chatbotInput.value = "";
-
-        // Simulate bot response
-        setTimeout(() => {
-            const response = generateBotResponse(message);
-            addChatMessage(response, "bot");
-        }, 1000);
-    }
-
-    // Event listeners for sending messages
-    if (chatbotSend) {
-        chatbotSend.addEventListener("click", sendMessage);
-    }
-
-    if (chatbotInput) {
-        chatbotInput.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") {
-                sendMessage();
-            }
-        });
-    }
-
-    // Add message to chat
-    function addChatMessage(message, sender) {
-        const messageDiv = document.createElement("div");
-        messageDiv.className = `chatbot-message chatbot-message--${sender}`;
-        messageDiv.innerHTML = `<p>${message}</p>`;
-
-        chatbotMessages.appendChild(messageDiv);
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-    }
-
-    // Generate bot response
-    function generateBotResponse(userMessage) {
-        const message = userMessage.toLowerCase();
-
-        // Câu trả lời dựa trên từ khóa
-        if (message.includes("sản phẩm") || message.includes("len")) {
-            return "Chúng tôi có nhiều loại len chất lượng cao như len Yarn Art Jeans, len sợi bông, len mohair. Bạn có muốn xem danh mục sản phẩm không?";
-        }
-
-        if (message.includes("giá") || message.includes("tiền")) {
-            return "Giá sản phẩm của chúng tôi rất cạnh tranh. Bạn có thể xem giá cụ thể từng sản phẩm trong trang Sản Phẩm.";
-        }
-
-        if (message.includes("giao hàng") || message.includes("vận chuyển")) {
-            return "Chúng tôi hỗ trợ giao hàng toàn quốc. Phí vận chuyển từ 30.000đ tùy theo khu vực.";
-        }
-
-        if (message.includes("thanh toán")) {
-            return "Chúng tôi hỗ trợ thanh toán COD (thanh toán khi nhận hàng) và chuyển khoản ngân hàng.";
-        }
-
-        if (message.includes("đăng ký") || message.includes("tài khoản")) {
-            return "Bạn có thể đăng ký tài khoản miễn phí để theo dõi đơn hàng và nhận ưu đãi đặc biệt.";
-        }
-
-        if (message.includes("liên hệ")) {
-            return "Bạn có thể liên hệ với chúng tôi qua trang Liên Hệ hoặc hotline: 0123-456-789";
-        }
-
-        if (message.includes("giỏ hàng")) {
-            return "Bạn có thể thêm sản phẩm vào giỏ hàng và thanh toán dễ dàng. Giỏ hàng sẽ được lưu ngay cả khi bạn chưa đăng nhập.";
-        }
-
-        // Câu trả lời mặc định
-        const defaultResponses = [
-            "Cảm ơn bạn đã liên hệ! Tôi có thể giúp bạn tìm hiểu về sản phẩm len, giá cả, giao hàng.",
-            "Bạn có thể hỏi tôi về sản phẩm, giá cả, giao hàng, thanh toán hoặc cách đăng ký tài khoản.",
-            "Tôi luôn sẵn sàng hỗ trợ bạn! Hãy hỏi tôi về bất kỳ điều gì liên quan đến sản phẩm len của chúng tôi.",
-        ];
-
-        return defaultResponses[
-            Math.floor(Math.random() * defaultResponses.length)
-        ];
-    }
 }
 
 // Hàm cập nhật số lượng giỏ hàng

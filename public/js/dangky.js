@@ -5,8 +5,32 @@ const formdangky = document.getElementById("formdangky");
 const UserNameElement = document.getElementById("UserName");
 const EmailElement = document.getElementById("email");
 const sdtElement = document.getElementById("sdt");
+
+
 const passwordElement = document.getElementById("InputPassword");
+const togglePassIcon = document.getElementById("toggleEye");
+
+if (togglePassIcon) {
+    togglePassIcon.addEventListener("click", function () {
+        const isHidden = passwordElement.type === "password";
+        passwordElement.type = isHidden ? "text" : "password";
+        togglePassIcon.classList.toggle("fa-eye");
+        togglePassIcon.classList.toggle("fa-eye-slash");
+    });
+}
+
 const repasslElement = document.getElementById("ReInputPassword");
+const toggleEyeRePass = document.getElementById("toggleEyeRePass");
+
+if (toggleEyeRePass && repasslElement) {
+    toggleEyeRePass.addEventListener("click", function () {
+        const isHidden = repasslElement.type === "password";
+        repasslElement.type = isHidden ? "text" : "password";
+        toggleEyeRePass.classList.toggle("fa-eye");
+        toggleEyeRePass.classList.toggle("fa-eye-slash");
+    });
+}
+
 const locationElement = document.getElementById("location");
 
 //Element liên quan đến lỗi//
@@ -34,6 +58,8 @@ function validateEmail(email) {
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
 }
+
+
 
 formdangky.addEventListener("submit", function (e) {
     e.preventDefault();

@@ -12,16 +12,13 @@
         />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-            integrity="sha512-..."
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
-        
+
         <link rel="stylesheet" href="./css/cart.css" />
         <link rel="stylesheet" href="./css/nav.css" />
         <link rel="icon" href="./images/image.png" type="image/png" />
@@ -29,63 +26,6 @@
     <body>
         <header>
             <!-- Navbar sẽ được tạo bởi navbar-component.js -->
-        </header>
-
-        <main class="cart-container">
-            <div class="cart-header">
-                <h1>Giỏ Hàng Của Bạn</h1>
-                <p>Có <span id="cart-item-count">0</span> sản phẩm trong giỏ hàng</p>
-            </div>
-
-            <!-- Empty cart message -->
-            <div class="empty-cart" id="empty-cart" style="display: none;">
-                <div class="empty-cart__icon">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <h2>Giỏ hàng của bạn đang trống</h2>
-                <p>Hãy thêm một số sản phẩm tuyệt vời vào giỏ hàng của bạn!</p>
-                <a href="./Catalog_Page.html" class="empty-cart__link">
-                    <i class="fas fa-arrow-left"></i>
-                    Tiếp tục mua sắm
-                </a>
-            </div>
-
-            <!-- Cart items -->
-            <div class="cart-items" id="cart-items">
-                <!-- Cart items sẽ được tạo bởi JavaScript -->
-            </div>
-
-            <!-- Cart summary -->
-            <div class="cart-summary" id="cart-summary">
-                <div class="cart-summary__header">
-                    <h3>Tổng cộng</h3>
-                    <div class="cart-summary__total">
-                        <span id="cart-total">0</span>
-                    </div>
-                </div>
-                
-                <div class="cart-summary__actions">
-                    <a href="./Catalog_Page.html" class="cart-btn cart-btn--secondary">
-                        <i class="fas fa-arrow-left"></i>
-                        Tiếp tục mua sắm
-                    </a>
-                    <button class="cart-btn cart-btn--danger" id="clear-cart-btn">
-                        <i class="fas fa-trash"></i>
-                        Xóa tất cả
-                    </button>
-                    <button class="cart-btn cart-btn--primary" id="checkout-btn" disabled>
-                        <i class="fas fa-credit-card"></i>
-                        Thanh toán
-                    </button>
-                </div>
-            </div>
-        </main>
-                                ><i class="fas fa-sign-out-alt"></i
-                            ></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
         </header>
 
         <main class="cart-page">
@@ -126,15 +66,21 @@
                 <h2 class="cart-summary__title">Tổng tiền</h2>
                 <div class="cart-summary__row">
                     <span class="cart-summary__label">Tổng phụ:</span>
-                    <span class="cart-summary__value">205.000 VNĐ</span>
+                    <span class="cart-summary__value" id="subtotal"
+                        >205.000 VNĐ</span
+                    >
                 </div>
                 <div class="cart-summary__row">
                     <span class="cart-summary__label">Phí vận chuyển:</span>
-                    <span class="cart-summary__value">Miễn phí</span>
+                    <span class="cart-summary__value" id="shipping-fee"
+                        >Miễn phí</span
+                    >
                 </div>
                 <div class="cart-summary__row cart-summary__row--total">
                     <span class="cart-summary__label">Tổng cộng:</span>
-                    <span class="cart-summary__value">205.000 VNĐ</span>
+                    <span class="cart-summary__value" id="total-amount"
+                        >205.000 VNĐ</span
+                    >
                 </div>
                 <button class="cart-summary__button">
                     Tiến hành Thanh toán

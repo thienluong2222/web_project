@@ -6,11 +6,11 @@
         <title>Profile</title>
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
         <link
             href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
@@ -310,31 +310,6 @@
         <script src="./js/navbar-component.js"></script>
         <script src="./js/profile.js"></script>
         <script>
-            // Khởi tạo navbar
-            const toggleBtn = document.getElementById("navbarToggle");
-            const links = document.getElementById("navbarLinks");
-            const auth = document.getElementById("navbarAuth");
-            const after = document.getElementById("navbarAfter");
-
-            if (toggleBtn) {
-                toggleBtn.addEventListener("click", () => {
-                    links.classList.toggle("show");
-                    if (isUserLoggedIn()) {
-                        after.classList.toggle("show");
-                    } else {
-                        auth.classList.toggle("show");
-                    }
-                });
-            }
-
-            // Event listener cho nút logout
-            const logoutBtn = document.getElementById("logoutBtn");
-            if (logoutBtn) {
-                logoutBtn.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    logout();
-                });
-            }
 
             // Kiểm tra đăng nhập khi trang load
             document.addEventListener("DOMContentLoaded", function () {
@@ -366,7 +341,7 @@
                     document.getElementById("emailDisplay").textContent =
                         userData.email || "Chưa cập nhật";
                     document.getElementById("phone").value =
-                        userData.phone || "";
+                        userData.sdt || "";
                     document.getElementById("birthdate").value =
                         userData.birthdate || "";
                     document.getElementById("address").value =

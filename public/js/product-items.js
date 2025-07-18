@@ -134,7 +134,11 @@ async function loadProductDetail() {
                 <div class="product-quantity-btn minus">−</div>
                 <div class="product-quantity-value" id="quantity">0</div>
                 <div class="product-quantity-btn plus">+</div>
-              </div>              
+              </div>
+              <div>
+                <label class="product-quantity-label">Phân Loại</label>
+                <select name="type" id="id-product"></select>
+              </div>
             </div>
             <div class="product-add-to-cart">
               <button class="product-add-to-cart-btn">
