@@ -19,6 +19,7 @@ if (togglePassIcon) {
     });
 }
 
+
 const repasslElement = document.getElementById("ReInputPassword");
 const toggleEyeRePass = document.getElementById("toggleEyeRePass");
 
@@ -84,6 +85,8 @@ formdangky.addEventListener("submit", function (e) {
     if (!passwordElement.value) {
         errorPassword.style.display = "block";
     } else errorPassword.style.display = "none";
+    //Kiểm tra số ký tự của mật khẩu
+
 
     if (!repasslElement.value) {
         errorRePassword.style.display = "block";
