@@ -338,7 +338,7 @@ body {
     .navbar__after {
         display: none;
         flex-direction: column;
-        background-color: hotpink;
+        background-color: var(--footer-bg);
         padding: 1rem;
         width: 100%;
         order: 3;
@@ -350,6 +350,10 @@ body {
     .navbar__after.show {
         display: flex;
     }
+    .navbar__links {
+        flex-direction: row;
+        justify-content: center; 
+    }
 
     .navbar__link,
     .navbar__auth-link,
@@ -358,9 +362,14 @@ body {
         padding: 0.5rem 0;
         text-decoration: none;
     }
+    .navbar__auth {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
 
     .navbar__auth-link.navbar__auth-link--primary {
-        color: #ff69b4;
+        color: var(--primary-pink);
     }
 
     .navbar__after {
