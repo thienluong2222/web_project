@@ -1,3 +1,6 @@
+// Tác giả: Phan Lương Thiện B2308392
+
+
 // Navbar Component - Tái sử dụng cho tất cả các trang
 function createNavbar() {
     return `

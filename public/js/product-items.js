@@ -1,3 +1,7 @@
+// Tác giả: Phan Lương Thiện B2308392
+//          Phan Thị Huỳnh Trâm
+
+
 function formatDescription(description) {
   //chỉnh description
   if (!description) return "";
