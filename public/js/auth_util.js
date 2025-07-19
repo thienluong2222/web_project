@@ -1,3 +1,6 @@
+// Tác giả: Phan Lương Thiện B2308392
+// Nguồn: youtube.com
+
 // Authentication utilities
 function isUserLoggedIn() {
     return localStorage.getItem("isLoggedIn") === "true";

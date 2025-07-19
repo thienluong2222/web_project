@@ -1,3 +1,7 @@
+// Tác giả: Phan Lương Thiện B2308392
+// Nguồn: youtube.com
+//        github.com
+
 // Hugging Face NLP Service - Optimized for Vietnamese Yarn Shop Chatbot
 class HuggingFaceNLPService {
     constructor() {

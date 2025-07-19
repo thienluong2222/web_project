@@ -1,3 +1,6 @@
+// Tác giả: Phan Lương Thiện B2308392
+// Nguồn: youtube.com
+//        gemini.com
 // Admin Panel JavaScript
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Admin panel loaded");

@@ -1,3 +1,7 @@
+// Tác giả: Phan Lương Thiện B2308392
+// Nguồn: youtube.com
+//        github.com
+
 // Simple Chatbot for Yarn Shop - Compatible with chatbot.css
 class SimpleChatbot {
     constructor() {

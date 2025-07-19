@@ -1,3 +1,7 @@
+// Tác giả: Phan Lương Thiện B2308392
+// Nguồn: youtube.com
+//        github.com
+
 // Hugging Face API Configuration - Optimized for Vietnamese Chatbot
 const HUGGINGFACE_CONFIG = {
     apiKey: process.env.HUGGINGFACE_API_KEY || "YOUR_API_KEY_HERE", // Move to environment variable

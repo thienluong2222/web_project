@@ -1,3 +1,6 @@
+// Tác giả: Phan Lương Thiện B2308392
+// Nguồn: youtube.com
+
 // Cart counter utility
 function updateCartCounter() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];

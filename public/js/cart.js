@@ -1,3 +1,6 @@
+// Tác giả: Phan Lương Thiện B2308392
+
+
 // Cart functionality - Chức năng giỏ hàng
 class CartManager {
     constructor() {
