@@ -4,12 +4,12 @@ const passwordElement = document.getElementById("password");
 const toggleEyeLogin = document.getElementById("toggleEyeLogin");
 
 if (toggleEyeLogin) {
-  toggleEyeLogin.addEventListener("click", function () {
-    const isHidden = passwordElement.type === "password";
-    passwordElement.type = isHidden ? "text" : "password";
-    toggleEyeLogin.classList.toggle("fa-eye");
-    toggleEyeLogin.classList.toggle("fa-eye-slash");
-  });
+    toggleEyeLogin.addEventListener("click", function () {
+        const isHidden = passwordElement.type === "password";
+        passwordElement.type = isHidden ? "text" : "password";
+        toggleEyeLogin.classList.toggle("fa-eye");
+        toggleEyeLogin.classList.toggle("fa-eye-slash");
+    });
 }
 
 const AlertError = document.getElementById("AlertError");
@@ -68,13 +68,13 @@ function authenticateUser(email, password) {
         return {
             id: findUser.userID || "user_" + Date.now(),
             name:
+                findUser.UserName ||
                 findUser.fullName ||
                 findUser.fullname ||
-                findUser.UserName ||
                 findUser.name,
             email: findUser.email,
             phone: findUser.sdt || findUser.phone,
-            address: findUser.address,
+            address: findUser.location || findUser.address,
             role: findUser.role || "user",
             loginTime: new Date().toISOString(),
         };
@@ -90,9 +90,9 @@ function validateEmail(email) {
 }
 
 // Hàm validate password
-// function validatePassword(password) {
-//     return password.length >= 6; // Tối thiểu 6 ký tự
-// }
+function validatePassword(password) {
+    return password.length >= 6; // Mật khẩu phải có ít nhất 6 ký tự
+}
 
 // Hàm xử lý lỗi đăng nhập
 function handleLoginError(email, errorMessage) {
@@ -211,5 +211,3 @@ formdangnhap.addEventListener("submit", async function (e) {
         );
     }
 });
-
-
