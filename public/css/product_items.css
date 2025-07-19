@@ -1,3 +1,5 @@
+/* Tác giả : Phan Thị Huỳnh Trâm - B2303785 - tramb2303785@student.ctu.edu.vn
+  */
 /* RESET CƠ BẢN */
 * {
   padding: 0;
@@ -15,7 +17,7 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
-
+/* phần main canh toàn bộ thành cột */
 .main-product__items{
   display: flex;
   flex-direction: column;
@@ -28,7 +30,7 @@ body {
   padding: 2rem 1rem;
 }
 
-/* CỘT TRÁI: HÌNH ẢNH */
+/* phần hình ảnh và thông tin sản phẩm nằm trên dòng trong phần cột*/
 .product-describe__img {
   display: flex;
   flex-direction: row;
@@ -38,6 +40,7 @@ body {
 #product-carousel {
   position: relative;
 }
+/* phần mũi tên chuyển ảnh */
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -63,6 +66,7 @@ body {
   font-size: 24px;
   color: #5c5c5c;
 }
+/* hình ảnh của sản phẩm */
 .single-image {
   width: 400px;
   max-width: 100%;
@@ -82,19 +86,20 @@ body {
 .img-item.active {
   display: block;
 }
-/* CỘT PHẢI: THÔNG TIN SẢN PHẨM */
+
+/* THÔNG TIN SẢN PHẨM */
 .product-describe__content {
   flex: 1;
   margin-left: 10px;
 }
-
+/* tên sản phẩm */
 .content-title {
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
 }
-
+/* đánh giá và sao */
 .product-rating {
   display: flex;
   align-items: center;
@@ -225,13 +230,13 @@ body {
   box-shadow: none;
 }
 
-/* Khung tổng */
+/* Khung tổng của thông tin chi tiết*/
 .product-items-information {
   overflow: hidden;
   margin: 2rem;
 }
 
-/* Tabs */
+/* Tabs chuyển giữa mô tả và đánh giá*/
 .tabs {
   display: flex;
   flex-direction: row;
@@ -263,7 +268,7 @@ body {
   font-weight: 600;
   border-bottom: 2px solid transparent;
 }
-
+/* phần nội dung của tab */
 .tab-content {
   border: 1px solid #ccc;
   border-radius: 0 8px 8px 8px;
@@ -283,33 +288,6 @@ body {
   outline: none;
   box-shadow: none;
   border: none;
-}
-
-.product-items-information-description h2 {
-  margin-top: 1rem;
-  color: #1b8137;
-}
-
-.product-items-information-description ul {
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.product-items-information-description li {
-  margin-bottom: 0.5rem;
-}
-
-/* Lưu ý cảnh báo */
-.product-items-information-description p,
-.product-items-information-description {
-  margin-top: 1rem;
-}
-
-.product-items-information-description::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* ========== RESPONSIVE ========== */

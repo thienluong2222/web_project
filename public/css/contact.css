@@ -1,8 +1,10 @@
+/* Tác giả : Phan Thị Huỳnh Trâm - B2303785 - tramb2303785@student.ctu.edu.vn
+*/
 /* Tổng thể */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 /* Grid Layout cho bố cục tổng thể */
 .layout-grid {
@@ -16,24 +18,20 @@
   background-color: #fff;
   font-family: "Quicksand", sans-serif;
 }
-/* Tiêu đề */
+/* Tổng thể thẻ div trong phần main */
 .contact-content {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  margin: auto;
 }
-
+/* tiêu đề Liên Hệ */
 .text-center {
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap; /* Cho phép co giãn nếu khung nhỏ */
-}
-
-.title-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
 }
 
 .text-center::before,
@@ -44,11 +42,12 @@
   background: #000;
   margin: 0 10px;
 }
-/* Bố cục cột */
-.contact-content {
-  max-width: 100%;
-  margin: auto;
+.title-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 }
+/* phần form và thông tin về Miee */
 .contact-row {
   display: flex;
   flex-wrap: wrap;
@@ -62,11 +61,10 @@
 /* phần nd chiếm 40% */
 .contact-colum-text {
   flex: 1 1 40%;
-
 }
 
-.contact-colum-text h5{
-    color: #444;
+.contact-colum-text h5 {
+  color: #444;
 }
 /* Form liên hệ */
 .contact-form .form-control {
@@ -80,9 +78,9 @@
 .contact-form textarea {
   resize: vertical;
 }
-
+/* nút send your message */
 .contact-form button {
-  background-color: #FF69B4;
+  background-color: #ff69b4;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -92,11 +90,11 @@
   transition: all 0.3s ease;
 }
 .contact-form button:hover {
-  background-color: #FFE0F0;
+  background-color: #ffe0f0;
   color: #000;
 }
 
-.btn.btn-primary{
+.btn.btn-primary {
   font-size: 1rem;
 }
 /* Thông tin liên hệ */
@@ -109,28 +107,26 @@
   color: #444;
 }
 .logo i {
-  color: #FF69B4;
+  color: #ff69b4;
   margin-right: 12px;
   transition: transform 0.3s ease;
 }
-.logo i:hover{
+.logo i:hover {
   transform: scale(1.2);
 }
-.contact__social-links{
+.contact__social-links {
   margin-top: 10px;
   display: flex;
   gap: 30px;
 }
-.contact__social-link{
-    color: #FF69B4;
-    font-size: 20px;
-    display: flex;
+.contact__social-link {
+  color: #ff69b4;
+  font-size: 20px;
+  display: flex;
 }
-
 
 /* Responsive */
 @media (min-width: 481px) and (max-width: 600px) {
-
   .contact-row {
     flex-direction: column;
     gap: 30px;
@@ -218,6 +214,4 @@
     font-size: 26px;
     text-align: center;
   }
-
 }
-
