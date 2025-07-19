@@ -36,41 +36,59 @@ function initializeSampleData() {
     if (users.length === 0) {
         const sampleUsers = [
             {
+                userID: 1001,
+                UserName: "Nguyễn Văn A",
+                email: "nguyenvana@gmail.com",
+                sdt: "0123456789",
+                password: "123456",
+                location: "Hà Nội",
+                role: "user",
+                createdAt: "2024-01-15T00:00:00.000Z",
+                // Fields cũ để tương thích
                 id: "user001",
                 fullName: "Nguyễn Văn A",
                 fullname: "Nguyễn Văn A",
                 name: "Nguyễn Văn A",
-                email: "nguyenvana@gmail.com",
-                sdt: "0123456789",
                 phone: "0123456789",
-                password: "123456",
-                role: "user",
+                address: "Hà Nội",
                 status: "active",
                 registrationDate: "2024-01-15",
             },
             {
+                userID: 1002,
+                UserName: "Trần Thị B",
+                email: "tranthib@gmail.com",
+                sdt: "0987654321",
+                password: "123456",
+                location: "Hồ Chí Minh",
+                role: "user",
+                createdAt: "2024-02-10T00:00:00.000Z",
+                // Fields cũ để tương thích
                 id: "user002",
                 fullName: "Trần Thị B",
                 fullname: "Trần Thị B",
                 name: "Trần Thị B",
-                email: "tranthib@gmail.com",
-                sdt: "0987654321",
                 phone: "0987654321",
-                password: "123456",
-                role: "user",
+                address: "Hồ Chí Minh",
                 status: "active",
                 registrationDate: "2024-02-10",
             },
             {
+                userID: 1003,
+                UserName: "Lê Văn C",
+                email: "levanc@gmail.com",
+                sdt: "0111222333",
+                password: "123456",
+                location: "Đà Nẵng",
+                role: "user",
+                createdAt: "2024-03-05T00:00:00.000Z",
+                // Fields cũ để tương thích
                 id: "user003",
                 fullName: "Lê Văn C",
                 fullname: "Lê Văn C",
                 name: "Lê Văn C",
-                email: "levanc@gmail.com",
-                sdt: "0111222333",
                 phone: "0111222333",
-                password: "123456",
-                role: "user",
+                address: "Đà Nẵng",
                 status: "banned",
                 registrationDate: "2024-03-05",
             },
@@ -247,15 +265,33 @@ function addNewUser() {
         return;
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Email không đúng định dạng!");
+        return;
+    }
+
     const phone = prompt("Nhập số điện thoại:");
     if (!phone || phone.trim() === "") {
         alert("Vui lòng nhập số điện thoại!");
         return;
     }
 
-    const password = prompt("Nhập mật khẩu:");
+    const password = prompt("Nhập mật khẩu (ít nhất 6 ký tự):");
     if (!password || password.trim() === "") {
         alert("Vui lòng nhập mật khẩu!");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Mật khẩu phải có ít nhất 6 ký tự!");
+        return;
+    }
+
+    const location = prompt("Nhập địa chỉ:");
+    if (!location || location.trim() === "") {
+        alert("Vui lòng nhập địa chỉ!");
         return;
     }
 
@@ -269,17 +305,23 @@ function addNewUser() {
         return;
     }
 
-    // Create new user object
+    // Create new user object - đồng bộ với cấu trúc từ dangky.js
     const newUser = {
+        userID: Math.ceil(Math.random() * 1000000000), // Đồng bộ với dangky.js
+        UserName: name.trim(), // Đồng bộ với dangky.js (chữ U viết hoa)
+        email: email.trim(),
+        sdt: phone.trim(),
+        password: password.trim(),
+        location: location.trim(), // Đồng bộ với dangky.js
+        role: "user",
+        createdAt: new Date().toISOString(), // Thêm thời gian tạo
+        // Giữ lại các field cũ để tương thích
         id: "user" + Date.now(),
         fullName: name.trim(),
         fullname: name.trim(),
         name: name.trim(),
-        email: email.trim(),
-        sdt: phone.trim(),
         phone: phone.trim(),
-        password: password.trim(),
-        role: "user",
+        address: location.trim(),
         status: "active",
         registrationDate: new Date().toLocaleDateString(),
     };

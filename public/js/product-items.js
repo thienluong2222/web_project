@@ -1,15 +1,15 @@
 function formatDescription(description) {
-    //chỉnh description
-    if (!description) return "";
+  //chỉnh description
+  if (!description) return "";
 
-    return (
-        description
-            // Đổi ❌ thành <span class="warning">❌</span>
-            .replace(/❌/g, '<span class="warning">❌</span>')
+  return (
+    description
+      // Đổi ❌ thành <span class="warning">❌</span>
+      .replace(/❌/g, '<span class="warning">❌</span>')
 
-            // Đổi xuống dòng thành <br>
-            .replace(/\n/g, "<br>")
-    );
+      // Đổi xuống dòng thành <br>
+      .replace(/\n/g, "<br>")
+  );
 }
 
 // Đường dẫn đến file JSON chứa tất cả sản phẩm của bạn
@@ -19,42 +19,40 @@ const productDetailContainer = document.getElementById("product-container");
 
 // Hàm để lấy tham số từ URL
 function getParameterByName(name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return "";
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
 async function loadProductDetail() {
-    const productId = getParameterByName("id"); // Lấy ID sản phẩm từ URL
+  const productId = getParameterByName("id"); // Lấy ID sản phẩm từ URL
 
-    if (!productId) {
-        productDetailContainer.style.display = "none";
-        console.log("Khong tim thay du lieu");
-        return;
+  if (!productId) {
+    productDetailContainer.style.display = "none";
+    console.log("Khong tim thay du lieu");
+    return;
+  }
+
+  // loadingMessage.style.display = "block"; // Hiển thị thông báo đang tải
+  productDetailContainer.style.display = "none"; // Ẩn container chi tiết
+
+  try {
+    const response = await fetch(dataPath);
+    if (!response.ok) {
+      throw new Error("Lỗi mạng hoặc không tìm thấy file dữ liệu sản phẩm.");
     }
+    const data = await response.json();
+    const products = data.products; // Lấy mảng sản phẩm từ đối tượng data
 
-    // loadingMessage.style.display = "block"; // Hiển thị thông báo đang tải
-    productDetailContainer.style.display = "none"; // Ẩn container chi tiết
+    // Tìm sản phẩm có ID khớp
+    const product = products.find((p) => p.id === productId);
 
-    try {
-        const response = await fetch(dataPath);
-        if (!response.ok) {
-            throw new Error(
-                "Lỗi mạng hoặc không tìm thấy file dữ liệu sản phẩm."
-            );
-        }
-        const data = await response.json();
-        const products = data.products; // Lấy mảng sản phẩm từ đối tượng data
-
-        // Tìm sản phẩm có ID khớp
-        const product = products.find((p) => p.id === productId);
-
-        if (product) {
-            // Nếu tìm thấy sản phẩm, điền dữ liệu vào HTML
-            productDetailContainer.innerHTML = `<div class="main-product__items" id="product-container">
+    if (product) {
+      // Nếu tìm thấy sản phẩm, điền dữ liệu vào HTML
+      productDetailContainer.innerHTML = `<div class="main-product__items" id="product-container">
         <div class="product-describe__img">
           <div class="single-image">
             <div id="product-carousel">
@@ -114,8 +112,8 @@ async function loadProductDetail() {
               </div>
             </div>
             <div class="product-describe__price">
-              <div class="price-value"> ${product.original_price} </div>
-              <div class="flash-sale-text"> ${product.price} </div>
+              <div class="price-value"> ${product.price} </div>
+              <div class="flash-sale-text"> ${product.original_price} </div>
             </div>
             <div class="product-mini-vouchers">
               <h2 class="product-mini-vouchers-title">
@@ -134,10 +132,6 @@ async function loadProductDetail() {
                 <div class="product-quantity-btn minus">−</div>
                 <div class="product-quantity-value" id="quantity">0</div>
                 <div class="product-quantity-btn plus">+</div>
-              </div>
-              <div>
-                <label class="product-quantity-label">Phân Loại</label>
-                <select name="type" id="id-product"></select>
               </div>
             </div>
             <div class="product-add-to-cart">
@@ -176,19 +170,19 @@ async function loadProductDetail() {
         </div>
       </div>
             `;
-            // Ẩn thông báo đang tải
-            productDetailContainer.style.display = "flex"; // Hiển thị container chi tiết
-            bindProductEvents(product);
-        } else {
-            errorMessage.textContent = `Không tìm thấy sản phẩm với ID: ${productId}.`;
-            errorMessage.style.display = "block";
-        }
-    } catch (error) {
-        console.error("Lỗi khi tải chi tiết sản phẩm:", error);
-        errorMessage.textContent =
-            "Đã xảy ra lỗi khi tải dữ liệu sản phẩm. Vui lòng thử lại.";
-        errorMessage.style.display = "block";
+      // Ẩn thông báo đang tải
+      productDetailContainer.style.display = "flex"; // Hiển thị container chi tiết
+      bindProductEvents(product);
+    } else {
+      errorMessage.textContent = `Không tìm thấy sản phẩm với ID: ${productId}.`;
+      errorMessage.style.display = "block";
     }
+  } catch (error) {
+    console.error("Lỗi khi tải chi tiết sản phẩm:", error);
+    errorMessage.textContent =
+      "Đã xảy ra lỗi khi tải dữ liệu sản phẩm. Vui lòng thử lại.";
+    errorMessage.style.display = "block";
+  }
 }
 
 // Gọi hàm khi trang HTML đã được tải đầy đủ
@@ -204,136 +198,136 @@ document.addEventListener("DOMContentLoaded", loadProductDetail);
 //     }
 // });
 function bindProductEvents(product) {
-    // Tăng giảm số lượng
-    const minus = document.querySelector(".minus");
-    const plus = document.querySelector(".plus");
-    const quantity = document.getElementById("quantity");
+  // Tăng giảm số lượng
+  const minus = document.querySelector(".minus");
+  const plus = document.querySelector(".plus");
+  const quantity = document.getElementById("quantity");
 
-    minus.onclick = () => {
-        let current = parseInt(quantity.textContent);
-        if (current > 0) quantity.textContent = current - 1;
-    };
+  minus.onclick = () => {
+    let current = parseInt(quantity.textContent);
+    if (current > 0) quantity.textContent = current - 1;
+  };
 
-    plus.onclick = () => {
-        let current = parseInt(quantity.textContent);
-        quantity.textContent = current + 1;
-    };
+  plus.onclick = () => {
+    let current = parseInt(quantity.textContent);
+    quantity.textContent = current + 1;
+  };
 
-    // Format giá
-    const formatCurrency = (amount) =>
-        new Intl.NumberFormat("vi-VN", {
-            style: "currency",
-            currency: "VND",
-            minimumFractionDigits: 0,
-        }).format(amount);
+  // Format giá
+  const formatCurrency = (amount) =>
+    new Intl.NumberFormat("vi-VN", {
+      style: "currency",
+      currency: "VND",
+      minimumFractionDigits: 0,
+    }).format(amount);
 
-    const priceValue = document.querySelector(".price-value");
-    const flashSaleText = document.querySelector(".flash-sale-text");
+  const priceValue = document.querySelector(".price-value");
+  const flashSaleText = document.querySelector(".flash-sale-text");
 
-    priceValue.textContent = formatCurrency(product.original_price);
-    flashSaleText.textContent = formatCurrency(product.price);
+    priceValue.textContent = formatCurrency(product.price);
+    flashSaleText.textContent = formatCurrency(product.original_price);
 
-    // Tabs
-    const tabs = document.querySelectorAll(".tab");
-    const panes = document.querySelectorAll(".tab-pane");
-    tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-            tabs.forEach((t) => t.classList.remove("active"));
-            panes.forEach((p) => p.classList.remove("active"));
+  // Tabs
+  const tabs = document.querySelectorAll(".tab");
+  const panes = document.querySelectorAll(".tab-pane");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      panes.forEach((p) => p.classList.remove("active"));
 
-            tab.classList.add("active");
-            document.getElementById(tab.dataset.tab).classList.add("active");
-        });
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+  });
+
+  // Carousel
+  let currentIndex = 0;
+  const items = document.querySelectorAll(".img-item");
+  const showItem = (index) => {
+    items.forEach((item, i) => {
+      item.classList.toggle("active", i === index);
+    });
+  };
+  document
+    .querySelector(".carousel-control-next")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      currentIndex = (currentIndex + 1) % items.length;
+      showItem(currentIndex);
     });
 
-    // Carousel
-    let currentIndex = 0;
-    const items = document.querySelectorAll(".img-item");
-    const showItem = (index) => {
-        items.forEach((item, i) => {
-            item.classList.toggle("active", i === index);
-        });
-    };
-    document
-        .querySelector(".carousel-control-next")
-        .addEventListener("click", (e) => {
-            e.preventDefault();
-            currentIndex = (currentIndex + 1) % items.length;
-            showItem(currentIndex);
-        });
-
-    document
-        .querySelector(".carousel-control-prev")
-        .addEventListener("click", (e) => {
-            e.preventDefault();
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            showItem(currentIndex);
-        });
-
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % items.length;
-        showItem(currentIndex);
-    }, 3000);
-
-    // Giỏ hàng
-    const getItem = () => ({
-        id: product.id,
-        name: product.name,
-        price: Number(product.price),
-        image: product.image_url,
-        quantity: parseInt(quantity.textContent),
+  document
+    .querySelector(".carousel-control-prev")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      showItem(currentIndex);
     });
 
-    const addToCartHandler = (item) => {
-        if (item.quantity <= 0) {
-            alert("Vui lòng chọn số lượng!");
-            return;
-        }
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % items.length;
+    showItem(currentIndex);
+  }, 3000);
 
-        // Sử dụng hệ thống giỏ hàng mới
-        if (window.addToCart) {
-            window.addToCart(item);
-        } else {
-            // Fallback cho hệ thống cũ
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
-            let existingItem = cart.find((p) => p.id === item.id);
+  // Giỏ hàng
+  const getItem = () => ({
+    id: product.id,
+    name: product.name,
+    price: Number(product.price),
+    image: product.image_url,
+    quantity: parseInt(quantity.textContent),
+  });
 
-            if (existingItem) {
-                existingItem.quantity += item.quantity;
-            } else {
-                cart.push(item);
-            }
+  const addToCartHandler = (item) => {
+    if (item.quantity <= 0) {
+      alert("Vui lòng chọn số lượng!");
+      return;
+    }
 
-            localStorage.setItem("cart", JSON.stringify(cart));
+    // Sử dụng hệ thống giỏ hàng mới
+    if (window.addToCart) {
+      window.addToCart(item);
+    } else {
+      // Fallback cho hệ thống cũ
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let existingItem = cart.find((p) => p.id === item.id);
 
-            // Trigger event để cập nhật cart count
-            window.dispatchEvent(
-                new CustomEvent("cartUpdated", {
-                    detail: { cart: cart },
-                })
-            );
+      if (existingItem) {
+        existingItem.quantity += item.quantity;
+      } else {
+        cart.push(item);
+      }
 
-            alert("Đã thêm vào giỏ hàng!");
-        }
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Trigger event để cập nhật cart count
+      window.dispatchEvent(
+        new CustomEvent("cartUpdated", {
+          detail: { cart: cart },
+        })
+      );
+
+      alert("Đã thêm vào giỏ hàng!");
+    }
+  };
+
+  // Event listener cho nút thêm vào giỏ hàng
+  const addToCartBtn = document.querySelector(".product-add-to-cart-voucher");
+  if (addToCartBtn) {
+    addToCartBtn.onclick = () => {
+      addToCartHandler(getItem());
+      // Chuyển đến trang giỏ hàng sau khi thêm sản phẩm
+      setTimeout(() => {
+        window.location.href = "cart.html";
+      }, 1000);
     };
+  }
 
-    // Event listener cho nút thêm vào giỏ hàng
-    const addToCartBtn = document.querySelector(".product-add-to-cart-voucher");
-    if (addToCartBtn) {
-        addToCartBtn.onclick = () => {
-            addToCartHandler(getItem());
-            // Chuyển đến trang giỏ hàng sau khi thêm sản phẩm
-            setTimeout(() => {
-                window.location.href = "cart.html";
-            }, 1000);
-        };
-    }
-
-    // Thêm event listener cho nút thêm vào giỏ hàng nhanh (nếu có)
-    const quickAddBtn = document.querySelector(".product-add-to-cart-btn");
-    if (quickAddBtn) {
-        quickAddBtn.onclick = () => {
-            addToCartHandler(getItem());
-        };
-    }
+  // Thêm event listener cho nút thêm vào giỏ hàng nhanh (nếu có)
+  const quickAddBtn = document.querySelector(".product-add-to-cart-btn");
+  if (quickAddBtn) {
+    quickAddBtn.onclick = () => {
+      addToCartHandler(getItem());
+    };
+  }
 }

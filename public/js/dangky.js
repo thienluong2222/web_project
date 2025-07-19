@@ -6,7 +6,6 @@ const UserNameElement = document.getElementById("UserName");
 const EmailElement = document.getElementById("email");
 const sdtElement = document.getElementById("sdt");
 
-
 const passwordElement = document.getElementById("InputPassword");
 const togglePassIcon = document.getElementById("toggleEye");
 
@@ -45,87 +44,125 @@ const errorLocation = document.getElementById("errorLocation");
 const userLocal = JSON.parse(localStorage.getItem("user")) || [];
 
 /**
- * Validate địa chỉ Email
+ * Validate địa chỉ Email - sử dụng regex đơn giản để đồng bộ với dangnhap.js
  * @param {*} email : Chuỗi email người dùng nhập vào
- * @returns : Dữ liệu nếu email đúng định dạng, undefined nếu email không đúng định dạng
- * Author: NVQUY (16/2/2024)
+ * @returns : true nếu email đúng định dạng, false nếu email không đúng định dạng
  */
-//Nguồn: https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript//
 function validateEmail(email) {
-    return String(email)
-        .toLowerCase()
-        .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
 }
 
+/**
+ * Validate mật khẩu - phải có ít nhất 6 ký tự để đồng bộ với dangnhap.js
+ * @param {*} password : Mật khẩu người dùng nhập vào
+ * @returns : true nếu mật khẩu hợp lệ, false nếu không hợp lệ
+ */
+function validatePassword(password) {
+    return password.length >= 6;
+}
 
+/**
+ * Kiểm tra email đã tồn tại chưa
+ * @param {*} email : Email cần kiểm tra
+ * @returns : true nếu email đã tồn tại, false nếu chưa
+ */
+function isEmailExists(email) {
+    return userLocal.some((user) => user.email === email);
+}
 
 formdangky.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    if (!UserNameElement.value) {
-        errorUserName.style.display = "block"; //Hiển thị lỗi//
-    } else errorUserName.style.display = "none"; //Ẩn lỗi khi nhập đúng nè//
+    // Reset tất cả lỗi trước khi validate
+    errorUserName.style.display = "none";
+    errorEmail.style.display = "none";
+    errorSdt.style.display = "none";
+    errorPassword.style.display = "none";
+    errorRePassword.style.display = "none";
+    errorLocation.style.display = "none";
 
-    if (!EmailElement.value) {
+    let hasError = false;
+
+    // Validate UserName
+    if (!UserNameElement.value.trim()) {
+        errorUserName.style.display = "block";
+        errorUserName.innerHTML = "Vui lòng nhập tên người dùng";
+        hasError = true;
+    }
+
+    // Validate Email
+    if (!EmailElement.value.trim()) {
         errorEmail.style.display = "block";
-    } else errorEmail.style.display = "none";
-    //Kiểm tra định dạng Email
-    if (!validateEmail(EmailElement.value)) {
+        errorEmail.innerHTML = "Vui lòng nhập email";
+        hasError = true;
+    } else if (!validateEmail(EmailElement.value)) {
         errorEmail.style.display = "block";
         errorEmail.innerHTML = "Email không đúng định dạng";
+        hasError = true;
+    } else if (isEmailExists(EmailElement.value)) {
+        errorEmail.style.display = "block";
+        errorEmail.innerHTML = "Email đã được sử dụng";
+        hasError = true;
     }
 
-    if (!sdtElement.value) {
+    // Validate SDT
+    if (!sdtElement.value.trim()) {
         errorSdt.style.display = "block";
-    } else errorSdt.style.display = "none";
+        errorSdt.innerHTML = "Vui lòng nhập số điện thoại";
+        hasError = true;
+    }
 
+    // Validate Password
     if (!passwordElement.value) {
         errorPassword.style.display = "block";
-    } else errorPassword.style.display = "none";
+        errorPassword.innerHTML = "Vui lòng nhập mật khẩu";
+        hasError = true;
+    } else if (!validatePassword(passwordElement.value)) {
+        errorPassword.style.display = "block";
+        errorPassword.innerHTML = "Mật khẩu phải có ít nhất 6 ký tự";
+        hasError = true;
+    }
 
+    // Validate RePassword
     if (!repasslElement.value) {
         errorRePassword.style.display = "block";
-    } else errorRePassword.style.display = "none";
-
-    //Kiểm tra mật khẩu với nhập lại mật khẩu có trùng hay không//
-    if (passwordElement.value !== repasslElement.value) {
+        errorRePassword.innerHTML = "Vui lòng nhập lại mật khẩu";
+        hasError = true;
+    } else if (passwordElement.value !== repasslElement.value) {
         errorRePassword.style.display = "block";
         errorRePassword.innerHTML = "Mật khẩu không khớp";
-    } else {
-        errorRePassword.style.display = "none";
+        hasError = true;
     }
-    if (!locationElement.value) {
-        errorLocation.style.display = "block";
-    } else errorLocation.style.display = "none";
 
-    //Gửi dữ liệu
-    if (
-        UserNameElement.value &&
-        EmailElement.value &&
-        sdtElement.value &&
-        passwordElement.value &&
-        repasslElement.value &&
-        locationElement.value &&
-        passwordElement.value === repasslElement.value &&
-        validateEmail(EmailElement.value)
-    ) {
+    // Validate Location
+    if (!locationElement.value.trim()) {
+        errorLocation.style.display = "block";
+        errorLocation.innerHTML = "Vui lòng nhập địa chỉ";
+        hasError = true;
+    }
+
+    // Nếu không có lỗi thì tạo user
+    if (!hasError) {
         //Lấy dữ liệu và tạo thành user
         const user = {
             userID: Math.ceil(Math.random() * 1000000000), //Tạo id//
-            UserName: UserNameElement.value,
-            email: EmailElement.value,
-            sdt: sdtElement.value,
+            UserName: UserNameElement.value.trim(),
+            email: EmailElement.value.trim(),
+            sdt: sdtElement.value.trim(),
             password: passwordElement.value,
-            location: locationElement.value,
+            location: locationElement.value.trim(),
+            role: "user", // Thêm role mặc định
+            createdAt: new Date().toISOString(), // Thêm thời gian tạo
         };
+
         //Push user vào mảng userLocal
         userLocal.push(user);
 
         //Lưu trữ dữ liệu lên Local từ dữ liệu người dùng đã nhập ở trên nè
         localStorage.setItem("user", JSON.stringify(userLocal));
 
+        alert("Đăng ký thành công!");
         //Chuyển hướng sang trang đăng nhập khi đăng ký thành công
         window.location.href = "dangnhap.html";
     }
