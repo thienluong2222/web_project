@@ -1,3 +1,6 @@
+/*Tác giả: Đỗ Thanh Uyên - B2205387 // Đồng tác giả: 
+Nguồn tham khảo: ChatGPT.com, https://www.w3schools.com/, https://www.youtube.com/watch?v=u3xILzeQPEg, 
+https://getbootstrap.com/docs/5.3/getting-started/introduction/ */
 //js của trang Dang ky//
 
 //Lấy Element của trang đăng ký//

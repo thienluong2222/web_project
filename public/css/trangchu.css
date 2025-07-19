@@ -4,6 +4,11 @@
     margin: 0;
     padding: 0;
 }
+.layout-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 .page__main {
     font-family: "Quicksand", sans-serif;
     font-size: 1.2rem;
