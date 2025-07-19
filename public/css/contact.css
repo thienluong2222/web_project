@@ -4,12 +4,20 @@
     margin: 0;
     padding: 0;
 }
+/* Grid Layout cho bố cục tổng thể */
+.layout-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
 .main-contact {
   padding: 50px 15px;
   background-color: #fff;
   font-family: "Quicksand", sans-serif;
 }
 /* Tiêu đề */
+
 .title {
   margin-bottom: 40px;
 }
@@ -97,7 +105,7 @@
   margin-right: 12px;
   transition: transform 0.3s ease;
 }
-.logo i :hover{
+.logo i:hover{
   transform: scale(1.2);
 }
 .contact__social-links{
@@ -151,7 +159,7 @@
     line-height: 1.6;
   }
 
-  .cotact__social-link {
+  .contact__social-link {
     justify-content: center;
     gap: 16px;
     margin-top: 12px;
