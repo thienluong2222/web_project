@@ -1,3 +1,7 @@
+/* Tác giả : Nguyễn Thị Trúc Ngân - B2304071 - nganb2304071@student.ctu.edu.vn
+    Mã nguồn tham khảo: https://www.w3schools.com/
+                        https://www.youtube.com/watch?v=749ta0nvj8s  
+*/
 /* ------------------------slider----------------------------- */
 const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0;
