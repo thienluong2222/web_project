@@ -9,6 +9,12 @@ body {
   background: #f8f8f8;
   color: #333;
 }
+/* Grid Layout cho bố cục tổng thể */
+.layout-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 
 .main-product__items{
   display: flex;

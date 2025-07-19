@@ -17,19 +17,27 @@
   font-family: "Quicksand", sans-serif;
 }
 /* Tiêu đề */
-
-.title {
-  margin-bottom: 40px;
-}
-.title-text {
+.contact-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  font-weight: bold;
+  flex-direction: column;
 }
-.title-text::before,
-.title-text::after {
+
+.text-center {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* Cho phép co giãn nếu khung nhỏ */
+}
+
+.title-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.text-center::before,
+.text-center::after {
   content: "";
   flex: 1;
   height: 1px;
@@ -109,6 +117,7 @@
   transform: scale(1.2);
 }
 .contact__social-links{
+  margin-top: 10px;
   display: flex;
   gap: 30px;
 }
@@ -170,8 +179,8 @@
     text-align: center;
   }
 
-  .title-text::before,
-  .title-text::after {
+  .title::before,
+  .title::after {
     width: 40px;
     margin: 0 8px;
   }
@@ -186,6 +195,7 @@
   .contact-colum {
     flex: 1 1 55%;
     padding-right: 10px;
+    margin-top: -2rem;
   }
 
   .contact-colum-text {
