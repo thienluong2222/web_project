@@ -1,8 +1,14 @@
+/*Tác giả: Đỗ Thanh Uyên - B2205387
+Nguồn tham khảo: ChatGPT.com, https://www.w3schools.com/, https://www.youtube.com/watch?v=qIjOFbQb3zM-->
 /* ===================== CẤU TRÚC NỀN TOÀN TRANG ===================== */
 body {
   font-family: "Quicksand", sans-serif;
 }
-
+.layout-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 .bgform {
   min-height: 100vh;
   display: flex;
