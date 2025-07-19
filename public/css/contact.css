@@ -7,12 +7,7 @@
   padding: 0;
 }
 /* Grid Layout cho bố cục tổng thể */
-.layout-grid {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
+  
 .main-contact {
   padding: 50px 15px;
   background-color: #fff;
