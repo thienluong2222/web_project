@@ -1,3 +1,8 @@
+/* Tác giả: Phan Lương Thiện B2308392
+// Nguồn: youtube.com
+
+ */
+
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const submitButton = document.getElementById("login-button");

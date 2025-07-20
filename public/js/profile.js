@@ -1,3 +1,6 @@
+/* Tác giả: Phan Lương Thiện B2308392
+*/
+
 // hàm này chuyển sang trang đăng nhập khi người dùng đăng xuất
 function logout() {
   localStorage.setItem("isLoginedIn", "false");
