@@ -26,208 +26,198 @@
         <link rel="stylesheet" href="./css/nav.css" />
         <link rel="stylesheet" href="./css/chatbot.css" />
     </head>
-    <body class="page__produce">
-        
-            <header class="page__header">
-                <nav class="navbar">   
-                    <div class="navbar__container">
-                        <ul class="navbar__links">
-                            <li>
-                                <a href="./trangchu.html" class="navbar__link"
-                                    >Trang Chủ</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#" class="navbar__link">Sản Phẩm</a>
-                            </li>                                  
-                            <li>
-                                <a href="./tintuc.html" class="navbar__link"
-                                    >Tin tức</a
-                                >
-                            </li>
-                            <li>
-                                <a href="./contact.html" class="navbar__link"
-                                    >Liên Hệ</a
-                                >
-                            </li>
-                        </ul>
-                        <ul class="navbar__auth">
-                            <li>
-                                <a
-                                    href="./dangky.html"
-                                    class="navbar__auth-link"
-                                    >Đăng Ký</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="./dangnhap.html"
-                                    class="navbar__auth-link navbar__auth-link--primary"
-                                    >Đăng Nhập</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-
-            <main class="page__main">
-                <!-- SIDEBAR -->
-                <aside class="sidebar">
-                    <h3 class="sidebar__h3">Mục Sản Phẩm</h3>
-                    <hr />
-                    <ul class="sidebar__list">
-                        <li class="sidebar__item">
-                            <button class="sidebar__toggle" data-target="len">
-                                🧶 Len
-                            </button>
-                        </li>
-                        <li class="sidebar__item">
-                            <button
-                                class="sidebar__toggle"
-                                data-target="thoitrang"
+    <body class="page__produce layout-grid">
+        <header class="page__header">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <ul class="navbar__links">
+                        <li>
+                            <a href="./trangchu.html" class="navbar__link"
+                                >Trang Chủ</a
                             >
-                                👗 Thời Trang
-                            </button>
                         </li>
-                        <li class="sidebar__item">
-                            <button
-                                class="sidebar__toggle"
-                                data-target="phukien"
+                        <li>
+                            <a href="#" class="navbar__link">Sản Phẩm</a>
+                        </li>
+                        <li>
+                            <a href="./tintuc.html" class="navbar__link"
+                                >Tin tức</a
                             >
-                                📱 Dụng Cụ Đan Len
-                            </button>
                         </li>
-                        <li class="sidebar__item">
-                            <button
-                                class="sidebar__toggle"
-                                data-target="sanphamtulen"
+                        <li>
+                            <a href="./contact.html" class="navbar__link"
+                                >Liên Hệ</a
                             >
-                                🐻 Sản Phẩm Từ Len
-                            </button>
-                        </li>
-                        <li class="sidebar__item">
-                            <button class="sidebar__toggle" data-target="top">
-                                🔝 Quay Về Đầu Trang 
-                            </button>
                         </li>
                     </ul>
-                </aside>
-
-                 <div class="main__content">
-                    <!-- 🧶 Len -->
-                    <section id="len" class="product-section">
-                        <h2 class="product-section__title">🧶 Len</h2>
-                        <div class="produce__container" id="Len_catalog">
-                            <div class="main__div--produce">
-                                <img
-                                    src="./Len Picture/Len Milk Contton Den 4.jpeg"
-                                    alt="Len Milk Cotton Đen"
-                                    class="div__img--produce"
-                                />
-                                <div class="div__produce-item--info">
-                                    <p class="item--id">Mã Sản Phẩm : 005</p>
-                                    <h3 class="item--name">
-                                        Len Milk cotton Đen
-                                    </h3>
-                                    <hr />
-                                    <h2>7,500đ</h2>
-                                </div>
-                                <a class="div__add-cart" href="#"
-                                    >Xem Chi Tiết</a
-                                >
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- 👗 Thời Trang -->
-                    <section id="thoitrang" class="product-section">
-                        <h2 class="product-section__title">👗 Thời Trang</h2>
-                        <div class="produce__container" id="ThoiTrang_catalog">
-                            <div class="main__div--produce">
-                                <img
-                                    src="./ThoiTrang/Áo Khoác len đen.png"
-                                    alt="Áo Khoác Len Cardigan"
-                                    class="div__img--produce"
-                                />
-                                <div class="div__produce-item--info">
-                                    <p class="item--id">Mã Sản Phẩm : 101</p>
-                                    <h3 class="item--name">
-                                        Áo Khoác Len Cardigan
-                                    </h3>
-                                    <section class="produce__fashion">
-                                        <p class="infomation__fashion">
-                                            Thông tin:
-                                        </p>
-                                        <hr />
-                                        <p class="info--fashion">
-                                            Áo dài: 40cm <br />
-                                            Ngực: 98cm <br />
-                                            Chiều dài tay áo: 77cm
-                                        </p>
-                                    </section>
-                                    <hr />
-                                    <h2>320,000đ</h2>
-                                </div>
-                                <a class="div__add-cart" href="#"
-                                    >Xem Chi Tiết</a
-                                >
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- 📱 Phụ kiện -->
-                    <section id="phukien" class="product-section">
-                        <h2 class="product-section__title">
-                            📱 Phụ Kiện Đan Móc Len
-                        </h2>
-                        <div class="produce__container" id="PhuKien_catalog">
-                            <div class="main__div--produce">
-                                <img
-                                    src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg"
-                                    alt="Máy Đếm Dòng Cơ"
-                                    class="div__img--produce"
-                                />
-                                <div class="div__produce-item--info">
-                                    <p class="item--id">Mã Sản Phẩm : 201</p>
-                                    <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
-                                    <hr />
-                                    <h2>50,000đ</h2>
-                                </div>
-                                <a class="div__add-cart" href="#"
-                                    >Xem Chi Tiết</a
-                                >
-                            </div>
-                        </div>
-                    </section>
-                    <!--🐻 Sản Phẩm Từ Len-->
-                    <!-- né chỗ này ra nha -->
-                    <section id="sanphamtulen" class="product-section">
-                        <h2 class="product-section__title">
-                            🐻 Sản Phẩm Từ Len
-                        </h2>
-                        <div class="produce__container" id="thuBong_catalog">
-                            <div class="main__div--produce">
-                                <img
-                                    src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg"
-                                    alt="Máy Đếm Dòng Cơ"
-                                    class="div__img--produce"
-                                />
-                                <div class="div__produce-item--info">
-                                    <p class="item--id">Mã Sản Phẩm : 201</p>
-                                    <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
-                                    <hr />
-                                    <h2>50,000đ</h2>
-                                </div>
-                                <a class="div__add-cart" href="#"
-                                    >Xem Chi Tiết</a
-                                >
-                            </div>
-                        </div>
-                    </section>
+                    <ul class="navbar__auth">
+                        <li>
+                            <a href="./dangky.html" class="navbar__auth-link"
+                                >Đăng Ký</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="./dangnhap.html"
+                                class="navbar__auth-link navbar__auth-link--primary"
+                                >Đăng Nhập</a
+                            >
+                        </li>
+                    </ul>
                 </div>
-            </main>
-        
+            </nav>
+        </header>
+
+        <main class="page__main">
+            <!-- HAMBURGER BUTTON cho mobile -->
+            <button class="sidebar__hamburger" id="sidebarToggle">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar__header">
+                    <h3 class="sidebar__h3">Mục Sản Phẩm</h3>
+                    <button class="sidebar__close" id="sidebarClose">
+                        &times;
+                    </button>
+                </div>
+                <hr />
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <button class="sidebar__toggle" data-target="len">
+                            🧶 Len
+                        </button>
+                    </li>
+                    <li class="sidebar__item">
+                        <button class="sidebar__toggle" data-target="thoitrang">
+                            👗 Thời Trang
+                        </button>
+                    </li>
+                    <li class="sidebar__item">
+                        <button class="sidebar__toggle" data-target="phukien">
+                            📱 Dụng Cụ Đan Len
+                        </button>
+                    </li>
+                    <li class="sidebar__item">
+                        <button
+                            class="sidebar__toggle"
+                            data-target="sanphamtulen"
+                        >
+                            🐻 Sản Phẩm Từ Len
+                        </button>
+                    </li>
+                    <li class="sidebar__item">
+                        <button class="sidebar__toggle" data-target="top">
+                            🔝 Quay Về Đầu Trang
+                        </button>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="main__content">
+                <!-- 🧶 Len -->
+                <section id="len" class="product-section">
+                    <h2 class="product-section__title">🧶 Len</h2>
+                    <div class="produce__container" id="Len_catalog">
+                        <div class="main__div--produce">
+                            <img
+                                src="./Len Picture/Len Milk Contton Den 4.jpeg"
+                                alt="Len Milk Cotton Đen"
+                                class="div__img--produce"
+                            />
+                            <div class="div__produce-item--info">
+                                <p class="item--id">Mã Sản Phẩm : 005</p>
+                                <h3 class="item--name">Len Milk cotton Đen</h3>
+                                <hr />
+                                <h2>7,500đ</h2>
+                            </div>
+                            <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 👗 Thời Trang -->
+                <section id="thoitrang" class="product-section">
+                    <h2 class="product-section__title">👗 Thời Trang</h2>
+                    <div class="produce__container" id="ThoiTrang_catalog">
+                        <div class="main__div--produce">
+                            <img
+                                src="./ThoiTrang/Áo Khoác len đen.png"
+                                alt="Áo Khoác Len Cardigan"
+                                class="div__img--produce"
+                            />
+                            <div class="div__produce-item--info">
+                                <p class="item--id">Mã Sản Phẩm : 101</p>
+                                <h3 class="item--name">
+                                    Áo Khoác Len Cardigan
+                                </h3>
+                                <section class="produce__fashion">
+                                    <p class="infomation__fashion">
+                                        Thông tin:
+                                    </p>
+                                    <hr />
+                                    <p class="info--fashion">
+                                        Áo dài: 40cm <br />
+                                        Ngực: 98cm <br />
+                                        Chiều dài tay áo: 77cm
+                                    </p>
+                                </section>
+                                <hr />
+                                <h2>320,000đ</h2>
+                            </div>
+                            <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 📱 Phụ kiện -->
+                <section id="phukien" class="product-section">
+                    <h2 class="product-section__title">
+                        📱 Phụ Kiện Đan Móc Len
+                    </h2>
+                    <div class="produce__container" id="PhuKien_catalog">
+                        <div class="main__div--produce">
+                            <img
+                                src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg"
+                                alt="Máy Đếm Dòng Cơ"
+                                class="div__img--produce"
+                            />
+                            <div class="div__produce-item--info">
+                                <p class="item--id">Mã Sản Phẩm : 201</p>
+                                <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
+                                <hr />
+                                <h2>50,000đ</h2>
+                            </div>
+                            <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                </section>
+                <!--🐻 Sản Phẩm Từ Len-->
+                <!-- né chỗ này ra nha -->
+                <section id="sanphamtulen" class="product-section">
+                    <h2 class="product-section__title">🐻 Sản Phẩm Từ Len</h2>
+                    <div class="produce__container" id="thuBong_catalog">
+                        <div class="main__div--produce">
+                            <img
+                                src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg"
+                                alt="Máy Đếm Dòng Cơ"
+                                class="div__img--produce"
+                            />
+                            <div class="div__produce-item--info">
+                                <p class="item--id">Mã Sản Phẩm : 201</p>
+                                <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
+                                <hr />
+                                <h2>50,000đ</h2>
+                            </div>
+                            <a class="div__add-cart" href="#">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
 
         <footer class="footer">
             <div class="footer__container">
@@ -332,9 +322,70 @@
                             });
                         }
                     }
+
+                    // Đóng sidebar trên mobile sau khi click
+                    if (window.innerWidth <= 768) {
+                        closeSidebar();
+                    }
                 });
             });
-        </script> 
+
+            // 🍔 HAMBURGER MENU FUNCTIONALITY
+            const hamburgerBtn = document.getElementById("sidebarToggle");
+            const sidebar = document.getElementById("sidebar");
+            const sidebarClose = document.getElementById("sidebarClose");
+            let overlay;
+
+            // Tạo overlay element
+            function createOverlay() {
+                if (!overlay) {
+                    overlay = document.createElement("div");
+                    overlay.className = "sidebar__overlay";
+                    document.body.appendChild(overlay);
+
+                    // Click overlay để đóng sidebar
+                    overlay.addEventListener("click", closeSidebar);
+                }
+            }
+
+            // Mở sidebar
+            function openSidebar() {
+                createOverlay();
+                sidebar.classList.add("active");
+                overlay.classList.add("active");
+                document.body.style.overflow = "hidden"; // Ngăn scroll body
+            }
+
+            // Đóng sidebar
+            function closeSidebar() {
+                sidebar.classList.remove("active");
+                if (overlay) {
+                    overlay.classList.remove("active");
+                }
+                document.body.style.overflow = ""; // Cho phép scroll lại
+            }
+
+            // Event listeners
+            hamburgerBtn.addEventListener("click", openSidebar);
+            sidebarClose.addEventListener("click", closeSidebar);
+
+            // Đóng sidebar khi resize về desktop
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 768) {
+                    closeSidebar();
+                }
+            });
+
+            // Xử lý ESC key để đóng sidebar
+            document.addEventListener("keydown", (e) => {
+                if (
+                    e.key === "Escape" &&
+                    sidebar.classList.contains("active")
+                ) {
+                    closeSidebar();
+                }
+            });
+        </script>
         <script src="./js/main.js"></script>
         <script src="./js/navbar-component.js"></script>
         <script src="./js/auth_util.js"></script>
