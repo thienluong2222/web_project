@@ -1,133 +1,92 @@
-<!--Tác giả : Phùng Đăng Khoa B2306549: Khoab2306549@student.ctu.edu.vn
+<!-- 🌟 TÁC GIẢ & NGUỒN THAM KHẢO -->
+<!--
+    Tác giả : Phùng Đăng Khoa B2306549: Khoab2306549@student.ctu.edu.vn
     Mã nguồn tham khảo: https://www.w3schools.com/
                         https://chatgpt.com/
- -->
+-->
 
 <!DOCTYPE html>
 <html lang="vi-vn">
     <head>
+        <!-- ✅ Cấu hình cơ bản cho trang -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sản phẩm - Len Móc</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
+
+        <!-- 🎨 Thư viện icon Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <!-- 🖋️ Font chữ Quicksand từ Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+
+        <!-- 🖼️ Favicon -->
         <link rel="icon" type="image/png" href="./images/image.png" />
+
+        <!-- 📦 CSS chính -->
         <link rel="stylesheet" href="css/Catalog_Page.css" />
         <link rel="stylesheet" href="./css/nav.css" />
         <link rel="stylesheet" href="./css/chatbot.css" />
     </head>
-    <body class="page__produce layout-grid">
+    <body class="grid__layout">
+        
+        <!-- 🏠 HEADER -->
         <header class="page__header">
-            <nav class="navbar">
+            <nav class="navbar">   
                 <div class="navbar__container">
+                    <!-- 🔗 Menu điều hướng chính -->
                     <ul class="navbar__links">
-                        <li>
-                            <a href="./trangchu.html" class="navbar__link"
-                                >Trang Chủ</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#" class="navbar__link">Sản Phẩm</a>
-                        </li>
-                        <li>
-                            <a href="./tintuc.html" class="navbar__link"
-                                >Tin tức</a
-                            >
-                        </li>
-                        <li>
-                            <a href="./contact.html" class="navbar__link"
-                                >Liên Hệ</a
-                            >
-                        </li>
+                        <li><a href="./trangchu.html" class="navbar__link">Trang Chủ</a></li>
+                        <li><a href="#" class="navbar__link">Sản Phẩm</a></li>
+                        <li><a href="./tintuc.html" class="navbar__link">Tin tức</a></li>
+                        <li><a href="./contact.html" class="navbar__link">Liên Hệ</a></li>
                     </ul>
+                    <!-- 👤 Liên kết Đăng Ký / Đăng Nhập -->
                     <ul class="navbar__auth">
-                        <li>
-                            <a href="./dangky.html" class="navbar__auth-link"
-                                >Đăng Ký</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="./dangnhap.html"
-                                class="navbar__auth-link navbar__auth-link--primary"
-                                >Đăng Nhập</a
-                            >
-                        </li>
+                        <li><a href="./dangky.html" class="navbar__auth-link">Đăng Ký</a></li>
+                        <li><a href="./dangnhap.html" class="navbar__auth-link navbar__auth-link--primary">Đăng Nhập</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
+        <!-- 📦 MAIN CONTENT -->
         <main class="page__main">
-            <!-- HAMBURGER BUTTON cho mobile -->
-            <button class="sidebar__hamburger" id="sidebarToggle">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-            </button>
+            <!-- 📑 SIDEBAR: Menu sản phẩm -->
+           <button class="sidebar__hamburger" onclick="toggleSidebar()">☰</button>
 
-            <!-- SIDEBAR -->
-            <aside class="sidebar" id="sidebar">
-                <div class="sidebar__header">
-                    <h3 class="sidebar__h3">Mục Sản Phẩm</h3>
-                    <button class="sidebar__close" id="sidebarClose">
-                        &times;
-                    </button>
-                </div>
+            <aside class="sidebar">
+                <h3 class="sidebar__h3">Mục Sản Phẩm</h3>
                 <hr />
                 <ul class="sidebar__list">
+                    <!-- 📌 Nút điều hướng đến từng section sản phẩm -->
                     <li class="sidebar__item">
-                        <button class="sidebar__toggle" data-target="len">
-                            🧶 Len
-                        </button>
+                        <button class="sidebar__toggle" data-target="len">🧶 Len</button>
                     </li>
                     <li class="sidebar__item">
-                        <button class="sidebar__toggle" data-target="thoitrang">
-                            👗 Thời Trang
-                        </button>
+                        <button class="sidebar__toggle" data-target="thoitrang">👗 Thời Trang</button>
                     </li>
                     <li class="sidebar__item">
-                        <button class="sidebar__toggle" data-target="phukien">
-                            📱 Dụng Cụ Đan Len
-                        </button>
+                        <button class="sidebar__toggle" data-target="phukien">📱 Dụng Cụ Đan Len</button>
                     </li>
                     <li class="sidebar__item">
-                        <button
-                            class="sidebar__toggle"
-                            data-target="sanphamtulen"
-                        >
-                            🐻 Sản Phẩm Từ Len
-                        </button>
+                        <button class="sidebar__toggle" data-target="sanphamtulen">🐻 Sản Phẩm Từ Len</button>
                     </li>
                     <li class="sidebar__item">
-                        <button class="sidebar__toggle" data-target="top">
-                            🔝 Quay Về Đầu Trang
-                        </button>
+                        <button class="sidebar__toggle" data-target="top">🔝 Quay Về Đầu Trang</button>
                     </li>
                 </ul>
             </aside>
 
+            <!-- 📦 DANH SÁCH SẢN PHẨM -->
             <div class="main__content">
-                <!-- 🧶 Len -->
+                
+                <!-- 🧶 Section: Len -->
                 <section id="len" class="product-section">
                     <h2 class="product-section__title">🧶 Len</h2>
                     <div class="produce__container" id="Len_catalog">
                         <div class="main__div--produce">
-                            <img
-                                src="./Len Picture/Len Milk Contton Den 4.jpeg"
-                                alt="Len Milk Cotton Đen"
-                                class="div__img--produce"
-                            />
+                            <img src="./Len Picture/Len Milk Contton Den 4.jpeg" alt="Len Milk Cotton Đen" class="div__img--produce" />
                             <div class="div__produce-item--info">
                                 <p class="item--id">Mã Sản Phẩm : 005</p>
                                 <h3 class="item--name">Len Milk cotton Đen</h3>
@@ -139,25 +98,18 @@
                     </div>
                 </section>
 
-                <!-- 👗 Thời Trang -->
+                <!-- 👗 Section: Thời Trang -->
                 <section id="thoitrang" class="product-section">
                     <h2 class="product-section__title">👗 Thời Trang</h2>
                     <div class="produce__container" id="ThoiTrang_catalog">
                         <div class="main__div--produce">
-                            <img
-                                src="./ThoiTrang/Áo Khoác len đen.png"
-                                alt="Áo Khoác Len Cardigan"
-                                class="div__img--produce"
-                            />
+                            <img src="./ThoiTrang/Áo Khoác len đen.png" alt="Áo Khoác Len Cardigan" class="div__img--produce" />
                             <div class="div__produce-item--info">
                                 <p class="item--id">Mã Sản Phẩm : 101</p>
-                                <h3 class="item--name">
-                                    Áo Khoác Len Cardigan
-                                </h3>
+                                <h3 class="item--name">Áo Khoác Len Cardigan</h3>
+                                <!-- ℹ️ Thông tin chi tiết sản phẩm -->
                                 <section class="produce__fashion">
-                                    <p class="infomation__fashion">
-                                        Thông tin:
-                                    </p>
+                                    <p class="infomation__fashion">Thông tin:</p>
                                     <hr />
                                     <p class="info--fashion">
                                         Áo dài: 40cm <br />
@@ -173,18 +125,12 @@
                     </div>
                 </section>
 
-                <!-- 📱 Phụ kiện -->
+                <!-- 📱 Section: Phụ Kiện -->
                 <section id="phukien" class="product-section">
-                    <h2 class="product-section__title">
-                        📱 Phụ Kiện Đan Móc Len
-                    </h2>
+                    <h2 class="product-section__title">📱 Phụ Kiện Đan Móc Len</h2>
                     <div class="produce__container" id="PhuKien_catalog">
                         <div class="main__div--produce">
-                            <img
-                                src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg"
-                                alt="Máy Đếm Dòng Cơ"
-                                class="div__img--produce"
-                            />
+                            <img src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg" alt="Máy Đếm Dòng Cơ" class="div__img--produce" />
                             <div class="div__produce-item--info">
                                 <p class="item--id">Mã Sản Phẩm : 201</p>
                                 <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
@@ -195,17 +141,13 @@
                         </div>
                     </div>
                 </section>
-                <!--🐻 Sản Phẩm Từ Len-->
-                <!-- né chỗ này ra nha -->
+
+                <!-- 🐻 Section: Sản Phẩm Từ Len -->
                 <section id="sanphamtulen" class="product-section">
                     <h2 class="product-section__title">🐻 Sản Phẩm Từ Len</h2>
                     <div class="produce__container" id="thuBong_catalog">
                         <div class="main__div--produce">
-                            <img
-                                src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg"
-                                alt="Máy Đếm Dòng Cơ"
-                                class="div__img--produce"
-                            />
+                            <img src="./DụngCụĐangLen/Máy Đếm Dòng Cơ.jpeg" alt="Máy Đếm Dòng Cơ" class="div__img--produce" />
                             <div class="div__produce-item--info">
                                 <p class="item--id">Mã Sản Phẩm : 201</p>
                                 <h3 class="item--name">Máy Đếm Dòng Cơ</h3>
@@ -219,8 +161,10 @@
             </div>
         </main>
 
+        <!-- 🔻 FOOTER -->
         <footer class="footer">
             <div class="footer__container">
+                <!-- 👥 Về chúng tôi -->
                 <div class="footer__section">
                     <h3 class="footer__title">Về chúng tôi</h3>
                     <p class="footer__text">
@@ -229,74 +173,36 @@
                         len móc thủ công độc đáo và nguyên liệu chất lượng cao.
                     </p>
                 </div>
-
+                <!-- 📂 Danh mục -->
                 <div class="footer__section">
                     <h3 class="footer__title">Danh mục</h3>
                     <ul class="footer__list">
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__link">Len Sợi</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__link">Kim Móc</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__link">Phụ Kiện</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__link"
-                                >Sản Phẩm Thủ Công</a
-                            >
-                        </li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Len Sợi</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Kim Móc</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Phụ Kiện</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Sản Phẩm Thủ Công</a></li>
                     </ul>
                 </div>
-
+                <!-- 🆘 Hỗ trợ -->
                 <div class="footer__section">
                     <h3 class="footer__title">Hỗ trợ khách hàng</h3>
                     <ul class="footer__list">
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__link">FAQ</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__link"
-                                >Chính sách đổi trả</a
-                            >
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__link"
-                                >Chính sách bảo mật</a
-                            >
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__link"
-                                >Điều khoản dịch vụ</a
-                            >
-                        </li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">FAQ</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Chính sách đổi trả</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Chính sách bảo mật</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Điều khoản dịch vụ</a></li>
                     </ul>
                 </div>
-
+                <!-- 📞 Liên hệ -->
                 <div class="footer__section">
                     <h3 class="footer__title">Liên hệ</h3>
                     <p class="footer__text">Địa chỉ: Đại học Cần Thơ</p>
                     <p class="footer__text">Điện thoại: 0123 456 789</p>
                     <p class="footer__text">Email: miee@lenmoc.vn</p>
                     <div class="footer__social-links">
-                        <a
-                            href="https://www.facebook.com/profile.php?id=100085507778776"
-                            class="footer__social-link"
-                            ><i class="fab fa-facebook-f"></i
-                        ></a>
-                        <a
-                            href="#"
-                            class="footer__social-link"
-                            aria-label="Instagram"
-                            ><i class="fab fa-instagram"></i
-                        ></a>
-                        <a
-                            href="#"
-                            class="footer__social-link"
-                            aria-label="Pinterest"
-                            ><i class="fab fa-pinterest-p"></i
-                        ></a>
+                        <a href="https://www.facebook.com/profile.php?id=100085507778776" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
             </div>
@@ -305,91 +211,69 @@
             </div>
         </footer>
 
-        <!-- JavaScript scroll mượt -->
+        <!-- 🪄 JavaScript: Scroll mượt cho sidebar -->
         <script>
-            const sidebarButtons =
-                document.querySelectorAll(".sidebar__toggle");
-            sidebarButtons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    const targetId = button.getAttribute("data-target");
-                    if (targetId === "top") {
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                    } else {
-                        const targetSection = document.getElementById(targetId);
-                        if (targetSection) {
-                            targetSection.scrollIntoView({
-                                behavior: "smooth",
-                            });
-                        }
-                    }
+    // 📦 Lấy tất cả các button trong sidebar có class .sidebar__toggle
+    const sidebarButtons = document.querySelectorAll(".sidebar__toggle");
+    
+    // 🔁 Duyệt qua từng button để gắn sự kiện click
+    sidebarButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // 🎯 Lấy giá trị data-target của button (id của section cần cuộn tới)
+            const targetId = button.getAttribute("data-target");
 
-                    // Đóng sidebar trên mobile sau khi click
-                    if (window.innerWidth <= 768) {
-                        closeSidebar();
-                    }
-                });
-            });
-
-            // 🍔 HAMBURGER MENU FUNCTIONALITY
-            const hamburgerBtn = document.getElementById("sidebarToggle");
-            const sidebar = document.getElementById("sidebar");
-            const sidebarClose = document.getElementById("sidebarClose");
-            let overlay;
-
-            // Tạo overlay element
-            function createOverlay() {
-                if (!overlay) {
-                    overlay = document.createElement("div");
-                    overlay.className = "sidebar__overlay";
-                    document.body.appendChild(overlay);
-
-                    // Click overlay để đóng sidebar
-                    overlay.addEventListener("click", closeSidebar);
+            if (targetId === "top") {
+                // 🚀 Nếu target là "top", cuộn mượt về đầu trang
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+                // 🏃‍♂️ Nếu target là section khác, tìm phần tử đó theo id
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    // 📜 Cuộn mượt tới section đó
+                    targetSection.scrollIntoView({ behavior: "smooth" });
                 }
             }
+        });
+    });
+</script>
 
-            // Mở sidebar
-            function openSidebar() {
-                createOverlay();
-                sidebar.classList.add("active");
-                overlay.classList.add("active");
-                document.body.style.overflow = "hidden"; // Ngăn scroll body
-            }
+<!-- ✨ GIẢI THÍCH: 
+    ✅ Mục đích: Cho phép người dùng click vào các button trong sidebar để cuộn mượt đến các phần tương ứng trên trang.
+    ✅ Sử dụng: scrollIntoView() để cuộn đến section cần hiển thị.
+    ✅ Đặc biệt: Nếu bấm "Quay Về Đầu Trang" (data-target="top"), thì dùng window.scrollTo để cuộn lên đầu.
+-->
 
-            // Đóng sidebar
-            function closeSidebar() {
-                sidebar.classList.remove("active");
-                if (overlay) {
-                    overlay.classList.remove("active");
-                }
-                document.body.style.overflow = ""; // Cho phép scroll lại
-            }
+<script>
+    // 🍔 Hàm toggleSidebar() bật/tắt class "show" cho sidebar
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar'); // 🔥 Lấy phần tử sidebar
+        sidebar.classList.toggle('show'); // ✅ Thêm hoặc xóa class "show" để mở/đóng sidebar
+    }
 
-            // Event listeners
-            hamburgerBtn.addEventListener("click", openSidebar);
-            sidebarClose.addEventListener("click", closeSidebar);
+    // 📦 Đóng sidebar khi click bên ngoài nó
+    window.addEventListener('click', function(e) {
+        const sidebar = document.querySelector('.sidebar'); // 📌 Lấy sidebar
+        const hamburger = document.querySelector('.sidebar__hamburger'); // 📌 Lấy nút hamburger
 
-            // Đóng sidebar khi resize về desktop
-            window.addEventListener("resize", () => {
-                if (window.innerWidth > 768) {
-                    closeSidebar();
-                }
-            });
+        // ❌ Nếu click KHÔNG nằm trong sidebar hoặc nút hamburger => đóng sidebar
+        if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.classList.remove('show'); // 📴 Xóa class "show" => đóng sidebar
+        }
+    });
+</script>
 
-            // Xử lý ESC key để đóng sidebar
-            document.addEventListener("keydown", (e) => {
-                if (
-                    e.key === "Escape" &&
-                    sidebar.classList.contains("active")
-                ) {
-                    closeSidebar();
-                }
-            });
-        </script>
+<!-- ✨ GIẢI THÍCH:
+    ✅ toggleSidebar(): Khi click hamburger, mở hoặc đóng sidebar bằng cách toggle class "show".
+    ✅ window.addEventListener('click'): Tự động đóng sidebar nếu người dùng click bên ngoài sidebar & ngoài nút hamburger.
+    ✅ Logic này giúp UI gọn gàng hơn, không cần nút "đóng".
+-->
+
+
+        <!-- 📦 JavaScript phụ -->
         <script src="./js/main.js"></script>
         <script src="./js/navbar-component.js"></script>
         <script src="./js/auth_util.js"></script>
-        <!-- Chatbot Scripts -->
+        <!-- 💬 Chatbot Scripts -->
         <script src="./js/nlp-config.js"></script>
         <script src="./js/huggingface_service.js"></script>
         <script src="./js/chatbot.js"></script>

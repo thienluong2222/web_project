@@ -1,407 +1,281 @@
 /*  Tác giả : Phùng Đăng Khoa B2306549: Khoab2306549@student.ctu.edu.vn
     Mã nguồn tham khảo: https://www.w3schools.com/
                         https://chatgpt.com/
- */
+*/
 
 /* 🎯 RESET - Reset margin, padding và box-sizing */
 * {
-    margin: 0; /* Xoá khoảng trắng mặc định */
-    padding: 0; /* Xoá padding mặc định */
-    box-sizing: border-box; /* Tính toán kích thước theo border-box */
+    margin: 0;                  /* ❌ Xóa khoảng trắng mặc định */
+    padding: 0;                 /* ❌ Xóa padding mặc định */
+    box-sizing: border-box;     /* 📦 Tính kích thước theo border-box */
 }
 
 /* 🎨 BODY - Font chữ và nền gradient */
 body {
-    background: radial-gradient(
-        circle at 30% 30%,
-        #ffe3e3,
-        #ffccd5,
-        #f8bbd0
-    ); /* Nền gradient */
-    font-family: "Poppins", sans-serif; /* Font chữ chính */
-}
-
-/* 📦 Layout chính - Bọc toàn bộ trang */
-.div__layout {
-    max-width: 100%; /* Full chiều rộng */
-    margin: 0 auto; /* Căn giữa */
+    background: radial-gradient(circle at 30% 30%, #ffe3e3, #ffccd5, #f8bbd0); /* 🎨 Nền gradient mềm */
+    font-family: "Poppins", sans-serif;                                        /* 🔤 Font chữ đẹp, hiện đại */
 }
 
 /* 📦 Main content - Gồm sidebar và nội dung */
 .page__main {
-    display: flex; /* Flexbox để sắp xếp ngang */
-    align-items: flex-start; /* Căn top */
-    gap: 20px; /* Khoảng cách giữa sidebar và content */
-    padding: 20px; /* Padding tổng */
+    grid-row: 2;                /* 📐 Nằm ở hàng thứ 2 của grid layout */
+    display: flex;              /* 📦 Flexbox để xếp hàng ngang */
+    align-items: flex-start;    /* 📍 Căn top các phần tử con */
+    gap: 20px;                  /* 📏 Khoảng cách giữa sidebar và content */
+    padding: 20px;              /* 📦 Khoảng trống quanh content */
 }
 
 /* 📝 SIDEBAR - Danh mục sản phẩm */
 .sidebar {
-    width: 250px; /* Chiều rộng sidebar */
-    background-color: rgb(235, 207, 216); /* Nền sidebar */
-    padding: 20px; /* Khoảng cách trong */
-    border-radius: 10px; /* Bo góc */
-    border: 2px solid paleturquoise; /* Viền */
-    position: sticky; /* Giữ cố định khi scroll */
-    top: 20px; /* Khoảng cách từ top */
-    transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
-}
-
-/* 🍔 HAMBURGER BUTTON - Chỉ hiện trên mobile */
-.sidebar__hamburger {
-    display: none; /* Ẩn mặc định */
-    position: fixed; /* Cố định vị trí */
-    top: 20px; /* Cách top */
-    left: 20px; /* Cách trái */
-    z-index: 1001; /* Trên cùng */
-    background: rgb(235, 207, 216); /* Nền giống sidebar */
-    border: 2px solid paleturquoise; /* Viền giống sidebar */
-    border-radius: 8px; /* Bo góc */
-    padding: 10px; /* Padding */
-    cursor: pointer; /* Con trỏ pointer */
-    flex-direction: column; /* Sắp xếp dọc */
-    gap: 4px; /* Khoảng cách giữa các vạch */
-    transition: all 0.3s ease; /* Hiệu ứng */
-}
-
-.hamburger__line {
-    width: 24px; /* Chiều rộng vạch */
-    height: 3px; /* Chiều cao vạch */
-    background: #4b383f; /* Màu vạch */
-    border-radius: 2px; /* Bo góc nhẹ */
-    transition: all 0.3s ease; /* Hiệu ứng */
-}
-
-/* 📱 SIDEBAR Header với nút đóng */
-.sidebar__header {
-    display: flex; /* Flexbox */
-    justify-content: space-between; /* Căn 2 đầu */
-    align-items: center; /* Căn giữa dọc */
-    margin-bottom: 10px; /* Khoảng cách dưới */
-}
-
-.sidebar__close {
-    display: none; /* Ẩn mặc định */
-    background: none; /* Không nền */
-    border: none; /* Không viền */
-    font-size: 1.5rem; /* Cỡ chữ lớn */
-    color: #4b383f; /* Màu chữ */
-    cursor: pointer; /* Con trỏ pointer */
-    padding: 5px; /* Padding nhẹ */
-    border-radius: 50%; /* Bo tròn */
-    transition: all 0.3s ease; /* Hiệu ứng */
-}
-
-.sidebar__close:hover {
-    background: rgba(75, 56, 63, 0.1); /* Nền nhẹ khi hover */
+    width: 250px;                          /* 📐 Chiều rộng sidebar */
+    background-color: rgb(235, 207, 216);   /* 🎨 Nền sidebar màu hồng nhạt */
+    padding: 20px;                         /* 📦 Padding bên trong */
+    border-radius: 10px;                   /* 🟢 Bo góc đẹp */
+    border: 2px solid paleturquoise;       /* 🖌️ Viền màu xanh ngọc nhạt */
+    position: sticky;                      /* 📌 Giữ cố định khi scroll */
+    top: 10px;                             /* 📍 Cách mép trên 10px */
 }
 
 .sidebar__list,
 .sidebar__sublist {
-    list-style: none; /* Xoá dấu chấm list */
+    list-style: none;                      /* ❌ Xóa dấu chấm mặc định của list */
 }
 
 .sidebar__item {
-    margin-bottom: 10px; /* Khoảng cách giữa các item */
+    margin-bottom: 10px;                   /* 📏 Khoảng cách giữa các mục */
 }
 
 /* 🎯 Nút mở danh mục */
 .sidebar__toggle {
-    display: flex; /* Icon + text cùng hàng */
-    align-items: center; /* Căn giữa icon và text */
-    gap: 8px; /* Khoảng cách giữa icon và text */
-    cursor: pointer; /* Đổi con trỏ khi hover */
-    font-weight: bold; /* Đậm chữ */
-    font-size: 1rem; /* Cỡ chữ */
-    padding: 8px 0; /* Padding trên/dưới */
-    border: none; /* Xoá border */
-    background: none; /* Xoá nền */
-    width: 100%; /* Chiếm hết chiều ngang */
-    text-align: left; /* Căn trái text */
-    color: #4b383f; /* Màu chữ */
-    white-space: nowrap; /* Giữ text trên 1 dòng */
-    transition: color 0.3s ease; /* Hiệu ứng hover */
+    align-items: center;        /* 📦 Căn giữa icon và text */
+    gap: 10px;                  /* 📏 Khoảng cách giữa icon và text */
+    cursor: pointer;            /* 🖱️ Đổi con trỏ khi hover */
+    font-weight: bold;          /* 🔠 Chữ đậm */
+    font-size: 1rem;            /* 🔤 Kích thước chữ */
+    padding: 8px 0;             /* 📦 Padding trên/dưới */
+    border: none;               /* ❌ Xóa viền mặc định */
+    background: none;           /* ❌ Không nền */
+    width: 100%;                /* 📐 Chiều ngang full */
+    text-align: left;           /* 📍 Căn trái text */
+    color: #4b383f;             /* 🎨 Màu chữ */
+    white-space: nowrap;        /* 🚫 Không xuống dòng */
+    transition: color 0.5s ease;/* ✨ Hiệu ứng đổi màu mượt mà */
 }
 
 .sidebar__toggle:hover {
-    color: rgb(219, 126, 141); /* Đổi màu khi hover */
+    color: rgb(219, 126, 141);  /* 🎨 Đổi màu chữ khi hover */
 }
 
 /* 🛍️ CONTAINER sản phẩm - Grid layout */
 .produce__container {
-    flex: 1; /* Chiếm hết phần còn lại */
-    display: grid; /* Grid layout */
-    grid-template-columns: repeat(4, 1fr); /* 4 cột đều nhau */
-    gap: 20px; /* Khoảng cách giữa các sản phẩm */
-    padding: 10px; /* Padding */
+    flex: 1;                                /* 📦 Chiếm hết phần còn lại của flex */
+    display: grid;                          /* 📦 Grid layout */
+    grid-template-columns: repeat(4, 1fr);  /* 📐 4 cột bằng nhau */
+    gap: 20px;                              /* 📏 Khoảng cách giữa sản phẩm */
+    padding: 10px;                          /* 📦 Padding container */
 }
 
 /* 🎁 CARD sản phẩm - Box từng sản phẩm */
 .main__div--produce {
-    background: #ffffff; /* Nền trắng */
-    border: 1px solid #ddd; /* Viền mờ */
-    border-radius: 20px; /* Bo góc */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
-    overflow: hidden; /* Ẩn phần tràn */
-    display: flex; /* Flexbox */
-    flex-direction: column; /* Sắp xếp dọc */
-    justify-content: space-between; /* Đẩy nút xuống đáy */
-    align-items: center; /* Căn giữa nội dung */
-    height: 100%; /* Chiều cao đồng nhất */
-    text-align: center; /* Căn giữa text */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
+    background: #ffffff;                    /* 🎨 Nền trắng */
+    border: 10px solid #ddd;                /* 🖌️ Viền xám nhạt */
+    border-radius: 20px;                    /* 🟢 Bo góc lớn */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* 🌟 Đổ bóng nhẹ */
+    overflow: hidden;                       /* ❌ Ẩn phần tràn */
+    display: flex;                          /* 📦 Flexbox */
+    flex-direction: column;                 /* 📐 Sắp xếp dọc */
+    justify-content: space-between;         /* ⬆️⬇️ Đẩy nút xuống dưới cùng */
+    align-items: center;                    /* 📍 Căn giữa nội dung */
+    height: 100%;                           /* 📐 Chiều cao đồng nhất */
+    text-align: center;                     /* 📍 Căn giữa text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* ✨ Hiệu ứng hover */
 }
 
 .main__div--produce:hover {
-    transform: translateY(-10px) scale(1.02); /* Nhô lên khi hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Bóng đậm hơn */
+    transform: translateY(-10px) scale(1.02); /* 🚀 Nhô lên và phóng to nhẹ khi hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);/* 🌟 Đổ bóng đậm hơn */
 }
 
 /* 🖼️ ẢNH sản phẩm */
 .div__img--produce {
-    width: 100%; /* Full chiều ngang */
-    height: 220px; /* Chiều cao cố định */
-    object-fit: cover; /* Zoom hình đầy khung */
-    border-radius: 10px; /* Bo nhẹ góc */
-    transition: transform 0.3s ease; /* Hiệu ứng hover */
+    width: 100%;                             /* 📐 Chiều ngang full */
+    height: 220px;                           /* 📏 Chiều cao cố định */
+    object-fit: cover;                       /* 🔍 Zoom ảnh vừa khung */
+    border-radius: 10px;                     /* 🟢 Bo góc ảnh */
+    transition: transform 0.3s ease;         /* ✨ Hiệu ứng phóng ảnh */
 }
 
 .div__img--produce:hover {
-    transform: scale(1.05); /* Phóng to ảnh khi hover */
+    transform: scale(1.05);                  /* 🚀 Phóng to ảnh khi hover */
 }
 
 /* 📋 MÔ TẢ sản phẩm */
 .div__produce-item--info {
-    width: 90%; /* Chiều rộng */
-    background: #fafafa; /* Nền nhạt */
-    border: 1px solid #ddd; /* Viền mờ */
-    border-radius: 10px; /* Bo góc */
-    padding: 15px; /* Padding */
-    margin: 15px 0; /* Margin trên/dưới */
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Đổ bóng trong */
-    text-align: justify; /* Căn đều text */
+    width: 90%;                              /* 📐 Chiều ngang 90% */
+    background: #fafafa;                     /* 🎨 Nền nhạt */
+    border: 1px solid #ddd;                  /* 🖌️ Viền nhạt */
+    border-radius: 10px;                     /* 🟢 Bo góc */
+    padding: 15px;                           /* 📦 Padding trong */
+    margin: 15px 0;                          /* 📏 Margin trên/dưới */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* 🌟 Đổ bóng trong */
+    text-align: justify;                     /* 📍 Căn đều text */
 }
 
 .div__produce-item--info::before {
-    content: "📝 Mô Tả"; /* Tiêu đề trước mô tả */
+    content: "📝 Mô Tả";                      /* 🏷️ Tiêu đề trước phần mô tả */
     display: block;
     font-weight: bold;
-    color: #e84a63; /* Màu tiêu đề */
-    margin-bottom: 10px; /* Khoảng cách dưới */
-    font-size: 1.1rem; /* Cỡ chữ */
+    color: #e84a63;                          /* 🎨 Màu tiêu đề */
+    margin-bottom: 10px;                     /* 📏 Khoảng cách dưới */
+    font-size: 1.1rem;                        /* 🔤 Kích thước chữ */
 }
 
 /* 🏷️ Tên và giá sản phẩm */
 .item--name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2f3542;
-    margin: 8px 0;
+    font-size: 1.2rem;                       /* 🔤 Kích thước tên */
+    font-weight: bold;                       /* 🔠 Đậm chữ */
+    color: #2f3542;                          /* 🎨 Màu chữ */
+    margin: 8px 0;                           /* 📏 Khoảng cách trên/dưới */
 }
 
 .item--id {
-    color: #747d8c;
-    font-size: 0.9rem;
+    color: #747d8c;                          /* 🎨 Màu chữ xám */
+    font-size: 0.9rem;                       /* 🔤 Kích thước nhỏ hơn */
 }
 
 .div__produce-item--info h2 {
-    color: #ff4757; /* Màu giá */
+    color: #ff4757;                          /* 🎨 Màu giá */
     margin: 10px 0;
-    font-size: 1.4rem;
+    font-size: 1.4rem;                       /* 🔤 Cỡ chữ lớn */
 }
 
 /* 🍬 NÚT Xem Chi Tiết */
 .div__add-cart {
     display: inline-block;
-    padding: 10px 20px;
-    background: linear-gradient(45deg, #ff6b81, #ff4757); /* Gradient nút */
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 30px;
-    box-shadow: 0 4px 12px rgba(255, 107, 129, 0.4); /* Bóng nút */
-    transition: background 0.3s ease, transform 0.2s ease;
+    padding: 10px 20px;                      /* 📦 Padding nút */
+    background: linear-gradient(45deg, #ff6b81, #ff4757); /* 🎨 Gradient nền */
+    color: #fff;                              /* 🎨 Chữ trắng */
+    text-decoration: none;                   /* ❌ Không gạch chân */
+    font-weight: bold;                       /* 🔠 Chữ đậm */
+    border-radius: 30px;                     /* 🟢 Bo tròn nút */
+    box-shadow: 0 4px 12px rgba(255, 107, 129, 0.4); /* 🌟 Đổ bóng nút */
+    transition: background 0.3s ease, transform 0.2s ease; /* ✨ Hiệu ứng hover */
 }
 
 .div__add-cart:hover {
-    background: linear-gradient(
-        45deg,
-        #ff4757,
-        #ff6b81
-    ); /* Đảo gradient khi hover */
-    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff4757, #ff6b81); /* 🔁 Đảo gradient */
+    transform: scale(1.05);                /* 🚀 Phóng to nhẹ */
 }
 
 /* 📱 RESPONSIVE - Tablet */
 @media (max-width: 1024px) {
     .produce__container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cột */
-    }
-
-    .page__main {
-        gap: 15px; /* Giảm khoảng cách */
-    }
-
-    .sidebar {
-        width: 220px; /* Giảm chiều rộng sidebar */
+        grid-template-columns: repeat(2, 1fr); /* 📐 2 cột */
     }
 }
 
 /* 📱 RESPONSIVE - Mobile */
-@media (max-width: 768px) {
-    .page__main {
-        position: relative; /* Relative để positioning */
-        padding: 60px 20px 20px; /* Padding top cho hamburger */
-    }
-
-    /* Hiện hamburger button */
-    .sidebar__hamburger {
-        display: flex; /* Hiện hamburger */
-    }
-
-    /* Ẩn sidebar mặc định trên mobile */
-    .sidebar {
-        position: fixed; /* Fixed positioning */
-        top: 0; /* Cách top 0 */
-        left: -280px; /* Ẩn bên trái */
-        width: 280px; /* Chiều rộng */
-        height: 100vh; /* Full chiều cao */
-        z-index: 1000; /* Trên cùng */
-        overflow-y: auto; /* Scroll dọc nếu cần */
-        border-radius: 0; /* Bỏ bo góc */
-        border-left: none; /* Bỏ viền trái */
-        transition: left 0.3s ease; /* Hiệu ứng trượt */
-    }
-
-    /* Hiện sidebar khi có class active */
-    .sidebar.active {
-        left: 0; /* Trượt vào */
-    }
-
-    /* Hiện nút đóng trên mobile */
-    .sidebar__close {
-        display: block; /* Hiện nút đóng */
-    }
-
-    /* Overlay khi sidebar mở */
-    .sidebar__overlay {
-        position: fixed; /* Fixed positioning */
-        top: 0; /* Full màn hình */
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5); /* Nền đen mờ */
-        z-index: 999; /* Dưới sidebar */
-        opacity: 0; /* Ẩn mặc định */
-        visibility: hidden; /* Ẩn hoàn toàn */
-        transition: all 0.3s ease; /* Hiệu ứng */
-    }
-
-    .sidebar__overlay.active {
-        opacity: 1; /* Hiện overlay */
-        visibility: visible; /* Hiện overlay */
-    }
-
-    /* Main content khi sidebar mở */
-    .main__content {
-        flex: 1; /* Chiếm hết không gian */
-    }
-
-    .produce__container {
-        grid-template-columns: 1fr; /* 1 cột */
-        padding: 10px 5px; /* Giảm padding */
-    }
-
-    .div__img--produce {
-        height: 180px; /* Chiều cao ảnh nhỏ hơn */
-    }
-}
-
 @media (max-width: 600px) {
-    .sidebar__hamburger {
-        top: 15px; /* Điều chỉnh vị trí */
-        left: 15px;
-        padding: 8px; /* Giảm padding */
+    .produce__container {
+        grid-template-columns: 1fr;        /* 📐 1 cột */
     }
-
-    .hamburger__line {
-        width: 20px; /* Giảm kích thước vạch */
-        height: 2px;
-    }
-
-    .sidebar {
-        width: 260px; /* Giảm chiều rộng */
-        padding: 15px; /* Giảm padding */
-    }
-
-    .page__main {
-        padding: 50px 15px 15px; /* Điều chỉnh padding */
+    .div__img--produce {
+        height: 180px;                     /* 📏 Ảnh nhỏ hơn */
     }
 }
 
 /* 🌟 TIÊU ĐỀ mỗi section (Len, Thời Trang, ...) */
 .product-section__title {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    margin: 30px 0 20px;
-    background: linear-gradient(45deg, #ff6b81, #ff4757);
-    /* hỗ trợ đầy đủ */
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
+  font-size: 2rem;                          /* 🔤 Cỡ chữ lớn */
+  font-weight: 800;                         /* 🔠 Đậm chữ */
+  text-align: center;                       /* 📍 Căn giữa */
+  margin: 30px 0 20px;                      /* 📏 Margin trên/dưới */
+  background: linear-gradient(45deg, #ff6b81, #ff4757); /* 🎨 Gradient chữ */
+  -webkit-background-clip: text;            /* 🌟 Clip gradient vào text */
+  background-clip: text;                    
+  -webkit-text-fill-color: transparent;     /* 🌟 Đổ màu text trong suốt */
+  position: relative;
 }
 
 .product-section__title::after {
-    content: "";
+    content: "";                            /* 🖌️ Thanh ngang trang trí */
     display: block;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #ff6b81, #ff4757);
-    margin: 8px auto 0;
-    border-radius: 2px;
-    text-align: center;
+    width: 80px;                            /* 📏 Chiều ngang */
+    height: 4px;                            /* 📏 Chiều cao */
+    background: linear-gradient(90deg, #ff6b81, #ff4757); /* 🎨 Gradient */
+    margin: 8px auto 0;                     /* 📍 Căn giữa */
+    border-radius: 2px;                     /* 🟢 Bo góc */
 }
 
 .product-section__title:hover {
-    text-shadow: 0 0 10px rgba(255, 107, 129, 0.7);
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 107, 129, 0.7); /* 🌟 Đổ bóng text khi hover */
+    transform: scale(1.05);                         /* 🚀 Phóng to nhẹ */
+    transition: all 0.3s ease;                      /* ✨ Hiệu ứng */
 }
 
 /* 🌟 NGĂN CÁCH từng section sản phẩm */
 .product-section {
-    background: linear-gradient(135deg, #ffe3ec, #f9f9f9);
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    padding: 30px 20px;
-    margin-bottom: 40px; /* Khoảng cách giữa các section */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #ffe3ec, #f9f9f9); /* 🎨 Nền */
+    border-radius: 20px;                      /* 🟢 Bo góc */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 🌟 Đổ bóng */
+    padding: 30px 20px;                        /* 📦 Padding */
+    margin-bottom: 40px;                       /* 📏 Khoảng cách giữa các section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* ✨ Hiệu ứng */
 }
 
 .product-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);               /* 🚀 Nhô lên khi hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);/* 🌟 Đổ bóng đậm hơn */
 }
+
 /* 📦 GRID Layout tổng - Chia 3 phần header, main, footer */
-.layout-grid {
-    display: grid; /* Kích hoạt Grid */
-    grid-template-rows: auto 1fr auto; /* 3 hàng: header, main, footer */
-    min-height: 100vh; /* Chiều cao tối thiểu full màn hình */
+.grid__layout {
+    display: grid;                             /* 📦 Kích hoạt Grid */
+    grid-template-rows: auto 1fr auto;         /* 📐 3 hàng: header, main, footer */
+    min-height: 100vh;                         /* 📏 Chiều cao tối thiểu full màn */
 }
 
-/* 🏷️ Header nằm trên cùng */
-.page__header {
-    grid-row: 1; /* Hàng 1 */
+/* 🍔 NÚT HAMBURGER - Chỉ xuất hiện trên mobile */
+.sidebar__hamburger {
+    display: none;            /* ❌ Ẩn trên desktop */
+    position: fixed;          /* 📌 Giữ vị trí khi scroll */
+    top: 20px;                /* 📍 Cách trên 20px */
+    left: 20px;               /* 📍 Cách trái 20px */
+    z-index: 1100;            /* 🔝 Trên cả sidebar */
+    background-color: #ff6b81;/* 🎨 Nền hồng cam */
+    color: #fff;              /* 🎨 Chữ trắng */
+    border: none;             /* ❌ Xóa viền */
+    padding: 10px 15px;       /* 📦 Padding */
+    font-size: 1.8rem;        /* 🔤 Cỡ chữ lớn */
+    border-radius: 8px;       /* 🟢 Bo tròn */
+    cursor: pointer;          /* 🖱️ Pointer khi hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* 🌟 Đổ bóng */
 }
 
-/* 📦 Main chiếm phần giữa */
-.page__main {
-    grid-row: 2; /* Hàng 2 */
-}
+/* 📱 MOBILE: Ẩn sidebar mặc định, chỉ hiện khi người dùng bấm hamburger */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;           /* 📌 Sidebar cố định */
+        top: 0;                    /* 📍 Mép trên */
+        left: 0;                   /* 📍 Mép trái */
+        width: 80%;                /* 📐 Chiếm 80% ngang */
+        height: 100%;              /* 📏 Full chiều cao */
+        background: #fff;          /* 🎨 Nền trắng */
+        z-index: 1000;             /* 🔝 Trên nội dung nhưng dưới hamburger */
+        box-shadow: 2px 0 12px rgba(0,0,0,0.2); /* 🌟 Đổ bóng */
+        transform: translateX(-100%); /* 🛑 Ẩn ngoài màn */
+        transition: transform 0.3s ease; /* ✨ Hiệu ứng trượt */
+    }
 
-/* 🦶 Footer nằm dưới cùng */
-.footer {
-    grid-row: 3; /* Hàng 3 */
+    .sidebar.show {
+        transform: translateX(0);  /* ✅ Hiện sidebar khi có class .show */
+    }
+
+    .sidebar__hamburger {
+        display: block;            /* ✅ Hiện hamburger trên mobile */
+    }
+
+    .page__main {
+        flex-direction: column;    /* 📦 Xếp dọc nội dung */
+    }
 }
